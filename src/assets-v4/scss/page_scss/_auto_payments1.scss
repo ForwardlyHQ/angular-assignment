@@ -1,0 +1,559 @@
+// Auto Payment Left Sidebar
+// Search Bar
+.auto_payment_user_search {
+    width: 100%;
+    position: relative;
+    margin: 0 0 20px 0;
+    @include max-breakpoint-1680 {
+        margin: 0 0 16px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 12px 0;
+    }
+
+    button {
+        &.search_btn {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            z-index: 1;
+            color: $BL-102;
+            background: none;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            @include max-breakpoint-1800 {
+                width: 21px;
+                height: 21px;
+                line-height: 21px;
+            }
+            @include max-breakpoint-1680 {
+                width: 19px;
+                height: 19px;
+                line-height: 19px;
+                top: 8px;
+            }
+
+            img {
+                height: 18px;
+                @include max-breakpoint-1800 {
+                    height: 16px;
+                }
+                @include max-breakpoint-1680 {
+                    height: 14px;
+                }
+            }
+        }
+    }
+
+    input {
+        &[type='text'] {
+            width: 100%;
+            height: 38px;
+            font: 400 $font-s-16 $primaryFont;
+            color: $GY-2;
+            background: none;
+            border: 0;
+            border-bottom: 1px solid $GY-8;
+            padding: 0 0 0 30px;
+            @include max-breakpoint-1800 {
+                height: 34px;
+                font: 400 $font-s-15 $primaryFont;
+                padding: 0 0 0 28px;
+            }
+            @include max-breakpoint-1680 {
+                height: 30px;
+                font: 400 $font-s-14 $primaryFont;
+                padding: 0 0 0 24px;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 400 $font-s-13 $primaryFont;
+            }
+            @include max-breakpoint-1440 {
+                font: 400 $font-s-12 $primaryFont;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $GY-2;
+                opacity: 1;
+            }
+            &:-moz-placeholder {
+                color: $GY-2;
+                opacity: 1;
+            }
+            &::-moz-placeholder {
+                color: $GY-2;
+                opacity: 1;
+            }
+            &:-ms-input-placeholder {
+                color: $GY-2;
+                opacity: 1;
+            }
+            &::-ms-input-placeholder {
+                color: $GY-2;
+                opacity: 1;
+            }
+            &::placeholder {
+                color: $GY-2;
+                opacity: 1;
+            }
+        }
+    }
+    &.disabled_search {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.6;
+    }
+    .ghost_loading_box {
+        &.input_box_ghost {
+            min-height: 38px;
+            @include max-breakpoint-1800 {
+                min-height: 34px;
+            }
+            @include max-breakpoint-1680 {
+                min-height: 30px;
+            }
+        }
+    }
+}
+// Virtual Scroll
+cdk-virtual-scroll-viewport {
+    &.auto_payment_viewport {
+        height: calc(100vh - 305px);
+        overflow: hidden;
+        overflow-y: auto;
+        contain: inherit;
+        @include max-breakpoint-1800 {
+            height: calc(100vh - 285px);
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            height: calc(100vh - 244px);
+        }
+        @include max-breakpoint-1366 {
+            height: calc(100vh - 238px);
+        }
+        @include max-breakpoint-1279 {
+            height: auto;
+            overflow: unset;
+        }
+
+        .cdk-virtual-scroll-content-wrapper {
+            position: static;
+            padding-right: 25px;
+            margin-right: -15px;
+            @include max-breakpoint-1680 {
+                padding-right: 20px;
+                margin-right: -12px;
+            }
+        }
+        // If No Data Found
+        &.no_data_found {
+            @include flex_center();
+            justify-content: center;
+            border-right: 1px dashed #acb5be;
+            .cdk-virtual-scroll-content-wrapper {
+                .auto_payment_list_content {
+                    .no_data_found_wrapper {
+                        h3 {
+                            &.mat-h3 {
+                                &.dark_red {
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// User List
+.auto_payment_list_content {
+    position: relative;
+
+    app-no-data-found {
+        .no_data_found_wrapper {
+            margin-top: 45px;
+            @include max-breakpoint-1800 {
+                margin-top: 40px;
+            }
+            @include max-breakpoint-1680 {
+                margin-top: 36px;
+            }
+            @include max-breakpoint-1440 {
+                margin-top: 30px;
+            }
+
+            h3 {
+                &.mat-h3 {
+                    font: 400 $font-s-16 $primaryFont;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-14 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                }
+            }
+        }
+    }
+
+    ul {
+        @include unordered_list();
+
+        li {
+            width: 100%;
+            position: relative;
+            border-bottom: 1px dashed #cbced9;
+            padding: 10px 0;
+            @include max-breakpoint-1680 {
+                padding: 8px 0;
+            }
+
+            button {
+                &.auto_pay_info_box {
+                    width: 100%;
+                    min-height: 65px;
+                    @include flex_align_center();
+                    justify-content: space-between;
+                    padding: 0 20px;
+                    background: none;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    @include max-breakpoint-1800 {
+                        min-height: 55px;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding: 0 16px;
+                        min-height: 52px;
+                        border-radius: 4px;
+                    }
+                    @include max-breakpoint-1440 {
+                        min-height: 45px;
+                    }
+
+                    &.ghost_btn {
+                        cursor: default;
+                    }
+
+                    .auto_pay_info_box_left {
+                        width: 86.6666%;
+                        font: 400 $font-s-14 $primaryFont;
+                        color: $GY-2;
+                        text-align: left;
+                        padding-right: 15px;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-12 $primaryFont;
+                            padding-right: 12px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-11 $primaryFont;
+                        }
+
+                        h3 {
+                            &.mat-h3 {
+                                font: 500 $font-s-16 $primaryFont;
+                                color: $BE-1;
+                                margin: 0 0 2px 0;
+                                @include max-breakpoint-1800 {
+                                    font: 500 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 500 $font-s-14 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 500 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 500 $font-s-12 $primaryFont;
+                                }
+
+                                .ghost_loading_box {
+                                    &.customer_name_ghost {
+                                        min-height: 20px;
+                                        margin: 0 0 10px 0;
+                                        @include max-breakpoint-1680 {
+                                            min-height: 16px;
+                                            margin: 0 0 8px 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .tooltip_default {
+                            span,
+                            p {
+                                width: 100%;
+                                display: inline-block;
+                                @include text_limit();
+                            }
+                        }
+
+                        .ghost_loading_box {
+                            &.email_ghost {
+                                width: 50%;
+                                min-height: 16px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 13px;
+                                }
+                            }
+                        }
+                    }
+
+                    .auto_pay_info_box_right {
+                        width: 24px;
+                        @include max-breakpoint-1800 {
+                            width: 21px;
+                        }
+                        @include max-breakpoint-1680 {
+                            width: 19px;
+                        }
+                        @include max-breakpoint-1440 {
+                            width: 16px;
+                        }
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                            vertical-align: middle;
+                            @include max-breakpoint-1800 {
+                                width: 21px;
+                                height: 21px;
+                            }
+                            @include max-breakpoint-1680 {
+                                width: 19px;
+                                height: 19px;
+                            }
+                            @include max-breakpoint-1440 {
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .ghost_loading_box {
+                            &.right_icon_ghost {
+                                width: 24px;
+                                min-height: 24px;
+                                @include max-breakpoint-1800 {
+                                    width: 21px;
+                                    min-height: 21px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    width: 19px;
+                                    min-height: 19px;
+                                }
+                            }
+                        }
+                        .tooltip_default {
+                            .tooltip_default_wrapper {
+                                .tooltip_default_inner {
+                                    p {
+                                        white-space: nowrap;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                border-bottom: none;
+
+                button {
+                    &.auto_pay_info_box {
+                        min-height: 85px;
+                        background: $WE-1;
+                        border-color: $BL-114;
+                        @include max-breakpoint-1800 {
+                            min-height: 75px;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-height: 68px;
+                        }
+
+                        .auto_pay_info_box_left {
+                            h3 {
+                                &.mat-h3 {
+                                    font: 700 $font-s-16 $primaryFont;
+                                    color: $OE-1;
+                                    @include max-breakpoint-1800 {
+                                        font: 700 $font-s-15 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 700 $font-s-14 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 700 $font-s-13 $primaryFont;
+                                    }
+                                }
+                            }
+                            .tooltip_default {
+                                span {
+                                    width: 100%;
+                                    display: inline-block;
+                                    @include text_limit();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                padding-top: 20px;
+                @include max-breakpoint-1680 {
+                    padding-top: 16px;
+                }
+            }
+        }
+    }
+}
+// Auto Payment Right Content 1
+.auto_payment_right_wrapper {
+    padding: 0 0 15px 30px;
+    @include max-breakpoint-1800 {
+        padding: 0 0 15px 26px;
+    }
+    @include max-breakpoint-1680 {
+        padding: 0 0 12px 24px;
+    }
+    @include max-breakpoint-959 {
+        padding-left: 0;
+    }
+
+    .auto_payment_heading_wrap {
+        margin: 0 0 30px 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 24px 0;
+        }
+        @include max-breakpoint-1279 {
+            display: none;
+        }
+
+        h2 {
+            &.mat-h2 {
+                font: 700 $font-s-24 $primaryFont;
+                line-height: normal;
+                color: $BE-1;
+                margin: 0 0 15px 0;
+                @include max-breakpoint-1800 {
+                    font: 700 $font-s-21 $primaryFont;
+                    line-height: normal;
+                    margin: 0 0 12px 0;
+                }
+                @include max-breakpoint-1680 {
+                    font: 700 $font-s-18 $primaryFont;
+                    line-height: normal;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 700 $font-s-19 $primaryFont;
+                    line-height: normal;
+                }
+                @include max-breakpoint-1440 {
+                    font: 700 $font-s-16 $primaryFont;
+                    line-height: normal;
+                }
+
+                .ghost_loading_box {
+                    width: 30%;
+                    min-height: 30px;
+                    margin: 0 0 15px 0;
+                    @include max-breakpoint-1800 {
+                        min-height: 26px;
+                        margin: 0 0 12px 0;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-height: 24px;
+                    }
+                }
+            }
+        }
+
+        p {
+            font: 400 $font-s-16 $primaryFont;
+            line-height: 24px;
+            color: $GY-2;
+            margin: 0 0 15px 0;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-15 $primaryFont;
+                line-height: 21px;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-14 $primaryFont;
+                line-height: 21px;
+                margin: 0 0 12px 0;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 400 $font-s-13 $primaryFont;
+                line-height: 19px;
+            }
+            @include max-breakpoint-1440 {
+                font: 400 $font-s-12 $primaryFont;
+                line-height: 18px;
+                margin: 0 0 10px 0;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .ghost_loading_box {
+            &.paragraph_ghost {
+                min-height: 14px;
+                margin: 0 0 10px 0;
+                @include max-breakpoint-1680 {
+                    min-height: 11px;
+                    margin: 0 0 8px 0;
+                }
+            }
+        }
+    }
+    .mb_back_menu {
+        @include flex_center();
+        justify-content: flex-start;
+        padding: 15px 0;
+        border-bottom: 1px solid $GY-132;
+        margin-bottom: 30px;
+        font: 400 $font-s-21 $primaryFont;
+        color: $BL-114;
+        display: none;
+        @include max-breakpoint-1680 {
+            padding: 12px 0;
+            margin-bottom: 24px;
+            font: 400 $font-s-19 $primaryFont;
+        }
+        @include max-breakpoint-1279 {
+            display: flex;
+        }
+        button {
+            &.mat-mdc-button {
+                padding: 0;
+                min-width: auto;
+                mat-icon {
+                    font-size: $font-s-26;
+                    color: $BL-114;
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-21;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,280 @@
+app-custom-mat-date-picker {
+    .custom-mat-date-container {
+        mat-form-field {
+            &.mat-mdc-form-field {
+                .mat-mdc-text-field-wrapper {
+                    border: 1px solid $GY-118;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    @include max-breakpoint-1680 {
+                        border-radius: 4px;
+                    }
+                    .mat-mdc-form-field-flex {
+                        .mdc-notched-outline {
+                            .mdc-notched-outline__leading,
+                            .mdc-notched-outline__notch,
+                            .mdc-notched-outline__trailing {
+                                border-color: $GY-118;
+                            }
+                        }
+                        .mat-mdc-form-field-infix {
+                            @include flex_center();
+                            min-height: 40px;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            @include max-breakpoint-1680 {
+                                min-height: 32px;
+                                padding-top: 6px;
+                                padding-bottom: 6px;
+                            }
+
+                            input {
+                                font: 400 $font-s-14 $primaryFont;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                            }
+                        }
+                        .mat-mdc-form-field-icon-suffix {
+                            mat-datepicker-toggle {
+                                button {
+                                    width: 40px;
+                                    height: 40px;
+                                    padding: 8px;
+                                    @include max-breakpoint-1680 {
+                                        width: 32px;
+                                        height: 32px;
+                                        padding: 6px;
+                                    }
+                                    .mat-mdc-button-touch-target {
+                                        width: 40px;
+                                        height: 40px;
+                                        @include max-breakpoint-1680 {
+                                            width: 32px;
+                                            height: 32px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.mat-form-field-disabled {
+                    .mat-mdc-text-field-wrapper {
+                        .mat-mdc-form-field-flex {
+                            .mat-mdc-form-field-infix {
+                                input {
+                                    color: rgba($BL-103, $opacitySize-7);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Ng Input OTP
+app-otp-input {
+    justify-content: center;
+    input {
+        width: 50px;
+        height: 50px;
+        font: 400 $font-s-16 $primaryFont;
+        color: $BL-103;
+        text-align: center;
+        outline: none;
+        padding: 5px;
+        border: 1px solid $GY-118;
+        border-radius: 5px;
+        box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+        margin: 0 6px;
+        @include max-breakpoint-1800 {
+            font: 400 $font-s-15 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+            width: 40px;
+            height: 40px;
+            font: 400 $font-s-14 $primaryFont;
+            padding: 4px;
+            border-radius: 4px;
+            box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 0 5px;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 400 $font-s-13 $primaryFont;
+        }
+        @include max-breakpoint-1440 {
+            font: 400 $font-s-12 $primaryFont;
+        }
+
+        @include max-breakpoint-480 {
+            width: 32px;
+            height: 40px;
+            margin: 0 3px;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $BL-110;
+        }
+        &:-moz-placeholder {
+            color: $BL-110;
+        }
+        &::-moz-placeholder {
+            color: $BL-110;
+        }
+        &:-ms-input-placeholder {
+            color: $BL-110;
+        }
+        &::-ms-input-placeholder {
+            color: $BL-110;
+        }
+        &::placeholder {
+            color: $BL-110;
+        }
+        &:focus {
+            box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+            @include max-breakpoint-1680 {
+                box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+        }
+        &.ng-invalid {
+            color: $RD-107;
+            border-color: $RD-107;
+            box-shadow: inset 0px 3px 6px rgba($RD-107, $opacitySize-11);
+            @include max-breakpoint-1680 {
+                box-shadow: inset 0px 2px 5px rgba($RD-107, $opacitySize-11);
+            }
+        }
+    }
+}
+// mat button toggle group
+mat-button-toggle-group {
+    &.mat-button-toggle-group {
+        &.custom_btn_group {
+            border: none;
+
+            mat-button-toggle {
+                &.mat-button-toggle {
+                    font: 600 $font-s-14 $primaryFont;
+                    color: rgba($WE-100, 0.5);
+                    background: $BLN-113;
+                    border: none;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1) inset;
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-12 $primaryFont;
+                        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1) inset;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-11 $primaryFont;
+                    }
+
+                    button {
+                        &.mat-button-toggle-button {
+                            .mat-button-toggle-label-content {
+                                line-height: 34px;
+                                @include max-breakpoint-1680 {
+                                    line-height: 28px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.mat-button-toggle-checked {
+                        color: $WE-100;
+
+                        button {
+                            &.mat-button-toggle-button {
+                                background: $GR-100;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.ml_auto {
+                margin-left: auto;
+            }
+        }
+    }
+}
+// Custom Select option bar
+.mat-mdc-select-panel-above {
+    .mdc-menu-surface {
+        &.mat-mdc-select-panel {
+            border-radius: 5px !important;
+            border: 1px solid $GY-108;
+            @include max-breakpoint-1680 {
+                border-radius: 4px !important;
+            }
+        }
+    }
+}
+// Selected
+.mat-primary {
+    .mat-mdc-option {
+        &.mdc-list-item--selected {
+            &:not(.mdc-list-item--disabled) {
+                .mdc-list-item__primary-text {
+                    color: $BL-102;
+                }
+            }
+        }
+    }
+}
+.mat-primary .mat-pseudo-checkbox-checked.mat-pseudo-checkbox-minimal::after,
+.mat-primary .mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-minimal::after {
+    color: $BL-102;
+}
+// Form Placeholder
+/* Change the white to any color */
+:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px $WE-100 inset !important;
+    @include max-breakpoint-1680 {
+        -webkit-box-shadow: 0 0 0 24px $WE-100 inset !important;
+    }
+    @include max-breakpoint-1440 {
+        -webkit-box-shadow: 0 0 0 20px $WE-100 inset !important;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        -webkit-box-shadow: 0 0 0 30px $WE-100 inset !important;
+        @include max-breakpoint-1680 {
+            -webkit-box-shadow: 0 0 0 24px $WE-100 inset !important;
+        }
+        @include max-breakpoint-1440 {
+            -webkit-box-shadow: 0 0 0 20px $WE-100 inset !important;
+        }
+    }
+}
+// Safari Autofill
+input {
+    &::-webkit-contacts-auto-fill-button {
+        visibility: hidden;
+        display: none !important;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+    }
+
+    &::-webkit-autofill,
+    &::-webkit-contacts-auto-fill-button,
+    &::-webkit-credentials-auto-fill-button {
+        opacity: 0 !important;
+    }
+}
+// Edge Password eyes
+::-ms-reveal {
+    display: none;
+}

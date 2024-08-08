@@ -1,0 +1,64 @@
+// Import Flex Mixin
+// @import "./flex-mixin";
+
+.fx-wrap {
+    flex-wrap: wrap;
+}
+.fx-nowrap {
+    flex-wrap: nowrap;
+}
+.fx-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+// Flex Row Column Wrap
+// .fx-row-wrap {
+//   @include flex-properties();
+//   flex-flow: row wrap;
+// }
+// .fx-row-reverse-wrap {
+//   @include flex-properties();
+//   flex-flow: row-reverse wrap;
+// }
+// .fx-column-wrap {
+//   @include flex-properties();
+//   flex-flow: column wrap;
+// }
+// .fx-column-reverse-wrap {
+//   @include flex-properties();
+//   flex-flow: column-reverse wrap;
+// }
+// Flex Row Column Nowrap
+// .fx-row-nowrap {
+//   @include flex-properties();
+//   flex-flow: row nowrap;
+// }
+// .fx-row-reverse-nowrap {
+//   @include flex-properties();
+//   flex-flow: row-reverse nowrap;
+// }
+// .fx-column-nowrap {
+//   @include flex-properties();
+//   flex-flow: column nowrap;
+// }
+// .fx-column-reverse-nowrap {
+//   @include flex-properties();
+//   flex-flow: column-reverse nowrap;
+// }
+// Flex Row Column Wrap Reverse
+// .fx-row-wrap-reverse {
+//   @include flex-properties();
+//   flex-flow: row wrap-reverse;
+// }
+// .fx-row-reverse-wrap-reverse {
+//   @include flex-properties();
+//   flex-flow: row-reverse wrap-reverse;
+// }
+// .fx-column-wrap-reverse {
+//   @include flex-properties();
+//   flex-flow: column wrap-reverse;
+// }
+// .fx-column-reverse-wrap-reverse {
+//   @include flex-properties();
+//   flex-flow: column-reverse wrap-reverse;
+// }

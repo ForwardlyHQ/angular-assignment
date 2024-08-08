@@ -1,0 +1,644 @@
+/* Cash Flow Table Style */
+.fai_cashflow_tabular_container {
+    .fai_tabular_header {
+        position: sticky;
+        top: 116px;
+        z-index: 99;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            top: 93px;
+        }
+        @include max-breakpoint-767 {
+            top: 128px;
+        }
+        .fai_tabular_header_row {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: $WE-100;
+            border: 1px solid $GY-114;
+            border-radius: 15px;
+
+            @include max-breakpoint-1680 {
+                border-radius: 10px;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                border-radius: 12px;
+            }
+
+            @include max-breakpoint-1440 {
+                border-radius: 7px;
+            }
+
+            .fai_tabular_header_column {
+                flex: 1 1 0;
+                max-width: 100%;
+                font: 400 $font-s-16 $primaryFont;
+                color: $GY-100;
+                @include flex_center();
+                justify-content: flex-end;
+                padding: 11px 15px;
+
+                @include max-breakpoint-1800 {
+                    font: 400 $font-s-14 $primaryFont;
+                }
+
+                @include max-breakpoint-1680 {
+                    padding: 10px 12px;
+                    font: 400 $font-s-12 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-13 $primaryFont;
+                    padding: 9px 12px;
+                }
+
+                @include max-breakpoint-1440 {
+                    padding: 10px 10px;
+                }
+
+                /* Sorting Icon Style */
+                .fai_sorting {
+                    display: flex;
+                    margin-left: 2px;
+                    cursor: pointer;
+
+                    &.fai_current_date_sorting,
+                    &.fai_highlight_sorting {
+                        display: none;
+                    }
+
+                    img {
+                        width: 12px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            width: 10px;
+                        }
+                    }
+                }
+
+                .ghost_loading_box {
+                    min-height: 27px;
+                    display: block;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        min-height: 22px;
+                    }
+                }
+
+                &:first-child {
+                    width: 100%;
+                    flex: 0 0 280px;
+                    max-width: 280px;
+                    background-color: $WE-100;
+                    justify-content: flex-start;
+                    padding: 0;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    @include max-breakpoint-1680 {
+                        flex: 0 0 250px;
+                        max-width: 250px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        flex: 0 0 224px;
+                        max-width: 224px;
+                        border-radius: 12px;
+                    }
+                    @include max-breakpoint-1440 {
+                        flex: 0 0 220px;
+                        max-width: 220px;
+                    }
+                    @include max-breakpoint-1279 {
+                        flex: 0 0 150px;
+                        max-width: 150px;
+                    }
+
+                    .fai_input_date_wrapper {
+                        width: 100%;
+
+                        // Date Picker Skin
+                        mat-form-field {
+                            &.mat-mdc-form-field {
+                                &.default_field_control {
+                                    margin: 0;
+
+                                    .mat-mdc-text-field-wrapper {
+                                        padding: 0 0 0 15px;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            padding: 0 0 0 12px;
+                                        }
+
+                                        .mat-mdc-form-field-focus-overlay,
+                                        .mdc-line-ripple {
+                                            display: none !important;
+                                        }
+
+                                        .mat-mdc-form-field-flex {
+                                            .mat-mdc-form-field-infix {
+                                                @include max-breakpoint-1680 {
+                                                    padding: 12px 0;
+                                                    min-height: 40px;
+                                                }
+                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                    padding: 10px 0;
+                                                    min-height: 32px;
+                                                }
+
+                                                input {
+                                                    font: 600 $font-s-16 $primaryFont;
+                                                    color: $BL-103;
+
+                                                    @include max-breakpoint-1800 {
+                                                        font: 600 $font-s-13 $primaryFont;
+                                                    }
+                                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                                        font: 500 $font-s-13 $primaryFont;
+                                                    }
+                                                }
+                                            }
+
+                                            .mat-mdc-form-field-icon-suffix {
+                                                position: relative;
+                                                left: 0;
+                                                top: 0;
+
+                                                mat-datepicker-toggle {
+                                                    &.mat-datepicker-toggle {
+                                                        button {
+                                                            @include flex_center();
+                                                            justify-content: center;
+
+                                                            svg {
+                                                                fill: $BL-103;
+                                                            }
+
+                                                            @include max-breakpoint-1680 {
+                                                                width: 32px;
+                                                                height: 32px;
+                                                                padding: 4px;
+
+                                                                svg {
+                                                                    width: 16px;
+                                                                    height: 16px;
+                                                                }
+                                                            }
+                                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                                width: 38px;
+                                                                height: 38px;
+                                                                padding: 10px;
+                                                                svg {
+                                                                    width: 19px;
+                                                                    height: 19px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2),
+                &:last-child {
+                    width: 100%;
+                    flex: 0 0 24px;
+                    max-width: 24px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    justify-content: center;
+
+                    @include max-breakpoint-1680 {
+                        flex: 0 0 16px;
+                        max-width: 16px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        flex: 0 0 19px;
+                        max-width: 19px;
+                        padding-left: 4px;
+                        padding-right: 4px;
+                    }
+
+                    button {
+                        min-width: auto;
+                        line-height: normal;
+                        padding: 0;
+                        border-radius: 0;
+
+                        mat-icon {
+                            font-size: $font-s-24;
+                            margin: 0;
+
+                            @include max-breakpoint-1680 {
+                                font-size: $font-s-16;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: $font-s-19;
+                            }
+                        }
+                    }
+
+                    .ghost_loading_box {
+                        min-height: 30px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            min-height: 24px;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 10px;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        padding-right: 8px;
+                    }
+                }
+
+                &:nth-child(2) {
+                    background-color: $WE-100;
+                }
+
+                &.fai_border_right {
+                    border-right: 1px solid $GY-114;
+                }
+
+                &.fai_current_date {
+                    font: 600 $font-s-16 $primaryFont;
+                    color: $WE-100;
+                    background-color: $BL-103;
+                    border-left: 1px dashed $BL-116;
+                    border-right: 1px dashed $BL-116;
+
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-14 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 500 $font-s-13 $primaryFont;
+                    }
+
+                    @include max-breakpoint-1440 {
+                        font: 600 $font-s-12 $primaryFont;
+                    }
+
+                    /* Sorting Icon Style */
+                    .fai_sorting,
+                    .fai_highlight_sorting {
+                        display: none;
+                        margin-left: 2px;
+
+                        &.fai_current_date_sorting {
+                            display: flex;
+                        }
+
+                        img {
+                            width: 12px;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                width: 10px;
+                            }
+                        }
+                    }
+                }
+
+                &.headerHighlight {
+                    background-color: #e6eef7;
+                    color: #0f1138;
+
+                    .fai_sorting {
+                        display: none;
+                        margin-left: 2px;
+
+                        &.fai_highlight_sorting {
+                            display: flex;
+                        }
+
+                        img {
+                            width: 12px;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                width: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Cash Flow Table Body Style */
+    .fai_tabular_body {
+        /* Cashflow Table Background Gradient Style */
+        .fai_tabular_cashin {
+            background: rgb(186, 208, 232);
+            background: -moz-linear-gradient(top, rgba(186, 208, 232, 0.45) 0%, rgba(154, 202, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 100%);
+            background: -webkit-linear-gradient(top, rgba(186, 208, 232, 0.45) 0%, rgba(154, 202, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 100%);
+            background: linear-gradient(to bottom, rgba(186, 208, 232, 0.45) 0%, rgba(154, 202, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bad0e8', endColorstr='$WE-100', GradientType=0);
+            border: 1px solid $GY-114;
+            border-radius: 15px;
+
+            @include max-breakpoint-1680 {
+                border-radius: 10px;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                border-radius: 12px;
+            }
+
+            @include max-breakpoint-1440 {
+                border-radius: 7px;
+            }
+        }
+        .fai_tabular_body_row {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: transparent;
+            .fai_tabular_body_column {
+                flex: 1 1 0;
+                max-width: 100%;
+                font: 400 $font-s-13 $primaryFont;
+                color: $GY-100;
+                @include flex_center();
+                justify-content: flex-end;
+                padding: 7px 15px;
+
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-11 $primaryFont;
+                    padding: 7px 10px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-10 $primaryFont;
+                    padding: 6px 10px;
+                }
+
+                .ghost_loading_box {
+                    min-height: 27px;
+                    display: block;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        min-height: 22px;
+                    }
+                }
+
+                &:first-child {
+                    width: 100%;
+                    flex: 0 0 280px;
+                    max-width: 280px;
+                    justify-content: flex-start;
+
+                    .fai_tabular_text_wrapper {
+                        .info_tooltip_wrapper {
+                            &.info_text {
+                                &.ml_0 {
+                                    .info_tooltip {
+                                        left: 25px;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            left: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @include max-breakpoint-1680 {
+                        flex: 0 0 250px;
+                        max-width: 250px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        flex: 0 0 224px;
+                        max-width: 224px;
+                    }
+
+                    @include max-breakpoint-1440 {
+                        flex: 0 0 220px;
+                        max-width: 220px;
+                    }
+                    @include max-breakpoint-1279 {
+                        flex: 0 0 150px;
+                        max-width: 150px;
+                    }
+
+                    button {
+                        line-height: normal;
+                        padding: 0;
+                        min-width: auto;
+                        margin-right: 5px;
+
+                        @include max-breakpoint-1680 {
+                            margin-right: 2px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            margin-right: 4px;
+                        }
+
+                        img {
+                            width: 18px;
+
+                            @include max-breakpoint-1680 {
+                                width: 17px;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                width: 14px;
+                            }
+
+                            @include max-breakpoint-1440 {
+                                width: 16px;
+                            }
+                        }
+
+                        &.fai_tabular_menu {
+                            height: 24px;
+                            width: 24px;
+                            margin: 0 0 0 11px;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                height: 19px;
+                                width: 19px;
+                                margin: 0 0 0 9px;
+                            }
+
+                            mat-icon {
+                                font-size: $font-s-19;
+                                color: $BL-100;
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font-size: $font-s-15;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2),
+                &:last-child {
+                    width: 100%;
+                    flex: 0 0 24px;
+                    max-width: 24px;
+                    padding-left: 5px !important;
+                    padding-right: 5px !important;
+                    justify-content: center;
+
+                    @include max-breakpoint-1680 {
+                        flex: 0 0 16px;
+                        max-width: 16px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        flex: 0 0 19px;
+                        max-width: 19px;
+                        padding-left: 4px !important;
+                        padding-right: 4px !important;
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 10px;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        padding-right: 8px;
+                    }
+                }
+
+                &.fai_border_right {
+                    border-right: 1px solid $GY-114;
+                }
+
+                &.fai_current_date {
+                    background-color: $WE-100;
+                    border-left: 1px dashed $BL-116;
+                    border-right: 1px dashed $BL-116;
+                    box-shadow: 10px 15px 15px 0 rgba(112, 190, 238, 0.3), -10px 15px 15px 0 rgba(112, 190, 238, 0.3);
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        box-shadow: 8px 12px 12px 0 rgba(112, 190, 238, 0.3), -8px 12px 12px 0 rgba(112, 190, 238, 0.3);
+                    }
+
+                    &.fai_border_bottom {
+                        border-bottom: 1px dashed $BL-116 !important;
+                    }
+                }
+
+                &.cursor {
+                    cursor: pointer;
+                }
+            }
+            &:last-child {
+                .fai_tabular_body_column {
+                    border-bottom: none !important;
+
+                    &:first-child {
+                        border-radius: 0 0 0 15px;
+
+                        @include max-breakpoint-1680 {
+                            border-radius: 0 0 0 8px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            border-radius: 0 0 0 12px;
+                        }
+
+                        @include max-breakpoint-1440 {
+                            border-radius: 0 0 0 6px;
+                        }
+                    }
+                }
+            }
+            /* For Opening Balance Row */
+            &.fai_opening_balance {
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+
+                .fai_tabular_body_column {
+                    font: 700 $font-s-16 $primaryFont;
+                    color: $BL-103;
+                    padding: 25px 15px;
+
+                    @include max-breakpoint-1680 {
+                        font: 700 $font-s-13 $primaryFont;
+                        padding: 20px 12px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-13 $primaryFont;
+                        padding: 20px 12px;
+                    }
+
+                    @include max-breakpoint-1440 {
+                        padding: 15px 10px;
+                    }
+
+                    &:first-child {
+                        .info_tooltip_wrapper {
+                            &.info_text {
+                                &.ml_0 {
+                                    .info_tooltip {
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* For Cash In Row */
+            &.fai_cash_in {
+                .fai_tabular_body_column {
+                    font: 600 $font-s-15 $primaryFont;
+                    color: $BL-103;
+                    border-bottom: 1px solid $GY-114;
+                    padding: 19px 15px;
+
+                    .fai_tabular_text_wrapper {
+                        @include flex_center();
+                        justify-content: flex-start;
+
+                        &.fai_skeleton_wrapper {
+                            width: 100%;
+
+                            .ghost_loading_box {
+                                width: 80%;
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    width: 64%;
+                                }
+                            }
+                        }
+                    }
+
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-12 $primaryFont;
+                        padding: 15px 12px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 500 $font-s-12 $primaryFont;
+                        padding: 15px 12px;
+                    }
+
+                    @include max-breakpoint-1440 {
+                        padding: 11px 10px;
+                    }
+
+                    &:first-child {
+                        font: 600 $font-s-17 $primaryFont;
+                        color: $BL-103;
+                        background-color: $WE-100;
+                        border-radius: 15px 0 0 0;
+
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-14 $primaryFont;
+                            border-radius: 8px 0 0 0;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 500 $font-s-14 $primaryFont;
+                            border-radius: 12px 0 0 0;
+                        }
+
+                        @include max-breakpoint-1440 {
+                            border-radius: 6px 0 0 0;
+                        }
+
+                        .info_tooltip_wrapper {
+                            &.info_text {
+                                &.ml_0 {
+                                    .info_tooltip {
+                                        left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background-color: $WE-100;
+                    }
+                }
+            }
+        }
+    }
+}

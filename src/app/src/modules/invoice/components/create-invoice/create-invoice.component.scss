@@ -1,0 +1,71 @@
+/* SCSS File Include Here */
+@import "../../../../../../assets-v4/scss/variable";
+@import "../../../../../../assets-v4/scss/breakpoint-mixin";
+@import "../../../../../../assets-v4/scss/common-useful-mixin";
+
+/* Main Style Include Here */
+.payment_inner_content1 {
+  background: $WE-1;
+  margin: 0 0 45px 0;
+  @include max-breakpoint-1800 {
+    margin: 0 0 40px 0;
+  }
+  @include max-breakpoint-1680 {
+    margin: 0 0 36px 0;
+  }
+  @include max-breakpoint-1440 {
+    margin: 0 0 32px 0;
+  }
+}
+
+.payment_inner_content2 {
+  margin: 0 0 30px 0;
+  @include max-breakpoint-1800 {
+    margin: 0 0 27px 0;
+  }
+  @include max-breakpoint-1680 {
+    margin: 0 0 24px 0;
+  }
+  @include max-breakpoint-1440 {
+    margin: 0 0 20px 0;
+  }
+}
+
+// Table Column Width
+.custom_column_width1 {
+  max-width: 165px;
+  @include max-breakpoint-1680 {
+    max-width: 132px;
+  }
+  @include max-breakpoint-1279 {
+    max-width: 100%;
+  }
+}
+.custom_column_width2 {
+  max-width: 210px;
+  @include max-breakpoint-1680 {
+    max-width: 168px;
+  }
+  @include max-breakpoint-1279 {
+    max-width: 100%;
+  }
+}
+.custom_column_width3 {
+  max-width: 190px;
+  @include max-breakpoint-1680 {
+    max-width: 152px;
+  }
+  @include max-breakpoint-1279 {
+    max-width: 100%;
+  }
+}
+.custom_column_width4 {
+  max-width: 50px;
+  @include max-breakpoint-1680 {
+    max-width: 40px;
+  }
+  @include max-breakpoint-1279 {
+    max-width: 100%;
+    display: none !important;
+  }
+}

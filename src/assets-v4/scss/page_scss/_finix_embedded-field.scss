@@ -1,0 +1,592 @@
+// Finix Embedded Field Style Include Here
+.finix_form_wrapper {
+    width: 100%;
+    max-width: 404px;
+    margin: auto;
+    @include max-breakpoint-1800 {
+        max-width: 364px;
+    }
+    @include max-breakpoint-1680 {
+        max-width: 323px;
+    }
+
+    .finix_card_logos {
+        ul {
+            @include ul_style();
+            @include flex_justify_center();
+            align-items: center;
+            margin: 0 0 15px 0;
+            @include max-breakpoint-1800 {
+                margin: 0 0 13px 0;
+            }
+            @include max-breakpoint-1680 {
+                margin: 0 0 12px 0;
+            }
+            li {
+                display: inline-block;
+                padding: 0 calc(25px / 2);
+                @include max-breakpoint-1800 {
+                    padding: 0 calc(22px / 2);
+                }
+                @include max-breakpoint-1680 {
+                    padding: 0 calc(20px / 2);
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                    img {
+                        max-height: 23px;
+                        @include max-breakpoint-1800 {
+                            max-height: 21px;
+                        }
+                        @include max-breakpoint-1680 {
+                            max-height: 18px;
+                        }
+                    }
+                }
+                img {
+                    max-height: 21px;
+                    vertical-align: middle;
+                    @include max-breakpoint-1800 {
+                        max-height: 19px;
+                    }
+                    @include max-breakpoint-1680 {
+                        max-height: 17px;
+                    }
+                }
+            }
+        }
+    }
+    .finix_card_design {
+        display: block;
+        width: 100%;
+        padding: 15px 15px;
+        border: 1px solid rgba($GY-15, 0.4);
+        border-radius: 15px;
+        box-shadow: 0 7px 7px 0 rgba($BK-1, 0.07);
+        margin-bottom: 35px;
+        @include max-breakpoint-1800 {
+            padding: 13px 13px;
+            border-radius: 13px;
+            box-shadow: 0 6px 6px 0 rgba($BK-1, 0.07);
+            margin-bottom: 31px;
+        }
+        @include max-breakpoint-1680 {
+            padding: 12px 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+        .finix_card_heading {
+            @include flex_align_start();
+            justify-content: space-between;
+            flex-direction: row;
+            margin-bottom: 8px;
+            @include max-breakpoint-1800 {
+                margin-bottom: 7px;
+            }
+            @include max-breakpoint-1680 {
+                margin-bottom: 6px;
+            }
+            h6 {
+                &.mat-h6 {
+                    font: 500 $font-s-16 $primaryFont;
+                    line-height: normal;
+                    color: $BE-1;
+                    margin: 0;
+                    @include max-breakpoint-1800 {
+                        font: 500 $font-s-14 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 500 $font-s-13 $primaryFont;
+                    }
+                }
+            }
+        }
+        .finix_card_chip_sec {
+            @include flex_align_center();
+            justify-content: flex-start;
+            flex-direction: row;
+            margin-bottom: 8px;
+            @include max-breakpoint-1800 {
+                margin-bottom: 7px;
+            }
+            @include max-breakpoint-1680 {
+                margin-bottom: 6px;
+            }
+            .finix_card_chip {
+                margin-right: 9px;
+                @include max-breakpoint-1800 {
+                    margin-right: 8px;
+                }
+                @include max-breakpoint-1680 {
+                    margin-right: 7px;
+                }
+                img {
+                    max-height: 41px;
+                    @include max-breakpoint-1800 {
+                        max-height: 37px;
+                    }
+                    @include max-breakpoint-1680 {
+                        max-height: 33px;
+                    }
+                }
+            }
+            .finix_card_wifi {
+                img {
+                    max-height: 24px;
+                    @include max-breakpoint-1800 {
+                        max-height: 22px;
+                    }
+                    @include max-breakpoint-1680 {
+                        max-height: 19px;
+                    }
+                }
+            }
+        }
+        .payment_card_field_wrapper {
+            padding-right: 30px;
+            @include max-breakpoint-1800 {
+                padding-right: 27px;
+            }
+            @include max-breakpoint-1680 {
+                padding-right: 24px;
+            }
+        }
+    }
+    .finix_field_wrapper {
+        position: relative;
+        margin: 0;
+        label {
+            display: block;
+            font: 400 $font-s-9 $primaryFont;
+            color: $GY-3;
+            line-height: normal;
+        }
+        .finix_field {
+            iframe {
+                width: 100%;
+                height: 29px;
+                border: none;
+                @include max-breakpoint-1800 {
+                    height: 26px;
+                }
+                @include max-breakpoint-1680 {
+                    height: 23px;
+                }
+            }
+        }
+        span {
+            &.finix_field_error {
+                display: block;
+                font: 500 $font-s-12 $primaryFont;
+                line-height: normal;
+                color: $RD-107;
+                @include max-breakpoint-1800 {
+                    font: 500 $font-s-11 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 500 $font-s-10 $primaryFont;
+                }
+            }
+        }
+        .info_tooltip_wrapper {
+            position: absolute;
+            left: calc(100% + 15px);
+            top: 13px;
+            height: 16px;
+            width: 16px;
+            @include max-breakpoint-1800 {
+                left: calc(100% + 13px);
+                top: 11px;
+                height: 14px;
+                width: 14px;
+            }
+            @include max-breakpoint-1680 {
+                left: calc(100% + 12px);
+                top: 10px;
+                height: 13px;
+                width: 13px;
+            }
+            .info_tooltip_text {
+                .inner_text {
+                    img {
+                        height: 16px;
+                        width: 16px;
+                        vertical-align: middle;
+                        @include max-breakpoint-1800 {
+                            height: 14px;
+                            width: 14px;
+                        }
+                        @include max-breakpoint-1680 {
+                            height: 13px;
+                            width: 13px;
+                        }
+                    }
+                }
+            }
+            .info_tooltip {
+                left: auto;
+                right: 0;
+                top: auto;
+                bottom: calc(100% + 2px);
+                .info_tooltip_inner {
+                    &::before {
+                        width: 7px;
+                        height: 7px;
+                        left: auto;
+                        top: auto;
+                        right: 5px;
+                        bottom: -4px;
+                        @include max-breakpoint-1800 {
+                            width: 6px;
+                            height: 6px;
+                            right: 4px;
+                        }
+                        @include max-breakpoint-1680 {
+                            bottom: -3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .finix_no_card_design {
+        display: block;
+        width: 100%;
+        margin-bottom: 35px;
+        @include max-breakpoint-1800 {
+            margin-bottom: 31px;
+        }
+        @include max-breakpoint-1680 {
+            margin-bottom: 20px;
+        }
+        h6 {
+            &.mat-h6 {
+                font: 500 $font-s-16 $primaryFont;
+                line-height: normal;
+                color: $BE-1;
+                margin: 0 0 10px 0;
+                @include max-breakpoint-1800 {
+                    font: 500 $font-s-14 $primaryFont;
+                    margin: 0 0 9px 0;
+                }
+                @include max-breakpoint-1680 {
+                    font: 500 $font-s-13 $primaryFont;
+                    margin: 0 0 8px 0;
+                }
+            }
+        }
+        .fx-gap-10 {
+            @include max-breakpoint-1680 {
+                margin: 0 -5px -5px 0;
+            }
+            .fxFlex {
+                @include max-breakpoint-1680 {
+                    padding: 0 5px 5px 0;
+                }
+            }
+        }
+        mat-form-field {
+            &.mat-mdc-form-field {
+                &.default_field_control {
+                    margin: 0;
+                    padding-top: 10px;
+                    .mat-mdc-text-field-wrapper {
+                        .mat-mdc-form-field-flex {
+                            .mat-mdc-form-field-infix {
+                                padding: 0;
+                                min-height: 29px;
+                                label {
+                                    font-size: $font-s-9;
+                                    top: 0;
+                                    transform: translateY(9px) scale(1);
+                                    &.mdc-floating-label--float-above {
+                                        transform: translateY(-11px) scale(1);
+                                    }
+                                }
+                                input {
+                                    padding: calc(11px / 2) 0;
+                                }
+                            }
+                        }
+                    }
+                    .mat-mdc-form-field-subscript-wrapper {
+                        .mat-mdc-form-field-error-wrapper {
+                            padding: 0;
+                            .form-validation-main {
+                                margin: 0;
+                                ul {
+                                    li {
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .finix_form_error {
+        @include flex_align_center();
+        justify-content: flex-start;
+        margin: -35px 0 24px 0;
+        @include max-breakpoint-1800 {
+            margin: -31px 0 22px 0;
+        }
+        @include max-breakpoint-1680 {
+            margin: -28px 0 19px 0;
+        }
+        mat-icon {
+            font-size: $font-s-11;
+            color: $RD-107;
+            margin-right: 7px;
+            @include max-breakpoint-1800 {
+                font-size: $font-s-10;
+                margin-right: 6px;
+            }
+            @include max-breakpoint-1680 {
+                font: $font-s-9;
+            }
+        }
+        p {
+            font: 400 $font-s-12 $primaryFont;
+            line-height: normal;
+            color: $RD-107;
+            margin: 0;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-11 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-10 $primaryFont;
+            }
+        }
+    }
+    .accounting_sof_sec {
+        margin-bottom: 25px;
+        @include max-breakpoint-1800 {
+            margin-bottom: 22px;
+        }
+        @include max-breakpoint-1680 {
+            margin-bottom: 10px;
+        }
+        p {
+            font: 400 $font-s-14 $primaryFont;
+            line-height: 20px;
+            text-align: center;
+            color: $GY-2;
+            margin: 0 -76px 9px -76px;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-13 $primaryFont;
+                line-height: 18px;
+                margin: 0 -76px 8px -76px;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-11 $primaryFont;
+                line-height: 16px;
+                margin: 0 -76px 7px -76px;
+            }
+        }
+        .select_option_sec {
+            position: relative;
+            padding-right: 26px;
+            @include max-breakpoint-1800 {
+                padding-right: 23px;
+            }
+            @include max-breakpoint-1680 {
+                padding-right: 21px;
+            }
+            .select_dropdown {
+                mat-form-field {
+                    margin: 0;
+                    .mat-mdc-text-field-wrapper {
+                        height: 40px;
+                        @include max-breakpoint-1800 {
+                            height: 36px;
+                        }
+                        @include max-breakpoint-1680 {
+                            height: 32px;
+                        }
+                        .mat-mdc-form-field-flex {
+                            .mat-mdc-form-field-infix {
+                                padding-top: 9px;
+                                min-height: 40px;
+                                @include max-breakpoint-1800 {
+                                    padding-top: 8px;
+                                    min-height: 36px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    padding-top: 7px;
+                                    min-height: 32px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .accounting_sof_logo {
+                position: absolute;
+                height: 16px;
+                width: 16px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                @include max-breakpoint-1800 {
+                    height: 14px;
+                    width: 14px;
+                }
+                @include max-breakpoint-1680 {
+                    height: 13px;
+                    width: 13px;
+                }
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                    @include max-breakpoint-1680 {
+                        vertical-align: unset;
+                    }
+                }
+            }
+        }
+        &.accounting_sof_sec_business {
+            margin: 0 0 20px 0;
+            @include max-breakpoint-1800 {
+                margin: 0 0 18px 0;
+            }
+            @include max-breakpoint-1680 {
+                margin: 0 0 16px 0;
+            }
+            .accounting_sof_logo_business {
+                @include flex_center();
+                img {
+                    width: 20px;
+                    margin-right: 10px;
+                }
+                p {
+                    font: 500 $font-s-14 $primaryFont;
+                    line-height: normal;
+                    color: $BE-1;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .coa_warning_msg_row {
+        margin: 0 -76px;
+        p {
+            &.coa_warning_msg {
+                @include flex_center();
+                font: 400 $font-s-12 $primaryFont;
+                line-height: normal;
+                color: $GY-16;
+                margin: 0 0 20px 0;
+                @include max-breakpoint-1800 {
+                    font: 400 $font-s-11 $primaryFont;
+                    margin: 0 0 18px 0;
+                }
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-10 $primaryFont;
+                    margin: 0 0 16px 0;
+                }
+                img {
+                    width: 17px;
+                    margin-right: 4px;
+                    @include max-breakpoint-1800 {
+                        width: 15px;
+                    }
+                    @include max-breakpoint-1680 {
+                        width: 14px;
+                        margin-right: 3px;
+                    }
+                }
+            }
+        }
+    }
+    .btn_sec {
+        text-align: center;
+        margin-bottom: 25px;
+        @include max-breakpoint-1800 {
+            margin-bottom: 22px;
+        }
+        @include max-breakpoint-1680 {
+            margin-bottom: 10px;
+        }
+        button {
+            position: relative;
+            border: none;
+            outline: none;
+            font: 700 $font-s-16 $primaryFont;
+            color: $WE-1;
+            background-color: $GN-1;
+            border-radius: 5px;
+            line-height: 46px;
+            min-width: 220px;
+            cursor: pointer;
+            @include max-breakpoint-1800 {
+                font: 700 $font-s-14 $primaryFont;
+                border-radius: 4px;
+                line-height: 41px;
+                min-width: 198px;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-13 $primaryFont;
+                line-height: 37px;
+                min-width: 176px;
+            }
+            &[disabled='true'],
+            &.disabled,
+            &.mat-button-disabled {
+                color: $WE-1;
+                background-color: $GY-1;
+                border-color: $GY-1;
+                cursor: default;
+                pointer-events: none;
+            }
+            mat-spinner {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+        .info_tooltip_wrapper {
+            .info_tooltip {
+                top: auto;
+                bottom: calc(100% + 5px);
+                @include max-breakpoint-1800 {
+                    bottom: calc(100% + 4px);
+                }
+                .info_tooltip_inner {
+                    text-align: left;
+                    &::before {
+                        top: auto;
+                        bottom: -4px;
+                        @include max-breakpoint-1680 {
+                            bottom: -3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .privacy_policy_text {
+        font: 400 $font-s-12 $primaryFont;
+        line-height: normal;
+        text-align: center;
+        color: $GY-2;
+        margin-bottom: 24px;
+        @include max-breakpoint-1800 {
+            font: 400 $font-s-11 $primaryFont;
+            margin-bottom: 22px;
+        }
+        @include max-breakpoint-1680 {
+            font: 400 $font-s-10 $primaryFont;
+            margin-bottom: 15px;
+        }
+    }
+}

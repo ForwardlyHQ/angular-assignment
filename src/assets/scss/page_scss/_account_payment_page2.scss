@@ -1,0 +1,337 @@
+// Common Auto Collect Payments
+.auto_collect_wrap {
+    position: relative;
+    padding: 0 0 0 55px;
+    @include max-breakpoint-1680 {
+        padding: 0 0 0 44px;
+    }
+
+    h3 {
+        &.mat-h3 {
+            width: 100%;
+            @include flex_center();
+            font: 600 $font-s-18 $primaryFont;
+            color: $BL-103;
+            letter-spacing: 0.18px;
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-16 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-15 $primaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 600 $font-s-14 $primaryFont;
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+
+            mat-slide-toggle {
+                &.mat-mdc-slide-toggle {
+                    &.custom_slide_toggle {
+                        min-height: 28px;
+                        padding: 3px 10px;
+                        margin: 0 0 0 10px;
+                        @include max-breakpoint-1680 {
+                            min-height: 22px;
+                            padding: 2px 8px;
+                            margin: 0 0 0 8px;
+                        }
+
+                        .mdc-form-field {
+                            button {
+                                &.mdc-switch {
+                                    order: 2;
+
+                                    &.mdc-switch--disabled {
+                                        opacity: 0.8;
+                                        cursor: default;
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+
+                            > label {
+                                font: 600 $font-s-14 $primaryFont;
+                                margin: 0 15px 0 0;
+                                padding: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-12 $primaryFont;
+                                    margin: 0 12px 0 0;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-11 $primaryFont;
+                                }
+
+                                .slide_toggle_text {
+                                    display: none;
+
+                                    &.active {
+                                        display: block;
+                                    }
+
+                                    &.on {
+                                        color: $GR-100;
+                                    }
+                                    &.off {
+                                        display: block;
+                                        color: $RD-110;
+                                    }
+                                    &.requested {
+                                        color: $YL-105;
+                                    }
+
+                                    &.disabled {
+                                        color: #00000061;
+                                        opacity: 0.8;
+                                        cursor: default;
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .mdc-switch--selected,
+                        .mdc-switch--unselected {
+                            .mdc-switch__icon--on,
+                            .mdc-switch__icon--off {
+                                display: none;
+                            }
+                        }
+
+                        .mdc-switch {
+                            .mdc-switch__ripple {
+                                display: none;
+                            }
+
+                            &:enabled {
+                                .mdc-switch__shadow {
+                                    box-shadow: none;
+                                }
+
+                                .mdc-switch__track {
+                                    &::before,
+                                    &::after {
+                                        background: $BLN-113;
+                                    }
+                                }
+                            }
+
+                            // OFF
+                            &.mdc-switch--unselected {
+                                &:enabled {
+                                    .mdc-switch__handle {
+                                        &::after {
+                                            background: $RD-110;
+                                        }
+                                    }
+                                }
+                            }
+
+                            // ON
+                            &.mdc-switch--selected {
+                                &:enabled {
+                                    .mdc-switch__handle {
+                                        &::after {
+                                            background: $GR-100;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // ON
+                        &.mat-mdc-slide-toggle-checked {
+                            .mdc-form-field {
+                                > label {
+                                    .slide_toggle_text {
+                                        &.on {
+                                            display: block;
+                                        }
+
+                                        &.off {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .ghost_loading_box {
+                &.icon_ghost {
+                    width: 36px;
+                    min-height: 36px;
+                    margin: 0 6px 0 0;
+                    @include max-breakpoint-1680 {
+                        width: 29px;
+                        min-height: 29px;
+                        margin: 0 5px 0 0;
+                    }
+                }
+
+                &.heading_title_ghost {
+                    width: 10rem;
+                    min-height: 30px;
+                    margin: 0 10px 0 0;
+                    @include max-breakpoint-1680 {
+                        width: 8rem;
+                        min-height: 24px;
+                        margin: 0 8px 0 0;
+                    }
+                }
+
+                &.toggle_ghost {
+                    width: 105px;
+                    min-height: 30px;
+                    @include max-breakpoint-1680 {
+                        width: 84px;
+                        min-height: 24px;
+                    }
+                }
+            }
+
+            .info_tooltip_wrapper {
+                .info_tooltip {
+                    &.btn_tooltip {
+                        top: 35px;
+                        @include max-breakpoint-1680 {
+                            top: 28px;
+                        }
+                        .info_tooltip_inner {
+                            &::before {
+                                right: 25px;
+                                @include max-breakpoint-1680 {
+                                    right: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    p {
+        font: 400 $font-s-16 $primaryFont;
+        line-height: 24px;
+        color: $BL-107;
+        margin: 0 0 15px 0;
+        @include max-breakpoint-1800 {
+            font: 400 $font-s-14 $primaryFont;
+            line-height: 21px;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 400 $font-s-13 $primaryFont;
+            line-height: 19px;
+            margin: 0 0 12px 0;
+        }
+        @include max-breakpoint-1440 {
+            font: 400 $font-s-12 $primaryFont;
+            line-height: 18px;
+        }
+
+        strong {
+            font-weight: 700;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font-weight: 600;
+            }
+        }
+
+        a {
+            color: $BL-103;
+            text-decoration: underline;
+        }
+        button {
+            &.fai_begin_now_btn {
+                padding: 0;
+                color: $BL-103;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .ghost_loading_box {
+        &.paragraph_ghost {
+            min-height: 20px;
+            margin: 0 0 10px 0;
+            @include max-breakpoint-1680 {
+                min-height: 16px;
+                margin: 0 0 8px 0;
+            }
+        }
+    }
+}
+// Common Bank Account Box
+mat-card {
+    // Link Blue Box
+    &.link_bank_box {
+        min-height: 100%;
+        @include flex_center();
+        justify-content: center;
+        background-color: $GYN-133;
+        border: 1px dashed $BLN-113;
+        box-shadow: none;
+
+        mat-card-content {
+            &.link_bank_content {
+                @include flex_center();
+                min-height: 155px;
+                padding: 15px 15px;
+                @include max-breakpoint-1680 {
+                    min-height: 124px;
+                    padding: 12px 12px;
+                }
+
+                .link_bank_account {
+                    width: 100%;
+                    text-align: center;
+
+                    img {
+                        max-width: 150px;
+                        height: auto;
+                        display: block;
+                        margin: 0 auto 15px auto;
+                        @include max-breakpoint-1680 {
+                            max-width: 120px;
+                            margin: 0 auto 12px auto;
+                        }
+                    }
+
+                    button {
+                        &.bank_link_btn {
+                            min-height: 36px;
+                            background-color: $BL-102;
+                            font: 600 $font-s-14 $primaryFont;
+                            color: $WE-100;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                min-height: 29px;
+                                font: 600 $font-s-12 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-11 $primaryFont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.disabled {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}

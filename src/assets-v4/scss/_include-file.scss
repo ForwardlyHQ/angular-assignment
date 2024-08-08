@@ -1,0 +1,48 @@
+// Variable SCSS File Include Here
+@import './variable';
+
+// Breakpoints Mixins SCSS File Include Here
+@import './breakpoint-mixin';
+
+// Ghost Loading SCSS
+@import '../../app/animations/ghost-animation.scss';
+
+// Common Use Full Mixins SCSS File Include Here
+@import './common-useful-mixin';
+
+// Common Grid Scss File Include Here
+@import './grid';
+
+// Angular Material Common SCSS File Include Here
+@import './material_scss/material_common';
+@import './material_scss/material_input1';
+@import './material_scss/material_input2';
+@import './material_scss/material_input3';
+@import './material_scss/material_radio_checkbox';
+@import './material_scss/material_radio_checkbox2';
+@import './material_scss/material_table';
+@import './material_scss/_material_table_V4_1';
+@import './material_scss/finalize_payment_dialog';
+@import './material_scss/finalize_payment_dialog2';
+/* Onboarding Common SCSS File Include Here */
+@import './common_scss/common1';
+@import './common_scss/common2';
+@import './common_scss/auth_common';
+@import './common_scss/common3';
+
+// Auto Payment Common SCSS File Include Here
+@import './page_scss/auto_payments1';
+@import './page_scss/auto_payments2';
+@import './page_scss/auto_payments3';
+@import './page_scss/auto_payments4';
+@import './page_scss/finix_embedded-field';
+@import './page_scss/finix_embedded-field2';
+@import './page_scss/critical_actions';
+
+// Payment V4 Common SCSS File Include Here
+@import './page_scss/payments/payments_page1';
+@import './page_scss/payments/payments_page2';
+@import './page_scss/payments/payments_page3';
+
+// Common Spacer Scss File Include Here
+@import './spacing';

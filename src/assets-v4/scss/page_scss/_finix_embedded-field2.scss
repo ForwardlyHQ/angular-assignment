@@ -1,0 +1,158 @@
+app-guest-payment-wrapper {
+    app-credit-card-form {
+        .finix_form_wrapper {
+            .finix_card_design {
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                margin-bottom: 15px;
+                @include max-breakpoint-1800 {
+                    margin-bottom: 13px;
+                }
+                @include max-breakpoint-1680 {
+                    margin-bottom: 12px;
+                }
+                .finix_card_heading {
+                    padding-top: 10px;
+                    justify-content: center;
+                    margin-bottom: 10px;
+                    @include max-breakpoint-1800 {
+                        padding-top: 9px;
+                        margin-bottom: 9px;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding-top: 8px;
+                        margin-bottom: 8px;
+                    }
+                    h6 {
+                        &.mat-h6 {
+                            font: 600 $font-s-19 $primaryFont;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-17 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-15 $primaryFont;
+                            }
+                        }
+                    }
+                }
+                .credit_card_field_wrapper {
+                    padding: 0;
+                    .fx-gap-10 {
+                        margin: 0 -15px -15px 0;
+                        .fxFlex {
+                            padding: 0 15px 15px 0;
+                        }
+                        .fxFlex-80,
+                        .fxFlex-md-80 {
+                            flex: 1 1 auto;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            .finix_no_card_design {
+                margin-bottom: 30px;
+                @include max-breakpoint-1800 {
+                    margin-bottom: 27px;
+                }
+                @include max-breakpoint-1680 {
+                    margin-bottom: 24px;
+                }
+                h6 {
+                    &.mat-h6 {
+                        font: 600 $font-s-19 $primaryFont;
+                        text-align: center;
+                        margin: 0 0 15px 0;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-17 $primaryFont;
+                            margin: 0 0 13px 0;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-15 $primaryFont;
+                            margin: 0 0 12px 0;
+                        }
+                    }
+                }
+                .fx-gap-10 {
+                    @include max-breakpoint-1680 {
+                        margin: 0 -10px -10px 0;
+                    }
+                    .fxFlex {
+                        @include max-breakpoint-1680 {
+                            padding: 0 10px 10px 0;
+                        }
+                    }
+                }
+            }
+            .finix_field_wrapper {
+                .finix_field {
+                    margin-bottom: 15px;
+                    @include max-breakpoint-1800 {
+                        margin-bottom: 13px;
+                    }
+                    @include max-breakpoint-1680 {
+                        margin-bottom: 12px;
+                    }
+                    iframe {
+                        height: 36px;
+                        @include max-breakpoint-1800 {
+                            height: 32px;
+                        }
+                        @include max-breakpoint-1680 {
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Card Form Dailog Style
+.cdk-overlay-pane {
+    &.add-new-card {
+        @include max-breakpoint-1680 {
+            max-width: 524px !important;
+        }
+        .mat-mdc-dialog-container {
+            app-credit-card-form-dialog {
+                mat-dialog-content {
+                    &.mat-mdc-dialog-content {
+                        .finix_form_wrapper {
+                            @include max-breakpoint-1680 {
+                                max-width: 323px;
+                            }
+                            .fxFlex {
+                                &.fxFlex-60 {
+                                    flex: 1 1 56%;
+                                    max-width: 56%;
+                                    @include max-breakpoint-1680 {
+                                        flex: 1 1 48%;
+                                        max-width: 48%;
+                                    }
+                                    @media only screen and (max-width: 959px) {
+                                        flex: 1 1 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                                &.fxFlex-20 {
+                                    flex: 1 1 22%;
+                                    max-width: 22%;
+                                    @include max-breakpoint-1680 {
+                                        flex: 1 1 26%;
+                                        max-width: 26%;
+                                    }
+                                    @media only screen and (max-width: 959px) {
+                                        flex: 1 1 100%;
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

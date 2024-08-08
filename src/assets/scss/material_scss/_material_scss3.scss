@@ -1,0 +1,352 @@
+mat-dialog-container {
+    &.mat-mdc-dialog-container {
+        overflow: inherit;
+
+        .mdc-dialog__surface {
+            overflow: inherit;
+            border-radius: 15px;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+            @include max-breakpoint-1680 {
+                border-radius: 12px;
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+            }
+            @include max-breakpoint-1440 {
+                box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        .mdc-dialog__content {
+            padding: 0 24px;
+            letter-spacing: 0;
+            @include max-breakpoint-1680 {
+                padding: 0 19px;
+            }
+            &.otp_screen_content {
+                mat-tab-group {
+                    &.finalize_payment_tabs {
+                        mat-tab-header {
+                            &.mat-mdc-tab-header {
+                                display: none;
+                            }
+                        }
+                        .mat-mdc-tab-body-wrapper {
+                            mat-tab-body {
+                                padding: 0;
+                                .otp_screen_container {
+                                    padding: 90px 0;
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        padding: 72px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mat Dialog Box Header
+.mat_dialog_header {
+    position: relative;
+
+    button {
+        &.slide_close_btn {
+            @include round_close_btn();
+            right: -10px;
+            top: -10px;
+            z-index: 999;
+            @include max-breakpoint-1680 {
+                right: -8px;
+                top: -8px;
+            }
+        }
+    }
+
+    .mat_dialog_header_content {
+        margin: 0 0 15px 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 12px 0;
+        }
+
+        .fai_link_plaid_logo {
+            @include link_bank_plaid();
+            margin: 15px 0;
+            @include max-breakpoint-1680 {
+                margin: 12px 0;
+            }
+        }
+
+        h2 {
+            &.mat-mdc-dialog-title {
+                @include heading_sm_blue();
+            }
+        }
+
+        &.center {
+            text-align: center;
+        }
+        &.payment_dialog_title {
+            padding: 15px 0;
+            margin: 0;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                padding: 12px 0;
+            }
+            &.request_payment_title {
+                padding: 25px 15px;
+                border-bottom: 1px solid $BLN-113;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    padding: 20px 12px;
+                }
+            }
+            h2 {
+                &.mat-mdc-dialog-title {
+                    position: relative;
+                    font: 700 $font-s-28 $primaryFont;
+                    line-height: normal;
+                    @include max-breakpoint-1800 {
+                        font: 700 $font-s-26 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 700 $font-s-24 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 700 $font-s-22 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 700 $font-s-21 $primaryFont;
+                    }
+                    button {
+                        &.common_back_btn {
+                            min-width: auto;
+                            padding: 0;
+                            position: absolute;
+                            left: 45px;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            @include max-breakpoint-1800 {
+                                left: 40px;
+                            }
+                            @include max-breakpoint-1680 {
+                                left: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.otp_screen_header {
+        .payment_dialog_title {
+            display: none;
+        }
+    }
+}
+// Mat Icon
+mat-icon {
+    width: auto !important;
+    height: auto !important;
+}
+// Mat Badge
+.mat-badge-medium {
+    .mat-badge-content {
+        width: 24px;
+        height: 24px;
+        background: $RD-101;
+        font: 600 $font-s-12 $primaryFont;
+        line-height: 24px;
+        color: $WE-100;
+        @include max-breakpoint-1800 {
+            width: 21px;
+            height: 21px;
+            font: 600 $font-s-11 $primaryFont;
+            line-height: 21px;
+        }
+        @include max-breakpoint-1680 {
+            width: 19px;
+            height: 19px;
+            font: 600 $font-s-10 $primaryFont;
+            line-height: 19px;
+        }
+    }
+}
+// Calender
+.mat-calendar-body-selected {
+    background-color: $BL-101;
+}
+.mat-calendar-body-cell {
+    &:not(.mat-calendar-body-disabled) {
+        &:hover {
+            > .mat-calendar-body-cell-content {
+                &:not(.mat-calendar-body-selected) {
+                    &:not(.mat-calendar-body-comparison-identical) {
+                        background-color: rgba(134, 141, 170, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}
+// Custom ZIndex
+.custom_zIndex {
+    position: relative;
+    z-index: 999;
+}
+.cdk-overlay-backdrop {
+    &.cdk-overlay-backdrop-showing {
+        background: rgba(16, 18, 58, 0.4);
+    }
+}
+.cdk-overlay-pane {
+    &.changePhoneNumber {
+        @include max-breakpoint-1800 {
+            max-width: 469px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 417px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 365px !important;
+        }
+
+        mat-dialog-container {
+            &.mat-mdc-dialog-container {
+                .mdc-dialog__container {
+                    .mat-mdc-dialog-content {
+                        min-height: 356px;
+                        @include max-breakpoint-1800 {
+                            min-height: 320px;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-height: 285px;
+                        }
+                        @include max-breakpoint-1440 {
+                            min-height: 249px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mat Dialog
+.cdk-global-overlay-wrapper {
+    padding: 0 15px;
+    @include max-breakpoint-1680 {
+        padding: 0 12px;
+    }
+}
+.cdk-overlay-dark-backdrop {
+    background: rgba(78, 89, 131, 0.5);
+}
+/* Select Bank Account Select Box Style */
+.cdk-overlay-pane {
+    .mat-mdc-select-panel {
+        &.mdc-menu-surface {
+            border-radius: 5px !important;
+            border: 1px solid $BL-102;
+            padding: 0;
+            @include max-breakpoint-1680 {
+                border-radius: 4px !important;
+            }
+        }
+    }
+    &.fai_select_bank_account {
+        width: auto !important;
+        min-width: 254px;
+        transform: translate(calc(-100% + 254px), 0);
+        @include max-breakpoint-1680 {
+            min-width: 203px;
+            transform: translate(calc(-100% + 203px), 0);
+        }
+    }
+
+    &.delete_file_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 440px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 384px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 380px !important;
+        }
+    }
+    &.sync_complete_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 522px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 464px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 406px !important;
+        }
+    }
+    &.auto_payment_confirmation_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 571px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 508px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 444px !important;
+        }
+    }
+    &.link_account_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 873px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 776px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 679px !important;
+        }
+    }
+    &.vendor_not_found_dialog,
+    &.confirm_information_dialog,
+    &.confirmation_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 585px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 520px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 455px !important;
+        }
+    }
+    &.delete_invoice_confirm_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 450px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 400px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 350px !important;
+        }
+    }
+    &.sync_proceed_dialog {
+        @include max-breakpoint-1800 {
+            max-width: 486px !important;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 432px !important;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 378px !important;
+        }
+    }
+}
+// For Disconnect Business Dialog
+.cdk-overlay-pane {
+    &.disconnect_business_modal {
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            max-width: 534px !important;
+        }
+    }
+}

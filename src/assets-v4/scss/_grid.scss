@@ -1,0 +1,39 @@
+// Common Style For Grid
+.common_row {
+    @include flex_box();
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    @include max-breakpoint-1680 {
+        margin: 0 -12px;
+    }
+}
+
+.common_col {
+    width: 100%;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    padding: 0 15px;
+    @include max-breakpoint-1680 {
+        padding: 0 12px;
+    }
+
+    &.custom_zIndex1 {
+        z-index: 9;
+    }
+}
+
+@for $i from 1 through 12 {
+    .common_col_#{$i} {
+        width: 100%;
+        flex: 0 0 $i * 8.333333333333333%;
+        max-width: $i * 8.333333333333333%;
+        position: relative;
+        padding: 0 15px;
+
+        &.custom_zIndex1 {
+            z-index: 9;
+        }
+    }
+}

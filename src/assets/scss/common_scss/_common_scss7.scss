@@ -1,0 +1,649 @@
+// Table Ghost
+.ghost_table_main {
+    width: 100%;
+
+    .ghost_table_head {
+        display: flex;
+        margin: 0 0 10px 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 8px 0;
+        }
+
+        .ghost_table_th {
+            width: 100%;
+            padding: 8px 8px;
+            @include max-breakpoint-1680 {
+                padding: 6px 6px;
+            }
+
+            .ghost_loading_box {
+                width: 70%;
+                min-height: 24px;
+                @include max-breakpoint-1680 {
+                    width: 56%;
+                    min-height: 19px;
+                }
+            }
+        }
+    }
+
+    .ghost_table_row {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 10px 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 8px 0;
+        }
+
+        .ghost_loading_box {
+            width: 100%;
+            min-height: 62px;
+            border-radius: 5px;
+            margin: 0;
+            @include max-breakpoint-1800 {
+                min-height: 56px;
+            }
+            @include max-breakpoint-1680 {
+                min-height: 50px;
+                border-radius: 4px;
+            }
+            @include max-breakpoint-1440 {
+                min-height: 44px;
+            }
+        }
+    }
+}
+// Custom Sort Table Icon
+.sort_custom_icon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 18px 0 0;
+    cursor: pointer;
+    @include max-breakpoint-1680 {
+        padding: 0 14px 0 0;
+    }
+
+    &::after {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        content: '';
+        background: url('../../../assets/images/common/sorting.svg') no-repeat center;
+        background-size: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transform: rotate(0deg);
+        @include max-breakpoint-1680 {
+            width: 11px;
+            height: 11px;
+            background-size: 10px;
+        }
+    }
+
+    &.descending {
+        &::after {
+            background: url('../../../assets/images/common/sorting2.png') no-repeat center;
+            background-size: 12px;
+            @include max-breakpoint-1680 {
+                background-size: 10px;
+            }
+        }
+    }
+}
+// Table Tooltip
+.table_tooltip_wrap {
+    position: relative;
+    @include flex_center();
+
+    .table_tooltip_inner {
+        min-width: 14px;
+        height: 14px;
+        cursor: pointer;
+        margin-left: 6px;
+        position: relative;
+        top: 0;
+        @include max-breakpoint-1680 {
+            min-width: 11px;
+            height: 11px;
+            margin-left: 5px;
+        }
+        @include max-breakpoint-1365 {
+            margin-left: 1px;
+        }
+
+        img {
+            min-width: 12px;
+            height: 12px;
+            @include max-breakpoint-1680 {
+                min-width: 10px;
+                height: 10px;
+            }
+        }
+
+        .table_inner_tooltip {
+            min-width: 590px;
+            display: none;
+            position: absolute;
+            right: -10px;
+            top: 25px;
+            z-index: 9;
+            background: $WE-100;
+            border: 1px solid $GYN-132;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1607843137);
+            border-radius: 10px;
+            padding: 15px 15px;
+            @include max-breakpoint-1680 {
+                min-width: 472px;
+                right: -8px;
+                top: 20px;
+                box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1607843137);
+                border-radius: 8px;
+                padding: 12px 12px;
+            }
+            @include max-breakpoint-1440 {
+                min-width: 520px;
+                box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1607843137);
+            }
+
+            &::before {
+                width: 5px;
+                height: 5px;
+                position: absolute;
+                content: '';
+                right: 15px;
+                top: -6px;
+                background: $WE-100;
+                border-left: 1px solid $GYN-132;
+                border-top: 1px solid $GYN-132;
+                transform: rotate(45deg);
+                @include max-breakpoint-1680 {
+                    width: 4px;
+                    height: 4px;
+                    right: 12px;
+                    top: 5px;
+                }
+            }
+
+            ul {
+                @include ul_style();
+                text-align: left;
+
+                li {
+                    position: relative;
+                    padding: 2px 0 2px 18px;
+                    font: 400 $font-s-14 $primaryFont;
+                    line-height: 21px;
+                    color: $GY-100;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                        line-height: 17px;
+                    }
+
+                    &::before {
+                        width: 8px;
+                        min-width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: $GY-101;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 8px;
+                        @include max-breakpoint-1680 {
+                            width: 6px;
+                            min-width: 6px;
+                            height: 6px;
+                            top: 6px;
+                        }
+                    }
+
+                    span {
+                        &.green {
+                            color: $GR-100;
+                        }
+                        &.yellow {
+                            color: $YL-105;
+                        }
+                        &.red {
+                            color: $RD-105;
+                        }
+                    }
+
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                    &:last-child {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .table_inner_tooltip {
+                display: block;
+            }
+        }
+    }
+    // Black Tooltip
+    &.table_tooltip_black {
+        .table_tooltip_inner {
+            .table_inner_tooltip {
+                width: 100%;
+                min-width: 350px;
+                background-color: #616161;
+                border: 1px solid #616161;
+                box-shadow: 0 4px 8px rgba(102, 102, 102, 0.1);
+                border-radius: 6px;
+                padding: 6px;
+                font: 400 $font-s-12 $primaryFont;
+                color: #fff;
+                @include max-breakpoint-1680 {
+                    min-width: 280px;
+                    box-shadow: 0 3px 6px rgba(102, 102, 102, 0.1);
+                    border-radius: 5px;
+                    padding: 5px;
+                    font: 400 $font-s-10 $primaryFont;
+                }
+                &::before {
+                    width: 7px;
+                    height: 7px;
+                    right: 14px;
+                    top: -5px;
+                    background-color: #616161;
+                    border-left: 1px solid #616161;
+                    border-top: 1px solid #616161;
+                    @include max-breakpoint-1680 {
+                        width: 6px;
+                        height: 6px;
+                        right: 11px;
+                        top: -4px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Graph Tooltip
+.fc__tooltip.fusioncharts-div {
+    overflow: inherit !important;
+    box-shadow: 0px 10px 10px #0000001a !important;
+    border: 1px solid $BLN-113 !important;
+    @include max-breakpoint-1680 {
+        box-shadow: 0px 8px 8px #0000001a !important;
+    }
+}
+.graph_tooltip {
+    position: relative;
+    padding: 0.6vw 0.8vw;
+    @include max-breakpoint-1680 {
+        padding: 0.48vw 0.64vw;
+    }
+
+    h3 {
+        &.mat-h3 {
+            font: 600 0.8vw $primaryFont;
+            margin: 0 0 0.2vw 0;
+            @include max-breakpoint-1680 {
+                font: 500 0.64vw $primaryFont;
+                margin: 0 0 0.16vw 0;
+            }
+        }
+    }
+
+    .graph_tooltip_content {
+        color: $BL-102;
+    }
+}
+.dashboard_graph_tooltip {
+    padding: 0.2vw 0.8vw;
+    @include max-breakpoint-1680 {
+        padding: 0.16vw 0.64vw;
+    }
+
+    &.row_tooltip {
+        padding: 0.2vw 0;
+        @include max-breakpoint-1680 {
+            padding: 0.16vw 0;
+        }
+
+        .dash_graph_tooltip_row {
+            width: 100%;
+            display: table;
+
+            .dash_graph_tooltip_col {
+                display: table-cell;
+                padding: 0 10px;
+                font: 600 $font-s-12 $primaryFont;
+                @include max-breakpoint-1800 {
+                    font: 600 $font-s-11 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    padding: 0 8px;
+                    font: 600 $font-s-10 $primaryFont;
+                }
+
+                .dash_graph_tooltip_text {
+                    color: $BL-102;
+                }
+
+                &:first-child {
+                    width: 80px;
+                    text-align: left;
+                    @include max-breakpoint-1680 {
+                        width: 64px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Bank Detail Tab Table
+.mat_table_wrap_main {
+    mat-table {
+        &.mat-mdc-table {
+            &.custom_table_padding3 {
+                mat-row {
+                    &.mat-mdc-row {
+                        &.reverted {
+                            .fai_overlay_content_wrapper {
+                                top: auto;
+                                bottom: 100px;
+                                right: 100px;
+                                @include max-breakpoint-1680 {
+                                    bottom: 80px;
+                                    right: 80px;
+                                }
+
+                                @include max-breakpoint-1279 {
+                                    bottom: 140px;
+                                    right: 240px;
+                                }
+
+                                .fai_overlay_content {
+                                    h6 {
+                                        &::after {
+                                            width: 125px;
+                                            height: 125px;
+                                            right: -120px;
+                                            bottom: -110px;
+                                            background: url('../../../assets/images/common/business-setting-arrow2.png') no-repeat center top;
+                                            background-size: 60%;
+                                            @include max-breakpoint-1680 {
+                                                width: 100px;
+                                                height: 100px;
+                                                right: -96px;
+                                                bottom: -88px;
+                                                background-size: 48%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Request Button Style For Invoices & Bills Drawer */
+button {
+    &.fai_btn_request {
+        .mdc-button__label {
+            @include flex_center();
+            justify-content: center;
+            .button_enabled {
+                display: block;
+            }
+            .button_disabled {
+                display: none;
+            }
+        }
+        &[disabled='true'] {
+            .mdc-button__label {
+                .button_enabled {
+                    display: none;
+                }
+                .button_disabled {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// Account Setting Page
+.account_details_tab_header {
+    width: 100%;
+    @include flex_center();
+    border-bottom: 1px solid $BL-103;
+    margin: 0 0 45px 0;
+    @include max-breakpoint-1680 {
+        margin: 0 0 36px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 25px 0;
+    }
+
+    ul {
+        @include ul_style();
+
+        li {
+            display: inline-block;
+            position: relative;
+            padding: 0 10px;
+            @include max-breakpoint-1680 {
+                padding: 0 8px;
+            }
+
+            &:first-child {
+                padding-left: 0;
+            }
+
+            button {
+                &.horizontal_tab_btn {
+                    min-height: 42px;
+                    display: inline-block;
+                    font: 600 $font-s-16 $primaryFont;
+                    padding: 6px 30px;
+                    color: $BL-102;
+                    background-color: $WE-100;
+                    border-radius: 10px 10px 0 0;
+                    border: 1px solid #dbdeeb;
+                    border-bottom: 0;
+                    box-shadow: inset 0px 3px 6px rgba(102, 102, 102, 0.1);
+                    cursor: pointer;
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-height: 34px;
+                        font: 600 $font-s-14 $primaryFont;
+                        padding: 5px 24px;
+                        border-radius: 8px 8px 0 0;
+                        box-shadow: inset 0px 2px 5px rgba(102, 102, 102, 0.1);
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 600 $font-s-12 $primaryFont;
+                    }
+
+                    .horizontal_btn_inner {
+                        width: 100%;
+                        @include flex_center();
+                        justify-content: center;
+
+                        .info_tooltip_wrapper {
+                            &.info_text {
+                                &.ml_0 {
+                                    margin-left: 6px;
+                                    position: relative;
+                                    top: 2px;
+                                    @include max-breakpoint-1680 {
+                                        margin-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    img {
+                        max-height: 21px;
+                        margin-right: 9px;
+                        @include max-breakpoint-1680 {
+                            max-height: 17px;
+                            margin-right: 7px;
+                        }
+                    }
+                }
+            }
+
+            &.active,
+            &:focus,
+            &:hover {
+                button {
+                    &.horizontal_tab_btn {
+                        color: $BL-103;
+                        background-color: $WE-100;
+                        border-color: $BL-103;
+                        box-shadow: 0px -10px 10px rgba(102, 102, 102, 0.1);
+                        @include max-breakpoint-1680 {
+                            box-shadow: 0px -8px 8px rgba(102, 102, 102, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Center Align
+    &.center {
+        ul {
+            text-align: center;
+        }
+    }
+}
+.account_details_wrapper {
+    width: 100%;
+    position: relative;
+
+    .account_details_tab_content {
+        width: 100%;
+        position: relative;
+
+        .setting_tab_footer {
+            width: 100%;
+            @include flex_center();
+            margin-top: 30px;
+            @include max-breakpoint-1680 {
+                margin-top: 24px;
+            }
+
+            button {
+                &.fot_btn {
+                    min-width: 180px;
+                    min-height: 45px;
+                    font: 700 $font-s-16 $primaryFont;
+                    color: $BK-100;
+                    background-color: $GY-107;
+                    padding: 4px 15px;
+                    @include max-breakpoint-1800 {
+                        min-height: 40px;
+                        font: 700 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-width: 144px;
+                        min-height: 36px;
+                        font: 700 $font-s-14 $primaryFont;
+                        padding: 3px 12px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 700 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        min-height: 34px;
+                        font: 700 $font-s-12 $primaryFont;
+                    }
+
+                    .mdc-button__label {
+                        @include flex_center();
+
+                        mat-spinner {
+                            svg {
+                                circle {
+                                    stroke: $WE-100;
+                                }
+                            }
+                        }
+                    }
+
+                    &.blue_btn {
+                        color: $WE-100;
+                        background-color: $BL-103;
+
+                        &[disabled='true'],
+                        &.disabled,
+                        &.mat-button-disabled {
+                            @include disable_button();
+                        }
+                        img {
+                            margin: 0 6px 0 0;
+                            @include max-breakpoint-1680 {
+                                margin: 0 5px 0 0;
+                            }
+                        }
+                    }
+
+                    &[disabled='true'],
+                    &.disabled,
+                    &.mat-button-disabled {
+                        @include disable_button();
+                    }
+                }
+            }
+
+            &.right_align {
+                justify-content: flex-end;
+            }
+
+            &.business_address_checkbox {
+                mat-checkbox {
+                    margin-left: -10px;
+                    @include max-breakpoint-1680 {
+                        margin-left: -8px;
+                    }
+
+                    label {
+                        font: 600 $font-s-16 $primaryFont;
+                        color: $BL-103;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-15 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-14 $primaryFont;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1440 {
+                            font: 600 $font-s-12 $primaryFont;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

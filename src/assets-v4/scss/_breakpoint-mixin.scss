@@ -1,0 +1,102 @@
+/* All Max Width Breakpoint Mixins Include Here */
+@mixin max-breakpoint-1800 {
+    @media (max-width: #{$desktopS-1800}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1680 {
+    @media (max-width: #{$desktopS-1680}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1580 {
+    @media (max-width: #{$desktopS-1580}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1440 {
+    @media (max-width: #{$desktopS-1440}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1366 {
+    @media (max-width: #{$desktopS-1366}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1365 {
+    @media (max-width: #{$desktopS-1365}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1279 {
+    @media (max-width: #{$desktopS-1279}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1199 {
+    @media (max-width: #{$desktopS-1199}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1136 {
+    @media (max-width: #{$desktopS-1136}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1080 {
+    @media (max-width: #{$desktopS-1080}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-1024 {
+    @media (max-width: #{$desktopS-1024}) {
+        @content;
+    }
+}
+
+@mixin max-breakpoint-991 {
+    @media (max-width: #{$desktopS-991}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-959 {
+    @media (max-width: #{$desktopS-959}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-900 {
+    @media (max-width: #{$desktopS-900}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-880 {
+    @media (max-width: #{$desktopS-880}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-767 {
+    @media (max-width: #{$desktopS-767}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-599 {
+    @media (max-width: #{$desktopS-599}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-540 {
+    @media (max-width: #{$desktopS-540}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-480 {
+    @media (max-width: #{$desktopS-480}) {
+        @content;
+    }
+}
+@mixin max-breakpoint-414 {
+    @media (max-width: #{$desktopS-414}) {
+        @content;
+    }
+}

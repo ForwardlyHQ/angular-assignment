@@ -1,0 +1,60 @@
+// Import Flex Mixin
+@import "./flex-mixin";
+
+// All Flex Layout Directions
+@media (min-width: 1280px) {
+  .fx-row {
+    @include flex-direction-row();
+  }
+  .fx-row-reverse {
+    @include flex-direction-row-reverse();
+  }
+  .fx-column {
+    @include flex-direction-column();
+  }
+  .fx-column-reverse {
+    @include flex-direction-column-reverse();
+  }
+}
+@media (min-width: 960px) and (max-width: 1279px) {
+  .fx-md-row {
+    @include flex-direction-row();
+  }
+  .fx-md-row-reverse {
+    @include flex-direction-row-reverse();
+  }
+  .fx-md-column {
+    @include flex-direction-column();
+  }
+  .fx-md-column-reverse {
+    @include flex-direction-column-reverse();
+  }
+}
+@media (min-width: 600px) and (max-width: 959px) {
+  .fx-sm-row {
+    @include flex-direction-row();
+  }
+  .fx-sm-row-reverse {
+    @include flex-direction-row-reverse();
+  }
+  .fx-sm-column {
+    @include flex-direction-column();
+  }
+  .fx-sm-column-reverse {
+    @include flex-direction-column-reverse();
+  }
+}
+@media (max-width: 599px) {
+  .fx-xs-row {
+    @include flex-direction-row();
+  }
+  .fx-xs-row-reverse {
+    @include flex-direction-row-reverse();
+  }
+  .fx-xs-column {
+    @include flex-direction-column();
+  }
+  .fx-xs-column-reverse {
+    @include flex-direction-column-reverse();
+  }
+}

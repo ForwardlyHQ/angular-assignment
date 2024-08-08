@@ -1,0 +1,220 @@
+.mat_table_wrap_main {
+    mat-table {
+        &.mat-mdc-table {
+            &.linked_bank_box_table {
+                &.custom_table_padding1 {
+                    mat-header-row {
+                        &.mat-mdc-header-row {
+                            padding: 0 0.4vw 0 3.1vw;
+                            @include max-breakpoint-1680 {
+                                padding: 0 0.32vw 0 2.48vw;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            min-height: 60px;
+                            padding: 0 0.4vw 0 60px;
+                            @include max-breakpoint-1680 {
+                                min-height: inherit;
+                                padding: 0 0.32vw 0 48px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                &.custom_table_padding2 {
+                    mat-header-row {
+                        &.mat-mdc-header-row {
+                            padding: 0 34px;
+                            @include max-breakpoint-1680 {
+                                padding: 0 27px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            padding: 0 34px;
+                            @include max-breakpoint-1680 {
+                                padding: 0 27px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+
+                &.custom_table_padding3 {
+                    mat-header-row {
+                        &.mat-mdc-header-row {
+                            padding: 0 10px;
+                            @include max-breakpoint-1680 {
+                                padding: 0 8px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            padding: 0 10px;
+                            @include max-breakpoint-1680 {
+                                padding: 0 8px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 6px 0;
+                            }
+
+                            &:last-child {
+                                .btn_tooltip_wrapper {
+                                    .info_tooltip {
+                                        &.hover_tooltip {
+                                            top: auto;
+                                            bottom: calc(100% + 8px);
+                                            @include max-breakpoint-1680 {
+                                                bottom: calc(100% + 6px);
+                                            }
+                                            &::before {
+                                                top: auto;
+                                                bottom: -6px;
+                                                transform: rotate(225deg);
+                                                @include max-breakpoint-1680 {
+                                                    bottom: -5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.fai_sky_bgColor {
+                        mat-row {
+                            &.mat-mdc-row {
+                                background-color: $BLN-119;
+                                border-color: $GYN-132;
+                            }
+                        }
+                    }
+                }
+
+                &.custom_table_padding4 {
+                    mat-header-row {
+                        &.mat-mdc-header-row {
+                            padding: 0 15px 0 85px;
+                            @include max-breakpoint-1680 {
+                                padding: 0 12px 0 68px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            min-height: 65px;
+                            padding: 0 15px 0 80px;
+                            @include max-breakpoint-1680 {
+                                min-height: inherit;
+                                padding: 0 12px 0 64px;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+
+                            mat-cell {
+                                min-height: 65px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 52px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.dialog_tooltip_alignment {
+                    &.scroll_visible_table {
+                        mat-row {
+                            &.mat-mdc-row {
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4) {
+                                    .btn_tooltip_wrapper {
+                                        .info_tooltip {
+                                            &.fai_top_tooltip {
+                                                top: calc(100% + 5px);
+                                                bottom: auto;
+                                                @include max-breakpoint-1680 {
+                                                    top: calc(100% + 4px);
+                                                    bottom: auto;
+                                                }
+
+                                                &::before {
+                                                    top: -5px;
+                                                    bottom: auto;
+                                                    transform: rotate(220deg);
+                                                    @include max-breakpoint-1680 {
+                                                        top: -4px;
+                                                        bottom: auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.last_child {
+                                    .btn_tooltip_wrapper {
+                                        .info_tooltip {
+                                            &.dialog_hover_tooltip {
+                                                top: auto;
+                                                bottom: calc(100% + 8px);
+                                                @include max-breakpoint-1680 {
+                                                    bottom: calc(100% + 6px);
+                                                }
+                                                &::before {
+                                                    top: auto;
+                                                    bottom: -6px;
+                                                    transform: rotate(225deg);
+                                                    @include max-breakpoint-1680 {
+                                                        bottom: -5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Team Management Table
+            &.team_management_table {
+                mat-header-row {
+                    &.mat-mdc-header-row {
+                        &.gray_header_row {
+                            background: $WE-100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

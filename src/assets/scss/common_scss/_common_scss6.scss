@@ -1,0 +1,451 @@
+/* Transaction Details Component */
+.fai_transaction_date_wise_wrapper {
+    min-height: 100px;
+    background: $WE-100;
+    padding: 5px 15px 0 15px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        min-height: 80px;
+        padding: 4px 12px 0 12px;
+    }
+
+    .fai_transaction_date_wise {
+        position: relative;
+        padding: 15px 15px;
+        background-color: $BLN-119;
+        border-radius: 10px;
+        box-shadow: inset 0px 3px 6px $boxShadow-C-3;
+        margin-bottom: 80px;
+
+        @include max-breakpoint-1680 {
+            padding: 12px 15px;
+            margin-bottom: 60px;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            padding: 12px 12px;
+            border-radius: 8px;
+            box-shadow: inset 0px 2px 5px $boxShadow-C-3;
+            margin-bottom: 64px;
+        }
+
+        @include max-breakpoint-1440 {
+            padding: 10px 15px;
+            margin-bottom: 40px;
+        }
+
+        mat-list {
+            &.mat-mdc-list {
+                display: flex;
+                padding: 0;
+
+                mat-list-item {
+                    &.mat-mdc-list-item {
+                        flex: 1 1 0;
+                        max-width: 100%;
+                        padding: 0 15px;
+                        cursor: pointer;
+
+                        @include max-breakpoint-1680 {
+                            padding: 0 12px;
+                        }
+
+                        @include max-breakpoint-1440 {
+                            padding: 0 10px;
+                        }
+
+                        &:not(.fai_transaction_btn, .fai_border_none) {
+                            border-right: 1px solid $GY-117;
+                        }
+
+                        &.fai_transaction_btn {
+                            flex: 0 0 30px;
+                            width: 30px;
+                            max-width: 100%;
+                            padding: 0;
+                            position: absolute;
+                            left: -15px;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                flex: 0 0 24px;
+                                width: 24px;
+                                left: -12px;
+                            }
+
+                            &.fai_transaction_next {
+                                left: auto;
+                                right: -15px;
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    right: -12px;
+                                }
+                            }
+
+                            .mdc-list-item__content {
+                                .mdc-list-item__primary-text {
+                                    .mdc-button {
+                                        padding: 0;
+                                        min-width: 30px;
+                                        height: 30px;
+                                        background-color: $BL-102;
+                                        border-radius: 50%;
+                                        box-shadow: 0 3px 6px $boxShadow-C-6;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            min-width: 24px;
+                                            height: 24px;
+                                            box-shadow: 0 2px 5px $boxShadow-C-6;
+                                        }
+
+                                        mat-icon {
+                                            margin: 0;
+                                            color: $WE-100;
+                                        }
+
+                                        .mdc-button__label {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                /* Ghost Loading Style */
+                                .mat-mdc-list-item-unscoped-content {
+                                    .ghost_loading_box {
+                                        display: block;
+                                        width: 30px;
+                                        min-height: 30px;
+                                        border-radius: 50%;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            width: 24px;
+                                            min-height: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .mdc-list-item__content,
+                        .mdc-list-item__primary-text {
+                            overflow: inherit;
+                        }
+
+                        .mdc-list-item__content {
+                            .mdc-list-item__primary-text {
+                                span {
+                                    display: block;
+                                    font: 400 $font-s-14 $primaryFont;
+                                    line-height: normal;
+                                    color: $BL-102;
+                                    text-align: center;
+                                    @include max-breakpoint-1800 {
+                                        font: 400 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 400 $font-s-12 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 400 $font-s-11 $primaryFont;
+                                    }
+
+                                    &.fai_transaction_date {
+                                        margin-bottom: 7px;
+
+                                        @include max-breakpoint-1680 {
+                                            margin-bottom: 6px;
+                                        }
+
+                                        @include max-breakpoint-1440 {
+                                            margin-bottom: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            /* Ghost Loading Style */
+                            .mat-mdc-list-item-unscoped-content {
+                                .fai_transaction_date {
+                                    display: block;
+                                    margin-bottom: 7px;
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        margin-bottom: 6px;
+                                    }
+
+                                    span {
+                                        &.ghost_loading_box {
+                                            width: 90%;
+                                            min-height: 17px;
+                                            display: block;
+                                            margin: auto;
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                width: 72%;
+                                                min-height: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .fai_transaction_amount {
+                                    .ghost_loading_box {
+                                        width: 70%;
+                                        min-height: 17px;
+                                        display: block;
+                                        margin: auto;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            width: 56%;
+                                            min-height: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        /* If Active, Hover, & Focused */
+                        &:not(.fai_transaction_btn) {
+                            &.active,
+                            &:hover,
+                            &:focus {
+                                overflow: visible;
+
+                                .mdc-list-item__content {
+                                    height: 81px;
+                                    position: absolute;
+                                    left: 15px;
+                                    right: 15px;
+                                    top: -20px;
+                                    @include flex_center();
+                                    justify-content: center;
+                                    background-color: $WE-100;
+                                    border: 1px solid $BL-102;
+                                    border-radius: 10px;
+                                    box-shadow: 0px 10px 10px $boxShadow-C-3;
+
+                                    @include max-breakpoint-1680 {
+                                        height: 72px;
+                                        left: 12px;
+                                        right: 12px;
+                                        top: -17px;
+                                        border-radius: 7px;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        height: 65px;
+                                        left: 12px;
+                                        right: 12px;
+                                        top: -16px;
+                                        border-radius: 8px;
+                                        box-shadow: 0px 8px 8px $boxShadow-C-3;
+                                    }
+
+                                    @include max-breakpoint-1440 {
+                                        height: 65px;
+                                        left: 10px;
+                                        right: 10px;
+                                        top: -15px;
+                                        border-radius: 5px;
+                                    }
+
+                                    .mdc-list-item__primary-text {
+                                        span {
+                                            font-weight: 500;
+                                            color: $BL-103;
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                font-weight: 400;
+                                            }
+
+                                            &.fai_transaction_amount {
+                                                strong {
+                                                    font-weight: 700;
+                                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Transaction Details Dialog Button Style */
+.fai_trans_add_show {
+    text-align: center;
+    margin-bottom: 35px;
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        margin-bottom: 28px;
+    }
+
+    @include max-breakpoint-1440 {
+        margin-bottom: 20px;
+    }
+
+    button {
+        &.mat-mdc-button {
+            &.fai_trans_btn {
+                min-width: 260px;
+                height: 33px;
+                font: 600 $font-s-16 $primaryFont;
+                color: $WE-100;
+                background-color: $BL-102;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    min-width: 208px;
+                    height: 26px;
+                    font: 500 $font-s-13 $primaryFont;
+                }
+
+                @include max-breakpoint-1440 {
+                    min-width: 230px;
+                    font: 600 $font-s-14 $primaryFont;
+                }
+
+                .mdc-button__label {
+                    @include flex_center();
+                    justify-content: center;
+                    flex: 1 1 0;
+                    width: 100%;
+
+                    img {
+                        max-width: 20px;
+                        margin-right: 7px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            max-width: 16px;
+                            margin-right: 6px;
+                        }
+
+                        &.fai_active {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.fai_show_trans {
+                    color: $BL-102;
+                    background-color: $WE-100;
+                    border: 1px solid $BL-102;
+                }
+
+                &.active {
+                    color: $WE-100;
+                    background-color: $BL-103;
+                    border-color: $BL-108;
+                    box-shadow: 0px 10px 10px $boxShadow-C-3;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        box-shadow: 0px 8px 8px $boxShadow-C-3;
+                    }
+
+                    .mdc-button__label {
+                        img {
+                            display: none;
+
+                            &.fai_active {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Table Ghost
+.ghost_table_main {
+    width: 100%;
+
+    .ghost_table_head {
+        display: flex;
+        margin: 0 0 10px 0;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            margin: 0 0 8px 0;
+        }
+
+        .ghost_table_th {
+            width: 100%;
+            padding: 8px 8px;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                padding: 6px 6px;
+            }
+
+            .ghost_loading_box {
+                width: 70%;
+                min-height: 24px;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    width: 56%;
+                    min-height: 19px;
+                }
+            }
+        }
+    }
+
+    .ghost_table_row {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 10px 0;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            margin: 0 0 8px 0;
+        }
+
+        .ghost_loading_box {
+            width: 100%;
+            min-height: 62px;
+            border-radius: 5px;
+            margin: 0;
+
+            @include max-breakpoint-1800 {
+                min-height: 45px;
+            }
+
+            @include max-breakpoint-1680 {
+                min-height: 35px;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                min-height: 50px;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+// Not Found
+.no_data_found_wrapper {
+    text-align: center;
+    img {
+        width: 150px;
+        display: block;
+        margin: 0 auto 25px auto;
+        @include max-breakpoint-1680 {
+            margin: 0 auto 20px auto;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            width: 120px;
+            margin: 0 auto 20px auto;
+        }
+        @include max-breakpoint-1440 {
+            height: 110px;
+            margin: 0 auto 15px auto;
+        }
+    }
+
+    h3 {
+        &.mat-h3 {
+            font: 600 $font-s-18 $primaryFont;
+            color: $BL-102;
+            text-align: center;
+            margin: 0 0 35px 0;
+            letter-spacing: 0.3px;
+            @include max-breakpoint-1680 {
+                font: 700 $font-s-16 $primaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 600 $font-s-14 $primaryFont;
+                margin: 0 0 28px 0;
+            }
+            @include max-breakpoint-1440 {
+                font: 700 $font-s-14 $primaryFont;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* Global SCSS File Include Here */
+@import './include-file';
+
+// Main Code Start
+a {
+    color: $BE-1;
+    text-decoration: underline;
+
+    &:hover {
+        color: $BE-1;
+        text-decoration: none;
+    }
+}

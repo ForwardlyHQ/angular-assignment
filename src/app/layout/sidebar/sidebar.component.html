@@ -1,0 +1,28 @@
+<div class="fai_side_nav_wrapper">
+  <mat-nav-list class="primary_navigation">
+    <mat-list-item class="primary_list_dropdown">
+      <button
+        matLine
+        mat-button
+        class="primary_menu_btn"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
+        [routerLink]="['./invoice/create']"
+      >
+        Create
+      </button>
+    </mat-list-item>
+    <mat-list-item class="primary_list_dropdown support_menu">
+      <button
+        matLine
+        mat-button
+        class="primary_menu_btn"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: false }"
+        [routerLink]="['./invoice/list']"
+      >
+        List
+      </button>
+    </mat-list-item>
+  </mat-nav-list>
+</div>

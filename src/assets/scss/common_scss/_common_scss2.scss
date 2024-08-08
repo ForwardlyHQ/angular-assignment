@@ -1,0 +1,480 @@
+// Business User
+.business_user_wrapper {
+    width: 100%;
+    padding: 0 0 30px 0;
+    @include max-breakpoint-1680 {
+        padding: 0 0 24px 0;
+    }
+
+    .table_search_bar {
+        position: relative;
+        margin: 0 0 20px 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 16px 0;
+        }
+        .ghost_loading_box {
+            min-height: 36px;
+            @include max-breakpoint-1680 {
+                min-height: 29px;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 36px;
+            font: 400 $font-s-15 $primaryFont;
+            color: $BL-102;
+            background: none;
+            border: 0;
+            border-bottom: 1px solid $GY-124;
+            border-radius: 0;
+            padding: 10px 10px 10px 35px;
+
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-14 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                height: 29px;
+                padding: 8px 8px 8px 28px;
+                font: 400 $font-s-12 $primaryFont;
+            }
+
+            &::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: $BL-102;
+                opacity: 1;
+                /* Firefox */
+            }
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: $BL-102;
+            }
+            &::-ms-input-placeholder {
+                /* Microsoft Edge */
+                color: $BL-102;
+            }
+        }
+
+        button {
+            &.search_btn {
+                width: 24px;
+                min-width: 24px;
+                height: 24px;
+                line-height: 24px;
+                position: absolute;
+                left: 0;
+                top: 8px;
+                z-index: 9;
+                color: $BL-102;
+                background: none;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+
+                mat-icon {
+                    font-size: $font-s-21;
+                }
+                @include max-breakpoint-1680 {
+                    width: 19px;
+                    min-width: 19px;
+                    height: 19px;
+                    line-height: 19px;
+                    top: 6px;
+                    mat-icon {
+                        font-size: $font-s-17;
+                    }
+                }
+            }
+        }
+    }
+}
+// Common Page Wrapper
+.common_setting_wrapper {
+    position: relative;
+    padding: 0 100px 0 126px;
+    @include max-breakpoint-1680 {
+        padding: 0 80px 0 101px;
+    }
+    @include max-breakpoint-1440 {
+        padding: 0 70px 0 88px;
+    }
+    @include max-breakpoint-1279 {
+        padding: 0 65px;
+    }
+    @include max-breakpoint-767 {
+        padding: 0 35px;
+    }
+    @include max-breakpoint-599 {
+        padding: 0 15px;
+    }
+}
+// Stepper Footer Button
+.stepper_btn_footer {
+    width: 100%;
+    @include flex_center();
+
+    &.button_divide {
+        flex-wrap: wrap;
+    }
+
+    button {
+        &.stepper_btn {
+            min-width: 113px;
+            min-height: 50px;
+            background-color: $BL-102;
+            font: 700 $font-s-16 $primaryFont;
+            color: $WE-100;
+
+            mat-icon {
+                font-size: $font-s-21;
+            }
+
+            mat-spinner {
+                svg {
+                    circle {
+                        stroke: $WE-100;
+                    }
+                }
+            }
+
+            @include max-breakpoint-1800 {
+                min-width: 100px;
+                min-height: 40px;
+                font: 700 $font-s-15 $primaryFont;
+                mat-icon {
+                    font-size: $font-s-16;
+                }
+            }
+            @include max-breakpoint-1680 {
+                min-width: 90px;
+                font: 700 $font-s-14 $primaryFont;
+                mat-icon {
+                    font-size: $font-s-17;
+                }
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 700 $font-s-13 $primaryFont;
+            }
+
+            &.right {
+                margin-left: auto;
+            }
+
+            &.center {
+                margin: auto;
+            }
+
+            &.icon_right {
+                mat-icon {
+                    margin: 0 0 0 6px;
+                    order: 2;
+                    @include max-breakpoint-1680 {
+                        margin: 0 0 0 5px;
+                    }
+                }
+            }
+
+            &.blue_btn {
+                color: $WE-100;
+                background-color: $BL-103;
+            }
+
+            &.red_btn {
+                color: $WE-100;
+                background-color: $RD-101;
+
+                .mdc-button__label {
+                    position: static;
+                }
+                &.qbo_btn {
+                    font: 700 $font-s-16 $secondaryFont !important;
+                    background-color: #2ca01c !important;
+                }
+                &.xero_btn {
+                    font: 700 $font-s-16 $secondaryFont !important;
+                    background-color: #0d84ab !important;
+                    .mdc-button__label {
+                        @include flex_center();
+                        justify-content: center;
+                        img {
+                            height: 35px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+
+            &.green_btn,
+            &.blue_light_btn {
+                font: 700 $font-s-16 $secondaryFont;
+                color: $WE-100;
+
+                .mdc-button__label {
+                    @include flex_center();
+                    justify-content: center;
+
+                    img {
+                        height: 35px;
+                        margin: 0 10px 0 0;
+                    }
+                }
+
+                @include max-breakpoint-1800 {
+                    font: 700 $font-s-14 $secondaryFont;
+
+                    .mdc-button__label {
+                        img {
+                            height: 26px;
+                            margin: 0 6px 0 0;
+                        }
+                    }
+                }
+            }
+
+            &.green_btn {
+                background-color: #2ca01c;
+            }
+
+            &.blue_light_btn {
+                background-color: #0d84ab;
+            }
+
+            &.disabled,
+            &[disabled='true'],
+            &.mat-button-disabled {
+                @include disable_button();
+            }
+        }
+    }
+
+    &.fai_fixed_btn {
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        @include max-breakpoint-1680 {
+            bottom: 12px;
+        }
+    }
+    &.fixed_right {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+app-settings-wrapper {
+    .business_heading_wrap {
+        h2 {
+            &.mat-h2 {
+                margin: 0 0 15px 0;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 12px 0;
+                }
+                .ghost_loading_box {
+                    width: 35%;
+                    min-height: 29px;
+                }
+            }
+        }
+    }
+    .tab_content_heading {
+        p {
+            font-weight: 400 !important;
+            span {
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+    // Business Setting > Banking Details
+    app-banking-details {
+        .bank_details_wrapper {
+            mat-card {
+                &.no_bank_connected {
+                    min-height: 280px;
+                    @include max-breakpoint-1800 {
+                        min-height: 240px;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-height: 224px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Business User Choose Permission
+mat-radio-group {
+    &.fai_user_permission {
+        display: flex;
+        flex-wrap: wrap;
+        mat-radio-button {
+            &.mat-mdc-radio-button {
+                width: 100%;
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin: 0 0 15px 0;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 12px 0;
+                }
+                @include max-breakpoint-1440 {
+                    margin: 0 0 10px 0;
+                }
+                &:nth-child(odd) {
+                    flex: 0 0 40%;
+                    max-width: 40%;
+                    @include max-breakpoint-1365 {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    @include max-breakpoint-1279 {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+
+                &:nth-child(even) {
+                    flex: 0 0 60%;
+                    max-width: 60%;
+                    @include max-breakpoint-1365 {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                    @include max-breakpoint-1279 {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                    }
+                }
+                &.disabledRadioButton {
+                    pointer-events: none;
+                    cursor: default;
+                }
+                .mdc-form-field {
+                    width: 100%;
+                    font: 400 $font-s-14 $primaryFont;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+
+                    .mdc-radio {
+                        width: 20px;
+                        height: 20px;
+                        padding: 0 8px 0 0;
+                        @include max-breakpoint-1680 {
+                            width: 16px;
+                            height: 16px;
+                            padding: 0 6px 0 0;
+                        }
+
+                        .mdc-radio__background {
+                            width: 20px;
+                            height: 20px;
+                            @include max-breakpoint-1680 {
+                                width: 16px;
+                                height: 16px;
+                            }
+
+                            &::before {
+                                width: 40px;
+                                height: 40px;
+                                top: 0;
+                                left: 0;
+                                display: none;
+                                @include max-breakpoint-1680 {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+
+                            &::after {
+                                width: 12px;
+                                height: 6px;
+                                position: absolute;
+                                content: '';
+                                left: 5px;
+                                top: 3px;
+                                border: 0;
+                                border-left: 2px solid $WE-100;
+                                border-bottom: 2px solid $WE-100;
+                                transform: rotate(-35deg);
+                                z-index: 1;
+                                opacity: 0;
+                                @include max-breakpoint-1680 {
+                                    width: 10px;
+                                    height: 5px;
+                                    left: 4px;
+                                    top: 2px;
+                                }
+                            }
+                        }
+
+                        .mat-radio-ripple {
+                            display: none;
+                        }
+
+                        .mdc-radio__native-control {
+                            width: 40px;
+                            height: 40px;
+                            top: 0;
+                            right: 0;
+                            left: 0;
+                            @include max-breakpoint-1680 {
+                                width: 32px;
+                                height: 32px;
+                            }
+
+                            &:enabled {
+                                &:not(:checked) + {
+                                    .mdc-radio__background {
+                                        .mdc-radio__outer-circle,
+                                        .mdc-radio__inner-circle {
+                                            border-color: $BL-102;
+                                        }
+                                    }
+                                }
+                                &:checked + {
+                                    .mdc-radio__background {
+                                        .mdc-radio__outer-circle,
+                                        .mdc-radio__inner-circle {
+                                            border-color: $GR-100;
+                                            background: $GR-100;
+                                        }
+
+                                        &::after {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    > label {
+                        font: 600 $font-s-14 $primaryFont;
+                        color: $BL-102;
+                        letter-spacing: 0;
+                        padding: 0;
+                        margin: 0 0 3px 0;
+                        cursor: pointer;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-12 $primaryFont;
+                            margin: 0 0 2px 0;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-11 $primaryFont;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

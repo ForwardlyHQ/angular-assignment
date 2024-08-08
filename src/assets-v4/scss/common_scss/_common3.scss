@@ -1,0 +1,533 @@
+// Button Tooltip
+.btn_tooltip_wrapper {
+    display: inline-block;
+    position: relative;
+    margin-left: 8px;
+    @include max-breakpoint-1680 {
+        margin-left: 6px;
+    }
+
+    .info_tooltip {
+        width: 100%;
+        min-width: 290px;
+        background: $WE-1;
+        position: absolute;
+        left: 0;
+        top: calc(100% + 8px);
+        z-index: 99;
+        padding: 12px 12px;
+        border: 1px solid $GY-107;
+        box-shadow: 0 4px 8px rgba(102, 102, 102, 0.1);
+        border-radius: 6px;
+        display: none;
+        @include max-breakpoint-1680 {
+            min-width: 232px;
+            top: calc(100% + 6px);
+            padding: 10px 10px;
+            box-shadow: 0 3px 6px rgba(102, 102, 102, 0.1);
+            border-radius: 5px;
+        }
+
+        &::before {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            content: '';
+            left: 8px;
+            top: -6px;
+            background: $WE-1;
+            border-left: 1px solid $GY-107;
+            border-top: 1px solid $GY-107;
+            transform: rotate(45deg);
+            @include max-breakpoint-1680 {
+                width: 6px;
+                height: 6px;
+                left: 6px;
+                top: -5px;
+            }
+        }
+
+        &.fai_top_tooltip {
+            top: auto;
+            bottom: calc(100% + 5px);
+            @include max-breakpoint-1680 {
+                bottom: calc(100% + 4px);
+            }
+
+            &::before {
+                top: auto;
+                bottom: -4px;
+                border-left: none;
+                border-top: none;
+                border-right: 1px solid $RD-101;
+                border-bottom: 1px solid $RD-101;
+                @include max-breakpoint-1680 {
+                    bottom: -3px;
+                }
+            }
+        }
+
+        &.custom_lg_tooltip {
+            min-width: 44vw;
+            @include max-breakpoint-1800 {
+                min-width: 50vw;
+            }
+            @include max-breakpoint-1580 {
+                min-width: 54vw;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                min-width: 35vw;
+            }
+            @include max-breakpoint-1440 {
+                min-width: 56vw;
+            }
+            @include max-breakpoint-1366 {
+                min-width: 55vw;
+            }
+        }
+
+        &.right {
+            left: auto;
+            right: 0;
+
+            &::before {
+                left: auto;
+                right: 18px;
+                @include max-breakpoint-1680 {
+                    right: 14px;
+                }
+            }
+        }
+
+        &.red_border {
+            border-color: $RD-101;
+
+            &::before {
+                border-left-color: $RD-101;
+                border-top-color: $RD-101;
+            }
+        }
+
+        .info_tooltip_content {
+            p {
+                font: 400 $font-s-14 $primaryFont;
+                line-height: 18px;
+                color: $BL-102;
+                @include max-breakpoint-1800 {
+                    font: 400 $font-s-13 $primaryFont;
+                    line-height: 18px;
+                }
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-12 $primaryFont;
+                    line-height: 16px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-11 $primaryFont;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        .info_tooltip_footer {
+            padding: 15px 0 0 0;
+            @include max-breakpoint-1680 {
+                padding: 12px 0 0 0;
+            }
+
+            h5 {
+                &.mat-h5 {
+                    font: 700 $font-s-16 $primaryFont;
+                    color: $BL-103;
+                    margin: 0 0 15px 0;
+                    @include max-breakpoint-1800 {
+                        font: 700 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 700 $font-s-14 $primaryFont;
+                        margin: 0 0 12px 0;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 700 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 700 $font-s-12 $primaryFont;
+                    }
+                }
+            }
+
+            .info_tool_row {
+                @include flex_align_center();
+
+                button {
+                    &.info_tool_btn {
+                        font: 300 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                        padding: 2px 6px;
+                        @include max-breakpoint-1800 {
+                            font: 300 $font-s-13 $primaryFont;
+                            line-height: 21px;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 300 $font-s-12 $primaryFont;
+                            line-height: 18px;
+                            padding: 2px 5px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 300 $font-s-11 $primaryFont;
+                            line-height: 17px;
+                        }
+
+                        mat-icon {
+                            font-size: $font-s-18;
+                            margin-right: 6px;
+                            @include max-breakpoint-1680 {
+                                font-size: $font-s-16;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        &.red_fill_btn {
+                            color: $WE-1;
+                            border-color: $RD-101;
+                            background-color: $RD-101;
+
+                            &[disabled='true'],
+                            &.disabled,
+                            &.mat-button-disabled {
+                                @include disable_button();
+                                border-color: $GYN-132;
+                            }
+                        }
+
+                        &.blue_fill_btn {
+                            color: $WE-1;
+                            background-color: $BL-102;
+                            border-color: $BL-102;
+                            margin-left: auto;
+
+                            &[disabled='true'],
+                            &.disabled,
+                            &.mat-button-disabled {
+                                @include disable_button();
+                                border-color: $GYN-132;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.right_tooltip {
+            left: auto;
+            right: -4px;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                right: -3px;
+            }
+            &::before {
+                left: auto;
+                right: 15px;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    right: 12px;
+                }
+            }
+        }
+    }
+
+    &.custom_md_tooltip {
+        .info_tooltip {
+            min-width: 440px;
+            @include max-breakpoint-1800 {
+                min-width: 396px;
+            }
+            @include max-breakpoint-1680 {
+                min-width: 352px;
+            }
+            @include max-breakpoint-1440 {
+                min-width: 308px;
+            }
+            @include max-breakpoint-767 {
+                min-width: 400px;
+            }
+            @include max-breakpoint-480 {
+                min-width: 340px;
+            }
+
+            &.right {
+                @include max-breakpoint-767 {
+                    right: -100%;
+
+                    &::before {
+                        left: 0;
+                        right: -145px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .info_tooltip {
+            display: block;
+        }
+    }
+
+    &.btn_disabled_mood {
+        &:hover {
+            .info_tooltip {
+                display: block;
+            }
+        }
+    }
+
+    // Toggle Tooltip
+    &.toggle_wrapper {
+        .info_tooltip {
+            &.toggle_tooltip {
+                display: block;
+
+                &:hover {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+// Ghost Loading
+.ghost_loading_box {
+    width: 100%;
+    min-height: 45px;
+    border-radius: 4px;
+    @include background-gradient;
+    @include animate-ghost-line;
+    @include max-breakpoint-1800 {
+        min-height: 40px;
+    }
+    @include max-breakpoint-1680 {
+        min-height: 36px;
+        border-radius: 3px;
+    }
+}
+// Mat Dialog Common Style
+.mat_dialog_header_wrapper {
+    position: relative;
+
+    button {
+        &.dialog_close_btn {
+            @include dialog_close_btn();
+            right: -10px;
+            top: -10px;
+            z-index: 999;
+            @include max-breakpoint-1680 {
+                right: -8px;
+                top: -8px;
+            }
+        }
+    }
+
+    .mat_dialog_heading {
+        position: relative;
+        width: 100%;
+        min-height: 85px;
+        @include flex_align_center();
+        padding: 15px 15px;
+        @include max-breakpoint-1800 {
+            min-height: 76px;
+        }
+        @include max-breakpoint-1680 {
+            min-height: 68px;
+            padding: 12px 12px;
+        }
+        @include max-breakpoint-1440 {
+            min-height: 59px;
+        }
+
+        h2 {
+            &.mat_dialog_title {
+                font: 600 $font-s-24 $primaryFont;
+                color: $BE-1;
+                @include max-breakpoint-1800 {
+                    font: 600 $font-s-21 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 600 $font-s-18 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 600 $font-s-19 $primaryFont;
+                }
+                @include max-breakpoint-1440 {
+                    font: 600 $font-s-16 $primaryFont;
+                }
+            }
+        }
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.border_bottom {
+            border-bottom: 1px solid $GY-8;
+        }
+        button {
+            &.common_back_btn {
+                padding: 0;
+                min-width: auto;
+                border-radius: 0;
+                height: 24px;
+                left: 30px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                mat-icon {
+                    font-size: $font-s-24;
+                    margin: 0;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+app-credit-card-form-dialog {
+    .mat_dialog_header_wrapper {
+        .mat_dialog_heading {
+            position: relative;
+            min-height: auto;
+            padding: 25px 15px;
+            button {
+                &.common_back_btn {
+                    min-width: auto;
+                    padding: 0;
+                    position: absolute;
+                    left: 24px;
+                    mat-icon {
+                        font-size: $font-s-32;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    mat-dialog-content {
+        &.mat-mdc-dialog-content {
+            max-height: 85vh;
+        }
+    }
+}
+.fai_guest_congratulation_wrapper {
+    min-height: calc(100vh - 15px - 70px);
+    @include flex_center();
+    .fai_v4_congratulation_inner {
+        width: 100%;
+        max-width: 556px;
+        margin: auto;
+
+        &.full_inner {
+            max-width: 100%;
+        }
+        .common_main_header {
+            .common_top_logo {
+                &.custom_auth_mb {
+                    margin-bottom: 57px;
+                }
+            }
+        }
+        .fai_v4_bank_slide {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto 55px auto;
+            text-align: center;
+        }
+        .common_main_content {
+            .common_heading {
+                &.text_center {
+                    &.custom_auth_mb {
+                        margin: 0 0 22px 0;
+                    }
+                }
+            }
+            .fai_v4_verification_para {
+                p {
+                    font: 400 $font-s-16 $primaryFont;
+                    line-height: 22px;
+                    text-align: center;
+                    color: $GY-2;
+                    margin: 0 0 22px 0;
+
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                    }
+
+                    strong {
+                        font-weight: 700;
+                    }
+
+                    sub {
+                        position: relative;
+                        top: -3px;
+                        margin: 0 0 0 6px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            top: -2px;
+                            margin: 0 0 0 5px;
+                        }
+                    }
+                }
+            }
+            .fai_v4_verification_list {
+                width: 100%;
+                max-width: 430px;
+                margin: 0 auto 42px auto;
+                h6 {
+                    font: 700 $font-s-16 $primaryFont;
+                    line-height: 22px;
+                    color: $BE-1;
+                    margin-bottom: 10px;
+                    @include max-breakpoint-1800 {
+                        font: 700 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                        margin-bottom: 7px;
+                    }
+                }
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        position: relative;
+                        font: 400 $font-s-16 $primaryFont;
+                        line-height: 22px;
+                        color: $GY-2;
+                        margin: 10px;
+                        padding-left: 15px;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-14 $primaryFont;
+                            line-height: 21px;
+                            margin-bottom: 10px;
+                        }
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            height: 5px;
+                            width: 5px;
+                            background-color: $GY-2;
+                            border-radius: 50%;
+                            left: 0;
+                            top: 0;
+                            right: auto;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+            .fai_v4_button_box {
+                .fai_v4_button_box_inner {
+                    width: 100%;
+                    max-width: 230px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

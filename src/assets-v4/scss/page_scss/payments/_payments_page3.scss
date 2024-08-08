@@ -1,0 +1,155 @@
+.table_heading_wrap {
+    h3 {
+        &.mat-h3 {
+            font: 500 $font-s-16 $primaryFont;
+            color: $BL-1;
+            margin: 0 0 25px 0;
+            @include max-breakpoint-1800 {
+                font: 500 $font-s-15 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 500 $font-s-14 $primaryFont;
+                margin: 0 0 20px 0;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 500 $font-s-13 $primaryFont;
+            }
+            @include max-breakpoint-1440 {
+                font: 500 $font-s-12 $primaryFont;
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}
+
+// Common Mat Dialog Box (V4)
+.mat_dialog_header {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 40px 20px 20px 20px;
+    @include max-breakpoint-1680 {
+        padding: 32px 16px 16px 16px;
+    }
+
+    &.center {
+        text-align: center;
+    }
+
+    button {
+        &.mat_dialog_close_btn {
+            width: 45px;
+            height: 45px;
+            padding: 4px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 9;
+            @include max-breakpoint-1800 {
+                width: 40px;
+                height: 40px;
+            }
+            @include max-breakpoint-1680 {
+                width: 36px;
+                height: 36px;
+                padding: 3px;
+            }
+            @include max-breakpoint-1440 {
+                width: 32px;
+                height: 32px;
+            }
+
+            mat-icon {
+                font-size: $font-s-21;
+                @include max-breakpoint-1680 {
+                    font-size: $font-s-17;
+                }
+            }
+        }
+    }
+
+    .mat_dialog_inner_header {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+        h2 {
+            &.mat-h2 {
+                font: 500 $font-s-24 $primaryFont;
+                color: $BL-1;
+                margin: 0 0 15px 0;
+                @include max-breakpoint-1800 {
+                    font: 500 $font-s-21 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 500 $font-s-18 $primaryFont;
+                    margin: 0 0 12px 0;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 500 $font-s-19 $primaryFont;
+                }
+                @include max-breakpoint-1440 {
+                    font: 500 $font-s-16 $primaryFont;
+                }
+            }
+        }
+
+        p {
+            font: 400 $font-s-16 $primaryFont;
+            color: $GY-17;
+            margin: 0;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-15 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-14 $primaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 400 $font-s-13 $primaryFont;
+            }
+            @include max-breakpoint-1440 {
+                font: 400 $font-s-12 $primaryFont;
+            }
+
+            br {
+                @include max-breakpoint-1440 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+mat-dialog-content {
+    &.mdc-dialog__content {
+        &.common_dialog_content {
+            padding: 0 20px;
+            font: 400 $font-s-14 $primaryFont;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-13 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-12 $primaryFont;
+                padding: 0 16px;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 400 $font-s-11 $primaryFont;
+            }
+        }
+    }
+}
+mat-dialog-actions {
+    &.mdc-dialog__actions {
+        &.common_dialog_actions {
+            padding: 15px 20px;
+            @include max-breakpoint-1680 {
+                padding: 12px 16px;
+            }
+
+            button {
+                &.common_btn {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

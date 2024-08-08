@@ -1,0 +1,46 @@
+// Import Flex Mixin
+@import './flex-mixin';
+
+@for $flex-row-margin from 1 through 100 {
+    // Default & Large
+    .fx-gap-#{$flex-row-margin} {
+        margin: 0 (-1px * $flex-row-margin) (-1px * $flex-row-margin) 0;
+
+        & > .fxFlex {
+            padding: 0 (1px * $flex-row-margin) (1px * $flex-row-margin) 0;
+        }
+    }
+
+    // Medium
+    @media (min-width: 960px) and (max-width: 1279px) {
+        .fx-gap-md-#{$flex-row-margin} {
+            margin: 0 (-1px * $flex-row-margin) (-1px * $flex-row-margin) 0 !important;
+
+            & > .fxFlex {
+                padding: 0 (1px * $flex-row-margin) (1px * $flex-row-margin) 0 !important;
+            }
+        }
+    }
+
+    // Small
+    @media (min-width: 600px) and (max-width: 959px) {
+        .fx-gap-sm-#{$flex-row-margin} {
+            margin: 0 (-1px * $flex-row-margin) (-1px * $flex-row-margin) 0 !important;
+
+            & > .fxFlex {
+                padding: 0 (1px * $flex-row-margin) (1px * $flex-row-margin) 0 !important;
+            }
+        }
+    }
+
+    // Extra Small
+    @media (max-width: 599px) {
+        .fx-gap-xs-#{$flex-row-margin} {
+            margin: 0 (-1px * $flex-row-margin) (-1px * $flex-row-margin) 0 !important;
+
+            & > .fxFlex {
+                padding: 0 (1px * $flex-row-margin) (1px * $flex-row-margin) 0 !important;
+            }
+        }
+    }
+}

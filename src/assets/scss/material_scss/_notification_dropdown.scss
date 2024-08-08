@@ -1,0 +1,657 @@
+// Notification Mat Menu
+.mat-mdc-menu-panel {
+    position: relative;
+
+    &.mat-mdc-menu-panel {
+        &.notification_dropdown {
+            min-width: 383px;
+            max-height: inherit;
+            border: none;
+            box-shadow: 0px 6px 20px rgba(23, 23, 23, 0.12);
+            margin-top: 15px;
+            @include max-breakpoint-1800 {
+                min-width: 344px;
+            }
+            @include max-breakpoint-1680 {
+                min-width: 306px;
+                box-shadow: 0px 5px 16px rgba(23, 23, 23, 0.12);
+                margin-top: 15px;
+            }
+            @include max-breakpoint-540 {
+                min-width: 340px;
+                left: 15px;
+            }
+
+            .mat-mdc-menu-content {
+                padding: 0;
+
+                .notification_dropdown_wrapper {
+                    width: 100%;
+                    position: relative;
+
+                    .notification_dropdown_header {
+                        width: 100%;
+                        @include flex_center();
+                        position: relative;
+                        padding: 15px 15px;
+                        @include max-breakpoint-1680 {
+                            padding: 12px 12px;
+                        }
+
+                        h3 {
+                            &.mat-h3 {
+                                font: 600 $font-s-18 $primaryFont;
+                                color: $BL-103;
+                                margin: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-16 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-14 $primaryFont;
+                                }
+                            }
+                        }
+
+                        button {
+                            &.close_btn {
+                                font-size: $font-s-18;
+                                color: $BL-102;
+                                background: none;
+                                border: none;
+                                position: absolute;
+                                right: 15px;
+                                top: 12px;
+                                z-index: 1;
+                                cursor: pointer;
+                                @include max-breakpoint-1800 {
+                                    font-size: $font-s-16;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font-size: $font-s-14;
+                                    right: 12px;
+                                    top: 10px;
+                                }
+                            }
+                        }
+                    }
+
+                    .notification_dropdown_content {
+                        position: relative;
+                        padding: 0 15px;
+                        @include max-breakpoint-1680 {
+                            padding: 0 12px;
+                        }
+
+                        mat-tab-group {
+                            &.mat-mdc-tab-group {
+                                .mat-mdc-tab-body-wrapper {
+                                    .mat-mdc-tab-body {
+                                        max-height: 370px;
+                                        @include max-breakpoint-1800 {
+                                            max-height: 333px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            max-height: 296px;
+                                        }
+
+                                        .mat-mdc-tab-body-content {
+                                            visibility: initial !important;
+                                            display: block !important;
+                                            padding: 10px 15px 0 0;
+                                            @include max-breakpoint-1680 {
+                                                padding: 8px 12px 0 0;
+                                            }
+
+                                            // List Content Style
+                                            .notification_tab_inner {
+                                                ul {
+                                                    @include ul_style();
+
+                                                    li {
+                                                        width: 100%;
+                                                        border-bottom: 1px solid #d6d7df;
+
+                                                        .notification_list {
+                                                            font: 400 $font-s-14 $primaryFont;
+                                                            letter-spacing: 0;
+                                                            padding: 15px 10px;
+                                                            @include max-breakpoint-1800 {
+                                                                font: 400 $font-s-13 $primaryFont;
+                                                            }
+                                                            @include max-breakpoint-1680 {
+                                                                font: 400 $font-s-12 $primaryFont;
+                                                                padding: 12px 8px;
+                                                            }
+                                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                                font: 400 $font-s-11 $primaryFont;
+                                                            }
+
+                                                            .notification_list_inner {
+                                                                position: relative;
+
+                                                                .notification_text {
+                                                                    margin: 0 0 10px 0;
+                                                                    padding-right: 15px;
+                                                                    @include max-breakpoint-1680 {
+                                                                        margin: 0 0 8px 0;
+                                                                        padding-right: 12px;
+                                                                    }
+
+                                                                    button {
+                                                                        width: 100%;
+                                                                        display: inline-block;
+                                                                        font: 400 $font-s-14 $primaryFont;
+                                                                        line-height: 21px;
+                                                                        letter-spacing: 0;
+                                                                        color: $BL-103;
+                                                                        margin: 0;
+                                                                        text-align: left;
+                                                                        background: none;
+                                                                        border: none;
+                                                                        outline: none;
+                                                                        cursor: pointer;
+                                                                        @include max-breakpoint-1800 {
+                                                                            font: 400 $font-s-13 $primaryFont;
+                                                                            line-height: 21px;
+                                                                        }
+                                                                        @include max-breakpoint-1680 {
+                                                                            font: 400 $font-s-12 $primaryFont;
+                                                                            line-height: 18px;
+                                                                        }
+                                                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                                                            font: 400 $font-s-11 $primaryFont;
+                                                                            line-height: 17px;
+                                                                        }
+
+                                                                        h4 {
+                                                                            &.mat-h4 {
+                                                                                font: 600 $font-s-14 $primaryFont;
+                                                                                color: $BL-103;
+                                                                                margin: 0;
+                                                                                text-transform: capitalize;
+                                                                                letter-spacing: 0;
+                                                                                @include text_limit();
+                                                                                @include max-breakpoint-1800 {
+                                                                                    font: 600 $font-s-13 $primaryFont;
+                                                                                }
+                                                                                @include max-breakpoint-1680 {
+                                                                                    font: 600 $font-s-12 $primaryFont;
+                                                                                }
+                                                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                                                    font: 600 $font-s-11 $primaryFont;
+                                                                                }
+                                                                            }
+                                                                        }
+
+                                                                        p {
+                                                                            font: 400 $font-s-14 $primaryFont;
+                                                                            line-height: 21px;
+                                                                            color: $BL-103;
+                                                                            letter-spacing: 0;
+                                                                            @include max-breakpoint-1800 {
+                                                                                font: 400 $font-s-13 $primaryFont;
+                                                                                line-height: 21px;
+                                                                            }
+                                                                            @include max-breakpoint-1680 {
+                                                                                font: 400 $font-s-12 $primaryFont;
+                                                                                line-height: 18px;
+                                                                            }
+                                                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                                                font: 400 $font-s-11 $primaryFont;
+                                                                                line-height: 17px;
+                                                                            }
+
+                                                                            span {
+                                                                                font-weight: 600;
+                                                                                text-transform: capitalize;
+                                                                                margin: 0 4px 0 0;
+                                                                                @include max-breakpoint-1680 {
+                                                                                    margin: 0 3px 0 0;
+                                                                                }
+                                                                            }
+
+                                                                            strong {
+                                                                                font-weight: 600;
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    .ghost_loading_box {
+                                                                        min-height: 16px;
+                                                                        display: inline-block;
+                                                                        margin: 0 0 4px 0;
+                                                                        @include max-breakpoint-1680 {
+                                                                            min-height: 13px;
+                                                                            margin: 0 0 3px 0;
+                                                                        }
+
+                                                                        &.sm_box {
+                                                                            width: 50%;
+                                                                            margin: 0;
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                                .notification_status {
+                                                                    position: absolute;
+                                                                    right: 0;
+                                                                    top: 0;
+
+                                                                    .info_tooltip_wrapper {
+                                                                        .notification_status_dot {
+                                                                            width: 8px;
+                                                                            height: 8px;
+                                                                            border-radius: 50%;
+                                                                            display: inline-block;
+                                                                            background: $BL-102;
+                                                                            border: none;
+                                                                            outline: 0;
+                                                                            cursor: pointer;
+                                                                            @include max-breakpoint-1680 {
+                                                                                width: 6px;
+                                                                                height: 6px;
+                                                                            }
+                                                                        }
+
+                                                                        &.ml_0 {
+                                                                            top: -2px;
+                                                                        }
+
+                                                                        .info_tooltip {
+                                                                            &.right_tooltip {
+                                                                                right: -8px;
+                                                                                margin-top: 6px;
+                                                                                @include max-breakpoint-1680 {
+                                                                                    right: -6px;
+                                                                                    margin-top: 5px;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    &.green {
+                                                                        .info_tooltip_wrapper {
+                                                                            .notification_status_dot {
+                                                                                background: $GR-103;
+                                                                            }
+                                                                        }
+                                                                    }
+
+                                                                    .ghost_loading_box {
+                                                                        width: 8px;
+                                                                        min-height: 8px;
+                                                                        border-radius: 50%;
+                                                                        display: inline-block;
+                                                                        @include max-breakpoint-1680 {
+                                                                            width: 6px;
+                                                                            min-height: 6px;
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                                .notification_date {
+                                                                    font: 400 $font-s-12 $primaryFont;
+                                                                    color: $BL-102;
+                                                                    text-align: right;
+                                                                    @include max-breakpoint-1800 {
+                                                                        font: 400 $font-s-11 $primaryFont;
+                                                                    }
+                                                                    @include max-breakpoint-1680 {
+                                                                        font: 400 $font-s-10 $primaryFont;
+                                                                    }
+
+                                                                    .ghost_loading_box {
+                                                                        width: 80px;
+                                                                        min-height: 15px;
+                                                                        display: inline-block;
+                                                                        @include max-breakpoint-1680 {
+                                                                            width: 64px;
+                                                                            min-height: 12px;
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                                &.received,
+                                                                &.initiated,
+                                                                &.completed {
+                                                                    .notification_text {
+                                                                        button {
+                                                                            span {
+                                                                                color: $GR-103;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+
+                                                                &.failed {
+                                                                    .notification_text {
+                                                                        button {
+                                                                            span {
+                                                                                color: #eb7d7d;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &.read {
+                                                                .notification_list_inner {
+                                                                    .notification_text {
+                                                                        button {
+                                                                            opacity: 0.6;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        &:last-child {
+                                                            border-bottom: none;
+                                                        }
+
+                                                        &:hover {
+                                                            background: $GY-127;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .notification_list_footer {
+                        padding: 15px 10px;
+                        text-align: center;
+                        font: 400 $font-s-12 $primaryFont;
+                        color: $BL-102;
+                        letter-spacing: 0;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-11 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-10 $primaryFont;
+                            padding: 12px 8px;
+                        }
+
+                        a {
+                            color: $BL-103;
+                            text-decoration: underline;
+                            cursor: pointer;
+                            &:hover {
+                                color: $BL-103;
+                                text-decoration: none;
+                            }
+                        }
+
+                        .ghost_loading_box {
+                            width: 50%;
+                            min-height: 18px;
+                            margin: 0 auto;
+                            @include max-breakpoint-1680 {
+                                min-height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Common Mark as Read
+button {
+    &.read_btn {
+        @include flex_center();
+        font: 500 $font-s-12 $primaryFont;
+        color: $BL-102;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        z-index: 2;
+        @include max-breakpoint-1800 {
+            font: 500 $font-s-11 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+            font: 500 $font-s-10 $primaryFont;
+            right: 12px;
+        }
+
+        mat-icon {
+            font-size: $font-s-18;
+            margin: 0 6px 0 0;
+            @include max-breakpoint-1800 {
+                font-size: $font-s-16;
+            }
+            @include max-breakpoint-1680 {
+                font-size: $font-s-14;
+                margin: 0 5px 0 0;
+            }
+        }
+        &[disabled='true'],
+        &.disabled,
+        &.mat-button-disabled {
+            pointer-events: none;
+            cursor: default;
+            opacity: 0.4;
+        }
+    }
+}
+// Common No Notification
+.no_notification_wrapper {
+    width: 100%;
+    min-height: 170px;
+    @include flex_center();
+    justify-content: center;
+    padding: 15px;
+    @include max-breakpoint-1800 {
+        min-height: 153px;
+    }
+    @include max-breakpoint-1680 {
+        min-height: 136px;
+        padding: 12px;
+    }
+
+    .no_notification_inner {
+        text-align: center;
+
+        img {
+            height: 42px;
+            margin: 0 0 10px 0;
+            @include max-breakpoint-1680 {
+                height: 34px;
+                margin: 0 0 8px 0;
+            }
+        }
+
+        p {
+            font: 400 $font-s-12 $primaryFont;
+            color: $BL-102;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-11 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-10 $primaryFont;
+            }
+        }
+    }
+}
+// Common Mat Tab
+mat-tab-group {
+    &.mat-mdc-tab-group {
+        mat-tab-header {
+            &.mat-mdc-tab-header {
+                width: 100%;
+                flex: 0 0 50%;
+                max-width: 50%;
+
+                .mat-mdc-tab-list {
+                    .mat-mdc-tab-labels {
+                        .mat-mdc-tab {
+                            &.mdc-tab {
+                                min-width: inherit;
+                                height: auto;
+                                min-height: 28px;
+                                flex-grow: initial;
+                                padding: 0 15px;
+                                font: 400 $font-s-12 $primaryFont;
+                                color: $BL-102;
+                                letter-spacing: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    min-height: 22px;
+                                    padding: 0 12px;
+                                    font: 400 $font-s-10 $primaryFont;
+                                }
+
+                                .mat-mdc-tab-ripple,
+                                .mdc-tab__ripple {
+                                    display: none;
+                                }
+
+                                .mdc-tab__content {
+                                    .mdc-tab__text-label {
+                                        color: $BL-102;
+                                    }
+                                }
+
+                                .mdc-tab-indicator {
+                                    .mdc-tab-indicator__content--underline {
+                                        border-top-width: 1px;
+                                    }
+                                }
+
+                                &.mdc-tab--active {
+                                    .mdc-tab__content {
+                                        .mdc-tab__text-label {
+                                            color: $BL-103;
+                                        }
+                                    }
+                                    .mdc-tab-indicator {
+                                        .mdc-tab-indicator__content--underline {
+                                            border-color: $BL-103;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.notification_full_page {
+            mat-tab-header {
+                &.mat-mdc-tab-header {
+                    .mat-mdc-tab-list {
+                        .mat-mdc-tab-labels {
+                            .mat-mdc-tab {
+                                &.mdc-tab {
+                                    min-height: 34px;
+                                    padding: 0 15px;
+                                    font: 400 $font-s-16 $primaryFont;
+                                    @include max-breakpoint-1800 {
+                                        font: 400 $font-s-15 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        min-height: 27px;
+                                        padding: 0 12px;
+                                        font: 400 $font-s-14 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 400 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1440 {
+                                        font: 400 $font-s-12 $primaryFont;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mat-mdc-tab-body-wrapper {
+                .mat-mdc-tab-body {
+                    .mat-mdc-tab-body-content {
+                        padding: 15px 10px 15px 0;
+                        @include max-breakpoint-1680 {
+                            padding: 12px 8px 12px 0;
+                        }
+
+                        // Notification Full Page
+                        .notification_list_box {
+                            .notification_list_content {
+                                p {
+                                    font: 600 $font-s-14 $primaryFont;
+                                    color: $BL-103;
+                                    margin: 0;
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 600 $font-s-12 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 600 $font-s-11 $primaryFont;
+                                    }
+
+                                    span {
+                                        font-weight: 600;
+                                        text-transform: capitalize;
+                                        margin: 0 4px 0 0;
+                                        @include max-breakpoint-1680 {
+                                            margin: 0 3px 0 0;
+                                        }
+                                    }
+
+                                    strong {
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                            &.received,
+                            &.initiated,
+                            &.completed {
+                                .notification_list_content {
+                                    p {
+                                        span {
+                                            color: $GR-103;
+                                        }
+                                    }
+                                }
+                            }
+                            &.failed {
+                                .notification_list_content {
+                                    p {
+                                        span {
+                                            color: #eb7d7d;
+                                        }
+                                    }
+                                }
+                            }
+                            &.read {
+                                .notification_list_heading {
+                                    h3 {
+                                        &.mat-h3 {
+                                            opacity: 0.6;
+                                        }
+                                    }
+                                }
+                                .notification_list_content {
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

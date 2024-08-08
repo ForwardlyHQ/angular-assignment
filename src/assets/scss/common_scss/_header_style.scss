@@ -1,0 +1,667 @@
+.fai_secondary_header {
+    position: fixed;
+    left: 80px;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    @include max-breakpoint-1680 {
+        left: 64px;
+    }
+    @include max-breakpoint-767 {
+        left: 0;
+    }
+    mat-toolbar {
+        &.fai_header {
+            height: auto;
+            background-color: $WE-100;
+            padding: 38px 100px 38px 126px;
+            @include max-breakpoint-1680 {
+                padding: 30px 80px 30px 101px;
+            }
+            @include max-breakpoint-1440 {
+                padding: 26px 70px 26px 88px;
+            }
+
+            @include max-breakpoint-1279 {
+                padding: 15px 65px;
+            }
+            @include max-breakpoint-767 {
+                padding: 15px 35px;
+            }
+            @include max-breakpoint-599 {
+                padding: 15px 15px;
+            }
+            .fai_toolbar_inner {
+                @include flex_center();
+                justify-content: space-between;
+                flex: 1 1 auto;
+                max-width: 100%;
+
+                h1 {
+                    &.fai_page_title {
+                        @include heading_lg_blue();
+                        @include max-breakpoint-599 {
+                            display: none;
+                        }
+
+                        span {
+                            &.sub_title_head {
+                                font: 700 $font-s-18 $primaryFont;
+                                line-height: normal;
+                                color: $BL-103;
+                                margin-left: 4px;
+                                @include max-breakpoint-1800 {
+                                    font: 700 $font-s-16 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 700 $font-s-14 $primaryFont;
+                                    margin-left: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .fai_setting_wrapper {
+                    @include flex_center();
+                    justify-content: flex-start;
+                    @include max-breakpoint-599 {
+                        width: 100%;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        justify-content: space-between;
+                    }
+                    // Switch Business Toggle Button Style Include Here
+                    button {
+                        &.mat-mdc-button {
+                            &.switch_business_toggle {
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: normal;
+                                color: rgba($BL-114, 0.8);
+                                justify-content: flex-start;
+                                height: 40px;
+                                max-width: 260px;
+                                border: 1px solid $GY-132;
+                                border-radius: 100px;
+                                padding: 0 44px 0 6px;
+                                background: url('../../../assets/images/common/select-arrow-dark.png') no-repeat calc(100% - 15px) center;
+                                background-size: 14px;
+                                margin-right: 23px;
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                    line-height: normal;
+                                    height: 32px;
+                                    max-width: 208px;
+                                    padding: 0 35px 0 5px;
+                                    background: url('../../../assets/images/common/select-arrow-dark.png') no-repeat calc(100% - 12px) center;
+                                    background-size: 11px;
+                                    margin-right: 18px;
+                                }
+                                @include max-breakpoint-599 {
+                                    margin: 0;
+                                }
+                                &.single_business {
+                                    background: none;
+                                    cursor: auto;
+                                }
+                                span {
+                                    &.mdc-button__ripple,
+                                    &.mat-mdc-button-ripple {
+                                        display: none;
+                                    }
+                                    &.mdc-button__label {
+                                        .switch_business_toggle-wrapper {
+                                            @include flex_center();
+                                            justify-content: flex-start;
+                                            .accounting-logo-wrapper {
+                                                display: inline-flex;
+                                                width: 18px;
+                                                margin-right: 9px;
+                                                @include max-breakpoint-1680 {
+                                                    width: 14px;
+                                                    margin-right: 7px;
+                                                }
+                                                img {
+                                                    width: 100%;
+                                                }
+                                            }
+                                            .switch_business_toggle_inner {
+                                                text-align: left;
+                                                max-width: 183px;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                text-overflow: ellipsis;
+                                                @include max-breakpoint-1680 {
+                                                    max-width: 146px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .fai_user_setting {
+                        @include flex_center();
+                        justify-content: flex-start;
+                        // Sync Setting Button Style
+                        .sync_header_row {
+                            .sync_header_col {
+                                .fai_sync_btn_wrapper {
+                                    position: relative;
+                                    .info_tooltip_wrapper {
+                                        button {
+                                            &.fai_user_btn {
+                                                &.last_sync_btn {
+                                                    height: 40px;
+                                                    border: 1px solid $GY-132;
+                                                    border-radius: 100px;
+                                                    padding: 0 15px 0 6px;
+                                                    margin-right: 23px;
+                                                    @include max-breakpoint-1680 {
+                                                        height: 32px;
+                                                        padding: 0 12px 0 5px;
+                                                        margin-right: 18px;
+                                                    }
+                                                    @include max-breakpoint-599 {
+                                                        margin-right: 10px;
+                                                    }
+                                                    @include max-breakpoint-480 {
+                                                        min-width: auto;
+                                                        width: 32px;
+                                                        padding: 0;
+                                                    }
+                                                    span {
+                                                        &.mdc-button__label {
+                                                            @include flex_center();
+                                                            justify-content: flex-start;
+                                                            font: 400 $font-s-14 $primaryFont;
+                                                            line-height: normal;
+                                                            color: rgba($BL-114, 0.8);
+                                                            @include max-breakpoint-1680 {
+                                                                font: 400 $font-s-11 $primaryFont;
+                                                                line-height: normal;
+                                                            }
+                                                            .sync_img_wrapper {
+                                                                @include flex_center();
+                                                                justify-content: center;
+                                                                height: 26px;
+                                                                width: 26px;
+                                                                background-color: $BL-117;
+                                                                border-radius: 50%;
+                                                                margin-right: 9px;
+                                                                @include max-breakpoint-1680 {
+                                                                    height: 21px;
+                                                                    width: 21px;
+                                                                    margin-right: 7px;
+                                                                }
+                                                                @include max-breakpoint-480 {
+                                                                    margin: 0;
+                                                                }
+                                                                img {
+                                                                    max-width: 15px;
+                                                                    vertical-align: middle;
+                                                                    @include max-breakpoint-1680 {
+                                                                        max-width: 12px;
+                                                                    }
+                                                                }
+                                                            }
+                                                            .sync-text {
+                                                                @include flex_center();
+                                                                justify-content: flex-start;
+                                                                &.reconnect-text {
+                                                                    color: $RD-103;
+                                                                }
+                                                                img {
+                                                                    &.reconnect-img {
+                                                                        width: 16px;
+                                                                        height: auto;
+                                                                        margin-left: 3px;
+                                                                        margin-top: 3px;
+                                                                        @include max-breakpoint-1680 {
+                                                                            width: 13px;
+                                                                            margin-top: 2px;
+                                                                        }
+                                                                    }
+                                                                }
+                                                                @include max-breakpoint-480 {
+                                                                    display: none;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.last_sync_ref_btn {
+                                                        background-color: $BL-114;
+                                                        border-color: $BL-114;
+                                                        span {
+                                                            &.mdc-button__label {
+                                                                color: $WE-100;
+                                                                .sync_img_wrapper {
+                                                                    background-color: rgba($WE-100, 0.3);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.last_sync_something_btn {
+                                                        span {
+                                                            &.mdc-button__label {
+                                                                color: $RD-103;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .fai_reconnect_btn_tooltip {
+                                        width: 230px;
+                                        position: absolute;
+                                        left: 0px;
+                                        top: calc(100% + 6px);
+                                        padding: 15px 13px;
+                                        background-color: $WE-100;
+                                        border: 1px solid $GY-108;
+                                        border-radius: 5px;
+                                        box-shadow: 0 10px 10px $boxShadow-C-11;
+                                        z-index: 999;
+                                        @include max-breakpoint-1680 {
+                                            width: 184px;
+                                            padding: 12px 10px;
+                                            top: calc(100% + 5px);
+                                            border-radius: 4px;
+                                            box-shadow: 0 8px 8px $boxShadow-C-11;
+                                        }
+
+                                        &::before {
+                                            width: 7px;
+                                            height: 7px;
+                                            position: absolute;
+                                            content: '';
+                                            left: 10px;
+                                            top: -5px;
+                                            background-color: $WE-100;
+                                            border: 1px solid $GY-108;
+                                            border-right-color: transparent;
+                                            border-bottom-color: transparent;
+                                            transform: rotate(45deg);
+                                            @include max-breakpoint-1680 {
+                                                width: 6px;
+                                                height: 6px;
+                                                left: 24px;
+                                                top: -4px;
+                                            }
+                                        }
+
+                                        h6 {
+                                            @include flex_center();
+                                            justify-content: flex-start;
+                                            font: 700 $font-s-16 $primaryFont;
+                                            line-height: 24px;
+                                            color: #ff6c6c;
+                                            margin-bottom: 9px;
+                                            @include max-breakpoint-1800 {
+                                                font: 700 $font-s-15 $primaryFont;
+                                                line-height: 24px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                font: 700 $font-s-14 $primaryFont;
+                                                line-height: 21px;
+                                                margin-bottom: 7px;
+                                            }
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                font: 700 $font-s-13 $primaryFont;
+                                                line-height: 19px;
+                                            }
+                                            @include max-breakpoint-1440 {
+                                                font: 700 $font-s-12 $primaryFont;
+                                                line-height: 18px;
+                                            }
+
+                                            img {
+                                                max-height: 23px;
+                                                margin-right: 6px;
+                                                @include max-breakpoint-1680 {
+                                                    max-height: 18px;
+                                                    margin-right: 5px;
+                                                }
+                                            }
+                                        }
+
+                                        p {
+                                            font: 400 $font-s-14 $primaryFont;
+                                            line-height: 21px;
+                                            color: $BL-102;
+                                            white-space: normal;
+                                            margin-bottom: 10px;
+                                        }
+
+                                        .btn_sec {
+                                            display: flex;
+                                            justify-content: flex-end;
+
+                                            button {
+                                                border: none;
+                                                background: none;
+                                                font: 600 $font-s-14 $primaryFont;
+                                                color: $WE-100;
+                                                padding: 4px 12px;
+                                                border-radius: 5px;
+                                                background-color: #ff6c6c;
+                                                cursor: pointer;
+                                                @include max-breakpoint-1800 {
+                                                    font: 600 $font-s-13 $primaryFont;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 $font-s-12 $primaryFont;
+                                                    padding: 3px 10px;
+                                                    border-radius: 4px;
+                                                }
+                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                    font: 600 $font-s-11 $primaryFont;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // Notification Setting Button Style
+                        button {
+                            &.fai_user_btn {
+                                &.notification_btn {
+                                    height: 40px !important;
+                                    min-width: auto;
+                                    width: 40px;
+                                    padding: 0;
+                                    border: 1px solid $GY-132;
+                                    border-radius: 100px;
+                                    margin-right: 23px;
+                                    @include max-breakpoint-1680 {
+                                        height: 32px !important;
+                                        width: 32px;
+                                        margin-right: 18px;
+                                    }
+                                    @include max-breakpoint-599 {
+                                        margin-right: 10px;
+                                    }
+                                    span {
+                                        &.mdc-button__label {
+                                            @include flex_center();
+                                            justify-content: center;
+                                            img {
+                                                max-width: 20px;
+                                                @include max-breakpoint-1680 {
+                                                    max-width: 16px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // User Setting Button Style
+                        button {
+                            &.fai_user_btn {
+                                &.user_btn {
+                                    min-width: auto;
+                                    height: 40px;
+                                    border: 1px solid $GY-132;
+                                    border-radius: 100px;
+                                    padding: 0 9px 0 6px;
+                                    @include max-breakpoint-1680 {
+                                        min-width: auto;
+                                        height: 32px;
+                                        padding: 0 7px 0 5px;
+                                    }
+                                    .mdc-button__label {
+                                        .user_avatar_wrapper {
+                                            @include flex_center();
+                                            justify-content: flex-start;
+                                            .user_avatar {
+                                                @include flex_center();
+                                                justify-content: center;
+                                                height: 26px;
+                                                width: 26px;
+                                                background-color: $BL-114;
+                                                border-radius: 50%;
+                                                margin-right: 9px;
+                                                @include max-breakpoint-1680 {
+                                                    height: 21px;
+                                                    width: 21px;
+                                                    margin-right: 7px;
+                                                }
+                                                h4 {
+                                                    font: 700 $font-s-12 $primaryFont;
+                                                    line-height: normal;
+                                                    text-transform: uppercase;
+                                                    color: $WE-100;
+                                                    margin: 0;
+                                                    position: relative;
+                                                    @include max-breakpoint-1680 {
+                                                        font: 700 $font-s-10 $primaryFont;
+                                                    }
+                                                    span {
+                                                        position: absolute;
+                                                        top: -9px;
+                                                        right: -9px;
+                                                        @include max-breakpoint-1680 {
+                                                            top: -7px;
+                                                            right: -7px;
+                                                        }
+                                                        img {
+                                                            width: 16px;
+                                                            @include max-breakpoint-1680 {
+                                                                width: 13px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .user_name_arrow {
+                                                @include flex_center();
+                                                justify-content: center;
+                                                img {
+                                                    max-width: 14px;
+                                                    @include max-breakpoint-1680 {
+                                                        max-width: 11px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile View Navigation Style Include Here
+.mobile-nav-list-wrapper {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 1px);
+    right: 0;
+    background-color: $WE-100;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.095);
+    border-radius: 0;
+    z-index: 2;
+    display: none;
+    &.is-open {
+        display: block;
+    }
+    mat-nav-list {
+        &.primary_navigation {
+            padding: 0;
+            mat-list-item {
+                &.primary_list_dropdown {
+                    height: auto;
+                    padding: 15px 0;
+                    border-bottom: 1px solid $BL-117;
+                    &:last-child {
+                        border: none;
+                    }
+                    &::before {
+                        background-color: transparent;
+                    }
+                    .mat-ripple-element {
+                        background-color: transparent;
+                    }
+                    .mdc-list-item__primary-text {
+                        button {
+                            &.primary_menu_btn {
+                                min-width: 100%;
+                                padding: 12px 35px;
+                                justify-content: flex-start;
+                                font: 500 $font-s-13 $primaryFont;
+                                font-style: normal;
+                                line-height: normal;
+                                letter-spacing: normal;
+                                color: $BL-114;
+                                border-radius: 0;
+                                position: relative;
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 6px;
+                                    height: 100%;
+                                    background-color: $BL-114;
+                                    border-top-right-radius: 100px;
+                                    border-bottom-right-radius: 100px;
+                                    left: 0;
+                                    top: 0;
+                                    display: none;
+                                }
+                                &.active {
+                                    font: 700 $font-s-14 $primaryFont;
+                                    background-color: $BL-117;
+                                    &::after {
+                                        display: block;
+                                    }
+                                }
+                                .mdc-button__label {
+                                    @include flex_center();
+                                    justify-content: flex-start;
+                                    img {
+                                        width: 19px;
+                                        margin-right: 6px;
+                                    }
+                                }
+                            }
+                        }
+
+                        //Secondary Menu
+                        .secondary_dropdown {
+                            padding: 0;
+                            position: relative;
+                            &.empty_secondary_menu {
+                                display: none;
+                            }
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                width: 1px;
+                                height: calc(100% + 5px);
+                                left: 47px;
+                                top: -5px;
+                                background-color: $BL-114;
+                            }
+                            .secondary_list_dropdown {
+                                height: auto;
+                                padding: 15px 0;
+                                margin-bottom: 3px;
+                                &:last-child {
+                                    margin: 0;
+                                }
+                                &::before {
+                                    background-color: transparent;
+                                }
+                                .mat-ripple-element {
+                                    background-color: transparent;
+                                }
+                                .mdc-list-item__primary-text {
+                                    .secondary_menu_btn {
+                                        min-width: 100%;
+                                        padding: 4px 35px 4px 60px;
+                                        justify-content: flex-start;
+                                        font: 500 $font-s-13 $primaryFont;
+                                        font-style: normal;
+                                        line-height: normal;
+                                        letter-spacing: normal;
+                                        color: $BL-114;
+                                        border-radius: 0;
+                                        position: relative;
+                                        &::before {
+                                            position: absolute;
+                                            content: '';
+                                            height: 4px;
+                                            width: 4px;
+                                            background-color: $GY-131;
+                                            border: 2px solid $BL-118;
+                                            border-radius: 50%;
+                                            left: 44px;
+                                            top: 0;
+                                            bottom: 0;
+                                            margin: auto;
+                                            z-index: 1;
+                                        }
+                                        &::after {
+                                            position: absolute;
+                                            content: '';
+                                            width: 3px;
+                                            height: 100%;
+                                            background-color: $GY-131;
+                                            border-top-right-radius: 100px;
+                                            border-bottom-right-radius: 100px;
+                                            left: 0;
+                                            top: 0;
+                                            display: none;
+                                        }
+                                        &.active {
+                                            font: 600 $font-s-13 $primaryFont;
+                                            background-color: $BL-117;
+                                            &::after {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.support_menu {
+                        .mdc-list-item__primary-text {
+                            .primary_menu_btn {
+                                display: block;
+                                padding: 12px 35px;
+                                height: auto;
+                                span {
+                                    &.mdc-button__label {
+                                        @include flex_center();
+                                        justify-content: flex-start;
+                                        .menu_icon {
+                                            @include flex_center();
+                                            img {
+                                                width: 19px;
+                                                margin-right: 6px;
+                                            }
+                                        }
+                                        .menu_name {
+                                            font: 600 $font-s-14 $primaryFont;
+                                            color: $GY-131;
+                                            @include max-breakpoint-1680 {
+                                                font: 600 $font-s-11 $primaryFont;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

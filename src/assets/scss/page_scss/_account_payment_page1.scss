@@ -1,0 +1,619 @@
+// Common Bank Account Box
+mat-card {
+    &.bank_account_list_box {
+        width: 100%;
+        position: relative;
+        box-shadow: 0px 10px 10px #0000001a;
+        border: 1px solid $BLN-113;
+        border-radius: 10px;
+        padding: 0;
+        @include max-breakpoint-1680 {
+            box-shadow: 0px 8px 8px #0000001a;
+            border-radius: 8px;
+        }
+
+        mat-card-content {
+            &.bank_info_content {
+                min-height: 120px;
+                position: relative;
+                padding: 0 0 10px 0;
+                @include max-breakpoint-1680 {
+                    min-height: 96px;
+                    padding: 0 0 8px 0;
+                }
+                @include max-breakpoint-1440 {
+                    min-height: 92px;
+                }
+
+                .verify_check {
+                    width: 21px;
+                    height: 21px;
+                    overflow: hidden;
+                    position: absolute;
+                    right: -8px;
+                    top: -8px;
+                    background: $WE-100;
+                    border-radius: 50%;
+                    display: none;
+                    @include max-breakpoint-1680 {
+                        width: 17px;
+                        height: 17px;
+                        right: -6px;
+                        top: -6px;
+                    }
+
+                    mat-icon {
+                        font-size: $font-s-21;
+                        color: $GR-100;
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-17;
+                        }
+                    }
+                }
+
+                ul {
+                    @include ul_style();
+
+                    li {
+                        min-height: 35px;
+                        @include flex_center();
+                        flex-wrap: wrap;
+                        position: relative;
+                        padding: 15px 15px 0 45px;
+                        @include max-breakpoint-1680 {
+                            min-height: 28px;
+                            padding: 12px 12px 0 36px;
+                        }
+
+                        &::before {
+                            width: 1px;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            left: 25px;
+                            top: 0;
+                            border-left: 1px dashed $BLN-113;
+                            @include max-breakpoint-1680 {
+                                left: 20px;
+                            }
+                        }
+
+                        .bank_company_logo {
+                            min-height: 21px;
+                            border-radius: 50%;
+                            border: 1px solid $BLN-113;
+                            background: $WE-100;
+                            overflow: hidden;
+                            @include flex_center();
+                            position: absolute;
+                            left: 15px;
+                            top: 15px;
+                            z-index: 1;
+                            padding: 0;
+                            @include max-breakpoint-1680 {
+                                min-height: 17px;
+                                left: 12px;
+                                top: 12px;
+                            }
+
+                            img {
+                                width: 18px;
+                                min-width: 18px;
+                                @include max-breakpoint-1680 {
+                                    width: 14px;
+                                    min-width: 14px;
+                                }
+                            }
+
+                            .ghost_loading_box {
+                                width: 21px;
+                                min-width: 21px;
+                                min-height: 21px;
+                                border-radius: 50%;
+                                @include max-breakpoint-1680 {
+                                    width: 17px;
+                                    min-width: 17px;
+                                    height: 17px;
+                                }
+                            }
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                width: 100%;
+                                font: 400 $font-s-14 $primaryFont;
+                                color: $BL-102;
+                                margin: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+
+                                .ghost_loading_box {
+                                    width: 40%;
+                                    min-height: 16px;
+                                    @include max-breakpoint-1680 {
+                                        min-height: 13px;
+                                    }
+                                }
+                            }
+                        }
+
+                        h3 {
+                            &.mat-h3 {
+                                width: 100%;
+                                font: 400 $font-s-16 $primaryFont;
+                                color: $BL-103;
+                                margin: 0 0 4px 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-14 $primaryFont;
+                                    margin: 0 0 3px 0;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+
+                                .ghost_loading_box {
+                                    width: 50%;
+                                    min-height: 18px;
+                                    @include max-breakpoint-1680 {
+                                        min-height: 14px;
+                                    }
+                                }
+                            }
+                        }
+
+                        p {
+                            width: 100%;
+                            font: 600 $font-s-14 $primaryFont;
+                            color: $BL-103;
+                            text-transform: capitalize;
+                            margin: 0;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-12 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-11 $primaryFont;
+                            }
+
+                            .ghost_loading_box {
+                                width: 80%;
+                                min-height: 18px;
+                                display: inline-block;
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    min-height: 18px;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            &::before {
+                                height: 50%;
+                            }
+                        }
+                    }
+                    p {
+                        &.card_synced {
+                            padding: 5px 15px 0 10px;
+                            font: 400 $font-s-12 $primaryFont;
+                            color: $BL-102;
+                            text-align: right;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-11 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                padding: 4px 12px 0 8px;
+                                font: 400 $font-s-10 $primaryFont;
+                            }
+                        }
+                    }
+                }
+
+                // Single Payment Bank Details
+                .single_payment_bank_info {
+                    min-height: 35px;
+                    @include flex_center();
+                    flex-wrap: wrap;
+                    position: relative;
+                    padding: 15px 15px 0 45px;
+                    @include max-breakpoint-1680 {
+                        min-height: 28px;
+                        padding: 12px 12px 0 36px;
+                    }
+
+                    .single_bank_logo {
+                        width: 21px;
+                        min-width: 21px;
+                        height: 21px;
+                        border-radius: 50%;
+                        border: 1px solid $BLN-113;
+                        background: $WE-100;
+                        overflow: hidden;
+                        @include flex_center();
+                        position: absolute;
+                        left: 15px;
+                        top: 15px;
+                        z-index: 1;
+                        padding: 0;
+                        @include max-breakpoint-1680 {
+                            width: 17px;
+                            min-width: 17px;
+                            height: 17px;
+                            left: 12px;
+                            top: 12px;
+                        }
+
+                        img {
+                            width: 18px;
+                            min-width: 18px;
+                            @include max-breakpoint-1680 {
+                                width: 14px;
+                                min-width: 14px;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        &.mat-h4 {
+                            width: 100%;
+                            font: 400 $font-s-16 $primaryFont;
+                            color: $BL-103;
+                            margin: 0 0 4px 0;
+                            @include text_limit();
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-13 $primaryFont;
+                                margin: 0 0 3px 0;
+                            }
+
+                            .ghost_loading_box {
+                                width: 50%;
+                                min-height: 18px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        width: 100%;
+                        margin: 0;
+                        &.account_info {
+                            font: 600 $font-s-14 $primaryFont;
+                            color: $BL-103;
+                            text-transform: capitalize;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-12 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-11 $primaryFont;
+                            }
+                        }
+                        &.card_synced {
+                            padding: 5px 0 0 0;
+                            font: 400 $font-s-12 $primaryFont;
+                            color: $BL-102;
+                            text-align: right;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-11 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                padding: 4px 0 0 0;
+                                font: 400 $font-s-10 $primaryFont;
+                            }
+                        }
+
+                        .ghost_loading_box {
+                            width: 80%;
+                            min-height: 18px;
+                            display: inline-block;
+                            @include max-breakpoint-1680 {
+                                min-height: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        mat-card-footer {
+            width: 100%;
+            min-height: 36px;
+            @include flex_center();
+            justify-content: space-between;
+            background: $GYN-133;
+            border-radius: 0 0 10px 10px;
+            padding: 6px 15px;
+            @include max-breakpoint-1680 {
+                min-height: 29px;
+                border-radius: 0 0 8px 8px;
+                padding: 5px 12px;
+            }
+
+            button {
+                &.status_btn {
+                    min-height: 21px;
+                    background: none;
+                    border: none;
+                    @include flex_center();
+                    font: 600 $font-s-12 $primaryFont;
+                    color: $BL-102;
+                    cursor: default;
+                    @include max-breakpoint-1800 {
+                        min-height: 18px;
+                        font: 600 $font-s-11 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-height: 17px;
+                        font: 600 $font-s-10 $primaryFont;
+                    }
+
+                    &.green_btn {
+                        color: $GR-100;
+                    }
+
+                    &.green_fill_btn {
+                        color: $WE-100;
+                        background-color: $GR-100;
+                        border-radius: 4px;
+                        padding: 0 8px 0 6px;
+                        @include max-breakpoint-1680 {
+                            border-radius: 3px;
+                            padding: 0 6px 0 5px;
+                        }
+                    }
+
+                    &.red_btn {
+                        color: $RD-104;
+                    }
+
+                    mat-icon {
+                        font-size: $font-s-16;
+                        margin: 0 4px 0 0;
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-13;
+                            margin: 0 3px 0 0;
+                        }
+                    }
+
+                    img {
+                        height: 16px;
+                        margin: 0 6px 0 0;
+                        @include max-breakpoint-1680 {
+                            height: 13px;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+
+                    &.last_sync_rec_btn {
+                        color: $RD-102;
+                        border: 1px solid $RD-102;
+                        background-color: $WE-100;
+                        border-radius: 4px;
+                        padding: 0 8px 0 6px;
+                        cursor: pointer;
+                        @include max-breakpoint-1680 {
+                            border-radius: 3px;
+                            padding: 0 6px 0 5px;
+                        }
+
+                        mat-icon {
+                            font-size: $font-s-18;
+                            @include max-breakpoint-1680 {
+                                font-size: $font-s-14;
+                            }
+                        }
+                    }
+                }
+
+                &[disabled='true'],
+                &[disabled=''],
+                &.disabled,
+                &.mat-button-disabled {
+                    cursor: default;
+                    pointer-events: none;
+                    opacity: 0.6;
+                }
+            }
+
+            .info_tooltip_wrapper {
+                .info_tooltip {
+                    &.btn_tooltip {
+                        top: auto;
+                        bottom: 25px;
+                        @include max-breakpoint-1680 {
+                            bottom: 20px;
+                        }
+
+                        .info_tooltip_inner {
+                            &::before {
+                                top: auto;
+                                bottom: -4px;
+                                @include max-breakpoint-1680 {
+                                    bottom: -3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bank_account_list_left {
+                h5 {
+                    &.mat-h5 {
+                        font: 700 $font-s-16 $primaryFont;
+                        color: $BL-103;
+                        margin: 0;
+                        @include max-breakpoint-1800 {
+                            font: 700 $font-s-15 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 700 $font-s-14 $primaryFont;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 700 $font-s-13 $primaryFont;
+                        }
+
+                        .ghost_loading_box {
+                            width: 85px;
+                            min-height: 20px;
+                            display: inline-block;
+                            @include max-breakpoint-1680 {
+                                width: 68px;
+                                min-height: 16px;
+                            }
+                        }
+                    }
+                }
+
+                .info_tooltip_wrapper {
+                    .info_tooltip {
+                        &.right_tooltip {
+                            left: 0;
+                            right: auto;
+                            .info_tooltip_inner {
+                                &::before {
+                                    left: 10px;
+                                    right: auto;
+                                    @include max-breakpoint-1680 {
+                                        left: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bank_account_list_right {
+                text-align: right;
+
+                .ghost_loading_box {
+                    &.status_ghost_btn {
+                        width: 85px;
+                        min-height: 20px;
+                        display: inline-block;
+                        @include max-breakpoint-1680 {
+                            width: 68px;
+                            min-height: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        // Reconnect Bank Account Case
+        &.reconnect_bank_account {
+            border: 1px dashed $RD-103;
+            mat-card-content {
+                &.bank_info_content {
+                    .verify_check {
+                        display: none;
+                        &.reconnect_bank_warning {
+                            @include flex_center();
+                            justify-content: center;
+                            background-color: $RD-103;
+                            mat-icon {
+                                font-size: $font-s-13;
+                                color: $WE-100;
+                                @include max-breakpoint-1680 {
+                                    font-size: $font-s-10;
+                                }
+                            }
+                        }
+                    }
+                    ul {
+                        li {
+                            &:last-child {
+                                cursor: default;
+                                pointer-events: none;
+                                opacity: 0.5;
+                            }
+                        }
+                    }
+                    .single_payment_bank_info {
+                        cursor: default;
+                        pointer-events: none;
+                        opacity: 0.5;
+                    }
+                }
+            }
+            mat-card-footer {
+                .bank_account_list_right {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    // Verified Box
+    &.verified_box {
+        mat-card-content {
+            .verify_check {
+                display: block;
+            }
+        }
+    }
+    // Unverified Box
+    &.gray_list_box {
+        background: $GYN-133;
+        border-color: $GYN-133;
+        box-shadow: none;
+
+        mat-card-content {
+            &.bank_info_content {
+                position: relative;
+                .verify_check {
+                    display: none;
+                }
+
+                ul {
+                    li {
+                        h4 {
+                            &.mat-h4 {
+                                color: $BL-102;
+                            }
+                        }
+
+                        h3 {
+                            &.mat-h3 {
+                                color: $BL-102;
+                            }
+                        }
+
+                        p {
+                            color: $BL-102;
+                        }
+                    }
+                }
+            }
+        }
+
+        mat-card-footer {
+            background: #f0f2f4;
+
+            .bank_account_list_left {
+                h5 {
+                    &.mat-h5 {
+                        color: $BL-102;
+                    }
+                }
+            }
+        }
+    }
+}

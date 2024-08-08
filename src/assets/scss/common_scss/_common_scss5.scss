@@ -1,0 +1,483 @@
+// Select Bank Header
+.select_bank_header {
+    @include flex_center();
+
+    .select_bank_header_left {
+        @include flex_center();
+        padding-right: 10px;
+        @include max-breakpoint-1680 {
+            padding-right: 8px;
+        }
+
+        .bank_avatar {
+            width: 40px;
+            min-width: 40px;
+            height: 40px;
+            background: $WE-100;
+            border: 1px solid $GY-114;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            @include flex_center();
+            justify-content: center;
+            padding: 2px;
+            margin: 0 15px 0 0;
+            @include max-breakpoint-1680 {
+                width: 32px;
+                min-width: 32px;
+                height: 32px;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+                margin: 0 12px 0 0;
+            }
+
+            img {
+                width: 21px;
+                @include max-breakpoint-1680 {
+                    width: 17px;
+                }
+            }
+
+            mat-icon {
+                font-size: $font-s-21;
+                color: $GY-102;
+                @include max-breakpoint-1680 {
+                    font-size: $font-s-18;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font-size: $font-s-17;
+                }
+            }
+
+            &.default {
+                background: $GY-112;
+                border-color: $GY-112;
+                box-shadow: none;
+            }
+        }
+
+        h3 {
+            &.mat-h3 {
+                font: 700 $font-s-18 $primaryFont;
+                color: $BL-103;
+                margin: 0;
+                @include max-breakpoint-1800 {
+                    font: 700 $font-s-16 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 700 $font-s-14 $primaryFont;
+                }
+
+                .ghost_loading_box {
+                    width: 25rem;
+                    min-height: 24px;
+                    display: inline-block;
+                    @include max-breakpoint-1680 {
+                        width: 20rem;
+                        min-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+
+    .select_bank_header_right {
+        margin-left: auto;
+
+        button {
+            &.select_bank_btn {
+                font: 500 $font-s-14 $primaryFont;
+                line-height: 21px;
+                color: $GY-102;
+                background-color: $WE-100;
+                border-color: $GY-106;
+                border-radius: 5px;
+                padding: 0 10px;
+                @include max-breakpoint-1800 {
+                    font: 500 $font-s-13 $primaryFont;
+                    line-height: 21px;
+                }
+                @include max-breakpoint-1680 {
+                    font: 500 $font-s-12 $primaryFont;
+                    line-height: 18px;
+                    border-radius: 4px;
+                    padding: 0 8px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 500 $font-s-11 $primaryFont;
+                    line-height: 17px;
+                }
+
+                mat-icon {
+                    position: relative;
+                    font-size: $font-s-21;
+                    margin: 0 2px 0 0;
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-18;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font-size: $font-s-17;
+                    }
+
+                    &.check_icon {
+                        top: -1px;
+                    }
+                }
+
+                &.light_blue_btn {
+                    color: $BL-102;
+                    border-color: $BL-102;
+                }
+                &.dark_blue_btn {
+                    color: $BL-103;
+                    border-color: $BL-103;
+                }
+                &.red_fill_btn {
+                    color: $WE-100;
+                    border-color: $RD-101;
+                    background-color: $RD-101;
+
+                    mat-icon {
+                        font-size: $font-s-14;
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.select_bank_content {
+    position: relative;
+    padding: 0 0 0 55px;
+    margin: 8px 0 35px 0;
+    @include max-breakpoint-1680 {
+        padding: 0 0 0 44px;
+        margin: 6px 0 28px 0;
+    }
+
+    &::before {
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 20px;
+        top: 0;
+        content: '';
+        border-left: 1px dashed $BL-103;
+        @include max-breakpoint-1680 {
+            left: 16px;
+        }
+    }
+
+    mat-card {
+        &.mat-mdc-card {
+            &.white_default_card {
+                &.bank_link_card {
+                    margin: 10px 0 0 0;
+                    @include max-breakpoint-1680 {
+                        margin: 8px 0 0 0;
+                    }
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+
+                    mat-card-content {
+                        .link_bank_wrap {
+                            .bank_name {
+                                h3 {
+                                    &.mat-h3 {
+                                        color: #575975;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.primary_card {
+                        background: $BL-102;
+                        color: $WE-100;
+                        box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.1);
+                        @include max-breakpoint-1680 {
+                            box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+                        }
+
+                        mat-card-content {
+                            .bank_name {
+                                h3 {
+                                    &.mat-h3 {
+                                        color: $WE-100;
+                                    }
+                                }
+                            }
+
+                            .bank_account_info {
+                                color: $WE-100;
+                                border-top: 1px dashed #6d738b;
+
+                                .account_status {
+                                    &.verify {
+                                        color: $WE-100;
+                                    }
+
+                                    &.unverified {
+                                        color: $WE-100;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mat_table_wrap_main {
+        mat-table {
+            &.mat-mdc-table {
+                // Link Table
+                &.linked_bank_box_table {
+                    mat-header-row {
+                        &.mat-mdc-header-row {
+                            padding: 0 0.4vw;
+                            @include max-breakpoint-1680 {
+                                padding: 0 0.32vw;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            padding: 0 0.4vw;
+                            @include max-breakpoint-1680 {
+                                padding: 0 0.32vw;
+                            }
+                            @include max-breakpoint-1279 {
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    &.custom_table_padding4 {
+                        mat-header-row {
+                            &.mat-mdc-header-row {
+                                padding: 0 15px 0 15px;
+                                @include max-breakpoint-1680 {
+                                    padding: 0 12px 0 12px;
+                                }
+                                @include max-breakpoint-1279 {
+                                    padding: 0;
+                                }
+                            }
+                        }
+
+                        mat-row {
+                            &.mat-mdc-row {
+                                padding: 0 15px 0 15px;
+                                @include max-breakpoint-1680 {
+                                    padding: 0 12px 0 12px;
+                                }
+                                @include max-breakpoint-1279 {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Ghost
+    &.ghost_load {
+        &::before {
+            border-left: 1px dashed $GY-112;
+        }
+    }
+}
+.select_bank_footer {
+    text-align: center;
+
+    button {
+        &.select_bank_btn {
+            min-width: 294px;
+            min-height: 55px;
+            font: 600 $font-s-18 $primaryFont;
+            line-height: 1.6;
+            color: $BL-103;
+            background-color: $GY-107;
+            border-radius: 5px;
+            padding: 10px 15px;
+            @include max-breakpoint-1800 {
+                min-height: 50px;
+                font: 700 $font-s-16 $primaryFont;
+                line-height: 1.4;
+            }
+            @include max-breakpoint-1680 {
+                min-width: 235px;
+                min-height: 44px;
+                font: 600 $font-s-14 $primaryFont;
+                line-height: 1.28;
+                border-radius: 4px;
+                padding: 8px 12px;
+            }
+            @include max-breakpoint-1440 {
+                min-height: 45px;
+            }
+
+            &.blue_btn {
+                color: $WE-100;
+                background-color: $BL-103;
+            }
+        }
+    }
+
+    .ghost_loading_box {
+        width: 100%;
+        max-width: 294px;
+        min-height: 55px;
+        display: inline-block;
+        @include max-breakpoint-1800 {
+            min-height: 50px;
+        }
+        @include max-breakpoint-1680 {
+            min-width: 235px;
+            min-height: 44px;
+        }
+        @include max-breakpoint-1440 {
+            min-height: 45px;
+        }
+    }
+}
+// If Overlay Opened
+app-banking-details {
+    .bank_details_wrapper {
+        &.overlay_opened {
+            .table_wrapper {
+                &.fai_bank_link_table {
+                    .mat_table_wrap_main {
+                        height: auto;
+                        overflow: initial !important;
+                        padding: 0 !important;
+
+                        mat-table {
+                            &.custom_table_padding3 {
+                                :not(.fai_overlay_open) {
+                                    mat-cell {
+                                        &.mat-column-action {
+                                            .action_btn_group {
+                                                .fai_overlay_content_wrapper {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Banking Details Table Scroll Style
+app-settings-wrapper {
+    .setting_tab_content {
+        app-banking-details {
+            .setting_tab_content {
+                .table_wrapper {
+                    &.fai_bank_link_table {
+                        .mat_table_wrap_main {
+                            height: 224px !important;
+                            @include max-breakpoint-1680 {
+                                height: 179px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    app-business-details-wrapper {
+        app-business-information {
+            app-business-information-common {
+                form {
+                    .account_details_wrap {
+                        &.mb_4 {
+                            flex-direction: column !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Owl Carousel Style Include Here
+owl-carousel-o {
+    &.owl-carousel-dashed-navigation {
+        .owl-theme {
+            .owl-nav {
+                display: none;
+            }
+            .owl-dots {
+                @include flex_center();
+                justify-content: center;
+                .owl-dot {
+                    flex: 1 1 auto;
+                    max-width: 100%;
+                    margin: 0 6px;
+                    span {
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        border-radius: 5px;
+                        background-color: $BL-117;
+                        margin: 0;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &.active {
+                        span {
+                            background-color: $BL-114;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// New Button Style Here For Bank List
+.bank-btn-sec {
+    button {
+        &.mat-mdc-button {
+            &.bank-btn {
+                font: 400 $font-s-14 $primaryFont;
+                line-height: normal;
+                height: 24px;
+                border-radius: 50px;
+                .mdc-button__label {
+                    @include flex_center();
+                    justify-content: center;
+                }
+                &.bank-reconnect-btn {
+                    background-color: $BL-117;
+                    color: $RD-110;
+                    .mdc-button__label {
+                        img {
+                            max-width: 19px;
+                            margin-left: 4px;
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

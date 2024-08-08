@@ -1,0 +1,604 @@
+.info_tooltip_wrapper {
+  .info_tooltip {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 991;
+    display: none;
+
+    .info_tooltip_inner {
+      display: inline-block;
+      position: relative;
+      padding: 6px;
+      background: #616161;
+      border: 1px solid #616161;
+      box-shadow: 0 4px 8px rgba(102, 102, 102, 0.1);
+      border-radius: 6px;
+      font: 400 $font-s-12 $primaryFont;
+      line-height: normal;
+      color: $WE-1;
+      text-align: left;
+      white-space: nowrap;
+      @include max-breakpoint-1800 {
+        font: 400 $font-s-11 $primaryFont;
+      }
+      @include max-breakpoint-1680 {
+        padding: 5px;
+        box-shadow: 0 3px 6px rgba(102, 102, 102, 0.1);
+        border-radius: 5px;
+        font: 400 $font-s-10 $primaryFont;
+        line-height: normal;
+      }
+
+      a {
+        font: 600 $font-s-12 $primaryFont;
+        color: $WE-1;
+        text-decoration: underline;
+        @include max-breakpoint-1800 {
+          font: 600 $font-s-11 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+          font: 600 $font-s-10 $primaryFont;
+        }
+      }
+
+      &::before {
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        content: "";
+        left: 8px;
+        top: -4px;
+        background: #616161;
+        border-left: 1px solid #616161;
+        border-top: 1px solid #616161;
+        transform: rotate(45deg);
+        @include max-breakpoint-1800 {
+          width: 4px;
+          height: 4px;
+        }
+        @include max-breakpoint-1680 {
+          left: 6px;
+          top: -3px;
+        }
+      }
+
+      &.word_break {
+        word-break: break-all;
+      }
+    }
+
+    &.hideTooltipMsg {
+      display: none !important;
+    }
+
+    .info_tooltip_content {
+      p {
+        font: 400 $font-s-14 $primaryFont;
+        line-height: 18px;
+        color: $BL-102;
+        @include max-breakpoint-1800 {
+          font: 400 $font-s-13 $primaryFont;
+          line-height: 18px;
+        }
+        @include max-breakpoint-1680 {
+          font: 400 $font-s-12 $primaryFont;
+          line-height: 16px;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+          font: 400 $font-s-11 $primaryFont;
+          line-height: 14px;
+        }
+      }
+    }
+
+    // Gray Tooltip
+    &.gray_tooltip {
+      .info_tooltip_inner {
+        background: $GY-18;
+        border-color: $GY-19;
+        box-shadow: none;
+        color: $BL-1;
+
+        &::before {
+          background: $GY-18;
+          border-color: $GY-19;
+        }
+      }
+    }
+
+    // Left align tooltip
+    &.left_tooltip {
+      left: -4px;
+      right: auto;
+      @include max-breakpoint-1680 {
+        left: -3px;
+      }
+
+      .info_tooltip_inner {
+        &::before {
+          left: 8px;
+          @include max-breakpoint-1680 {
+            left: 6px;
+          }
+        }
+      }
+
+      &.custom_left_width {
+        .info_tooltip_inner {
+          width: max-content;
+          max-width: 220px;
+          white-space: normal;
+          @include max-breakpoint-1800 {
+            max-width: 210px;
+          }
+          @include max-breakpoint-1680 {
+            max-width: 176px;
+          }
+        }
+      }
+    }
+
+    // Center align tooltip
+    &.center_tooltip {
+      left: 0;
+      right: 0;
+
+      .info_tooltip_inner {
+        width: max-content;
+        max-width: 220px;
+        white-space: normal;
+        text-align: center;
+        @include max-breakpoint-1800 {
+          max-width: 210px;
+        }
+        @include max-breakpoint-1680 {
+          max-width: 176px;
+        }
+
+        &::before {
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    // Top align tooltip
+    &.top_tooltip {
+      top: auto;
+      bottom: 100%;
+
+      .info_tooltip_inner {
+        &::before {
+          top: auto;
+          bottom: -4px;
+          transform: rotate(228deg);
+          @include max-breakpoint-1680 {
+            bottom: -3px;
+          }
+        }
+      }
+    }
+
+    // Right align tooltip
+    &.right_tooltip {
+      left: auto;
+      right: -4px;
+      @include max-breakpoint-1680 {
+        right: -3px;
+      }
+      &.top_tooltip {
+        right: calc(100% - 20px);
+        @include max-breakpoint-1680 {
+          right: calc(100% - 16px);
+        }
+      }
+
+      .info_tooltip_inner {
+        &::before {
+          left: auto;
+          right: 8px;
+          @include max-breakpoint-1680 {
+            right: 6px;
+          }
+        }
+      }
+    }
+
+    &.btn_tooltip {
+      top: 34px;
+      @include max-breakpoint-1680 {
+        top: 27px;
+      }
+
+      .info_tooltip_inner {
+        &::before {
+          left: auto;
+          right: 3vw;
+          @include max-breakpoint-1680 {
+            right: 2.4vw;
+          }
+        }
+      }
+
+      &.left_tooltip {
+        top: 45px;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+          top: 36px;
+        }
+        .info_tooltip_inner {
+          &::before {
+            left: 15px;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+              left: 12px;
+            }
+          }
+        }
+      }
+
+      &.center_tooltip {
+        text-align: center;
+
+        .info_tooltip_inner {
+          &::before {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    // White Tooltip
+    &.white_tooltip {
+      .info_tooltip_inner {
+        background: $WE-1;
+        border: 1px solid #a4a9bf;
+        color: $BL-102;
+
+        &::before {
+          background: $WE-1;
+          border-left: 1px solid #a4a9bf;
+          border-top: 1px solid #a4a9bf;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    // Large Font size
+    &.lg_info_tooltip {
+      .info_tooltip_inner {
+        font: 400 $font-s-14 $primaryFont;
+        @include max-breakpoint-1800 {
+          font: 400 $font-s-13 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+          font: 400 $font-s-12 $primaryFont;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+          font: 400 $font-s-11 $primaryFont;
+        }
+      }
+    }
+
+    // Wide Doc list Tooltip
+    &.doc_list_tooltip {
+      @include max-breakpoint-1800 {
+        .info_tooltip_inner {
+          font: 400 $font-s-12 $primaryFont;
+        }
+      }
+      @include max-breakpoint-1680 {
+        .info_tooltip_inner {
+          font: 400 $font-s-10 $primaryFont;
+        }
+      }
+      @include max-breakpoint-1279 {
+        left: auto;
+        right: -4px;
+
+        .info_tooltip_inner {
+          &::before {
+            left: auto;
+            right: 8px;
+          }
+        }
+      }
+    }
+
+    // Table Th Tooltip
+    &.th_tooltip {
+      .info_tooltip_inner {
+        min-width: 240px;
+        white-space: normal;
+        @include max-breakpoint-1680 {
+          min-width: 192px;
+        }
+      }
+    }
+
+    &.th_tooltip2 {
+      .info_tooltip_inner {
+        min-width: 160px;
+        max-width: 280px;
+        white-space: normal;
+        @include max-breakpoint-1680 {
+          min-width: 128px;
+          max-width: 224px;
+        }
+      }
+    }
+
+    // File Name Tooltip
+    &.file_tooltip {
+      .info_tooltip_inner {
+        min-width: 240px;
+        white-space: normal;
+        @include max-breakpoint-1680 {
+          min-width: 192px;
+        }
+      }
+    }
+
+    // Beneficial Tab Tooltip
+    &.accordion_tooltip {
+      .info_tooltip_inner {
+        max-width: 300px;
+        white-space: normal;
+        @include max-breakpoint-1680 {
+          min-width: 240px;
+        }
+      }
+    }
+  }
+
+  // Multiple line Tooltip
+  &.multiple_line_tooltip {
+    .info_tooltip {
+      .info_tooltip_inner {
+        white-space: normal;
+      }
+    }
+  }
+  &.multiple_line_tooltip2 {
+    .info_tooltip {
+      .info_tooltip_inner {
+        white-space: nowrap;
+      }
+    }
+  }
+  &.multiple_line_tooltip3 {
+    .info_tooltip {
+      .info_tooltip_inner {
+        min-width: 180px;
+        max-width: 270px;
+        white-space: normal;
+        @include max-breakpoint-1680 {
+          min-width: 144px;
+          max-width: 216px;
+        }
+
+        &.word_break {
+          min-width: unset;
+          max-width: unset;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .info_tooltip {
+      display: block;
+    }
+    .hideTooltipMsg {
+      display: none;
+    }
+  }
+}
+
+// Common Input Tooltip
+.info_input_tooltip {
+  width: 15px;
+  min-width: 15px;
+  height: 15px;
+  background: $WE-1;
+  position: absolute;
+  right: 0;
+  top: auto;
+  bottom: 12px;
+  z-index: 99;
+  @include max-breakpoint-1680 {
+    width: 12px;
+    min-width: 12px;
+    height: 12px;
+    bottom: 10px;
+  }
+
+  .info_input_icon {
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: url(../../../assets/images/info_icon.png) no-repeat center;
+    background-size: 15px;
+
+    @include max-breakpoint-1680 {
+      width: 12px;
+      min-width: 12px;
+      height: 12px;
+      background-size: 12px;
+    }
+  }
+
+  .info_input_tooltip_text {
+    min-width: 200px;
+    display: none;
+    font: 400 $font-s-11 $primaryFont;
+    line-height: 14px;
+    color: $WE-1;
+    letter-spacing: 0;
+    text-align: center;
+    background: $BK-2;
+    border-radius: 4px;
+    padding: 6px;
+    position: absolute;
+    left: -93px;
+    top: auto;
+    bottom: 30px;
+    @include max-breakpoint-1680 {
+      min-width: 160px;
+      border-radius: 3px;
+      padding: 5px;
+      left: -74px;
+      bottom: 24px;
+    }
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      font: 400 $font-s-9 $primaryFont;
+      line-height: 11px;
+    }
+
+    p {
+      font: 400 $font-s-11 $primaryFont;
+      line-height: 14px;
+      color: $WE-1;
+      position: relative;
+      z-index: 2;
+      @media (-webkit-device-pixel-ratio: 1.25) {
+        font: 400 $font-s-9 $primaryFont;
+        line-height: 11px;
+      }
+    }
+
+    &::after {
+      width: 16px;
+      height: 14px;
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: auto;
+      bottom: -6px;
+      margin: 0 auto;
+      background: $BK-2;
+      border-left: 1px solid $BK-2;
+      border-top: 1px solid $BK-2;
+      transform: rotate(45deg);
+      z-index: 1;
+      @include max-breakpoint-1680 {
+        width: 13px;
+        height: 11px;
+        bottom: -5px;
+      }
+    }
+
+    @include max-breakpoint-599 {
+      left: auto;
+      right: -10px;
+
+      &::after {
+        left: auto;
+        right: 10px;
+      }
+    }
+  }
+
+  &:hover {
+    .info_input_tooltip_text {
+      display: block;
+    }
+  }
+
+  &.phone_tooltip {
+    bottom: 12px;
+    @include max-breakpoint-1680 {
+      bottom: 10px;
+    }
+  }
+
+  &.light_icon {
+    .info_input_icon {
+      background: url(../../../assets/images/info_icon2.png) no-repeat center;
+      background-size: 15px;
+      @include max-breakpoint-1680 {
+        background-size: 12px;
+      }
+    }
+  }
+}
+
+// Common No Bank Connect (New)
+.no_bank_connect_container_new {
+  min-height: calc(100vh - 410px);
+  @include flex_center();
+  position: relative;
+  @include max-breakpoint-1680 {
+    min-height: calc(100vh - 360px);
+  }
+
+  .no_bank_connect_inner {
+    text-align: center;
+  }
+
+  h3 {
+    &.mat-h3 {
+      font: 600 $font-s-24 $primaryFont;
+      color: $BL-1;
+      @include max-breakpoint-1800 {
+        font: 600 $font-s-21 $primaryFont;
+      }
+      @include max-breakpoint-1680 {
+        font: 600 $font-s-18 $primaryFont;
+      }
+      @media (-webkit-device-pixel-ratio: 1.25) {
+        font: 600 $font-s-19 $primaryFont;
+      }
+      @include max-breakpoint-1440 {
+        font: 600 $font-s-16 $primaryFont;
+      }
+    }
+  }
+
+  img {
+    &.infographic_img {
+      margin: 15px 0;
+      @include max-breakpoint-1800 {
+        height: 75px;
+      }
+    }
+  }
+
+  p {
+    font: 400 $font-s-16 $primaryFont;
+    color: $BL-2;
+    margin: 0 0 10px 0;
+    @include max-breakpoint-1800 {
+      font: 400 $font-s-15 $primaryFont;
+    }
+    @include max-breakpoint-1680 {
+      font: 400 $font-s-14 $primaryFont;
+      margin: 0 0 8px 0;
+    }
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      font: 400 $font-s-13 $primaryFont;
+    }
+    @include max-breakpoint-1440 {
+      font: 400 $font-s-12 $primaryFont;
+    }
+  }
+
+  .no_bank_connect_footer {
+    button {
+      &.common_btn {
+        background-color: $BL-1;
+        border-radius: 200px;
+        padding: 0 30px;
+
+        mat-icon {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}

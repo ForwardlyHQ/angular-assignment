@@ -1,0 +1,494 @@
+// Plan a Scenario Page
+.scenario_inner_main {
+    .scenario_accordion_wrapper {
+        width: 100%;
+        max-width: 89%;
+        margin-left: -15px;
+
+        @include max-breakpoint-1365 {
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        mat-accordion {
+            &.mat-accordion {
+                &.scenario_accordion {
+                    mat-expansion-panel {
+                        &.mat-expansion-panel {
+                            .scenario_tab_icon {
+                                height: 24px;
+                                margin: 0 10px 0 0;
+
+                                img {
+                                    width: 24px;
+                                    min-width: 24px;
+                                    height: 24px;
+                                    opacity: 0.5;
+                                }
+
+                                @include max-breakpoint-1680 {
+                                    height: 20px;
+
+                                    img {
+                                        width: 20px;
+                                        min-width: 20px;
+                                        height: 20px;
+                                    }
+                                }
+                            }
+
+                            mat-expansion-panel-header {
+                                &.mat-expansion-panel-header {
+                                    padding: 0 15px;
+
+                                    mat-panel-title {
+                                        &.mat-expansion-panel-header-title {
+                                            h3 {
+                                                &.mat-h3 {
+                                                    font: 700 $font-s-18 $primaryFont;
+                                                    line-height: 1.6;
+                                                    color: $BL-104;
+                                                    margin: 0;
+
+                                                    @include max-breakpoint-1680 {
+                                                        font: 700 $font-s-16 $primaryFont;
+                                                        line-height: 1.6;
+                                                    }
+
+                                                    @include max-breakpoint-1440 {
+                                                        font: 700 $font-s-15 $primaryFont;
+                                                        line-height: 1.6;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        background: none;
+                                    }
+
+                                    &.mat-expanded {
+                                        mat-panel-title {
+                                            &.mat-expansion-panel-header-title {
+                                                .scenario_tab_icon {
+                                                    img {
+                                                        opacity: 1;
+                                                    }
+                                                }
+
+                                                h3 {
+                                                    &.mat-h3 {
+                                                        color: $BL-103;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            mat-list {
+                                &.mat-mdc-list {
+                                    mat-list-item {
+                                        &.mat-mdc-list-item {
+                                            .mdc-list-item__primary-text {
+                                                button {
+                                                    width: 100%;
+                                                    font: 400 $font-s-16 $primaryFont;
+                                                    line-height: 1.6;
+                                                    color: $BL-104;
+                                                    text-align: left;
+                                                    padding: 0px 15px;
+                                                    border: 1px solid transparent;
+                                                    border-top: 1px solid $GY-116;
+
+                                                    @include max-breakpoint-1680 {
+                                                        font: 400 $font-s-14 $primaryFont;
+                                                    }
+
+                                                    .mat-button-ripple.mat-ripple,
+                                                    .mat-button-focus-overlay {
+                                                        display: none;
+                                                    }
+
+                                                    .mat-button-wrapper {
+                                                        width: 100%;
+                                                        min-height: 44px;
+                                                        @include flex_center();
+                                                    }
+                                                }
+                                            }
+
+                                            &:first-child {
+                                                .mdc-list-item__primary-text {
+                                                    button {
+                                                        border-top: 1px solid transparent;
+                                                    }
+                                                }
+                                            }
+
+                                            .mdc-list-item__primary-text {
+                                                button {
+                                                    &.active {
+                                                        font-weight: 700;
+                                                        color: $BL-103;
+                                                        background-color: $WE-100;
+                                                        border-color: $BL-103;
+                                                        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+                                                        .scenario_tab_icon {
+                                                            img {
+                                                                opacity: 1;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    &:hover {
+                                                        background: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cashflow_impact_graph_wrapper {
+        border-left: 1px dashed $GY-107;
+        padding-left: 15px;
+
+        @include max-breakpoint-1279 {
+            max-width: 100%;
+            border-left: 0;
+            padding-left: 0;
+            border-top: 1px dashed $GY-107;
+        }
+    }
+}
+// Plan a Scenario Bottom Content
+.scenario_body {
+    position: relative;
+    padding: 45px 0;
+
+    .scenario_header {
+        width: 100%;
+        min-height: 45px;
+        @include flex_center();
+        position: relative;
+        margin: 0 0 10px 0;
+
+        .scenario_header_left {
+            h2 {
+                &.mat-h2 {
+                    @include heading_md_blue();
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+
+        .scenario_header_right {
+            margin-left: auto;
+            color: $BL-102;
+
+            mat-form-field {
+                &.mat-form-field {
+                    &.form_field_control {
+                        .mat-form-field-outline-start,
+                        .mat-form-field-outline-end {
+                            min-width: 10px;
+                        }
+
+                        .mat-form-field-outline-start {
+                            border-radius: 10px 0 0 10px;
+                        }
+
+                        .mat-form-field-outline-end {
+                            border-radius: 0 10px 10px 0;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: $BL-102;
+                margin: 0;
+
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-12 $primaryFont;
+                }
+            }
+        }
+    }
+
+    // Left Side
+    .scenario_left_wrapper {
+        .scenario_form_wrapper {
+            .scenario_form_field {
+                position: relative;
+                color: $BL-107;
+
+                @include max-breakpoint-1279 {
+                    margin-bottom: -15px;
+                }
+
+                .scenario_form_field_header {
+                    width: 100%;
+                    min-height: 40px;
+                    @include flex_center();
+
+                    .left {
+                        @include flex_center();
+
+                        mat-label {
+                            &.form_field_title {
+                                font: 600 $font-s-15 $primaryFont;
+                                color: $BL-107;
+                                margin: 0 30px 0 0;
+
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-14 $primaryFont;
+                                    margin: 0 15px 0 0;
+                                }
+
+                                @include max-breakpoint-1440 {
+                                    font: 600 $font-s-13 $primaryFont;
+                                    margin: 0 10px 0 0;
+                                }
+                            }
+                        }
+
+                        mat-form-field {
+                            &.mat-form-field {
+                                &.heading_dropdown {
+                                    .mat-form-field-wrapper {
+                                        padding-bottom: 0;
+                                    }
+
+                                    .mat-form-field-infix {
+                                        width: auto;
+                                        border-top: 0;
+                                        padding: 0;
+                                    }
+
+                                    .mat-select-value-text {
+                                        font: 600 $font-s-15 $primaryFont;
+
+                                        @include max-breakpoint-1680 {
+                                            font: 600 $font-s-14 $primaryFont;
+                                        }
+
+                                        @include max-breakpoint-1440 {
+                                            font: 600 $font-s-13 $primaryFont;
+                                        }
+                                    }
+
+                                    .mat-select-value,
+                                    .mat-mdc-select-arrow {
+                                        color: $BL-107;
+                                    }
+
+                                    .mat-mdc-select-arrow-wrapper {
+                                        margin-left: 6px;
+                                    }
+
+                                    .mat-form-field-underline {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .right {
+                        margin-left: auto;
+
+                        input {
+                            width: 100%;
+                            max-width: 130px;
+                            height: 42px;
+                            text-align: right;
+                            background: none;
+                            border: 2px solid transparent;
+                            border-radius: 10px;
+                            font: 600 $font-s-20 $primaryFont;
+                            color: $BL-103;
+                            @include hover-speed();
+
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-16 $primaryFont;
+                            }
+
+                            &:focus {
+                                padding: 4px 10px;
+                                border-color: $BL-103;
+                            }
+                        }
+                    }
+                }
+
+                .mat_slider_wrapper {
+                    position: relative;
+
+                    .row {
+                        @include flex_center();
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin: 0 -10px;
+                        position: relative;
+                        top: -8px;
+
+                        .col {
+                            position: relative;
+                            padding: 0 15px;
+                            font: 600 $font-s-16 $primaryFont;
+
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-14 $primaryFont;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Right Side
+    mat-card {
+        &.mat-mdc-card {
+            &.white_default_card {
+                &.scenario_box_card {
+                    width: 100%;
+                    max-width: 85%;
+                    margin-left: auto;
+
+                    @include max-breakpoint-1440 {
+                        max-width: 98%;
+                    }
+
+                    @include max-breakpoint-1365 {
+                        max-width: 100%;
+                    }
+
+                    &.fW_100 {
+                        max-width: 100%;
+                        margin: 0 0 30px 0;
+                    }
+
+                    mat-list {
+                        &.mat-mdc-list {
+                            mat-list-item {
+                                &.mat-mdc-list-item {
+                                    span {
+                                        &.mdc-list-item__primary-text {
+                                            justify-content: space-between;
+                                            min-height: 30px;
+                                            color: $BL-102;
+
+                                            .scenario_box_graph {
+                                                width: 100%;
+                                                text-align: center;
+                                                padding: 20px 0;
+                                            }
+
+                                            .scenario_box_col {
+                                                font: 400 $font-s-16 $primaryFont;
+                                                color: $BL-102;
+
+                                                @include max-breakpoint-1680 {
+                                                    font: 400 $font-s-14 $primaryFont;
+                                                }
+
+                                                strong {
+                                                    font-weight: 700;
+                                                    color: $BL-103;
+                                                }
+
+                                                &.left {
+                                                    @include flex_center();
+
+                                                    .scenario_dot {
+                                                        width: 14px;
+                                                        min-width: 14px;
+                                                        height: 14px;
+                                                        background: $GY-107;
+                                                        border-radius: 50%;
+                                                        margin: 0 8px 0 0;
+
+                                                        @include max-breakpoint-1680 {
+                                                            width: 10px;
+                                                            min-width: 10px;
+                                                            height: 10px;
+                                                        }
+
+                                                        &.green {
+                                                            background: #75c193;
+                                                        }
+
+                                                        &.blue {
+                                                            background: $BL-112;
+                                                        }
+
+                                                        &.red {
+                                                            background: #ff8298;
+                                                        }
+                                                    }
+                                                }
+
+                                                &.right {
+                                                    width: 100%;
+                                                    max-width: 40%;
+                                                    text-align: right;
+
+                                                    strong {
+                                                        width: 100%;
+                                                        display: inline-block;
+                                                        @include text_limit();
+                                                    }
+                                                }
+                                            }
+
+                                            .scenario_box_btn_wrapper {
+                                                width: 100%;
+                                                padding: 20px 0;
+                                                text-align: center;
+
+                                                button {
+                                                    &.scenario_btn {
+                                                        min-width: 160px;
+                                                        font: 700 $font-s-16 $primaryFont;
+                                                        color: $BL-103;
+                                                        background-color: $GY-107;
+                                                        border-radius: 10px;
+                                                        padding: 10px 10px;
+
+                                                        &.blue_btn {
+                                                            color: $WE-100;
+                                                            background-color: $BL-103;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.footer_list {
+                                        border-top: 1px solid $GY-116;
+                                        padding-top: 10px;
+                                        margin: 10px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

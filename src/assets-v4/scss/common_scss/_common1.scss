@@ -1,0 +1,589 @@
+// Common Heading Style
+.common_heading {
+    margin: 0 0 30px 0;
+    @include max-breakpoint-1680 {
+        margin: 0 0 24px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 20px 0;
+    }
+
+    .animated_icon {
+        margin: 0 0 20px 0;
+        img {
+            height: 100px;
+        }
+        @include max-breakpoint-1680 {
+            margin: 0 0 16px 0;
+            img {
+                height: 80px;
+            }
+        }
+        @include max-breakpoint-1440 {
+            margin: 0 0 10px 0;
+            img {
+                height: 75px;
+            }
+        }
+    }
+
+    h3 {
+        &.mat-h3 {
+            font: 600 $font-s-18 $primaryFont;
+            line-height: normal;
+            color: $BE-1;
+            margin: 0 0 3px 0;
+
+            &.transform_text {
+                text-transform: capitalize;
+            }
+
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-16 $primaryFont;
+                line-height: normal;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-14 $primaryFont;
+                line-height: normal;
+                margin: 0 0 2px 0;
+            }
+        }
+    }
+
+    h1 {
+        &.mat-h1 {
+            font: 600 $font-s-32 $primaryFont;
+            line-height: normal;
+            color: $BE-1;
+            margin: 0 0 10px 0;
+
+            &.transform_text {
+                text-transform: capitalize;
+            }
+
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-28 $primaryFont;
+                line-height: normal;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-26 $primaryFont;
+                line-height: normal;
+                margin: 0 0 8px 0;
+            }
+            @include max-breakpoint-1440 {
+                font: 600 $font-s-21 $primaryFont;
+                line-height: normal;
+            }
+        }
+    }
+
+    p {
+        font: 400 $font-s-16 $primaryFont;
+        line-height: 21px;
+        color: $GY-2;
+        @include max-breakpoint-1800 {
+            font: 400 $font-s-15 $primaryFont;
+            line-height: 21px;
+        }
+        @include max-breakpoint-1680 {
+            font: 400 $font-s-14 $primaryFont;
+            line-height: 21px;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 400 $font-s-13 $primaryFont;
+            line-height: 17px;
+        }
+        @include max-breakpoint-1440 {
+            font: 400 $font-s-12 $primaryFont;
+            line-height: 18px;
+        }
+        @include max-breakpoint-767 {
+            br {
+                display: none;
+            }
+        }
+
+        span {
+            color: $OE-1;
+        }
+
+        &.dark_text {
+            color: $BE-1;
+        }
+
+        strong {
+            font-weight: 600;
+            color: $GY-2;
+        }
+    }
+
+    &.text_center {
+        text-align: center;
+    }
+
+    &.custom_auth_mb {
+        margin: 0 0 75px 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 40px 0;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            margin: 0 0 60px 0;
+        }
+        @include max-breakpoint-1440 {
+            margin: 0 0 35px 0;
+        }
+    }
+}
+
+// Common Button Style
+button,
+a {
+    &.common_btn {
+        width: 100%;
+        min-height: 45px;
+        font: 500 $font-s-14 $primaryFont;
+        padding: 0 15px;
+        letter-spacing: 0;
+        @include max-breakpoint-1800 {
+            min-height: 40px;
+            font: 500 $font-s-13 $primaryFont;
+            padding: 0 12px;
+        }
+        @include max-breakpoint-1680 {
+            font: 500 $font-s-12 $primaryFont;
+            min-height: 36px;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 500 $font-s-11 $primaryFont;
+        }
+        @include max-breakpoint-1440 {
+            min-height: 34px;
+        }
+
+        &.gray_btn {
+            color: $BL-1;
+            background-color: $GY-18;
+            border-color: $GY-18;
+        }
+        &.black_btn {
+            color: $WE-1;
+            background-color: $BL-1;
+            border-color: $BL-1;
+        }
+        &.black_outline_btn {
+            color: $BL-1;
+            background-color: $WE-1;
+            border-color: $BL-1;
+        }
+        &.blue_btn {
+            color: $WE-1;
+            background-color: $BL-114;
+            border-color: $BL-114;
+        }
+        &.green_btn {
+            color: $WE-1;
+            background-color: $GN-1;
+            border-color: $GN-1;
+        }
+        &.green_outline_btn {
+            color: $GN-1;
+            background-color: $WE-1;
+            border-color: $GN-1;
+        }
+        &.orange_btn {
+            color: $WE-1;
+            background-color: $OE-1;
+            border-color: $OE-1;
+        }
+        &.orange_outline_btn {
+            color: $OE-1;
+            background-color: $WE-1;
+            border-color: $OE-1;
+        }
+        &.red_outline_btn {
+            color: $RD-5;
+            background-color: $WE-1;
+            border-color: $RD-5;
+        }
+        &.xero_btn {
+            font: 600 $font-s-14 $secondaryFont;
+            color: $WE-1;
+            background-color: #0d84ab;
+            border-color: #0d84ab;
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-13 $secondaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-12 $secondaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 600 $font-s-11 $secondaryFont;
+            }
+        }
+        &.qb_btn {
+            font: 600 $font-s-14 $secondaryFont;
+            color: $WE-1;
+            background-color: #2ca01c;
+            border-color: #2ca01c;
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-13 $secondaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-12 $secondaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 600 $font-s-11 $secondaryFont;
+            }
+        }
+        &.freshBook_btn {
+            color: $WE-1;
+            background-color: #0075dd;
+            border-color: #0075dd;
+        }
+        &.img_left_icon {
+            .mdc-button__label {
+                @include flex_align_center();
+                img {
+                    width: 28px;
+                    margin: 0 8px 0 0;
+                    @include max-breakpoint-1800 {
+                        width: 26px;
+                        margin: 0 6px 0 0;
+                    }
+                    @include max-breakpoint-1680 {
+                        width: 22px;
+                        margin: 0 6px 0 0;
+                    }
+                }
+            }
+            mat-icon {
+                font-size: $font-s-18;
+                margin: 0 8px 0 0;
+                @include max-breakpoint-1800 {
+                    font-size: $font-s-16;
+                    margin: 0 6px 0 0;
+                }
+                @include max-breakpoint-1680 {
+                    font-size: $font-s-14;
+                }
+            }
+        }
+        &.img_right_icon {
+            .mdc-button__label {
+                @include flex_align_center();
+                img {
+                    width: auto;
+                    height: 16px;
+                    margin: 0 0 0 8px;
+                    @include max-breakpoint-1800 {
+                        height: 14px;
+                        margin: 0 0 0 6px;
+                    }
+                    @include max-breakpoint-1680 {
+                        height: 13px;
+                    }
+                }
+            }
+
+            mat-icon {
+                font-size: $font-s-18;
+                margin: 0 0 0 8px;
+                order: 2;
+                @include max-breakpoint-1800 {
+                    font-size: $font-s-14;
+                    margin: 0 0 0 6px;
+                }
+                @include max-breakpoint-1680 {
+                    font-size: $font-s-13;
+                }
+            }
+        }
+
+        &.fluid_btn {
+            width: auto;
+        }
+        &.border_200 {
+            border-radius: 200px;
+        }
+
+        mat-spinner {
+            svg {
+                circle {
+                    stroke: $WE-1;
+                }
+            }
+        }
+
+        &[disabled='true'],
+        &[disabled=''],
+        &.disabled,
+        &.mat-button-disabled {
+            color: $WE-1;
+            background-color: rgba($BL-114, 0.3);
+            border-color: #bbbbbf;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}
+// Common Tooltip
+.info_tooltip_wrapper {
+    display: inline-block;
+    margin-left: 8px;
+    position: relative;
+    top: 2px;
+    @include max-breakpoint-1800 {
+        margin-left: 6px;
+    }
+
+    &.ml_0 {
+        margin-left: 0;
+        top: 0;
+    }
+
+    &.mt_0 {
+        top: 0;
+    }
+
+    &.info_text {
+        display: block;
+
+        .info_tooltip_text {
+            width: 100%;
+            display: inline-block;
+            @include text_limit();
+
+            &.white {
+                color: $WE-1 !important;
+            }
+
+            &.custom_w_text {
+                max-width: 7.3vw;
+                @include max-breakpoint-1680 {
+                    max-width: 5.84vw;
+                }
+                @include max-breakpoint-1279 {
+                    max-width: inherit;
+                }
+            }
+            &.custom_w_text2 {
+                max-width: 11vw;
+                text-transform: capitalize;
+
+                @include max-breakpoint-1800 {
+                    max-width: 10vw;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 9vw;
+                }
+                @include max-breakpoint-1440 {
+                    max-width: 7vw;
+                }
+                @include max-breakpoint-1279 {
+                    max-width: 10vw;
+                }
+            }
+            &.custom_w_text3 {
+                max-width: 300px;
+                display: inline-grid;
+                text-transform: capitalize;
+
+                &.uppercase {
+                    text-transform: uppercase;
+                }
+                @include max-breakpoint-1800 {
+                    max-width: 270px;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 240px;
+                }
+
+                span {
+                    width: 100%;
+                    display: inline-block;
+                    @include text_limit();
+                }
+            }
+            &.custom_w_text4 {
+                max-width: 140px;
+                @include max-breakpoint-1800 {
+                    max-width: 130px;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 112px;
+                }
+            }
+            &.custom_w_text5 {
+                max-width: 165px;
+                @include max-breakpoint-1800 {
+                    max-width: 150px;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 132px;
+                }
+            }
+        }
+    }
+
+    .ghost_loading_box {
+        width: 18px;
+        min-height: 18px;
+        @include max-breakpoint-1800 {
+            width: 16px;
+            min-height: 16px;
+        }
+        @include max-breakpoint-1680 {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    img {
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        @include max-breakpoint-1800 {
+            width: 12px;
+            height: 12px;
+        }
+        @include max-breakpoint-1680 {
+            width: 11px;
+            height: 11px;
+        }
+    }
+}
+// Virtual scroll
+cdk-virtual-scroll-viewport {
+    &.cdk-virtual-scrollable {
+        .cdk-virtual-scroll-content-wrapper {
+            margin-right: -20px;
+            padding-right: 20px;
+            @include max-breakpoint-1680 {
+                margin-right: -16px;
+                padding-right: 16px;
+            }
+        }
+    }
+    &.searchable_virtual_scrollbar {
+        min-height: 113px;
+        @include max-breakpoint-1680 {
+            min-height: 90px;
+        }
+        .cdk-virtual-scroll-content-wrapper {
+            margin-right: 0;
+            padding-right: 0;
+            @include max-breakpoint-1680 {
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+        &.customer_scrollbar {
+            &.single_item {
+                min-height: 56px;
+                @include max-breakpoint-1680 {
+                    min-height: 45px;
+                }
+            }
+        }
+        &.vendor_scrollbar {
+            min-height: 125px;
+            @include max-breakpoint-1680 {
+                min-height: 100px;
+            }
+            &.single_item {
+                min-height: 41px;
+                @include max-breakpoint-1680 {
+                    min-height: 33px;
+                }
+            }
+            &.double_item {
+                min-height: 83px;
+                @include max-breakpoint-1680 {
+                    min-height: 66px;
+                }
+            }
+        }
+    }
+}
+// Common No Bank Connect
+.no_bank_connect_container {
+    min-height: calc(100vh - 410px);
+    @include flex_center();
+    position: relative;
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        min-height: calc(100vh - 360px);
+    }
+
+    .no_bank_connect_inner {
+        text-align: center;
+    }
+
+    h3 {
+        &.mat-h3 {
+            font: 700 $font-s-18 $primaryFont;
+            color: $BE-1;
+            @include max-breakpoint-1800 {
+                font: 700 $font-s-16 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 700 $font-s-14 $primaryFont;
+            }
+        }
+    }
+
+    img {
+        &.infographic_img {
+            height: 88px;
+            margin: 15px 0;
+            @include max-breakpoint-1800 {
+                height: 79px;
+            }
+            @include max-breakpoint-1680 {
+                height: 70px;
+                margin: 12px 0;
+            }
+        }
+    }
+
+    p {
+        font: 400 $font-s-16 $primaryFont;
+        color: $GY-11;
+        margin: 0 0 10px 0;
+        @include max-breakpoint-1800 {
+            font: 400 $font-s-15 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+            font: 400 $font-s-14 $primaryFont;
+            margin: 0 0 8px 0;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 400 $font-s-13 $primaryFont;
+        }
+        @include max-breakpoint-1440 {
+            font: 400 $font-s-12 $primaryFont;
+        }
+    }
+
+    .no_bank_connect_footer {
+        button {
+            &.common_btn {
+                font: 600 $font-s-16 $primaryFont;
+                padding: 0 30px;
+                border-radius: 50px;
+                @include max-breakpoint-1800 {
+                    font: 600 $font-s-14 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    padding: 0 24px;
+                    border-radius: 6px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 600 $font-s-13 $primaryFont;
+                }
+                @include max-breakpoint-1440 {
+                    font: 600 $font-s-12 $primaryFont;
+                }
+            }
+        }
+    }
+}

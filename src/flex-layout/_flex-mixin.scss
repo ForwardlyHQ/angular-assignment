@@ -1,0 +1,27 @@
+// Flex Layout Variables
+$flex-column-size: 1;
+$flex-row-margin: 1;
+$flex-column-padding: 1;
+
+// Flex Layout Properties
+@mixin flex-properties() {
+  display: flex;
+  box-sizing: border-box;
+}
+// Flex Layout Direction Mixin
+@mixin flex-direction-row() {
+  @include flex-properties();
+  flex-direction: row;
+}
+@mixin flex-direction-row-reverse() {
+  @include flex-properties();
+  flex-direction: row-reverse;
+}
+@mixin flex-direction-column() {
+  @include flex-properties();
+  flex-direction: column;
+}
+@mixin flex-direction-column-reverse() {
+  @include flex-properties();
+  flex-direction: column-reverse;
+}

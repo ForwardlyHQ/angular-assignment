@@ -1,0 +1,680 @@
+mat-option {
+    &.mat-mdc-option {
+        /* Select Bank Account Option Style Include Here */
+        &.fai_custom_select_box {
+            padding: 6px 15px;
+            min-height: 60px;
+            border-bottom: 1px solid $BL-102;
+            @include max-breakpoint-1680 {
+                padding: 5px 12px;
+                min-height: 48px;
+            }
+
+            .mdc-list-item__primary-text {
+                h6 {
+                    font: 700 $font-s-14 $secondaryFont;
+                    line-height: normal;
+                    color: $BL-103;
+                    @include text_limit();
+                    @include max-breakpoint-1800 {
+                        font: 700 $font-s-13 $primaryFont;
+                        line-height: normal;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 700 $font-s-12 $primaryFont;
+                        line-height: normal;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 700 $font-s-11 $primaryFont;
+                        line-height: normal;
+                    }
+                }
+
+                p {
+                    font: 600 $font-s-14 $secondaryFont;
+                    line-height: normal;
+                    color: $BL-102;
+                    @include text_limit();
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-13 $primaryFont;
+                        line-height: normal;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-12 $primaryFont;
+                        line-height: normal;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-11 $primaryFont;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Mat Checkbox */
+mat-checkbox {
+    &.mat-mdc-checkbox {
+        .mat-checkbox-layout {
+            .mat-checkbox-label {
+                font: 400 $font-s-14 $primaryFont;
+                color: $BL-107;
+                @include max-breakpoint-1800 {
+                    font: 400 $font-s-13 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-12 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-11 $primaryFont;
+                }
+            }
+        }
+
+        .mat-checkbox-frame {
+            border-color: $BL-102;
+        }
+
+        &.sm_checkbox {
+            width: 100%;
+            .mdc-form-field {
+                width: 100%;
+                position: relative;
+                left: -10px;
+                @include max-breakpoint-1680 {
+                    left: -8px;
+                }
+
+                .mdc-checkbox {
+                    width: 14px;
+                    flex: 0 0 14px;
+                    height: 14px;
+                    padding: 10px;
+                    margin: 0;
+                    @include max-breakpoint-1680 {
+                        width: 11px;
+                        flex: 0 0 11px;
+                        height: 11px;
+                        padding: 8px;
+                    }
+
+                    .mdc-checkbox__native-control {
+                        width: 14px;
+                        height: 14px;
+                        top: 10px;
+                        right: 0;
+                        left: 10px;
+                        @include max-breakpoint-1680 {
+                            width: 11px;
+                            height: 11px;
+                            top: 8px;
+                            left: 8px;
+                        }
+                    }
+
+                    .mdc-checkbox__background {
+                        width: 14px;
+                        height: 14px;
+                        top: 10px;
+                        left: 10px;
+                        border-color: $GY-108 !important;
+                        @include max-breakpoint-1680 {
+                            width: 11px;
+                            height: 11px;
+                            top: 8px;
+                            left: 8px;
+                        }
+                    }
+                }
+
+                label {
+                    font: 400 $font-s-14 $primaryFont;
+                    color: $BL-102;
+                    padding-left: 0;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+                }
+            }
+
+            &.mat-mdc-checkbox-checked {
+                .mdc-form-field {
+                    .mdc-checkbox--selected ~ .mdc-checkbox__ripple {
+                        background: $BL-102;
+                    }
+
+                    .mdc-checkbox {
+                        .mdc-checkbox__background {
+                            background-color: $BL-102 !important;
+                            border-color: $BL-102 !important;
+                        }
+                    }
+                }
+            }
+            &.mat-mdc-checkbox-disabled {
+                .mdc-form-field {
+                    .mdc-checkbox {
+                        .mdc-checkbox__ripple {
+                            background: $BL-102;
+                        }
+                        .mdc-checkbox__background {
+                            background-color: $BL-102 !important;
+                            border-color: $BL-102 !important;
+                        }
+                    }
+                }
+            }
+
+            &.mtn_1 {
+                position: relative;
+                top: -15px;
+                @include max-breakpoint-1800 {
+                    top: -12px;
+                }
+                @include max-breakpoint-1440 {
+                    top: -10px;
+                }
+            }
+
+            &.practice_info_checkbox {
+                .mdc-form-field {
+                    left: 0;
+                    @include max-breakpoint-1680 {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        &.ripple_none {
+            .mdc-checkbox__ripple {
+                background: none !important;
+                display: none !important;
+            }
+
+            .mat-mdc-checkbox-ripple,
+            .mdc-checkbox__ripple {
+                display: none !important;
+            }
+        }
+
+        &.tick_checkbox {
+            width: 21px;
+            height: 21px;
+            @include max-breakpoint-1800 {
+                width: 20px;
+                height: 20px;
+            }
+            @include max-breakpoint-1680 {
+                width: 17px;
+                height: 17px;
+            }
+            .mdc-form-field {
+                width: 21px;
+                height: 21px;
+                @include max-breakpoint-1800 {
+                    width: 20px;
+                    height: 20px;
+                }
+                @include max-breakpoint-1680 {
+                    width: 17px;
+                    height: 17px;
+                }
+                .mdc-checkbox {
+                    opacity: 0;
+                }
+            }
+            mat-icon {
+                font-size: $font-s-21;
+                color: $BLN-113;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                z-index: 1;
+                @include max-breakpoint-1800 {
+                    font-size: $font-s-18;
+                    top: 8px;
+                }
+                @include max-breakpoint-1680 {
+                    font-size: $font-s-17;
+                }
+            }
+            &.mat-mdc-checkbox-checked {
+                mat-icon {
+                    color: $GR-100;
+                }
+            }
+        }
+
+        &.approver_check {
+            width: 100%;
+            display: inline-block;
+            content: '';
+
+            .mdc-form-field {
+                width: 100%;
+
+                .mdc-checkbox {
+                    width: 18px;
+                    height: 18px;
+                    flex: 0 0 18px;
+                    padding: 10px;
+                    margin: 0 0 0 -8px;
+                    position: relative;
+                    top: -2px;
+                    font: 400 $font-s-14 $primaryFont;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        width: 14px;
+                        height: 14px;
+                        flex: 0 0 14px;
+                        padding: 8px;
+                        margin: 0 0 0 -6px;
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+                    .mdc-checkbox__native-control {
+                        width: 30px;
+                        height: 30px;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        @include max-breakpoint-1680 {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    .mdc-checkbox__background {
+                        width: 18px;
+                        height: 18px;
+                        border: 1px solid $GY-108 !important;
+                        border-radius: 4px;
+                        top: 10px;
+                        left: 10px;
+                        @include max-breakpoint-1680 {
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 3px;
+                            top: 8px;
+                            left: 8px;
+                        }
+                    }
+                }
+
+                label {
+                    width: 100%;
+                    padding: 0;
+
+                    h5 {
+                        &.mat-h5 {
+                            width: 100%;
+                            max-width: 70%;
+                            font: 700 $font-s-12 $primaryFont;
+                            color: $BL-102;
+                            text-transform: capitalize;
+                            margin: 0;
+                            @include text_limit();
+                            @include max-breakpoint-1800 {
+                                font: 700 $font-s-11 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                max-width: 56%;
+                                font: 700 $font-s-10 $primaryFont;
+                            }
+                        }
+                    }
+
+                    p {
+                        width: 100%;
+                        max-width: 70%;
+                        font: 400 $font-s-10 $primaryFont;
+                        color: $BL-102;
+                        margin: 0;
+                        @include text_limit();
+                        @include max-breakpoint-1680 {
+                            max-width: 56%;
+                            font: 400 $font-s-8 $primaryFont;
+                        }
+                    }
+                }
+            }
+
+            &.mat-mdc-checkbox-checked {
+                .mdc-form-field {
+                    .mdc-checkbox {
+                        .mdc-checkbox__background {
+                            background-color: $GR-100 !important;
+                            border-color: $GR-100 !important;
+                        }
+                    }
+                }
+            }
+
+            &.mdc-checkbox--disabled {
+                pointer-events: inherit;
+                opacity: 0.6;
+            }
+        }
+
+        &.approver_req_checkbox {
+            display: inline-block;
+            background: $WE-100;
+            border: 1px solid #e7e7e7;
+            border-radius: 5px;
+            white-space: nowrap;
+            margin: 0 6px 6px 0;
+            @include max-breakpoint-1680 {
+                border-radius: 4px;
+                margin: 0 5px 5px 0;
+            }
+
+            .mdc-form-field {
+                position: relative;
+                padding: 4px 8px 4px 4px;
+                @include max-breakpoint-1680 {
+                    padding: 3px 6px 3px 3px;
+                }
+
+                .mdc-checkbox {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    opacity: 0;
+                    padding: 0;
+
+                    .mat-mdc-checkbox-touch-target {
+                        width: 24px;
+                        height: 24px;
+                        @include max-breakpoint-1680 {
+                            width: 19px;
+                            height: 19px;
+                        }
+                    }
+
+                    input {
+                        &.mdc-checkbox__native-control {
+                            width: 24px;
+                            height: 24px;
+                            @include max-breakpoint-1680 {
+                                width: 19px;
+                                height: 19px;
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    width: 100%;
+                    @include flex_center();
+                    padding: 0;
+                    font: 400 $font-s-16 $primaryFont;
+                    line-height: 24px;
+                    color: $BL-102;
+                    text-transform: capitalize;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-15 $primaryFont;
+                        line-height: 24px;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-13 $primaryFont;
+                        line-height: 19px;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 400 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+
+                    mat-icon {
+                        font-size: $font-s-21;
+                        color: #e7e7e7;
+                        margin: 0 6px 0 0;
+                        @include max-breakpoint-1800 {
+                            font-size: $font-s-18;
+                        }
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-16;
+                            margin: 0 5px 0 0;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font-size: $font-s-17;
+                        }
+                    }
+                }
+            }
+
+            &.mat-mdc-checkbox-checked {
+                .mdc-form-field {
+                    label {
+                        mat-icon {
+                            color: $GR-100;
+                        }
+                    }
+                }
+            }
+            &.approved-user {
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+
+        &.bypass_approval_check {
+            width: 100%;
+            display: inline-block;
+            margin: 0 0 15px 0;
+            @include max-breakpoint-1680 {
+                margin: 0 0 12px 0;
+            }
+
+            .mdc-form-field {
+                label {
+                    font: 400 $font-s-16 $primaryFont;
+                    line-height: 24px;
+                    color: $BL-103;
+                    padding: 0 0 0 2px;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-15 $primaryFont;
+                        line-height: 24px;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-13 $primaryFont;
+                        line-height: 19px;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 600 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+                }
+            }
+
+            &.mat-mdc-checkbox-checked {
+                .mdc-form-field {
+                    .mdc-checkbox {
+                        .mdc-checkbox__ripple {
+                            background: $GR-100;
+                        }
+                        .mdc-checkbox__background {
+                            border-color: $GR-100 !important;
+                            background-color: $GR-100 !important;
+                        }
+                    }
+                }
+            }
+        }
+        .mdc-checkbox {
+            .mdc-checkbox__native-control {
+                &:not([disabled]) {
+                    &:focus {
+                        ~ .mdc-checkbox__ripple {
+                            opacity: 0.1 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+mat-radio-group {
+    &.mat-mdc-radio-group {
+        mat-radio-button {
+            &.mat-mdc-radio-button {
+                &.formatting_radio_box {
+                    width: 100%;
+                    display: inline-block;
+
+                    .mdc-form-field {
+                        width: 100%;
+                        min-height: 100px;
+                        position: relative;
+                        @include flex_center();
+                        flex-wrap: wrap;
+                        padding: 15px;
+                        border: 2px solid $BLN-113;
+                        border-radius: 10px;
+                        @include max-breakpoint-1800 {
+                            min-height: 80px;
+                        }
+                        @include max-breakpoint-1680 {
+                            padding: 12px;
+                            border-radius: 8px;
+                        }
+
+                        &::before {
+                            width: 24px;
+                            height: 24px;
+                            display: block;
+                            content: '';
+                            background: $WE-100;
+                            border: 2px solid $BLN-113;
+                            margin: 0 auto 6px auto;
+                            border-radius: 50%;
+                            @include max-breakpoint-1680 {
+                                width: 19px;
+                                height: 19px;
+                                margin: 0 auto 5px auto;
+                            }
+                        }
+
+                        &::after {
+                            width: 8px;
+                            height: 20px;
+                            display: block;
+                            position: absolute;
+                            top: 15px;
+                            left: 8px;
+                            right: 0;
+                            margin: 0 auto;
+                            z-index: 1;
+                            transform: rotate(45deg);
+                            border-bottom: 3px solid $WE-100;
+                            border-right: 3px solid $WE-100;
+                            @include max-breakpoint-1680 {
+                                width: 6px;
+                                height: 16px;
+                                top: 12px;
+                                left: 6px;
+                                border-bottom-width: 2px;
+                                border-right-width: 2px;
+                            }
+                        }
+
+                        .mdc-radio {
+                            width: 100%;
+                            height: 100%;
+                            padding: 0;
+                            display: block;
+                            text-align: center;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            z-index: 2;
+                            opacity: 0;
+
+                            .mat-mdc-radio-touch-target {
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                transform: translate(0);
+                            }
+
+                            .mdc-radio__native-control {
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                right: 0;
+                                left: 0;
+                            }
+                        }
+
+                        label {
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                            text-align: center;
+                            font: 600 $font-s-16 $primaryFont;
+                            color: $BL-102;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-14 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 600 $font-s-12 $primaryFont;
+                            }
+                        }
+                    }
+
+                    &.mat-mdc-radio-checked {
+                        .mdc-form-field {
+                            border-color: $BL-103;
+                            box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.1);
+                            @include max-breakpoint-1680 {
+                                box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+                            }
+
+                            &::before {
+                                background: $GR-100;
+                                border-color: $GR-100;
+                            }
+
+                            &::after {
+                                content: '';
+                            }
+
+                            label {
+                                color: $BL-103;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

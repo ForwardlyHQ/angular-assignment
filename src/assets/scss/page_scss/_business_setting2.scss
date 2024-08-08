@@ -1,0 +1,125 @@
+// Business Documents Table
+.business_document_table {
+    margin: 0 0 45px 0;
+    @include max-breakpoint-1800 {
+        margin: 0 0 40px 0;
+    }
+    @include max-breakpoint-1680 {
+        margin: 0 0 36px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 30px 0;
+    }
+
+    .status_icon_label {
+        width: 100%;
+        @include flex_center();
+
+        img {
+            height: 17px;
+            margin: 0 6px 0 0;
+            @include max-breakpoint-1680 {
+                height: 14px;
+            }
+        }
+
+        &.under_review {
+            color: $RD-801;
+        }
+        &.submitted {
+            color: $GR-100;
+        }
+        &.pending {
+            color: $BL-102;
+        }
+        &.rejected {
+            color: $RD-110;
+        }
+        &.expired {
+            color: $RD-110;
+        }
+        &.approved {
+            color: $GR-100;
+        }
+    }
+
+    .td_tooltip_wrapper {
+        width: 100%;
+        @include flex_center();
+    }
+
+    .upload_edit_td {
+        width: 100%;
+        @include flex_center();
+
+        .upload_edit_col {
+            button {
+                &.edit_btn {
+                    @include flex_center();
+                    font: 600 $font-s-14 $primaryFont;
+                    color: $BL-103;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-11 $primaryFont;
+                    }
+
+                    mat-icon {
+                        font-size: $font-s-18;
+                        margin: 0 6px 0 0;
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-14;
+                            margin: 0 5px 0 0;
+                        }
+                    }
+
+                    &.disabled {
+                        color: $BL-102;
+                        cursor: default;
+                        pointer-events: none;
+                    }
+                }
+            }
+            &.right {
+                margin-left: auto;
+                @include max-breakpoint-1279 {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+// Formatting Page
+.formatting_main_wrapper {
+    .formatting_inner_wrapper {
+        width: 100%;
+        max-width: 755px;
+        margin: 0 auto 45px auto;
+        @include max-breakpoint-1800 {
+            margin: 0 auto 40px auto;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 604px;
+            margin: 0 auto 36px auto;
+        }
+        @include max-breakpoint-1440 {
+            max-width: 640px;
+            margin: 0 auto 30px auto;
+        }
+
+        .custom_mb_2 {
+            margin-bottom: 20px;
+            @include max-breakpoint-1680 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

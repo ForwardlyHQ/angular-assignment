@@ -1,0 +1,164 @@
+// Margin Top
+.mt_0 {
+    margin-top: 0 !important;
+}
+.mt_10 {
+    margin-top: 10px !important;
+    @include max-breakpoint-1680 {
+        margin-top: 8px !important;
+    }
+}
+.mt_28 {
+    margin-top: 28px !important;
+    @include max-breakpoint-1680 {
+        margin-top: 22px !important;
+    }
+    @include max-breakpoint-1440 {
+        margin-top: 15px !important;
+    }
+}
+.mt_30 {
+    margin-top: 30px !important;
+    @include max-breakpoint-1800 {
+        margin-top: 27px !important;
+    }
+    @include max-breakpoint-1680 {
+        margin-top: 24px !important;
+    }
+}
+.mt_40 {
+    margin-top: 40px !important;
+    @include max-breakpoint-1680 {
+        margin-top: 36px !important;
+    }
+    @include max-breakpoint-1680 {
+        margin-top: 32px !important;
+    }
+}
+
+// Margin Bottom
+.mb_0 {
+    margin-bottom: 0 !important;
+}
+.mb_5 {
+    margin-bottom: 5px !important;
+    @include max-breakpoint-1680 {
+        margin-bottom: 4px !important;
+    }
+}
+.mb_10 {
+    margin-bottom: 10px !important;
+    @include max-breakpoint-1680 {
+        margin-bottom: 8px !important;
+    }
+}
+.mb_12 {
+    margin-bottom: 12px !important;
+    @include max-breakpoint-1680 {
+        margin-bottom: 10px !important;
+    }
+}
+.mb_15 {
+    margin-bottom: 15px !important;
+    @include max-breakpoint-1680 {
+        margin-bottom: 12px !important;
+    }
+}
+.mb_20 {
+    margin-bottom: 20px !important;
+    @include max-breakpoint-1800 {
+        margin-bottom: 18px !important;
+    }
+    @include max-breakpoint-1680 {
+        margin-bottom: 16px !important;
+    }
+}
+.mb_30 {
+    margin-bottom: 30px !important;
+    @include max-breakpoint-1800 {
+        margin-bottom: 27px !important;
+    }
+    @include max-breakpoint-1680 {
+        margin-bottom: 24px !important;
+    }
+}
+.mb_40 {
+    margin-bottom: 40px !important;
+    @include max-breakpoint-1800 {
+        margin-bottom: 36px !important;
+    }
+    @include max-breakpoint-1680 {
+        margin-bottom: 32px !important;
+    }
+}
+.mb_75 {
+    margin-bottom: 75px !important;
+    @include max-breakpoint-1800 {
+        margin-bottom: 67px !important;
+    }
+    @include max-breakpoint-1680 {
+        margin-bottom: 60px !important;
+    }
+    @include max-breakpoint-1440 {
+        margin-bottom: 15px !important;
+    }
+}
+
+// Padding Top
+.pt_10 {
+    padding-top: 10px !important;
+    @include max-breakpoint-1680 {
+        padding-top: 8px !important;
+    }
+}
+
+// Padding Bottom
+.pb_0 {
+    padding-bottom: 0 !important;
+}
+.pb_5 {
+    padding-bottom: 5px !important;
+    @include max-breakpoint-1680 {
+        padding-bottom: 4px !important;
+    }
+    &.mb_15 {
+        margin-bottom: -15px !important;
+        @include max-breakpoint-1680 {
+            margin-bottom: -12px !important;
+        }
+    }
+}
+.pb_10 {
+    padding-bottom: 10px !important;
+    @include max-breakpoint-1680 {
+        padding-bottom: 8px !important;
+    }
+}
+.pb_15 {
+    padding-bottom: 15px !important;
+    @include max-breakpoint-1680 {
+        padding-bottom: 12px !important;
+    }
+
+    &.fai_date_field {
+        margin-bottom: 15px;
+        @include max-breakpoint-1680 {
+            margin-bottom: 12px;
+        }
+        .form-validation-main {
+            padding-top: 7px;
+            @include max-breakpoint-1680 {
+                padding-top: 6px;
+            }
+        }
+    }
+}
+.pb_30 {
+    padding-bottom: 30px !important;
+    @include max-breakpoint-1800 {
+        padding-bottom: 27px !important;
+    }
+    @include max-breakpoint-1680 {
+        padding-bottom: 24px !important;
+    }
+}

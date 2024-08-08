@@ -1,0 +1,820 @@
+// Payment Page SCSS 2
+.request_payment_wrapper {
+    h3 {
+        &.mat-h3 {
+            &.section_title {
+                font: 700 1vw $primaryFont;
+                color: $BL-103;
+                margin: 0 0 25px 0;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 20px 0;
+                }
+                @include max-breakpoint-1440 {
+                    margin: 0 0 15px 0;
+                }
+
+                .ghost_loading_box {
+                    width: 10rem;
+                    min-height: 10px;
+                    @include max-breakpoint-1680 {
+                        width: 8rem;
+                        min-height: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Request Payment Dialog
+    .request_payment_form {
+        // Daily Limit Box
+        .daily_limit_box {
+            padding: 0.6vw 15px;
+
+            .daily_limit_box_header {
+                margin: 0 0 6px 0;
+            }
+
+            .daily_limit_box_content {
+                ul {
+                    li {
+                        .daily_limit_box_left,
+                        .daily_limit_box_right {
+                            padding: 4px 0;
+                        }
+
+                        .daily_limit_box_left {
+                            h4 {
+                                &.mat-h4 {
+                                    font: 600 0.8vw $primaryFont;
+                                    color: $BL-103;
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        .daily_limit_box_right {
+                            p {
+                                font: 400 0.8vw $primaryFont;
+                                color: $BL-103;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .payment_eta_wrap {
+            width: 50%;
+            min-height: 45px;
+            margin-left: auto;
+            text-align: right;
+            border-radius: 4px;
+            background: transparent linear-gradient(270deg, #edf0f5 0%, $WE-100 100%) 0% 0% no-repeat padding-box;
+            padding: 14px 15px;
+            font: 400 0.8vw $primaryFont;
+            color: $BK-100;
+        }
+
+        .alert_message {
+            &.red_border {
+                position: relative;
+                border: 1px solid $RD-109;
+                padding: 15px 15px 15px 50px;
+                font: 400 $font-s-16 $primaryFont;
+                line-height: 24px;
+                color: $RD-109;
+                border-radius: 4px;
+                @include max-breakpoint-1800 {
+                    font: 400 $font-s-15 $primaryFont;
+                    line-height: 24px;
+                }
+                @include max-breakpoint-1680 {
+                    padding: 12px 12px 12px 40px;
+                    font: 400 $font-s-14 $primaryFont;
+                    line-height: 21px;
+                    border-radius: 3px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-13 $primaryFont;
+                    line-height: 19px;
+                }
+                @include max-breakpoint-1440 {
+                    font: 400 $font-s-12 $primaryFont;
+                    line-height: 18px;
+                }
+
+                mat-icon {
+                    position: absolute;
+                    left: 15px;
+                    top: 20px;
+                    @include max-breakpoint-1680 {
+                        left: 12px;
+                        top: 16px;
+                    }
+                }
+            }
+        }
+
+        // Submit Button (Note: This code is not in use, It will be remove with request-payment-dialog.component
+        .submit_btn_wrapper {
+            text-align: right;
+
+            button {
+                &.submit_btn {
+                    min-height: 45px;
+                    border-radius: 5px;
+                    font: 700 $font-s-16 $primaryFont;
+                    padding: 4px 20px;
+                    margin: 0 0 0 1.8vw;
+
+                    @include max-breakpoint-1800 {
+                        min-height: 40px;
+                        font: 700 $font-s-14 $primaryFont;
+                    }
+
+                    mat-spinner {
+                        svg {
+                            circle {
+                                stroke: $WE-100;
+                            }
+                        }
+                    }
+
+                    mat-icon {
+                        font-size: 1vw;
+                    }
+
+                    &.icon_right {
+                        mat-icon {
+                            order: 2;
+                            margin: 0 0 0 6px;
+                        }
+                    }
+
+                    &.green_fill_btn2 {
+                        color: $WE-100;
+                        background-color: $GR-100;
+                        border-color: $GR-100;
+
+                        mat-icon {
+                            font-size: 0.9vw;
+
+                            &.lg_icon {
+                                font-size: 1.2vw;
+                            }
+                        }
+                    }
+
+                    &.red_border_btn2 {
+                        color: $RD-101;
+                        background-color: $WE-100;
+                        border-color: $RD-101;
+                    }
+
+                    &:first-child {
+                        margin: 0;
+                    }
+
+                    &[disabled='true'],
+                    &.disabled,
+                    &.mat-button-disabled {
+                        @include disable_button();
+                        border-color: $GYN-132;
+                    }
+                }
+            }
+
+            // Dropdown Button
+            .submit_btn_dropdown {
+                width: 100%;
+                min-height: 120px;
+                @include flex_start();
+                justify-content: flex-end;
+                @include max-breakpoint-1680 {
+                    min-height: 96px;
+                }
+
+                .submit_btn_group_wrapper {
+                    position: relative;
+                    @include flex_center();
+                    background: $GR-100;
+                    border-radius: 5px;
+                    padding-right: 40px;
+                    @include max-breakpoint-1680 {
+                        border-radius: 4px;
+                        padding-right: 32px;
+                    }
+                    &.submit_btn_single_wrapper {
+                        padding: 0;
+                    }
+
+                    button {
+                        &.submit_btn_group {
+                            min-height: 45px;
+                            background: none;
+                            border: none;
+                            padding: 4px 10px 4px 15px;
+                            font: 600 $font-s-16 $primaryFont;
+                            color: $WE-100;
+                            text-align: left;
+                            @include max-breakpoint-1800 {
+                                min-height: 40px;
+                                font: 600 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                min-height: 36px;
+                                padding: 3px 8px 3px 12px;
+                                font: 600 $font-s-14 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1440 {
+                                min-height: 34px;
+                                font: 600 $font-s-12 $primaryFont;
+                            }
+
+                            // Button Mat Spinner
+                            mat-spinner {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+
+                                svg {
+                                    circle {
+                                        stroke: $WE-100;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.authorize_btn {
+                            min-width: 250px;
+                            @include max-breakpoint-1680 {
+                                min-width: 200px;
+                            }
+                        }
+                        &.approve_btn {
+                            min-width: 180px;
+                            @include max-breakpoint-1680 {
+                                min-width: 144px;
+                            }
+                        }
+
+                        &.green_right_btn {
+                            width: 40px;
+                            min-width: 40px;
+                            @include flex_center();
+                            justify-content: center;
+                            padding: 4px 0;
+                            cursor: pointer;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            z-index: 1;
+                            @include max-breakpoint-1680 {
+                                width: 32px;
+                                min-width: 32px;
+                                padding: 3px 0;
+                            }
+
+                            &::before {
+                                width: 1px;
+                                height: 20px;
+                                display: block;
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                background: $WE-100;
+                                @include max-breakpoint-1680 {
+                                    height: 16px;
+                                }
+                            }
+
+                            mat-icon {
+                                font-size: $font-s-32;
+                                @include max-breakpoint-1680 {
+                                    font-size: $font-s-26;
+                                }
+                            }
+
+                            &[aria-expanded='true'] {
+                                mat-icon {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+
+                        &.green_left_btn {
+                            background-color: $GR-100;
+                            border-top-left-radius: 5px;
+                            border-bottom-left-radius: 5px;
+                            @include max-breakpoint-1680 {
+                                border-top-left-radius: 4px;
+                                border-bottom-left-radius: 4px;
+                            }
+                            &.submit_single_btn {
+                                min-width: 140px;
+                                text-align: center;
+                                border-radius: 5px;
+                                @include max-breakpoint-1680 {
+                                    min-width: 112px;
+                                    border-radius: 4px;
+                                }
+                            }
+                            cursor: pointer;
+                            &[disabled='true'],
+                            &.disabled,
+                            &.mat-button-disabled,
+                            &[disabled] {
+                                cursor: default;
+                                opacity: 0.38;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Approval Button with Checkbox
+        .approval_btn_wrapper {
+            width: 100%;
+            @include flex_center();
+
+            .right_side_btn {
+                margin-left: auto;
+                text-align: right;
+            }
+
+            button {
+                &.approval_btn {
+                    min-width: 220px;
+                    min-height: 45px;
+                    color: $WE-100;
+                    background: none;
+                    border: none;
+                    padding: 4px 10px;
+                    font: 700 $font-s-16 $primaryFont;
+                    @include max-breakpoint-1800 {
+                        min-width: 176px;
+                        min-height: 40px;
+                        font: 700 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-width: 176px;
+                        min-height: 36px;
+                        padding: 3px 8px;
+                        font: 700 $font-s-14 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 700 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        min-height: 34px;
+                        font: 700 $font-s-12 $primaryFont;
+                    }
+
+                    // Button Mat Spinner
+                    mat-spinner {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+
+                        svg {
+                            circle {
+                                stroke: $WE-100;
+                            }
+                        }
+                    }
+                }
+
+                &.green_fill_btn {
+                    color: $WE-100;
+                    background-color: $GR-100;
+                }
+
+                &[disabled='true'],
+                &.disabled,
+                &.mat-button-disabled {
+                    @include disable_button();
+                    border-color: $GYN-132;
+                }
+            }
+        }
+    }
+}
+
+// Payment Details Table
+.payment_details_wrap {
+    margin-bottom: 35px;
+    @include max-breakpoint-1800 {
+        margin-bottom: 20px;
+    }
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        margin-bottom: 28px;
+    }
+    @include max-breakpoint-1440 {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        &.payment_details_list {
+            @include ul_style();
+
+            li {
+                width: 100%;
+                position: relative;
+                @include flex_center();
+                border-top: 1px dashed $GYN-132;
+                background: $GYN-133;
+
+                .pd_column {
+                    width: 100%;
+                    @include flex_center();
+                    position: relative;
+                    min-height: 45px;
+                    padding: 8px 20px;
+                    font: 600 $font-s-16 $primaryFont;
+                    line-height: 24px;
+                    color: $BL-102;
+                    @include max-breakpoint-1800 {
+                        min-height: 40px;
+                        font: 600 $font-s-15 $primaryFont;
+                        line-height: 24px;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-height: 36px;
+                        font: 600 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-13 $primaryFont;
+                        line-height: 19px;
+                    }
+                    @include max-breakpoint-1440 {
+                        min-height: 34px;
+                        font: 600 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+
+                    .ghost_loading_box {
+                        width: 6rem;
+                        min-height: 24px;
+                        @include max-breakpoint-1680 {
+                            width: 5rem;
+                            min-height: 19px;
+                        }
+                    }
+
+                    strong {
+                        font-weight: 600;
+                        color: $BL-103;
+                    }
+
+                    &.heading_left {
+                        max-width: 30%;
+                        .info_tooltip_wrapper {
+                            margin-left: 7px;
+                            @include max-breakpoint-1680 {
+                                margin-left: 6px;
+                            }
+                            .info_tooltip_text {
+                                img {
+                                    vertical-align: bottom;
+                                }
+                            }
+                            .info_tooltip {
+                                &.center_tooltip {
+                                    left: auto;
+                                    right: 50%;
+                                    transform: translate(50%, 2px);
+                                }
+                            }
+                        }
+                    }
+
+                    &.pd_content {
+                        max-width: 70%;
+                        background: $WE-100;
+                        padding-left: 25px;
+                        @include max-breakpoint-1800 {
+                            padding-left: 20px;
+                        }
+                        @include max-breakpoint-1440 {
+                            padding-left: 15px;
+                        }
+
+                        &::before {
+                            width: 20px;
+                            height: 100%;
+                            content: '';
+                            position: absolute;
+                            left: -15px;
+                            top: 0;
+                            z-index: 1;
+                            background: $GYN-133;
+                            @include max-breakpoint-1680 {
+                                width: 16px;
+                                left: -12px;
+                            }
+                        }
+
+                        h2 {
+                            &.mat-h2 {
+                                font: 700 $font-s-16 $primaryFont;
+                                line-height: 1;
+                                color: $BL-103;
+                                margin: 0;
+                                white-space: normal;
+                                @include max-breakpoint-1800 {
+                                    font: 700 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 700 $font-s-14 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 700 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 700 $font-s-12 $primaryFont;
+                                }
+
+                                span {
+                                    &.main_text {
+                                        text-transform: capitalize;
+                                    }
+                                }
+                                &.capitalize {
+                                    text-transform: capitalize;
+                                }
+
+                                sub {
+                                    width: 100%;
+                                    display: inline-block;
+                                    font: 700 $font-s-14 $primaryFont;
+                                    @include max-breakpoint-1800 {
+                                        font: 700 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 700 $font-s-12 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 700 $font-s-11 $primaryFont;
+                                    }
+                                }
+                            }
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                font: 600 $font-s-14 $primaryFont;
+                                color: $BL-102;
+                                margin: 0;
+                                white-space: normal;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-12 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-11 $primaryFont;
+                                }
+                            }
+                        }
+                        /* Custom Date Picker */
+                        mat-form-field {
+                            &.mat-mdc-form-field {
+                                &.cashflow_input_field {
+                                    .mat-mdc-text-field-wrapper {
+                                        max-width: 216px;
+                                        border: 1px solid $GY-118;
+                                        border-radius: 5px;
+                                        overflow: hidden;
+                                        @include max-breakpoint-1680 {
+                                            max-width: 179px;
+                                            border-radius: 4px;
+                                        }
+                                        .mat-mdc-form-field-flex {
+                                            .mat-mdc-form-field-infix {
+                                                @include flex_center();
+                                                min-height: 40px;
+                                                padding-top: 8px;
+                                                padding-bottom: 8px;
+                                                @include max-breakpoint-1680 {
+                                                    min-height: 32px;
+                                                    padding-top: 6px;
+                                                    padding-bottom: 6px;
+                                                }
+                                            }
+                                            .mat-mdc-form-field-icon-suffix {
+                                                mat-datepicker-toggle {
+                                                    button {
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        padding: 8px;
+                                                        @include max-breakpoint-1680 {
+                                                            width: 32px;
+                                                            height: 32px;
+                                                            padding: 6px;
+                                                        }
+                                                        .mat-mdc-button-touch-target {
+                                                            width: 40px;
+                                                            height: 40px;
+                                                            @include max-breakpoint-1680 {
+                                                                width: 32px;
+                                                                height: 32px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .mat-mdc-form-field-subscript-wrapper {
+                                        .mat-mdc-form-field-error-wrapper {
+                                            .mat-mdc-form-field-error {
+                                                ul {
+                                                    li {
+                                                        background-color: transparent;
+                                                        border-radius: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:first-child {
+                    border-top: none;
+                    border-radius: 10px 0 0 0;
+                    @include max-breakpoint-1680 {
+                        border-radius: 8px 0 0 0;
+                    }
+
+                    .pd_column {
+                        &::before {
+                            border-radius: 0 10px 0 0;
+                            @include max-breakpoint-1680 {
+                                border-radius: 0 8px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    border-radius: 0 0 0 10px;
+                    @include max-breakpoint-1680 {
+                        border-radius: 0 0 0 8px;
+                    }
+
+                    .pd_column {
+                        &::before {
+                            border-radius: 0 0 10px 0;
+                            @include max-breakpoint-1680 {
+                                border-radius: 0 0 8px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.light_font {
+                .pd_column {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.request_payment_form {
+    mat-form-field {
+        &.mat-mdc-form-field {
+            &.form_field_control {
+                @include max-breakpoint-1440 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .submit_btn_wrapper {
+        button {
+            &.submit_btn {
+                min-height: 40px;
+                padding: 4px 10px;
+                @include max-breakpoint-1680 {
+                    min-height: 32px;
+                    padding: 3px 8px;
+                }
+            }
+        }
+    }
+}
+
+// Bank List Carousel
+owl-carousel-o {
+    &.bank_list_carousel {
+        .owl-carousel {
+            .owl-item {
+                padding: 10px 10px 18px 10px;
+                @include max-breakpoint-1680 {
+                    padding: 8px 8px 14px 8px;
+                }
+            }
+
+            &.owl-theme {
+                position: relative;
+                padding: 0 30px;
+                @include max-breakpoint-1680 {
+                    padding: 0 24px;
+                }
+
+                .owl-nav {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 40%;
+                    transform: translateY(-50%);
+                    z-index: 99;
+                    margin: 0;
+
+                    [class*='owl-'] {
+                        width: 20px;
+                        height: 40px;
+                        border-radius: 0;
+                        font-size: 0;
+                        padding: 0;
+                        margin: 0;
+                        position: absolute;
+                        @include max-breakpoint-1680 {
+                            width: 16px;
+                            height: 32px;
+                        }
+                    }
+
+                    .owl-prev {
+                        left: 0;
+                        background: url(../../../assets/images/payments/arrow-left.svg) no-repeat center;
+                    }
+                    .owl-next {
+                        right: 0;
+                        background: url(../../../assets/images/payments/arrow-right.svg) no-repeat center;
+                    }
+                }
+            }
+        }
+
+        &.two_items_carousel {
+            .owl-carousel {
+                &.owl-theme {
+                    padding: 0;
+
+                    .owl-stage {
+                        width: auto !important;
+                        margin: 0 -8px;
+                        padding-right: 12px;
+                        @include max-breakpoint-1680 {
+                            margin: 0 -6px;
+                            padding-right: 10px;
+                        }
+
+                        .owl-item {
+                            width: 50% !important;
+
+                            mat-card {
+                                &.bank_account_list_box {
+                                    cursor: default;
+                                }
+                            }
+                        }
+                    }
+
+                    .owl-nav {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        &.disabled {
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}

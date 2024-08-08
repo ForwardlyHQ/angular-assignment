@@ -1,0 +1,534 @@
+// Auto Payment Right Content 4
+.auto_payment_right_wrapper {
+    // Payment Method Dropdown
+    .auto_payment_method_wrapper {
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        border: 1px solid $GY-9;
+        border-radius: 8px;
+        padding: 30px 30px 20px 30px;
+        @include max-breakpoint-1800 {
+            padding: 27px 27px 18px 27px;
+        }
+        @include max-breakpoint-1680 {
+            border-radius: 6px;
+            padding: 24px 24px 16px 24px;
+        }
+
+        label {
+            &.auto_payment_method_label {
+                font: 600 $font-s-16 $primaryFont;
+                line-height: normal;
+                color: $BE-1;
+                position: absolute;
+                left: 15px;
+                top: -15px;
+                z-index: 9;
+                @include max-breakpoint-1800 {
+                    font: 600 $font-s-15 $primaryFont;
+                    line-height: normal;
+                }
+                @include max-breakpoint-1680 {
+                    font: 600 $font-s-14 $primaryFont;
+                    line-height: normal;
+                    left: 12px;
+                    top: -12px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 600 $font-s-13 $primaryFont;
+                    line-height: normal;
+                }
+                @include max-breakpoint-1440 {
+                    font: 600 $font-s-12 $primaryFont;
+                    line-height: normal;
+                }
+
+                span {
+                    display: inline-block;
+                    background: $WE-1;
+                    padding: 5px 10px;
+                    @include max-breakpoint-1680 {
+                        padding: 4px 8px;
+                    }
+                }
+            }
+        }
+
+        .auto_payment_method_row {
+            @include flex_align_center();
+            margin: 0 -10px;
+            @include max-breakpoint-1680 {
+                margin: 0 -8px;
+            }
+            .auto_payment_method_col {
+                width: 100%;
+                -ms-flex-preferred-size: 0;
+                flex-basis: 0;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                max-width: 100%;
+                position: relative;
+                padding: 0 10px;
+                @include max-breakpoint-1680 {
+                    padding: 0 8px;
+                }
+
+                button {
+                    // Dropdown Toggle Button
+                    &.auto_payment_method_toggle {
+                        width: 100%;
+                        min-height: 35px;
+                        display: inline-block;
+                        position: relative;
+                        background: none;
+                        border: none;
+                        text-align: left;
+                        cursor: pointer;
+                        padding: 0;
+                        margin: 0;
+                        @include max-breakpoint-1680 {
+                            min-height: 28px;
+                        }
+                        .auto_payment_method_select_value {
+                            width: 100%;
+                            min-height: 24px;
+                            @include flex_align_start();
+                            position: relative;
+                            font: 400 $font-s-16 $primaryFont;
+                            line-height: normal;
+                            color: $GY-2;
+                            padding: 0 30px 0 0;
+                            @include max-breakpoint-1800 {
+                                min-height: 22px;
+                                font: 400 $font-s-15 $primaryFont;
+                                line-height: normal;
+                                padding: 0 27px 0 0;
+                            }
+                            @include max-breakpoint-1680 {
+                                min-height: 19px;
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: normal;
+                                padding: 0 24px 0 0;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 400 $font-s-13 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 400 $font-s-12 $primaryFont;
+                                line-height: normal;
+                                padding: 0 20px 0 0;
+                            }
+
+                            .auto_pay_select_col {
+                                &.bank_text_col {
+                                    width: 100%;
+                                    display: inline-block;
+                                    @include text_limit();
+                                }
+                            }
+                            .auto_payment_bank_logo {
+                                padding-right: 8px;
+                                @include max-breakpoint-1680 {
+                                    padding-right: 6px;
+                                }
+
+                                img {
+                                    height: 21px;
+                                    @include max-breakpoint-1680 {
+                                        height: 17px;
+                                    }
+                                    &.sm_logo {
+                                        height: 12px;
+                                        @include max-breakpoint-1680 {
+                                            height: 10px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            span {
+                                &.bank_name {
+                                    color: $BE-1;
+                                }
+                                &.routing_no {
+                                    position: relative;
+                                    padding: 0 10px;
+                                    @include max-breakpoint-1680 {
+                                        padding: 0 8px;
+                                    }
+
+                                    &::before {
+                                        width: 1px;
+                                        height: 80%;
+                                        content: '';
+                                        background: $BE-1;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                    }
+
+                                    &.first {
+                                        padding-left: 0;
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &::after {
+                            width: 14px;
+                            height: 14px;
+                            position: absolute;
+                            content: '';
+                            background: url('../../../assets/images/select-arrow-light.png') no-repeat right center;
+                            background-size: 14px;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                            @include max-breakpoint-1680 {
+                                width: 11px;
+                                height: 11px;
+                                background-size: 11px;
+                            }
+                        }
+
+                        &[aria-expanded='true'] {
+                            &::before {
+                                width: 100%;
+                                height: 2px;
+                                position: absolute;
+                                left: 0;
+                                top: auto;
+                                bottom: -2px;
+                                content: '';
+                                background: $OE-1;
+                            }
+                            &::after {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        &.no_dropdown {
+                            cursor: default;
+                            pointer-events: none;
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    // Right Side Button
+                    &.auto_payment_method_btn {
+                        width: 100%;
+                        min-height: 35px;
+                        padding: 0 10px;
+                        font: 600 $font-s-14 $primaryFont;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-12 $primaryFont;
+                            min-height: 28px;
+                            padding: 0 8px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-11 $primaryFont;
+                        }
+
+                        mat-icon {
+                            font-size: $font-s-21;
+                            @include max-breakpoint-1800 {
+                                font-size: $font-s-18;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font-size: $font-s-17;
+                            }
+                        }
+
+                        &.green_btn {
+                            color: $WE-1;
+                            background-color: $GN-1;
+
+                            mat-icon {
+                                order: 1;
+                                margin: 0 0 0 4px;
+                                position: relative;
+                                top: 1px;
+                                @include max-breakpoint-1680 {
+                                    margin: 0 0 0 3px;
+                                }
+                            }
+                        }
+                        &.transparent_btn {
+                            width: auto;
+                            background: none;
+                            justify-content: flex-end;
+                            padding: 0;
+
+                            &:focus,
+                            &:hover {
+                                .mat-mdc-button-persistent-ripple {
+                                    &.mdc-button__ripple {
+                                        display: none;
+                                    }
+                                }
+                                .mat-ripple {
+                                    &.mat-mdc-button-ripple {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.no_dropdown {
+                    max-width: 85%;
+                    button {
+                        // Dropdown Toggle Button
+                        &.auto_payment_method_toggle {
+                            cursor: default;
+                            pointer-events: none;
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &.dropdown_with_btn {
+                    max-width: 85%;
+                }
+
+                &.last_col {
+                    max-width: 140px;
+                    text-align: right;
+                    @include max-breakpoint-1680 {
+                        max-width: 112px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Payment Method Mat Menu
+.mat-mdc-menu-panel {
+    &.mat-mdc-menu-panel {
+        &.auto_payment_method_dropdown {
+            width: calc(100vh - 40px);
+            min-width: inherit;
+            max-width: inherit;
+            border: 1px solid $GY-107;
+            box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.07);
+            border-radius: 0;
+            margin: 2px 0 10px 0;
+            @include max-breakpoint-1800 {
+                width: calc(100vh - 38px);
+            }
+            @include max-breakpoint-1680 {
+                width: calc(100vh - 188px);
+                box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.07);
+                margin: 2px 0 8px 0;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                width: calc(100vh - 3px);
+            }
+            @include max-breakpoint-1440 {
+                width: calc(100vh - 130px);
+            }
+            @include max-breakpoint-1366 {
+                width: calc(100vh - -2px);
+            }
+
+            .mat-mdc-menu-content {
+                padding: 0;
+
+                .auto_payment_dropdown_inner {
+                    width: 100%;
+                    display: inline-block;
+                    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.07);
+                    margin: 0 0 6px 0;
+                    @include max-breakpoint-1680 {
+                        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.07);
+                        margin: 0 0 5px 0;
+                    }
+
+                    h4 {
+                        &.mat-h4 {
+                            width: 100%;
+                            display: inline-block;
+                            font: 500 $font-s-16 $primaryFont;
+                            padding: 0 15px;
+                            margin: 10px 0;
+                            @include max-breakpoint-1800 {
+                                font: 500 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 500 $font-s-14 $primaryFont;
+                                margin: 8px 0;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 500 $font-s-12 $primaryFont;
+                            }
+                        }
+                    }
+
+                    button {
+                        &.auto_payment_method_item {
+                            width: 100%;
+                            display: inline-block;
+                            background: none;
+                            border: none;
+                            border-bottom: 1px solid #dce6f0;
+                            cursor: pointer;
+                            font: 400 $font-s-16 $primaryFont;
+                            line-height: normal;
+                            color: $GY-2;
+                            padding: 10px 15px;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-15 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: normal;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 400 $font-s-13 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 400 $font-s-12 $primaryFont;
+                                line-height: normal;
+                            }
+
+                            .auto_payment_method_item_value {
+                                width: 100%;
+                                @include flex_align_start();
+                                position: relative;
+                                font: 400 $font-s-16 $primaryFont;
+                                line-height: normal;
+                                color: $GY-2;
+                                text-align: left;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-15 $primaryFont;
+                                    line-height: normal;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-14 $primaryFont;
+                                    line-height: normal;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-13 $primaryFont;
+                                    line-height: normal;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                    line-height: normal;
+                                }
+
+                                .auto_pay_select_col {
+                                    &.bank_text_col {
+                                        width: 100%;
+                                        display: inline-block;
+                                    }
+                                }
+                                .auto_payment_bank_logo {
+                                    padding-right: 8px;
+                                    @include max-breakpoint-1680 {
+                                        padding-right: 6px;
+                                    }
+
+                                    img {
+                                        height: 21px;
+                                        @include max-breakpoint-1680 {
+                                            height: 17px;
+                                        }
+                                        &.sm_logo {
+                                            height: 12px;
+                                            @include max-breakpoint-1680 {
+                                                height: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                span {
+                                    &.bank_name {
+                                        color: $BE-1;
+                                    }
+                                    &.routing_no {
+                                        position: relative;
+                                        padding: 0 10px;
+                                        @include max-breakpoint-1680 {
+                                            padding: 0 8px;
+                                        }
+
+                                        &::before {
+                                            width: 1px;
+                                            height: 15px;
+                                            content: '';
+                                            background: $BE-1;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            @include max-breakpoint-1680 {
+                                                height: 12px;
+                                            }
+                                        }
+
+                                        &.first {
+                                            padding-left: 0;
+                                            &::before {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                background: rgb(237, 242, 247);
+                                background: linear-gradient(180deg, rgba(237, 242, 247, 1) 0%, rgba(221, 232, 242, 1) 100%);
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &.column_grid {
+                width: calc(100vh - 180px);
+                @include max-breakpoint-1800 {
+                    width: calc(100vh - 180px);
+                }
+                @include max-breakpoint-1680 {
+                    width: calc(100vh - 300px);
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    width: calc(100vh - 115px);
+                }
+                @include max-breakpoint-1440 {
+                    width: calc(100vh - 242px);
+                }
+                @include max-breakpoint-1366 {
+                    width: calc(100vh - 110px);
+                }
+            }
+        }
+    }
+}

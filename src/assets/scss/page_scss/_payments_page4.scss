@@ -1,0 +1,661 @@
+// Payment Page SCSS 4
+mat-card {
+    &.mat-mdc-card {
+        // No Table Data
+        &.no_data_box {
+            border: 1px solid $GYN-132;
+            padding: 15px 15px;
+            @include max-breakpoint-1680 {
+                padding: 12px 12px;
+            }
+
+            mat-card-content {
+                text-align: center;
+                padding: 15px 15px;
+                @include max-breakpoint-1680 {
+                    padding: 12px 12px;
+                }
+
+                img {
+                    width: 150px;
+                    display: block;
+                    margin: 0 auto 25px auto;
+                    @include max-breakpoint-1800 {
+                        margin: 0 auto 20px auto;
+                    }
+                    @include max-breakpoint-1680 {
+                        width: 120px;
+                    }
+                    @include max-breakpoint-1440 {
+                        height: 110px;
+                        margin: 0 auto 15px auto;
+                    }
+                }
+
+                h3 {
+                    &.mat-h3 {
+                        font: 600 $font-s-18 $primaryFont;
+                        color: $BL-102;
+                        text-align: center;
+                        margin: 0 0 35px 0;
+                        letter-spacing: 0.3px;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-16 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-14 $primaryFont;
+                            margin: 0 0 28px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        // No Account Balance Data
+        &.no_bank_data_box {
+            margin: 15px 0 0 0;
+            padding: 0;
+            border: 1px dashed $BL-103;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1607843137);
+            @include max-breakpoint-1680 {
+                margin: 12px 0 0 0;
+                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1607843137);
+            }
+
+            mat-card-content {
+                width: 100%;
+                padding: 15px 15px;
+                @include max-breakpoint-1680 {
+                    padding: 12px 12px;
+                }
+
+                .no_bank_data_left {
+                    @include flex_center();
+                    @include max-breakpoint-1440 {
+                        flex: 1 1 67%;
+                        max-width: 67%;
+                    }
+                    @include max-breakpoint-1279 {
+                        justify-content: center;
+                    }
+
+                    h2 {
+                        &.mat-h2 {
+                            font: 600 $font-s-21 $primaryFont;
+                            color: $BL-103;
+                            margin: 0;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-18 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-16 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-17 $primaryFont;
+                            }
+
+                            span {
+                                font: 600 $font-s-16 $primaryFont;
+                                color: $BL-113;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-14 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .no_bank_data_right {
+                    @include max-breakpoint-1440 {
+                        flex: 1 1 33%;
+                        max-width: 33%;
+                    }
+
+                    .link_bank_account {
+                        width: 100%;
+                        max-width: 245px;
+                        margin: 0 0 0 auto;
+                        text-align: center;
+                        @include max-breakpoint-1680 {
+                            max-width: 196px;
+                        }
+
+                        img {
+                            max-width: 150px;
+                            height: auto;
+                            margin: 0 auto 10px auto;
+                            @include max-breakpoint-1680 {
+                                max-width: 120px;
+                                height: auto;
+                                margin: 0 auto 8px auto;
+                            }
+                        }
+
+                        button {
+                            &.bank_link_btn {
+                                width: 100%;
+                                min-height: 45px;
+                                padding: 0 10px;
+                                font: 600 $font-s-14 $primaryFont;
+                                color: $WE-100;
+                                background-color: $BL-103;
+                                @include max-breakpoint-1800 {
+                                    min-height: 40px;
+                                    padding: 0 8px;
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    min-height: 36px;
+                                    font: 600 $font-s-11 $primaryFont;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 600 $font-s-12 $primaryFont;
+                                }
+                            }
+                        }
+                        .info_tooltip_wrapper {
+                            .info_tooltip {
+                                top: calc(100% + 4px);
+                                @include max-breakpoint-1680 {
+                                    top: calc(100% + 3px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.dialog_no_data {
+                margin: 0 0 15px 0;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 12px 0;
+                }
+            }
+        }
+
+        // Connect Bank Box
+        &.white_default_card {
+            &.payment_bank_box {
+                padding: 0;
+                box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.0509803922);
+                margin: 0 0 30px 0;
+                @include max-breakpoint-1800 {
+                    margin: 0 0 24px 0;
+                }
+                @include max-breakpoint-1680 {
+                    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.0509803922);
+                }
+
+                .info_tooltip_wrapper {
+                    display: inherit;
+                    position: static;
+                }
+
+                mat-card-content {
+                    position: relative;
+                    background: rgba(131, 139, 167, 0.15);
+                    border-radius: 10px;
+                    padding: 0;
+                    @include max-breakpoint-1680 {
+                        border-radius: 8px;
+                    }
+
+                    button {
+                        &.change_btn {
+                            font: 600 0.7vw $primaryFont;
+                            color: $WE-100;
+                            text-decoration: underline;
+                            background: $BL-102;
+                            border: 0;
+                            cursor: pointer;
+                            border-radius: 0 10px 0 10px;
+                            padding: 8px 15px;
+                            position: absolute;
+                            right: -1px;
+                            top: -1px;
+                            z-index: 9;
+                            @include max-breakpoint-1680 {
+                                font: 600 0.56vw $primaryFont;
+                                border-radius: 0 8px 0 8px;
+                                padding: 6px 12px;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 400 0.8vw $primaryFont;
+                            }
+                            @include max-breakpoint-1279 {
+                                font: 600 $font-s-12 $primaryFont;
+                                padding: 6px 15px;
+                            }
+                        }
+                    }
+
+                    .payment_bank_box_row {
+                        display: flex;
+
+                        .payment_bank_box_col {
+                            width: 100%;
+                            flex: 0 0 70%;
+                            max-width: 70%;
+                            min-height: 64px;
+                            position: relative;
+                            padding: 0 15px;
+                            background: $WE-100;
+                            border-radius: 0 10px 10px 0;
+                            @include max-breakpoint-1680 {
+                                min-height: 64px;
+                                padding: 0 12px;
+                                border-radius: 0 8px 8px 0;
+                            }
+
+                            h3 {
+                                &.mat-h3 {
+                                    font: 600 0.9vw $primaryFont;
+                                    color: $BL-103;
+                                    margin: 0;
+                                    @include max-breakpoint-1680 {
+                                        font: 600 0.72vw $primaryFont;
+                                    }
+                                }
+                            }
+
+                            // Payment Bank List Tree
+                            .payment_bank_tree {
+                                padding-bottom: 15px;
+                                @include max-breakpoint-1680 {
+                                    padding-bottom: 12px;
+                                }
+
+                                ul {
+                                    @include ul_style();
+
+                                    li {
+                                        @include flex_center();
+                                        flex-wrap: wrap;
+                                        position: relative;
+                                        min-height: 1.7vw;
+                                        padding: 0.6vw 15px 0 2.5vw;
+                                        @include max-breakpoint-1680 {
+                                            min-height: 1.36vw;
+                                            padding: 0.48vw 12px 0 2vw;
+                                        }
+                                        @include max-breakpoint-1279 {
+                                            min-height: 30px;
+                                            padding: 5px 15px 0 40px;
+                                        }
+
+                                        &::before {
+                                            width: 1px;
+                                            height: 100%;
+                                            content: '';
+                                            position: absolute;
+                                            left: 1.3vw;
+                                            top: 0px;
+                                            border-left: 1px dashed $BLN-113;
+                                            @include max-breakpoint-1680 {
+                                                left: 1.04vw;
+                                            }
+                                            @include max-breakpoint-1279 {
+                                                left: 18px;
+                                            }
+                                        }
+
+                                        .bank_company_logo {
+                                            width: 1vw;
+                                            min-width: 1vw;
+                                            height: 1vw;
+                                            border-radius: 50%;
+                                            border: 1px solid $BLN-113;
+                                            background: $WE-100;
+                                            overflow: hidden;
+                                            @include flex_center();
+                                            justify-content: center;
+                                            position: absolute;
+                                            left: 0.8vw;
+                                            top: 0.7vw;
+                                            z-index: 1;
+                                            padding: 0;
+
+                                            @include max-breakpoint-1680 {
+                                                width: 0.8vw;
+                                                min-width: 0.8vw;
+                                                height: 0.8vw;
+                                                left: 0.64vw;
+                                                top: 0.56vw;
+                                            }
+                                            @include max-breakpoint-1279 {
+                                                width: 18px;
+                                                min-width: 18px;
+                                                height: 18px;
+
+                                                img {
+                                                    width: 18px;
+                                                    min-width: 18px;
+                                                }
+                                            }
+                                        }
+
+                                        h4 {
+                                            &.mat-h4 {
+                                                font: 600 0.8vw $primaryFont;
+                                                color: $BL-102;
+                                                margin: 0;
+                                                padding-right: 8px;
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 0.64vw $primaryFont;
+                                                    padding-right: 6.4px;
+                                                }
+                                                @include max-breakpoint-1279 {
+                                                    font: 600 $font-s-15 $primaryFont;
+                                                }
+
+                                                &.dark_heading {
+                                                    width: 100%;
+                                                    font: 600 0.8vw $primaryFont;
+                                                    color: $BL-103;
+                                                    @include text_limit();
+
+                                                    span {
+                                                        font-weight: 400;
+                                                        margin-left: 3px;
+                                                    }
+                                                    @include max-breakpoint-1680 {
+                                                        font: 600 0.64vw $primaryFont;
+                                                        span {
+                                                            margin-left: 2px;
+                                                        }
+                                                    }
+                                                    @include max-breakpoint-1279 {
+                                                        font: 600 $font-s-13 $primaryFont;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        h2 {
+                                            &.mat-h2 {
+                                                font: 600 1vw $primaryFont;
+                                                color: $BL-103;
+                                                margin: 0;
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 0.8vw $primaryFont;
+                                                }
+                                                @include max-breakpoint-1279 {
+                                                    font: 600 $font-s-16 $primaryFont;
+                                                }
+                                            }
+                                        }
+
+                                        .payment_tree_data_col {
+                                            width: 100%;
+                                            @include flex_center();
+
+                                            h2 {
+                                                &.mat-h2 {
+                                                    margin: 0 0 0 auto;
+
+                                                    .info_tooltip_wrapper {
+                                                        .info_tooltip {
+                                                            &.right_tooltip {
+                                                                right: 10px;
+                                                                @include max-breakpoint-1680 {
+                                                                    right: 8px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            &::before {
+                                                height: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            // Single Payment Bank Details
+                            .single_payment_bank_info {
+                                position: relative;
+                                min-height: 75px;
+                                padding: 15px 15px 15px 45px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 60px;
+                                    padding: 12px 12px 12px 36px;
+                                }
+
+                                .single_bank_logo {
+                                    width: 24px;
+                                    min-width: 24px;
+                                    height: 24px;
+                                    border-radius: 50%;
+                                    border: 1px solid $BLN-113;
+                                    background: $WE-100;
+                                    overflow: hidden;
+                                    @include flex_center();
+                                    position: absolute;
+                                    left: 0;
+                                    top: 15px;
+                                    z-index: 1;
+                                    padding: 0;
+                                    @include max-breakpoint-1680 {
+                                        width: 19px;
+                                        min-width: 19px;
+                                        height: 19px;
+                                        top: 12px;
+                                    }
+
+                                    img {
+                                        width: 24px;
+                                        min-width: 24px;
+                                        @include max-breakpoint-1680 {
+                                            width: 19px;
+                                            min-width: 19px;
+                                        }
+                                    }
+                                }
+
+                                h4 {
+                                    &.mat-h4 {
+                                        width: 100%;
+                                        font: 600 0.9vw $primaryFont;
+                                        color: $BL-103;
+                                        margin: 0 0 6px 0;
+                                        @include text_limit();
+
+                                        span {
+                                            font-weight: 400;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 600 0.72vw $primaryFont;
+                                            margin: 0 0 5px 0;
+                                        }
+                                        @include max-breakpoint-1279 {
+                                            font: 600 $font-s-16 $primaryFont;
+                                        }
+                                    }
+                                }
+
+                                h2 {
+                                    &.mat-h2 {
+                                        font: 600 1vw $primaryFont;
+                                        color: $BL-103;
+                                        margin: 0;
+                                        @include max-breakpoint-1680 {
+                                            font: 600 0.8vw $primaryFont;
+                                        }
+                                        @include max-breakpoint-1279 {
+                                            font: 600 $font-s-16 $primaryFont;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:first-child {
+                                max-width: 30%;
+                                @include flex_center();
+                                background: rgba(131, 139, 167, 0.15);
+                                padding: 0 20px;
+                                border-radius: 10px 0 0 10px;
+                                @include max-breakpoint-1680 {
+                                    padding: 0 16px;
+                                    border-radius: 8px 0 0 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Payment Full Width Page
+.page_full_wrapper {
+    .page_full_header {
+        width: 100%;
+        @include flex_center();
+        justify-content: space-between;
+        margin: 0 0 1vw 0;
+        @include max-breakpoint-1680 {
+            margin: 0 0 0.8vw 0;
+        }
+
+        .page_full_header_left {
+            @include flex_center();
+
+            button {
+                &.back_btn {
+                    min-width: 99px;
+                    min-height: 40px;
+                    background-color: $WE-100;
+                    border-color: $BL-102;
+                    font: 400 $font-s-16 $primaryFont;
+                    color: $BL-102;
+                    padding: 0 15px;
+                    margin: 0 2vw 0 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        min-width: 79px;
+                        min-height: 32px;
+                        font: 400 $font-s-14 $primaryFont;
+                        padding: 0 12px;
+                        margin: 0 1.6vw 0 0;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                }
+            }
+
+            h2 {
+                &.mat-h2 {
+                    @include heading_md_blue();
+                }
+            }
+        }
+
+        .page_full_header_right {
+            width: 18.8vw;
+            @include max-breakpoint-1680 {
+                width: 15.04vw;
+            }
+        }
+    }
+
+    .page_full_content {
+        position: relative;
+    }
+}
+
+// sticky title wrapper
+.sticky_title_wrapper {
+    background: $WE-100;
+    padding: 0 0 1.1vw 0;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    @include max-breakpoint-1680 {
+        padding: 0 0 0.88vw 0;
+    }
+}
+.account_to_wrapper {
+    .account_to_title {
+        .right {
+            .info_tooltip_wrapper {
+                button {
+                    &.transparent_btn {
+                        &.disabled {
+                            background-color: transparent !important;
+                        }
+                    }
+                }
+                .info_tooltip {
+                    top: calc(100% + 4px);
+                    @include max-breakpoint-1680 {
+                        top: calc(100% + 3px);
+                    }
+                }
+            }
+        }
+    }
+}
+.payment_approval_content {
+    .no_user_found {
+        .no_user_found_inner {
+            .info_tooltip_wrapper {
+                .info_tooltip {
+                    top: calc(100% + 4px);
+                    @include max-breakpoint-1680 {
+                        top: calc(100% + 3px);
+                    }
+                }
+            }
+        }
+    }
+}
+app-settings-wrapper {
+    app-banking-details {
+        .bank_details_wrapper {
+            mat-card {
+                &.no_bank_connected {
+                    mat-card-actions {
+                        &.no_bank_footer {
+                            .info_tooltip_wrapper {
+                                .info_tooltip {
+                                    top: calc(100% + 4px);
+                                    @include max-breakpoint-1680 {
+                                        top: calc(100% + 3px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .select_table_wrapper {
+                .connect_btn_group {
+                    .info_tooltip_wrapper {
+                        .info_tooltip {
+                            top: calc(100% + 4px);
+                            @include max-breakpoint-1680 {
+                                top: calc(100% + 3px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

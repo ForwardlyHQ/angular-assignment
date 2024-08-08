@@ -1,0 +1,1055 @@
+// Finalize Payment Dialog SCSS Include Here
+.finalize-payment-dialog {
+    @include max-breakpoint-1800 {
+        max-width: 688px !important;
+    }
+    @include max-breakpoint-1680 {
+        max-width: 612px !important;
+    }
+    mat-dialog-content {
+        &.mat-mdc-dialog-content {
+            .otp_screen_container {
+                padding: 100px 0;
+                position: relative;
+                @include max-breakpoint-1680 {
+                    padding: 80px 0;
+                }
+                &.pxy-45 {
+                    padding: 45px;
+                    @include max-breakpoint-1680 {
+                        padding: 36px;
+                    }
+                }
+                button {
+                    &.mat-back-btn {
+                        position: absolute;
+                        left: 15px;
+                        top: 15px;
+                        color: $BE-1;
+                        @include max-breakpoint-1680 {
+                            left: 12px;
+                            top: 12px;
+                        }
+                    }
+                }
+            }
+            /* Selected Bank Details */
+            .selected_bank_details {
+                padding: 0 38px 4px 0;
+                border-bottom: 2px solid rgba($BE-1, 0.3);
+                margin-bottom: 30px;
+                @include max-breakpoint-1680 {
+                    padding: 0 30px 3px 0;
+                    margin-bottom: 24px;
+                }
+                @include max-breakpoint-1440 {
+                    margin-bottom: 15px;
+                }
+                h6 {
+                    @include flex_center();
+                    justify-content: flex-start;
+                    font: 400 $font-s-16 $primaryFont;
+                    color: $GY-2;
+                    padding: 7px 0;
+                    border-bottom: 1px dashed $GY-5;
+                    margin: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-14 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-13 $primaryFont;
+                        padding: 7px 0;
+                    }
+                    img {
+                        width: 18px;
+                        margin-right: 15px;
+                        @include max-breakpoint-1800 {
+                            width: 16px;
+                            margin-right: 13px;
+                        }
+                        @include max-breakpoint-1680 {
+                            width: 14px;
+                            margin-right: 12px;
+                        }
+                    }
+                }
+                p {
+                    @include flex_center();
+                    justify-content: flex-start;
+                    font: 600 $font-s-16 $primaryFont;
+                    color: rgba($BE-1, 0.9);
+                    padding: 7px 0;
+                    margin: 0;
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-14 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 600 $font-s-13 $primaryFont;
+                        padding: 6px 0;
+                    }
+                    img {
+                        width: 18px;
+                        margin-right: 15px;
+                        @include max-breakpoint-1800 {
+                            width: 16px;
+                            margin-right: 13px;
+                        }
+                        @include max-breakpoint-1680 {
+                            width: 14px;
+                            margin-right: 12px;
+                        }
+                    }
+                    span {
+                        &.bank_details_sec {
+                            @include flex_justify_space_between();
+                            flex: 1 1 auto;
+                            .bank_details {
+                                span {
+                                    padding-right: 10px;
+                                    @include max-breakpoint-1680 {
+                                        padding-right: 8px;
+                                    }
+                                    &:first-child {
+                                        display: block;
+                                        max-width: 325px;
+                                        @include text_limit();
+                                        @include max-breakpoint-1800 {
+                                            max-width: 275px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            max-width: 260px;
+                                        }
+                                    }
+                                    &:last-child {
+                                        padding-left: 10px;
+                                        padding-right: 0;
+                                        border-left: 1px solid $GY-5;
+                                        font: 700 $font-s-16 $primaryFont;
+                                        @include max-breakpoint-1800 {
+                                            font: 700 $font-s-14 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            padding-left: 8px;
+                                            font: 700 $font-s-13 $primaryFont;
+                                        }
+                                    }
+                                }
+                            }
+                            .bank_date {
+                                font: 400 $font-s-14 $primaryFont;
+                                color: $GY-2;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                            }
+                        }
+                    }
+                    &.payment_card_details {
+                        img {
+                            max-width: 28px;
+                            max-height: 17px;
+                            margin-right: 15px;
+                            @include max-breakpoint-1680 {
+                                width: auto;
+                                margin-right: 12px;
+                            }
+                        }
+                        span {
+                            &.bank_details_sec {
+                                align-items: center;
+                                justify-content: flex-start;
+                                span {
+                                    padding: 0 10px;
+                                    &:not(:last-child) {
+                                        border-right: 1px solid $GY-5;
+                                    }
+                                    &:first-child {
+                                        padding-left: 0;
+                                    }
+                                    &:last-child {
+                                        padding-right: 0;
+                                    }
+                                    img {
+                                        max-width: 21px;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Payment Methods
+            .payment_method_wrapper {
+                @include flex_align_center();
+                justify-content: space-between;
+                margin: 0 -15px 15px -15px;
+
+                .payment_method_col {
+                    @include flex_align_center();
+                    padding: 0 15px;
+
+                    &.heading {
+                        h4 {
+                            &.mat-h4 {
+                                font: 500 $font-s-14 $primaryFont;
+                                color: $GY-2;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .payment_method_box {
+                        height: 45px;
+                        display: inline-block;
+                        position: relative;
+                        padding: 6px 15px 5px 50px;
+                        background: $WE-1;
+                        border: 1px solid $GY-5;
+                        border-radius: 4px;
+                        margin: 0 0 10px 10px;
+
+                        img {
+                            &.payment_method_icon {
+                                width: 24px;
+                                position: absolute;
+                                left: 15px;
+                                top: 10px;
+
+                                &.bank_icon {
+                                    top: 8px;
+                                }
+                            }
+                        }
+
+                        h5 {
+                            &.mat-h5 {
+                                min-height: 15px;
+                                @include flex_align_center();
+                                font: 500 $font-s-14 $primaryFont;
+                                line-height: 8px;
+                                color: $GY-2;
+                                margin: 0 0 -6px 0;
+
+                                .info_tooltip_wrapper {
+                                    margin-left: 6px;
+                                    .info_tooltip_text {
+                                        img {
+                                            width: 12px;
+                                            height: 12px;
+                                        }
+                                    }
+                                    .info_tooltip {
+                                        min-width: 216px;
+                                        .info_tooltip_inner {
+                                            a {
+                                                color: $OE-1;
+                                                text-decoration: underline;
+                                                &:hover {
+                                                    color: $OE-1;
+                                                    text-decoration: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        button {
+                            &.payment_method_status {
+                                font: 500 $font-s-12 $primaryFont;
+                                color: $GY-2;
+                                text-transform: capitalize;
+                                padding: 0;
+                                background: none;
+                                border: none;
+                                cursor: default;
+                                pointer-events: none;
+
+                                &.accepted {
+                                    color: $GN-1;
+                                }
+                                &.setup {
+                                    color: $OE-1;
+                                    cursor: pointer;
+                                    pointer-events: all;
+                                }
+                                &.action_required {
+                                    color: $RD-5;
+                                    cursor: pointer;
+                                    pointer-events: all;
+                                }
+                            }
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            .memo_wrapper {
+                position: relative;
+                mat-form-field {
+                    &.mat-mdc-form-field {
+                        font-size: $font-s-16;
+                        margin: 0 auto 30px auto;
+                        @include max-breakpoint-1800 {
+                            font-size: $font-s-14;
+                        }
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-13;
+                            margin: 0 auto 24px auto;
+                        }
+                        .mat-mdc-text-field-wrapper {
+                            padding: 0;
+                            &:hover {
+                                border-color: transparent;
+                                box-shadow: none;
+                            }
+                            .mat-mdc-form-field-focus-overlay {
+                                background-color: transparent;
+                            }
+                            .mat-mdc-form-field-flex {
+                                .mat-mdc-form-field-infix {
+                                    label {
+                                        &.mdc-floating-label {
+                                            mat-label {
+                                                color: rgba($BE-1, 0.5);
+                                            }
+                                        }
+                                    }
+                                    textarea {
+                                        font: 400 $font-s-16 $primaryFont;
+                                        color: rgba($BE-1, 0.9);
+                                        letter-spacing: 0;
+                                        resize: vertical !important;
+                                        max-height: 100px;
+                                        @include max-breakpoint-1800 {
+                                            font: 400 $font-s-14 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 400 $font-s-13 $primaryFont;
+                                            max-height: 80px;
+                                        }
+                                    }
+                                }
+                            }
+                            .mdc-line-ripple {
+                                &::before {
+                                    border-bottom-color: $BLN-113;
+                                }
+                                &::after {
+                                    border-bottom-color: $BE-1;
+                                }
+                            }
+                        }
+                        .mat-mdc-form-field-subscript-wrapper {
+                            .mat-mdc-form-field-hint-wrapper {
+                                padding: 0;
+                                .mat-mdc-form-field-hint {
+                                    font: 400 $font-s-9 $primaryFont;
+                                    color: $BL-102;
+                                    @include max-breakpoint-1680 {
+                                        font: 400 $font-s-7 $primaryFont;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                h6 {
+                    &.mat-h6 {
+                        font: 500 $font-s-16 $primaryFont;
+                        color: $GY-2;
+                        margin: 0 0 10px 0;
+                        @include max-breakpoint-1800 {
+                            font: 500 $font-s-14 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 500 $font-s-13 $primaryFont;
+                            margin: 0 0 8px 0;
+                        }
+                    }
+                }
+                p {
+                    font: 400 $font-s-16 $primaryFont;
+                    line-height: normal;
+                    color: $GY-2;
+                    margin: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-14 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                }
+                .memo-message-count-container {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    right: 0;
+                    transform: translate(0, -30px);
+                    margin: 0;
+                    @include max-breakpoint-1680 {
+                        transform: translate(0, -24px);
+                    }
+                }
+                .ghost_loading_box {
+                    min-height: 25px;
+                    margin-bottom: 10px;
+                    @include max-breakpoint-1680 {
+                        min-height: 20px;
+                        margin-bottom: 8px;
+                    }
+                    &:first-child {
+                        width: 50px;
+                        @include max-breakpoint-1680 {
+                            width: 40px;
+                        }
+                    }
+                    &:last-child {
+                        width: 50%;
+                    }
+                }
+            }
+            .usernotauthorized {
+                margin: 0 auto 30px auto;
+                @include max-breakpoint-1680 {
+                    margin: 0 auto 24px auto;
+                }
+                p {
+                    @include flex_center();
+                    font: 400 $font-s-14 $primaryFont;
+                    color: $RD-2;
+                    margin: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+                    mat-icon {
+                        margin-right: 5px;
+                        transform: rotate(45deg);
+                        @include max-breakpoint-1680 {
+                            margin-right: 3px;
+                            font-size: $font-s-20;
+                        }
+                    }
+                }
+            }
+            /* Approver Received Section */
+            .approver_list_sec {
+                margin: 0 0 30px 0;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 24px 0;
+                }
+                @include max-breakpoint-1440 {
+                    margin: 0 0 15px 0;
+                }
+                h6 {
+                    &.mat-h6 {
+                        font: 600 $font-s-16 $primaryFont;
+                        color: $BE-1;
+                        text-align: center;
+                        margin: 0 0 15px 0;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-14 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-13 $primaryFont;
+                            margin: 0 0 12px 0;
+                        }
+                    }
+                }
+                ul {
+                    &.approver_list_wrapper {
+                        @include unordered_list();
+                        @include flex_center();
+                        flex-wrap: wrap;
+                        li {
+                            &.approver_list {
+                                display: inline-block;
+                                padding: 5px calc(15px / 2);
+                                @include max-breakpoint-1680 {
+                                    padding: 4px calc(12px / 2);
+                                }
+                                span {
+                                    &.approver_list_inner {
+                                        display: block;
+                                        width: auto;
+                                        max-width: 152px;
+                                        height: 40px;
+                                        padding: 7px 12px;
+                                        background-color: transparent;
+                                        border: 1px solid $GY-5;
+                                        border-radius: 5px;
+                                        font: 500 $font-s-14 $primaryFont;
+                                        color: $GY-12;
+                                        @include max-breakpoint-1800 {
+                                            max-width: 130px;
+                                            height: 35px;
+                                            font: 400 $font-s-12 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            max-width: 122px;
+                                            height: 32px;
+                                            padding: 6px 10px;
+                                            border-radius: 4px;
+                                            font: 500 $font-s-11 $primaryFont;
+                                        }
+                                        span {
+                                            display: block;
+                                            width: 100%;
+                                            @include text_limit();
+                                            line-height: 24px;
+                                            @include max-breakpoint-1680 {
+                                                line-height: 19px;
+                                            }
+                                            img {
+                                                display: none;
+                                                max-width: 24px;
+                                                vertical-align: middle;
+                                                margin: 0;
+                                                @include max-breakpoint-1680 {
+                                                    max-width: 19px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                /* If Approver Approved */
+                                &.approver_list_approved {
+                                    span {
+                                        &.approver_list_inner {
+                                            border-color: $GN-1;
+                                            color: $GN-1;
+                                            box-shadow: 0 4px 10px rgba($BK-1, 0.15);
+                                            @include max-breakpoint-1680 {
+                                                box-shadow: 0 3px 8px rgba($BK-1, 0.15);
+                                            }
+                                            img {
+                                                display: inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .payment_dialog_footer {
+                @include flex-direction-row();
+                margin-top: 18px;
+                @include max-breakpoint-1680 {
+                    margin-top: 14px;
+                }
+                &.mt-28 {
+                    margin-top: 28px;
+                    @include max-breakpoint-1680 {
+                        margin-top: 22px;
+                    }
+                }
+                &.mt-0 {
+                    margin-top: 0;
+                }
+                p {
+                    &.acp_info {
+                        @include flex-direction-row();
+                        font: 400 $font-s-16 $primaryFont;
+                        color: $BL-102;
+                        margin: 0;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-14 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        img {
+                            max-width: 24px;
+                            margin-right: 10px;
+                            @include max-breakpoint-1680 {
+                                max-width: 19px;
+                                margin-right: 8px;
+                            }
+                        }
+                        span {
+                            &.disabled {
+                                color: rgba($BL-102, 0.7);
+                            }
+                            span {
+                                &.date {
+                                    color: $OE-1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .info_tooltip_wrapper {
+                    .info_tooltip {
+                        &.btn_tooltip {
+                            top: auto;
+                            bottom: 50px;
+                            @include max-breakpoint-1680 {
+                                bottom: 40px;
+                            }
+                            .info_tooltip_inner {
+                                &::before {
+                                    top: auto;
+                                    bottom: -4px;
+                                    @include max-breakpoint-1680 {
+                                        bottom: -3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.calendar_tooltip {
+                        .info_tooltip {
+                            &.btn_tooltip {
+                                top: auto;
+                                bottom: 26px;
+                                @include max-breakpoint-1680 {
+                                    bottom: 21px;
+                                }
+                                .info_tooltip_inner {
+                                    &::before {
+                                        top: auto;
+                                        right: 15px;
+                                        bottom: -4px;
+                                        @include max-breakpoint-1680 {
+                                            right: 12px;
+                                            bottom: -3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                button {
+                    &.common_btn {
+                        max-width: 182px;
+                        background-color: $GN-3;
+                        border-color: $GN-3;
+                        font: 700 $font-s-18 $primaryFont;
+                        @include max-breakpoint-1800 {
+                            max-width: 162px;
+                            font: 700 $font-s-16 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            max-width: 146px;
+                            font: 700 $font-s-14 $primaryFont;
+                        }
+                        &.m-auto {
+                            margin: auto;
+                        }
+                        &.mat_icon_btn {
+                            min-width: 182px;
+                            @include flex_center();
+                            flex-direction: row-reverse;
+                            @include max-breakpoint-1800 {
+                                min-width: 162px;
+                            }
+                            @include max-breakpoint-1680 {
+                                min-width: 146px;
+                            }
+                            mat-icon {
+                                font-size: $font-s-24;
+                                margin: 0 0 0 6px;
+                                @include max-breakpoint-1680 {
+                                    font-size: 19px;
+                                    margin: 0 0 0 5px;
+                                }
+                            }
+                        }
+                        &.approve_schedule_btn {
+                            max-width: 215px;
+                            margin-left: 15px;
+                            @include max-breakpoint-1680 {
+                                max-width: 172px;
+                                margin-left: 12px;
+                            }
+                        }
+                        &[disabled='true'],
+                        &[disabled=''],
+                        &.disabled,
+                        &.mat-button-disabled {
+                            color: $WE-1;
+                            background-color: $GY-1;
+                            border-color: $GY-1;
+                            cursor: default;
+                            pointer-events: none;
+                        }
+                    }
+                }
+                /* Drop Down Button Style Include Here */
+                .submit_btn_wrapper {
+                    text-align: right;
+
+                    // Dropdown Button
+                    .submit_btn_dropdown {
+                        width: 100%;
+                        @include flex_start();
+                        justify-content: flex-end;
+                        p {
+                            font: 400 $font-s-16 $primaryFont;
+                            color: $GY-2;
+                            margin: 0 15px 0 0;
+                            align-self: center;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-14 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-13 $primaryFont;
+                                margin: 0 12px 0 0;
+                            }
+                        }
+
+                        .submit_btn_group_wrapper {
+                            position: relative;
+                            @include flex_center();
+                            background: $GR-100;
+                            border-radius: 5px;
+                            padding-right: 40px;
+                            @include max-breakpoint-1680 {
+                                border-radius: 4px;
+                                padding-right: 32px;
+                            }
+                            &.disabled {
+                                background-color: $GY-1;
+                            }
+
+                            button {
+                                &.submit_btn_group {
+                                    position: relative;
+                                    min-height: 45px;
+                                    background: none;
+                                    border: none;
+                                    padding: 4px 10px 4px 15px;
+                                    font: 600 $font-s-16 $primaryFont;
+                                    color: $WE-100;
+                                    text-align: left;
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        min-height: 36px;
+                                        padding: 3px 8px 3px 12px;
+                                        font: 600 $font-s-13 $primaryFont;
+                                    }
+                                    mat-spinner {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        margin: auto;
+                                        svg {
+                                            circle {
+                                                stroke: $WE-100;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.green_left_btn {
+                                    min-width: 180px;
+                                    background-color: $GR-100;
+                                    border-top-left-radius: 5px;
+                                    border-bottom-left-radius: 5px;
+                                    @include max-breakpoint-1680 {
+                                        min-width: 144px;
+                                        border-top-left-radius: 4px;
+                                        border-bottom-left-radius: 4px;
+                                    }
+                                    cursor: pointer;
+                                    &[disabled='true'],
+                                    &[disabled=''],
+                                    &.disabled,
+                                    &.mat-button-disabled {
+                                        color: $WE-1;
+                                        background-color: $GY-1;
+                                        border-color: $GY-1;
+                                        cursor: default;
+                                        pointer-events: none;
+                                    }
+                                }
+
+                                &.green_right_btn {
+                                    width: 40px;
+                                    min-width: 40px;
+                                    @include flex_center();
+                                    justify-content: center;
+                                    padding: 4px 0;
+                                    border-top-right-radius: 5px;
+                                    border-bottom-right-radius: 5px;
+                                    cursor: pointer;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    z-index: 1;
+                                    &[disabled='true'],
+                                    &[disabled=''],
+                                    &.disabled,
+                                    &.mat-button-disabled {
+                                        color: $WE-1;
+                                        background-color: $GY-1;
+                                        border-color: $GY-1;
+                                        cursor: default;
+                                        pointer-events: none;
+                                    }
+
+                                    &::before {
+                                        width: 1px;
+                                        height: 20px;
+                                        display: block;
+                                        content: '';
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        background: $WE-100;
+                                        @include max-breakpoint-1680 {
+                                            height: 16px;
+                                        }
+                                    }
+
+                                    mat-icon {
+                                        font-size: $font-s-32;
+                                        @include max-breakpoint-1680 {
+                                            font-size: 26px;
+                                        }
+                                    }
+
+                                    &[aria-expanded='true'] {
+                                        mat-icon {
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+
+                                    @include max-breakpoint-1800 {
+                                        min-height: 45px;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        width: 32px;
+                                        min-width: 32px;
+                                        min-height: 36px;
+                                        padding: 3px;
+                                        border-top-right-radius: 4px;
+                                        border-bottom-right-radius: 4px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .payment_date_option {
+                    @include flex-direction-row();
+                    .pay_now_option {
+                        mat-checkbox {
+                            &.mat-mdc-checkbox {
+                                &.orange_checkbox {
+                                    .mdc-form-field {
+                                        .mdc-checkbox__ripple {
+                                            display: none;
+                                        }
+                                        label {
+                                            font: 400 $font-s-16 $primaryFont;
+                                            color: $GY-2;
+                                            padding: 0;
+                                            @include max-breakpoint-1800 {
+                                                font: 400 $font-s-14 $primaryFont;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                font: 400 $font-s-13 $primaryFont;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    span {
+                        &.other_option {
+                            color: rgba($GY-2, 0.5);
+                            margin-right: 11px;
+                            @include max-breakpoint-1680 {
+                                margin-right: 9px;
+                            }
+                        }
+                    }
+                    .schedule_date_option {
+                        @include flex-direction-row();
+                        font: 400 $font-s-16 $primaryFont;
+                        color: $GY-2;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-14 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        .scheduleDateButton {
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            font: 400 $font-s-16 $primaryFont;
+                            color: $GY-2;
+                            cursor: pointer;
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-14 $primaryFont;
+                            }
+                        }
+
+                        img {
+                            &.calendar-icon {
+                                max-width: 22px;
+                                margin-left: 11px;
+                                @include max-breakpoint-1680 {
+                                    max-width: 18px;
+                                    margin-left: 9px;
+                                }
+                            }
+                        }
+                        &.disabled {
+                            pointer-events: none;
+                            cursor: default;
+                            opacity: 0.5;
+                            .date_picker {
+                                .scheduled_date {
+                                    color: $GY-2;
+                                }
+                            }
+                        }
+                        .date_picker {
+                            @include flex-direction-row();
+                            position: relative;
+                            .scheduled_date {
+                                font: 500 $font-s-16 $primaryFont;
+                                color: $OE-1;
+                                margin-left: 11px;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-14 $primaryFont;
+                                    margin-right: 10px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 500 $font-s-13 $primaryFont;
+                                    margin-left: 9px;
+                                }
+                            }
+                            .date_picker_custom {
+                                width: 350px;
+                                padding: 15px 15px;
+                                background-color: $WE-1;
+                                border: 1px solid $GY-2;
+                                border-radius: 10px;
+                                position: absolute;
+                                left: 11px;
+                                bottom: 100%;
+                                transform: translate(-50%, -10px);
+                                z-index: 1;
+                                @include max-breakpoint-1680 {
+                                    width: 280px;
+                                    padding: 12px 12px;
+                                    border-radius: 8px;
+                                    left: 9px;
+                                    transform: translate(-50%, -8px);
+                                }
+                                &::after {
+                                    position: inherit;
+                                    content: '';
+                                    border: 7px solid transparent;
+                                    border-top-color: $GY-2;
+                                    left: 50%;
+                                    top: 100%;
+                                    @include max-breakpoint-1680 {
+                                        border: 6px solid transparent;
+                                        border-top-color: $GY-2;
+                                    }
+                                }
+                            }
+                            button {
+                                &.calendar_button {
+                                    padding: 0;
+                                    min-width: auto;
+                                    background: transparent;
+                                    box-shadow: none;
+                                    margin-left: 11px;
+                                    @include max-breakpoint-1680 {
+                                        margin-left: 9px;
+                                    }
+                                    .mdc-button__label {
+                                        @include flex_center();
+                                        img {
+                                            width: auto;
+                                            max-width: 22px;
+                                            min-width: auto;
+                                            height: auto;
+                                            @include max-breakpoint-1680 {
+                                                max-width: 18px;
+                                            }
+                                        }
+                                    }
+                                    &.disabled {
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .auto_pay_enabled {
+                        @include flex-direction-row();
+                        font: 400 $font-s-16 $primaryFont;
+                        line-height: normal;
+                        color: $BE-1;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-14 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        img {
+                            max-width: 25px;
+                            margin-right: 11px;
+                            @include max-breakpoint-1800 {
+                                max-width: 21px;
+                            }
+                            @include max-breakpoint-1680 {
+                                max-width: 20px;
+                                margin-right: 9px;
+                            }
+                        }
+                        strong {
+                            font: 500 $font-s-16 $primaryFont;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-14 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-13 $primaryFont;
+                            }
+                        }
+                    }
+                }
+                &.admin_bypass_schedule {
+                    .payment_date_option {
+                        flex: 1 1 auto;
+                        .schedule_date_option {
+                            margin-right: 15px;
+                            @include max-breakpoint-1680 {
+                                margin-right: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

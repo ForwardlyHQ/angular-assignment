@@ -1,0 +1,580 @@
+// Sign Up Pages
+.signin_main_wrapper {
+    mat-card {
+        &.mat-mdc-card {
+            &.white_default_card {
+                &.signup_box {
+                    mat-card-content {
+                        padding: 45px 15px 0 15px;
+
+                        @include max-breakpoint-1440 {
+                            padding: 30px 15px 0 15px;
+                        }
+
+                        .signup_right_stepper {
+                            width: 100%;
+                            max-width: 586px;
+                            margin: 0 auto 15px auto;
+                            padding: 0 20px;
+
+                            @include max-breakpoint-1440 {
+                                padding: 0 15px;
+                            }
+                            @include max-breakpoint-480 {
+                                padding: 0;
+                            }
+
+                            &.lg_stepper {
+                                max-width: 710px;
+
+                                @include max-breakpoint-1440 {
+                                    max-width: 640px;
+                                    padding: 0 15px;
+                                }
+                                @include max-breakpoint-480 {
+                                    padding: 0;
+                                }
+                            }
+                            .fai_brand_mobile {
+                                display: none;
+                                margin-bottom: 40px;
+                                @include max-breakpoint-991 {
+                                    display: block;
+                                }
+                                @include max-breakpoint-767 {
+                                    margin-bottom: 25px;
+                                }
+                                img {
+                                    display: block;
+                                    max-width: 164px;
+                                    margin: auto;
+                                }
+                            }
+
+                            .signup_right_stepper_header {
+                                .signup_right_stepper_wrapper {
+                                    width: 100%;
+                                    @include flex_center();
+                                    justify-content: center;
+
+                                    ul {
+                                        margin: 0;
+                                        padding: 0 6px;
+                                        list-style: none;
+                                        background: $WE-100;
+                                        border: 1px solid $GY-103;
+                                        border-radius: 10px;
+                                        display: inline-flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        li {
+                                            @include max-breakpoint-767 {
+                                                display: none;
+                                            }
+                                            &.active {
+                                                @include max-breakpoint-767 {
+                                                    display: block;
+                                                }
+                                            }
+                                            .stepper_tab_wrap {
+                                                @include flex_center();
+                                                position: relative;
+                                                background: $WE-100;
+                                                min-height: 65px;
+                                                padding: 6px 20px 6px 65px;
+                                                cursor: default;
+
+                                                &::after {
+                                                    width: 1px;
+                                                    height: 75%;
+                                                    position: absolute;
+                                                    right: 8px;
+                                                    top: 50%;
+                                                    transform: translateY(-50%);
+                                                    background: $GY-103;
+                                                    content: '';
+                                                    @include max-breakpoint-767 {
+                                                        display: none;
+                                                    }
+                                                }
+
+                                                .stepper_tab_icon {
+                                                    width: 50px;
+                                                    min-width: 50px;
+                                                    height: 50px;
+                                                    border-radius: 50%;
+                                                    background: $WE-100;
+                                                    border: 1px solid #adb1c1;
+                                                    @include flex_center();
+                                                    justify-content: center;
+                                                    padding: 4px;
+                                                    position: absolute;
+                                                    left: 6px;
+                                                    top: 6px;
+
+                                                    img {
+                                                        &.stepper_img {
+                                                            height: 21px;
+
+                                                            &.lg_img {
+                                                                height: 26px;
+                                                            }
+
+                                                            &.onhover,
+                                                            &.completed,
+                                                            &.incompleted {
+                                                                display: none;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    @include max-breakpoint-1440 {
+                                                        width: 45px;
+                                                        min-width: 45px;
+                                                        height: 45px;
+                                                        top: 10px;
+
+                                                        img {
+                                                            &.stepper_img {
+                                                                height: 18px;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                h4 {
+                                                    &.mat-h4 {
+                                                        font: 600 $font-s-14 $primaryFont;
+                                                        @include text_limit();
+                                                        margin: 0 0 4px 0;
+                                                    }
+                                                }
+
+                                                p {
+                                                    font: 600 $font-s-12 $primaryFont;
+                                                    color: $BL-102;
+                                                    margin: 0;
+                                                }
+
+                                                // Ghost
+                                                &.ghost_tab_wrap {
+                                                    cursor: default;
+
+                                                    .stepper_tab_icon {
+                                                        &.ghost_loading_box {
+                                                            width: 50px;
+                                                            min-width: 50px;
+                                                            min-height: 50px;
+                                                            border-radius: 50%;
+                                                            background: $GY-109;
+                                                            border-color: $GY-109;
+                                                        }
+
+                                                        @include max-breakpoint-1440 {
+                                                            width: 45px;
+                                                            min-width: 45px;
+                                                            min-height: 45px;
+                                                            top: 10px;
+                                                        }
+                                                    }
+
+                                                    h4 {
+                                                        &.mat-h4 {
+                                                            .ghost_loading_box {
+                                                                width: 6vw;
+                                                                min-height: 17px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    p {
+                                                        .ghost_loading_box {
+                                                            width: 4vw;
+                                                            min-height: 15px;
+                                                            display: block;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            &.sub_stepper {
+                                                &.active {
+                                                    .stepper_tab_wrap {
+                                                        &::before {
+                                                            width: 10px;
+                                                            height: 10px;
+                                                            position: absolute;
+                                                            content: '';
+                                                            left: 0;
+                                                            right: 0;
+                                                            top: auto;
+                                                            bottom: -6px;
+                                                            background: $GYN-133;
+                                                            border-left: 1px solid $GY-103;
+                                                            border-top: 1px solid $GY-103;
+                                                            transform: rotate(45deg);
+                                                            margin: 0 auto;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            &.active {
+                                                .stepper_tab_wrap {
+                                                    cursor: default;
+
+                                                    .stepper_tab_icon {
+                                                        background: $BL-103;
+                                                        border-color: $BL-103;
+
+                                                        img {
+                                                            &.stepper_img {
+                                                                display: none;
+                                                            }
+
+                                                            &.onhover {
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    h4 {
+                                                        &.mat-h4 {
+                                                            color: $BL-103;
+                                                        }
+                                                    }
+
+                                                    p {
+                                                        color: $BL-103;
+                                                    }
+                                                }
+                                            }
+
+                                            &.completed {
+                                                .stepper_tab_wrap {
+                                                    cursor: default;
+
+                                                    .stepper_tab_icon {
+                                                        background: $WE-100;
+                                                        border-color: $GR-100;
+
+                                                        img {
+                                                            &.stepper_img {
+                                                                display: none;
+                                                            }
+
+                                                            &.onhover {
+                                                                display: none;
+                                                            }
+
+                                                            &.completed {
+                                                                height: 30px;
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    h4 {
+                                                        &.mat-h4 {
+                                                            color: $BL-103;
+                                                        }
+                                                    }
+
+                                                    p {
+                                                        color: $BL-103;
+                                                    }
+                                                }
+                                            }
+
+                                            &.incompleted {
+                                                .stepper_tab_wrap {
+                                                    cursor: default;
+
+                                                    .stepper_tab_icon {
+                                                        background: $WE-100;
+                                                        border-color: $RD-104;
+
+                                                        img {
+                                                            &.stepper_img,
+                                                            &.onhover,
+                                                            &.completed {
+                                                                display: none;
+                                                            }
+
+                                                            &.incompleted {
+                                                                height: 30px;
+                                                                display: block;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    h4 {
+                                                        &.mat-h4 {
+                                                            color: $BL-103;
+                                                        }
+                                                    }
+
+                                                    p {
+                                                        color: $BL-103;
+                                                    }
+                                                }
+                                            }
+
+                                            &:last-child {
+                                                .stepper_tab_wrap {
+                                                    &::after {
+                                                        display: none;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .signup_right_sub_stepper {
+                                    width: 100%;
+                                    display: inline-block;
+                                    position: relative;
+                                    text-align: center;
+
+                                    ul {
+                                        display: inline-block;
+                                        list-style: none;
+                                        margin: 0;
+                                        padding: 12px 15px;
+                                        background: $GYN-133;
+                                        border-radius: 0 0 10px 10px;
+
+                                        li {
+                                            display: inline-block;
+                                            position: relative;
+                                            padding: 0 10px;
+                                            border-left: 1px solid #e2e3e4;
+                                            @include max-breakpoint-480 {
+                                                display: none;
+                                            }
+
+                                            button {
+                                                font: 600 $font-s-14 $primaryFont;
+                                                color: $BL-102;
+                                                background: none;
+                                                border: none;
+                                                padding: 0 10px;
+                                                cursor: default;
+                                            }
+
+                                            &.active {
+                                                @include max-breakpoint-480 {
+                                                    display: block;
+                                                    border: none;
+                                                }
+                                                button {
+                                                    color: $BL-103;
+                                                }
+                                            }
+
+                                            &:first-child {
+                                                border-left: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .fai_stepper_action_button {
+                                width: 100%;
+                                @include flex_start();
+
+                                &.custom_mt_1 {
+                                    margin-top: 1vw;
+                                }
+
+                                button {
+                                    &.fai_btn {
+                                        min-width: 113px;
+                                        min-height: 50px;
+                                        font: 700 $font-s-16 $secondaryFont;
+                                        color: $WE-100;
+                                        background-color: $BL-103;
+                                        @include max-breakpoint-1680 {
+                                            font: 700 $font-s-15 $secondaryFont;
+                                            min-height: 38px;
+                                        }
+                                        &.fai_btn_orange {
+                                            flex-direction: row-reverse;
+                                            margin-left: auto;
+                                            background-color: $RD-801;
+                                            mat-icon {
+                                                margin: 0;
+                                                margin-left: 8px;
+                                            }
+                                        }
+                                        &[disabled='true'],
+                                        &.disabled,
+                                        &.mat-button-disabled {
+                                            @include disable_button();
+                                            border-color: $GYN-132;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .signup_right_stepper_content {
+                            h3 {
+                                &.mat-h3 {
+                                    font: 700 $font-s-20 $primaryFont;
+                                    color: $BL-103;
+                                    margin: 0 0 25px 0;
+
+                                    @include max-breakpoint-1800 {
+                                        font: 700 $font-s-18 $primaryFont;
+                                    }
+
+                                    @include max-breakpoint-1680 {
+                                        font: 700 $font-s-16 $primaryFont;
+                                    }
+                                    @include max-breakpoint-767 {
+                                        text-align: center;
+                                    }
+
+                                    .ghost_loading_box {
+                                        display: inline-block;
+                                        max-width: 80%;
+                                        min-height: 17px;
+                                    }
+                                }
+                            }
+
+                            // Account Details
+                            .account_details_wrap {
+                                margin: 9% 0 15px 0;
+
+                                @include max-breakpoint-1366 {
+                                    margin: 30px 0 15px 0;
+                                }
+                            }
+
+                            .account_details_form {
+                                width: 100%;
+                                display: inline-block;
+                                padding-bottom: 20px;
+
+                                h6 {
+                                    font: 600 $font-s-14 $primaryFont;
+                                    line-height: normal;
+                                    color: $BL-103;
+                                    margin-bottom: 20px;
+                                }
+                            }
+                        }
+                        // Account Incomplete Message
+                        .account_incomplete_wrap {
+                            width: 100%;
+                            min-height: 440px;
+                            position: relative;
+                            padding: 100px 0 15px 0;
+
+                            @include max-breakpoint-1800 {
+                                padding: 65px 0 15px 0;
+                            }
+
+                            @include max-breakpoint-1440 {
+                                min-height: 380px;
+                                padding: 45px 0 15px 0;
+                            }
+
+                            .account_incomplete_inner {
+                                text-align: center;
+                                margin: 0 0 4vw 0;
+
+                                img {
+                                    height: 120px;
+                                    margin-bottom: 15px;
+
+                                    @include max-breakpoint-1800 {
+                                        height: 90px;
+                                    }
+                                }
+
+                                h2 {
+                                    &.mat-h2 {
+                                        font: 700 $font-s-21 $primaryFont;
+                                        color: $BL-103;
+
+                                        .ghost_loading_box {
+                                            width: 40%;
+                                            min-height: 28px;
+                                            margin: 0 auto;
+                                        }
+
+                                        @include max-breakpoint-1800 {
+                                            font: 700 $font-s-18 $primaryFont;
+                                        }
+                                    }
+                                }
+
+                                p {
+                                    font: 600 $font-s-16 $primaryFont;
+                                    line-height: 24px;
+                                    color: $BL-102;
+
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                        line-height: 21px;
+                                    }
+                                }
+                            }
+                            &.lg_space {
+                                padding: 4vw 0 3.5vw 0;
+
+                                .account_incomplete_inner {
+                                    margin: 0 0 8vw 0;
+
+                                    @include max-breakpoint-1800 {
+                                        margin: 0 0 6vw 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    mat-card-footer {
+                        &.signin_box_footer {
+                            width: 100%;
+                            min-height: 52px;
+                            @include flex_center();
+                            justify-content: center;
+                            background: #f3f5f7;
+                            border-radius: 0 0 20px 0;
+                            margin: 0;
+                            padding: 6px 15px;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            z-index: 9;
+                            @include max-breakpoint-1800 {
+                                min-height: 45px;
+                                padding: 4px 15px;
+                            }
+                            @include max-breakpoint-991 {
+                                border-radius: 0 0 20px 20px;
+                            }
+                            p {
+                                font: 400 $font-s-14 $primaryFont;
+                                color: $BL-102;
+                                @include max-breakpoint-480 {
+                                    text-align: center;
+                                }
+                            }
+                            a {
+                                color: $BL-103;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

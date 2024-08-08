@@ -1,0 +1,1022 @@
+/* Mat Checkbox */
+mat-checkbox {
+    &.mat-mdc-checkbox {
+        .mat-checkbox-layout {
+            .mat-checkbox-label {
+                font: 400 $font-s-14 $primaryFont;
+                color: $BE-1;
+                @include max-breakpoint-1800 {
+                    font: 400 $font-s-13 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-12 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-11 $primaryFont;
+                }
+            }
+        }
+
+        &.orange_checkbox {
+            .mdc-form-field {
+                position: relative;
+                left: -10px;
+                @include max-breakpoint-1680 {
+                    left: -8px;
+                }
+
+                .mdc-checkbox {
+                    padding: 10px;
+                    margin: 0;
+
+                    .mdc-checkbox__native-control {
+                        width: 30px;
+                        height: 30px;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                    }
+
+                    .mdc-checkbox__background {
+                        border-color: $GY-3 !important;
+                        top: 10px;
+                        left: 10px;
+                    }
+
+                    @include max-breakpoint-1680 {
+                        width: 14px;
+                        height: 14px;
+                        flex: 0 0 14px;
+                        padding: 8px;
+
+                        .mdc-checkbox__native-control {
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .mat-mdc-checkbox-touch-target {
+                            width: 38px;
+                            height: 38px;
+                        }
+                        .mdc-checkbox__background {
+                            width: 14px;
+                            height: 14px;
+                            top: 8px;
+                            left: 8px;
+                        }
+                    }
+                }
+            }
+
+            &.mat-mdc-checkbox-checked {
+                .mdc-form-field {
+                    .mdc-checkbox--selected ~ .mdc-checkbox__ripple {
+                        background: $OE-1;
+                    }
+
+                    .mdc-checkbox {
+                        .mdc-checkbox__background {
+                            background-color: $OE-1 !important;
+                            border-color: $OE-1 !important;
+                        }
+                    }
+                }
+            }
+            &.mat-mdc-checkbox-disabled {
+                .mdc-form-field {
+                    .mdc-checkbox {
+                        .mdc-checkbox__ripple {
+                            background: $GY-2;
+                        }
+                        .mdc-checkbox__background {
+                            background-color: $GY-2 !important;
+                            border-color: $GY-2 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.auth_checkbox {
+            .mdc-form-field {
+                > label {
+                    font: 400 $font-s-12 $primaryFont;
+                    color: $BE-1;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-10 $primaryFont;
+                        padding-left: 3px;
+                    }
+
+                    a {
+                        color: $BE-1;
+                        text-decoration: underline;
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            &.font_bold {
+                .mdc-form-field {
+                    > label {
+                        font: 600 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-13 $primaryFont;
+                            line-height: 21px;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-12 $primaryFont;
+                            line-height: 18px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-11 $primaryFont;
+                            line-height: 17px;
+                        }
+                    }
+                }
+            }
+
+            &[disabled='true'],
+            &.mat-mdc-checkbox-disabled,
+            &.disabled {
+                cursor: default;
+                pointer-events: none;
+                opacity: 0.6;
+            }
+        }
+
+        &.auto_payment_checkbox {
+            .mdc-checkbox {
+                top: -6px;
+                @include max-breakpoint-1680 {
+                    top: -5px;
+                }
+            }
+            .mdc-form-field {
+                label {
+                    font: 400 $font-s-14 $primaryFont;
+                    line-height: 21px;
+                    color: $GY-2;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                        line-height: 17px;
+                    }
+
+                    a {
+                        color: $OE-1;
+                        text-decoration: underline;
+                        position: relative;
+                        z-index: 2;
+
+                        &:hover {
+                            color: $OE-1;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mat Radio
+mat-radio-group {
+    &.mat-mdc-radio-group {
+        &.business_radio_box {
+            width: 100%;
+            display: inline-block;
+
+            .common_row {
+                margin: 0 -5px;
+                @include max-breakpoint-1680 {
+                    margin: 0 -4px;
+                }
+
+                .common_col_3,
+                .common_col_6,
+                .common_col_12 {
+                    padding: 0 5px;
+                    margin: 0 0 10px 0;
+                    @include max-breakpoint-1680 {
+                        padding: 0 4px;
+                        margin: 0 0 8px 0;
+                    }
+                }
+            }
+
+            mat-radio-button {
+                &.mat-mdc-radio-button {
+                    width: 100%;
+                    min-height: 64px;
+                    display: inline-block;
+                    border: 1px solid $GY-3;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    @include max-breakpoint-1680 {
+                        min-height: 51px;
+                        border-radius: 3px;
+                    }
+
+                    .mdc-form-field {
+                        width: 100%;
+                        min-height: 64px;
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+                        @include max-breakpoint-1680 {
+                            min-height: 51px;
+                        }
+
+                        .mdc-radio {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            margin: 0 auto;
+                            padding: 0;
+                            z-index: 9;
+                            opacity: 0;
+
+                            @include max-breakpoint-1680 {
+                                width: 16px;
+                                height: 16px;
+                                .mat-mdc-radio-touch-target {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+                                .mdc-radio__native-control {
+                                    width: 32px;
+                                    height: 32px;
+                                }
+                            }
+                        }
+
+                        label {
+                            font: 500 $font-s-14 $primaryFont;
+                            line-height: 1.4;
+                            color: $BE-1;
+                            letter-spacing: 0;
+                            padding: 0;
+                            margin: 0;
+                            @include max-breakpoint-1800 {
+                                font: 500 $font-s-13 $primaryFont;
+                                line-height: 1.4;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 500 $font-s-12 $primaryFont;
+                                line-height: 1.2;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500 $font-s-11 $primaryFont;
+                                line-height: 1.12;
+                            }
+                        }
+
+                        .business_radio_inner {
+                            width: 100%;
+                            min-height: 64px;
+                            display: inline-block;
+                            position: relative;
+                            padding: 10px 10px 10px 40px;
+                            cursor: pointer;
+                            @include max-breakpoint-1680 {
+                                min-height: 51px;
+                                padding: 8px 8px 8px 32px;
+                            }
+
+                            img {
+                                height: 18px;
+                                position: absolute;
+                                left: 10px;
+                                top: 10px;
+                                @include max-breakpoint-1680 {
+                                    height: 14px;
+                                    left: 8px;
+                                    top: 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    &.single_line_checkbox {
+                        min-height: 45px;
+                        border-color: $GY-3;
+                        @include max-breakpoint-1680 {
+                            min-height: 36px;
+                        }
+
+                        .mdc-form-field {
+                            min-height: 45px;
+
+                            label {
+                                color: $BE-1;
+                                position: relative;
+                                top: 2px;
+                            }
+
+                            .business_radio_inner {
+                                min-height: 45px;
+                                padding: 10px 10px;
+                                text-align: center;
+                            }
+
+                            @include max-breakpoint-1680 {
+                                min-height: 36px;
+
+                                .business_radio_inner {
+                                    min-height: 36px;
+                                    padding: 8px 8px;
+                                }
+                            }
+                        }
+
+                        &.mat-mdc-radio-checked {
+                            .mdc-form-field {
+                                min-height: 43px;
+                                .business_radio_inner {
+                                    min-height: 43px;
+                                }
+
+                                @include max-breakpoint-1680 {
+                                    min-height: 34px;
+                                    .business_radio_inner {
+                                        min-height: 34px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.mat-mdc-radio-checked {
+                        border-color: $OE-1;
+
+                        .mdc-form-field {
+                            label {
+                                color: $OE-1;
+                            }
+                        }
+                    }
+                    // If button is disabled
+                    &.mat-radio-disabled {
+                        opacity: 0.5;
+                        cursor: default;
+                        .mdc-form-field {
+                            cursor: default;
+                            label {
+                                .business_radio_inner {
+                                    cursor: default;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Connect Business
+            &.connect_radio_box {
+                .common_row {
+                    justify-content: center;
+                }
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        min-height: 120px;
+                        @include max-breakpoint-1680 {
+                            min-height: 96px;
+                        }
+                        .mdc-form-field {
+                            min-height: 120px;
+                            @include max-breakpoint-1680 {
+                                min-height: 96px;
+                            }
+                            label {
+                                color: $GY-2;
+                                @include max-breakpoint-480 {
+                                    font: 500 $font-s-12 $primaryFont;
+                                }
+                            }
+
+                            .connect_radio_inner {
+                                width: 100%;
+                                min-height: 120px;
+                                @include flex_center();
+                                position: relative;
+                                padding: 10px 10px;
+                                text-align: center;
+                                cursor: pointer;
+
+                                .connect_radio_img {
+                                    height: 42px;
+                                    margin: 0 0 10px 0;
+
+                                    img {
+                                        height: 42px;
+                                    }
+                                }
+                                @include max-breakpoint-1680 {
+                                    min-height: 96px;
+                                    padding: 8px 8px;
+
+                                    .connect_radio_img {
+                                        height: 34px;
+                                        margin: 0 0 8px 0;
+                                        img {
+                                            height: 34px;
+                                        }
+                                    }
+                                }
+                                @include max-breakpoint-480 {
+                                    padding: 5px 2px;
+                                    .connect_radio_img {
+                                        height: 32px;
+                                        margin: 0 0 6px 0;
+                                        img {
+                                            height: 32px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.mat-mdc-radio-checked {
+                            min-height: 118px;
+                            border: 2px solid $OE-1;
+                            .mdc-form-field {
+                                min-height: 118px;
+                                label {
+                                    color: $GY-2;
+                                }
+                                .connect_radio_inner {
+                                    min-height: 118px;
+                                }
+                            }
+
+                            @include max-breakpoint-1680 {
+                                min-height: 94px;
+
+                                .mdc-form-field {
+                                    min-height: 94px;
+                                    .connect_radio_inner {
+                                        min-height: 94px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Account Business
+            &.account_radio_box {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        .mdc-form-field {
+                            .account_type_box {
+                                min-height: 100px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 80px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.default_radio_group {
+            mat-radio-button {
+                &.mat-mdc-radio-button {
+                    .mdc-form-field {
+                        width: 100%;
+                        font: 400 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                        letter-spacing: 0;
+                        color: $BE-1;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-13 $primaryFont;
+                            line-height: 21px;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-12 $primaryFont;
+                            line-height: 18px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-11 $primaryFont;
+                            line-height: 17px;
+                        }
+
+                        .mdc-radio {
+                            width: 18px;
+                            height: 18px;
+                            padding: 6px;
+                            @include max-breakpoint-1680 {
+                                width: 14px;
+                                height: 14px;
+                                padding: 5px;
+                            }
+
+                            .mat-mdc-radio-touch-target {
+                                width: 38px;
+                                height: 38px;
+                                @include max-breakpoint-1680 {
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                            .mdc-radio__native-control {
+                                width: 38px;
+                                height: 38px;
+                                top: -4px;
+                                right: 0;
+                                left: -4px;
+                                @include max-breakpoint-1680 {
+                                    width: 30px;
+                                    height: 30px;
+                                    top: -3px;
+                                    left: -3px;
+                                }
+                            }
+                            .mdc-radio__background {
+                                width: 18px;
+                                height: 18px;
+                                @include max-breakpoint-1680 {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+
+                                &::before {
+                                    width: 38px;
+                                    height: 38px;
+                                    top: -10px;
+                                    left: -10px;
+                                    background-color: transparent;
+                                    @include max-breakpoint-1680 {
+                                        width: 30px;
+                                        height: 30px;
+                                        top: -8px;
+                                        left: -8px;
+                                    }
+                                }
+
+                                .mdc-radio__inner-circle {
+                                    transform: scale(0.6);
+                                    border: 9px solid transparent;
+                                    @include max-breakpoint-1680 {
+                                        border: 7px solid transparent;
+                                    }
+                                }
+                            }
+                        }
+
+                        > label {
+                            margin: 0;
+                            padding: 0 0 0 4px;
+                            @include max-breakpoint-1680 {
+                                padding: 0 0 0 3px;
+                            }
+                        }
+                    }
+                    &.mat-mdc-radio-checked {
+                        .mat-ripple-element {
+                            background-color: rgba($BE-1, 0.8);
+                        }
+                    }
+                }
+            }
+
+            &.text_hide {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        .mdc-form-field {
+                            > label {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.payment_method_selector {
+            width: 100%;
+            display: inline-block;
+
+            mat-radio-button {
+                &.mat-mdc-radio-button {
+                    width: 100%;
+                    display: inline-block;
+                    margin: 0 0 15px 0;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        margin: 0 0 12px 0;
+                    }
+
+                    .mdc-form-field {
+                        width: 100%;
+                        display: inline-block;
+                        position: relative;
+
+                        .mdc-radio {
+                            height: 100%;
+                            @include flex_align_center();
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            margin: 0 auto;
+                            z-index: 9;
+                            padding: 0;
+                            opacity: 0;
+                        }
+
+                        label {
+                            width: 100%;
+                            display: inline-block;
+                            position: relative;
+                            margin: 0;
+                            padding: 0;
+
+                            mat-card {
+                                &.payment_method_card {
+                                    border: 1px dashed $GY-5;
+                                    mat-card-content {
+                                        .payment_method_card_col {
+                                            .payment_method_name {
+                                                img {
+                                                    &.radio_img {
+                                                        &.selected {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            .payment_method_card_fee {
+                                                &::before {
+                                                    opacity: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.mat-mdc-radio-checked {
+                        .mdc-form-field {
+                            label {
+                                mat-card {
+                                    &.payment_method_card {
+                                        border: 2px solid $OE-1;
+                                        mat-card-content {
+                                            .payment_method_card_col {
+                                                .payment_method_name {
+                                                    h4 {
+                                                        &.mat-h4 {
+                                                            color: $OE-1;
+                                                        }
+                                                    }
+                                                    img {
+                                                        &.radio_img {
+                                                            display: none;
+                                                            &.selected {
+                                                                display: inline-block;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .payment_method_card_fee {
+                                                    p {
+                                                        color: $BK-1;
+                                                    }
+
+                                                    &::before {
+                                                        opacity: 1;
+                                                    }
+                                                    &::after {
+                                                        background: $OE-1;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+// Guest Payment Radio Button
+.fai_connect_bank_option {
+    mat-radio-group {
+        &.fai_connect_bank_radio {
+            mat-radio-button {
+                width: 100%;
+                display: block;
+                padding: 15px 15px;
+                background-color: $WE-1;
+                border: 1px dashed $GY-1;
+                border-radius: 4px;
+                margin-bottom: 22px;
+                cursor: pointer;
+                @include max-breakpoint-1680 {
+                    padding: 12px 12px;
+                    border-radius: 3px;
+                    margin-bottom: 18px;
+                }
+                .mdc-form-field {
+                    width: 100%;
+                    position: relative;
+                    cursor: pointer;
+                    .mdc-radio {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        opacity: 0;
+                    }
+                    label {
+                        width: 100%;
+                        display: block;
+                        padding: 0;
+                        cursor: pointer;
+                        .fai_connect_radio_inner {
+                            min-height: 66px;
+                            @include flex_align_center();
+                            position: relative;
+                            padding: 0 32px 0 53px;
+                            @include max-breakpoint-1680 {
+                                min-height: 53px;
+                                padding: 0 26px 0 42px;
+                            }
+                            .fai_connect_icon {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                right: auto;
+                                bottom: 0;
+                                @include flex_align_center();
+                                img {
+                                    width: 38px;
+                                    height: auto;
+                                    @include max-breakpoint-1680 {
+                                        width: 30px;
+                                        height: auto;
+                                    }
+                                    &.fai_connect_selected_icon {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .fai_connect_text {
+                                h6 {
+                                    font: 500 $font-s-16 $primaryFont;
+                                    color: $GY-6;
+                                    margin: 0 0 7px 0;
+                                    @include max-breakpoint-1800 {
+                                        font: 500 $font-s-15 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 500 $font-s-14 $primaryFont;
+                                        margin: 0 0 6px 0;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 500 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1440 {
+                                        font: 500 $font-s-12 $primaryFont;
+                                    }
+                                }
+                                p {
+                                    font: 400 $font-s-12 $primaryFont;
+                                    color: $GY-6;
+                                    margin: 0;
+                                    @include max-breakpoint-1800 {
+                                        font: 400 $font-s-11 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 400 $font-s-10 $primaryFont;
+                                    }
+                                    br {
+                                        @include max-breakpoint-480 {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                            .fai_connect_custom_radio {
+                                width: 17px;
+                                height: 17px;
+                                background-color: $GY-7;
+                                border-radius: 50%;
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                @include max-breakpoint-1680 {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // If Button Checked
+                &.mat-mdc-radio-checked {
+                    border-style: solid;
+                    border-color: $OE-1;
+                    .mdc-form-field {
+                        label {
+                            .fai_connect_radio_inner {
+                                .fai_connect_icon {
+                                    img {
+                                        &.fai_connect_default_icon {
+                                            display: none;
+                                        }
+                                        &.fai_connect_selected_icon {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                                .fai_connect_text {
+                                    h6 {
+                                        color: $OE-1;
+                                    }
+                                    p {
+                                        color: $BK-1;
+                                    }
+                                }
+                                .fai_connect_custom_radio {
+                                    background-color: $OE-1;
+                                    &::after {
+                                        width: 9px;
+                                        height: 6px;
+                                        position: absolute;
+                                        content: '';
+                                        top: 1px;
+                                        left: 3px;
+                                        border-left: 4px solid $WE-1;
+                                        border-bottom: 4px solid $WE-1;
+                                        transform: rotate(-45deg);
+                                        @include max-breakpoint-1680 {
+                                            width: 7px;
+                                            height: 5px;
+                                            left: 2px;
+                                            border-left-width: 3px;
+                                            border-bottom-width: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // Confirm The Bank Account Radio Button
+            &.confirm_bank_radio {
+                mat-radio-button {
+                    border-style: solid;
+                    margin-bottom: 15px;
+                    @include max-breakpoint-1680 {
+                        margin-bottom: 12px;
+                    }
+                    .mdc-form-field {
+                        label {
+                            .fai_v4_bank_box_list_row {
+                                min-height: 54px;
+                                @include flex_align_center();
+                                position: relative;
+                                padding-right: 37px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 43px;
+                                    padding-right: 30px;
+                                }
+                                .fai_v4_bank_box_list {
+                                    flex: auto;
+                                    .fai_v4_bank_box_list_inner {
+                                        @include flex_align_center();
+                                        .fai_v4_bank_brand {
+                                            @include flex_center();
+                                            flex: 0 0 46px;
+                                            max-width: 46px;
+                                            height: 46px;
+                                            border: 1px solid $GY-1;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                            @include max-breakpoint-1680 {
+                                                flex: 0 0 37px;
+                                                max-width: 37px;
+                                                height: 37px;
+                                                margin-right: 12px;
+                                            }
+
+                                            img {
+                                                max-width: 19px;
+                                                @include max-breakpoint-1680 {
+                                                    max-width: 15px;
+                                                }
+                                            }
+                                        }
+                                        .fai_v4_bank_details_wrapper {
+                                            flex: 1 1 auto;
+                                            max-width: 100%;
+                                            h4,
+                                            p {
+                                                @include flex_justify_space_between();
+                                            }
+                                            h4 {
+                                                font: 600 $font-s-18 $primaryFont;
+                                                color: $BE-1;
+                                                margin-bottom: 4px;
+                                                @include max-breakpoint-1800 {
+                                                    font: 600 $font-s-16 $primaryFont;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 $font-s-14 $primaryFont;
+                                                    margin-bottom: 3px;
+                                                }
+                                            }
+                                            p {
+                                                font: 600 $font-s-12 $primaryFont;
+                                                color: $GY-2;
+                                                margin: 0;
+                                                @include max-breakpoint-1800 {
+                                                    font: 600 $font-s-11 $primaryFont;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 $font-s-10 $primaryFont;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .fai_connect_custom_radio {
+                                    width: 17px;
+                                    height: 17px;
+                                    background-color: $GY-7;
+                                    border-radius: 50%;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    @include max-breakpoint-1680 {
+                                        width: 14px;
+                                        height: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // If Button Checked
+                    &.mat-mdc-radio-checked {
+                        border-color: $OE-1;
+                        .mdc-form-field {
+                            label {
+                                .fai_v4_bank_box_list_row {
+                                    .fai_connect_custom_radio {
+                                        background-color: $OE-1;
+                                        &::after {
+                                            width: 9px;
+                                            height: 6px;
+                                            position: absolute;
+                                            content: '';
+                                            top: 1px;
+                                            left: 3px;
+                                            border-left: 4px solid $WE-1;
+                                            border-bottom: 4px solid $WE-1;
+                                            transform: rotate(-45deg);
+                                            @include max-breakpoint-1680 {
+                                                width: 7px;
+                                                height: 5px;
+                                                left: 2px;
+                                                border-left-width: 3px;
+                                                border-bottom-width: 3px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

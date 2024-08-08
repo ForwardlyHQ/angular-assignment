@@ -1,0 +1,651 @@
+mat-form-field {
+    &.mat-mdc-form-field {
+        .mat-mdc-text-field-wrapper {
+            background: $WE-100;
+
+            &:hover {
+                border-color: $BLN-113;
+                box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+                @include max-breakpoint-1680 {
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+                }
+            }
+
+            label {
+                letter-spacing: 0;
+            }
+
+            span {
+                &.mat-mdc-form-field-required-marker {
+                    color: $BL-102;
+                    margin-left: 4px;
+                    @include max-breakpoint-1680 {
+                        margin-left: 3px;
+                    }
+                }
+            }
+
+            input {
+                &.mdc-text-field__input {
+                    letter-spacing: 0;
+                }
+            }
+        }
+        .mat-mdc-form-field-subscript-wrapper {
+            z-index: 1;
+            &::before {
+                display: none;
+            }
+
+            .mat-mdc-form-field-error-wrapper {
+                position: static;
+                padding: 7px 0 0 0;
+                @include max-breakpoint-1680 {
+                    padding: 6px 0 0 0;
+                }
+            }
+        }
+        &.form_field_control {
+            .mat-mdc-text-field-wrapper {
+                &::before {
+                    width: 10px;
+                    height: calc(100% - 4px);
+                    position: absolute;
+                    left: 6px;
+                    top: 2px;
+                    content: '';
+                    background: $WE-100;
+                    z-index: 9;
+                    @include max-breakpoint-1680 {
+                        width: 8px;
+                        height: calc(100% - 3px);
+                        left: 5px;
+                    }
+                }
+                .mat-mdc-form-field-flex {
+                    z-index: 4;
+
+                    label {
+                        &.mat-mdc-floating-label {
+                            font: 400 $font-s-14 $primaryFont;
+                            color: $BL-102;
+                            letter-spacing: 0;
+                            top: 24px;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-13 $primaryFont;
+                                top: 22px;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-12 $primaryFont;
+                                top: 20px;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 400 $font-s-11 $primaryFont;
+                                top: 19px;
+                            }
+
+                            .info_tooltip_wrapper {
+                                &.input_info {
+                                    margin-left: 6px;
+                                    top: 0;
+                                    @include max-breakpoint-1800 {
+                                        margin-left: 5px;
+                                    }
+
+                                    .info_tooltip {
+                                        width: 270px;
+                                        transform: scale(1.2);
+                                        left: 20px;
+                                        top: 30px;
+                                        @include max-breakpoint-1680 {
+                                            width: 216px;
+                                            left: 16px;
+                                            top: 24px;
+                                        }
+                                        .info_tooltip_inner {
+                                            white-space: normal;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .mdc-notched-outline {
+                        .mdc-notched-outline__leading,
+                        .mdc-notched-outline__notch,
+                        .mdc-notched-outline__trailing {
+                            border-color: $GY-118;
+                        }
+                    }
+
+                    .mat-mdc-form-field-infix {
+                        min-height: 50px;
+                        padding: 16px 0 6px 0;
+                        @include max-breakpoint-1800 {
+                            min-height: 45px;
+                            padding: 14px 0 6px 0;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-height: 40px;
+                            padding: 13px 0 5px 0;
+                        }
+                        @include max-breakpoint-1440 {
+                            padding: 10px 0 6px 0;
+                        }
+                        input,
+                        textarea {
+                            &.mat-mdc-input-element {
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: 21px;
+                                color: $BL-103;
+                                letter-spacing: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                    line-height: 21px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                    line-height: 18px;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                    line-height: 19px;
+                                }
+
+                                &::-webkit-input-placeholder {
+                                    color: $BL-110;
+                                }
+                                &:-moz-placeholder {
+                                    color: $BL-110;
+                                }
+                                &::-moz-placeholder {
+                                    color: $BL-110;
+                                }
+                                &:-ms-input-placeholder {
+                                    color: $BL-110;
+                                }
+                                &::-ms-input-placeholder {
+                                    color: $BL-110;
+                                }
+                                &::placeholder {
+                                    color: $BL-110;
+                                }
+
+                                /* Chrome, Safari, Edge, Opera */
+                                &::-webkit-outer-spin-button,
+                                &::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+
+                                /* Firefox */
+                                &[type='number'] {
+                                    -moz-appearance: textfield;
+                                }
+                            }
+                        }
+
+                        textarea {
+                            &.lg_textarea {
+                                height: 4.6vw;
+                                @include max-breakpoint-1680 {
+                                    height: 3.68vw;
+                                }
+                            }
+                        }
+
+                        mat-select {
+                            &.mat-mdc-select {
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: 21px;
+                                letter-spacing: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                    line-height: 21px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                    line-height: 18px;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                    line-height: 19px;
+                                }
+                                .mat-mdc-select-value {
+                                    color: $BL-103;
+                                }
+                            }
+                        }
+
+                        // Select Arrow
+                        .mat-mdc-select-arrow-wrapper {
+                            height: 20px;
+                            @include max-breakpoint-1680 {
+                                height: 16px;
+                            }
+
+                            .mat-mdc-select-arrow {
+                                width: 20px;
+                                height: 20px;
+                                background: url(../../../assets/images/common/select-arrow-light.jpg) no-repeat center;
+                                background-size: 20px;
+                                background-position-y: 0;
+                                @include max-breakpoint-1800 {
+                                    width: 18px;
+                                    height: 18px;
+                                    background-size: 18px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    width: 16px;
+                                    height: 16px;
+                                    background-size: 16px;
+                                }
+                                @include max-breakpoint-1440 {
+                                    width: 14px;
+                                    height: 14px;
+                                    background-size: 14px;
+                                }
+                                svg {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .mat-mdc-form-field-icon-prefix,
+                    .mat-mdc-form-field-icon-suffix {
+                        mat-icon {
+                            &.edit_icon {
+                                width: 48px;
+                                height: 48px;
+                                padding: 12px;
+                                font-size: $font-s-24;
+                                @include max-breakpoint-1800 {
+                                    height: 40px;
+                                    padding: 10px;
+                                    font-size: $font-s-21;
+                                }
+                                @include max-breakpoint-1680 {
+                                    width: 38px;
+                                    height: 38px;
+                                    font-size: $font-s-19;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font-size: $font-s-18;
+                                }
+                            }
+                        }
+                        button {
+                            &.mat-mdc-button-base {
+                                width: 48px;
+                                height: 48px;
+                                padding: 6px;
+                                @include flex_center();
+                                justify-content: center;
+                                color: #bcbcbc;
+                                mat-icon {
+                                    font-size: $font-s-24;
+                                }
+                                svg {
+                                    width: $font-s-24;
+                                    height: $font-s-24;
+                                }
+                                @include max-breakpoint-1800 {
+                                    width: 40px;
+                                    height: 40px;
+                                    mat-icon {
+                                        font-size: $font-s-21;
+                                    }
+                                    svg {
+                                        width: $font-s-21;
+                                        height: $font-s-21;
+                                    }
+                                    .mat-mdc-button-touch-target {
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+                                }
+                                @include max-breakpoint-1680 {
+                                    width: 38px;
+                                    height: 38px;
+                                    padding: 5px;
+                                    mat-icon {
+                                        font-size: $font-s-19;
+                                    }
+                                    svg {
+                                        width: $font-s-19;
+                                        height: $font-s-19;
+                                    }
+                                    .mat-mdc-button-touch-target {
+                                        width: 38px;
+                                        height: 38px;
+                                    }
+                                }
+                                @include max-breakpoint-1440 {
+                                    mat-icon {
+                                        font-size: $font-s-18;
+                                    }
+                                    svg {
+                                        width: $font-s-18;
+                                        height: $font-s-18;
+                                    }
+                                }
+
+                                mat-icon {
+                                    svg {
+                                        width: 24px;
+                                        height: 24px;
+                                        fill: #bbbbbb;
+                                        @include max-breakpoint-1800 {
+                                            width: 21px;
+                                            height: 21px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            width: 19px;
+                                            height: 19px;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            width: 18px;
+                                            height: 18px;
+                                        }
+                                    }
+                                }
+
+                                &:active,
+                                &:hover,
+                                &:focus {
+                                    .mat-mdc-button-persistent-ripple {
+                                        &::before {
+                                            opacity: 0.04;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        span {
+                            &.website_prefix {
+                                min-height: 50px;
+                                @include flex_center();
+                                padding: 10px 0 6px 15px;
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: 21px;
+                                letter-spacing: 0;
+                                @include max-breakpoint-1800 {
+                                    min-height: 45px;
+                                    padding: 8px 0 6px 15px;
+                                    font: 400 $font-s-13 $primaryFont;
+                                    line-height: 21px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    min-height: 40px;
+                                    padding: 8px 0 5px 12px;
+                                    font: 400 $font-s-11 $primaryFont;
+                                    line-height: 17px;
+                                }
+                                @include max-breakpoint-1440 {
+                                    padding: 5px 0 6px 15px;
+                                    font: 400 $font-s-12 $primaryFont;
+                                    line-height: 18px;
+                                }
+                            }
+                            &.fai_percentage_sign {
+                                width: 48px;
+                                height: 48px;
+                                @include flex_center();
+                                justify-content: center;
+                                border-left: 1px solid $GY-118;
+                                color: $BL-102;
+                                padding: 12px;
+                                @include max-breakpoint-1800 {
+                                    height: 40px;
+                                    border-width: 0.8;
+                                    padding: 10px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    width: 38px;
+                                    height: 38px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.mdc-text-field--outlined {
+                    .mdc-notched-outline--upgraded {
+                        .mdc-floating-label--float-above {
+                            --mat-mdc-form-field-label-transform: translateY(-30px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+                            transform: var(--mat-mdc-form-field-label-transform);
+                            @include max-breakpoint-1800 {
+                                --mat-mdc-form-field-label-transform: translateY(-28px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+                                transform: var(--mat-mdc-form-field-label-transform);
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                --mat-mdc-form-field-label-transform: translateY(-24px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.6));
+                                transform: var(--mat-mdc-form-field-label-transform);
+                            }
+                            @include max-breakpoint-1440 {
+                                --mat-mdc-form-field-label-transform: translateY(-25px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+                                transform: var(--mat-mdc-form-field-label-transform);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Tooltip Input Disabled If Info Icon Added In Input Field
+            &.fai_info_field {
+                position: relative;
+                z-index: 9;
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        label {
+                            &.mdc-floating-label {
+                                overflow: visible;
+                            }
+                        }
+                    }
+                }
+
+                .mat-mdc-form-field-subscript-wrapper {
+                    z-index: -1;
+                }
+
+                // Tooltip Input Disabled
+                &.mat-form-field-disabled {
+                    opacity: 1;
+
+                    .mat-mdc-form-field-required-marker,
+                    .mat-mdc-form-field-infix,
+                    .text_label {
+                        opacity: 0.6;
+                    }
+
+                    .info_tooltip_wrapper {
+                        img {
+                            opacity: 0.6;
+                        }
+                    }
+
+                    .mat-mdc-form-field-flex {
+                        .mdc-notched-outline__leading,
+                        .mdc-notched-outline__notch,
+                        .mdc-notched-outline__trailing {
+                            border-color: rgba(203, 203, 203, 0.6);
+                        }
+                    }
+                }
+            }
+
+            /* If form field disabled */
+            &.mat-form-field-disabled {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .mat-mdc-form-field-infix {
+                            input,
+                            textarea {
+                                &.mat-mdc-input-element {
+                                    color: rgba($BL-103, $opacitySize-7);
+                                }
+                            }
+                        }
+
+                        mat-select {
+                            &.mat-mdc-select {
+                                .mat-mdc-select-value {
+                                    color: rgba($BL-103, $opacitySize-7);
+                                }
+                            }
+                        }
+
+                        .mat-mdc-form-field-icon-suffix {
+                            span {
+                                &.fai_percentage_sign {
+                                    opacity: $opacitySize-7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.mat-focused {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .mdc-notched-outline {
+                            .mdc-notched-outline__leading,
+                            .mdc-notched-outline__notch,
+                            .mdc-notched-outline__trailing {
+                                border-color: $BL-102;
+                            }
+                        }
+
+                        label {
+                            &.mdc-floating-label {
+                                &.mat-mdc-floating-label {
+                                    mat-label {
+                                        color: $BL-102;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.mat-form-field-invalid {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .mdc-notched-outline {
+                            .mdc-notched-outline__leading,
+                            .mdc-notched-outline__notch,
+                            .mdc-notched-outline__trailing {
+                                border-color: $RD-107;
+                            }
+                        }
+
+                        label {
+                            &.mdc-floating-label {
+                                &.mat-mdc-floating-label {
+                                    mat-label {
+                                        color: $RD-107;
+                                    }
+
+                                    .mat-mdc-form-field-required-marker {
+                                        color: $RD-107;
+                                    }
+                                }
+                            }
+                        }
+
+                        .mat-mdc-form-field-icon-suffix {
+                            span {
+                                &.fai_percentage_sign {
+                                    color: $RD-107;
+                                    border-left-color: $RD-107;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.fai_field_capitalize {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .mat-mdc-form-field-infix {
+                            input,
+                            textarea {
+                                &.mat-mdc-input-element {
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.mat-form-field-disabled {
+            opacity: 0.6;
+            box-shadow: none;
+            pointer-events: none;
+
+            .mat-mdc-text-field-wrapper {
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+        &.payment_req_select {
+            margin: 0;
+
+            .mat-mdc-text-field-wrapper {
+                .mat-mdc-form-field-flex {
+                    .mdc-notched-outline {
+                        .mdc-notched-outline__leading {
+                            border-radius: 5px 0 0 5px;
+                            @include max-breakpoint-1680 {
+                                border-radius: 4px 0 0 4px;
+                            }
+                        }
+                        .mdc-notched-outline__trailing {
+                            border-radius: 0 5px 5px 0;
+                            @include max-breakpoint-1680 {
+                                border-radius: 0 4x 4px 0;
+                            }
+                        }
+                    }
+
+                    .mat-mdc-form-field-infix {
+                        padding: 6px 0;
+                        min-height: 34px;
+                        @include max-breakpoint-1680 {
+                            padding: 5px 0;
+                            min-height: 27px;
+                        }
+
+                        .mat-mdc-select-arrow {
+                            width: 18px;
+                            height: 18px;
+                            @include max-breakpoint-1800 {
+                                width: 16px;
+                                height: 16px;
+                                background-size: 16px;
+                            }
+                            @include max-breakpoint-1680 {
+                                width: 14px;
+                                height: 14px;
+                            }
+                        }
+                    }
+
+                    label {
+                        &.mdc-floating-label {
+                            transform: translateY(-100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

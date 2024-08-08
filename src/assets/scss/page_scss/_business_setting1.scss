@@ -1,0 +1,578 @@
+// Add Other Documents Button
+.add_other_documents {
+    min-width: 100%;
+    min-height: 65px;
+    @include flex_center();
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 1px dashed $BL-103;
+    border-radius: 10px;
+    margin: 0 0 30px 0;
+    font: 500 $font-s-16 $primaryFont;
+    color: $BL-104;
+    @include max-breakpoint-1800 {
+        min-height: auto;
+        border-radius: 5px;
+        margin: 0 0 27px 0;
+        font: 500 $font-s-15 $primaryFont;
+    }
+    @include max-breakpoint-1680 {
+        min-height: 52px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        margin: 0 0 24px 0;
+        font: 500 $font-s-14 $primaryFont;
+    }
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        font: 500 $font-s-13 $primaryFont;
+    }
+    @include max-breakpoint-1440 {
+        padding: 10px 15px;
+        margin: 0 0 15px 0;
+    }
+
+    .upload_btn_wrapper {
+        position: relative;
+
+        input {
+            &[type='file'] {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 9;
+                font-size: 0;
+                border: 0;
+                background: none;
+                outline: 0;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+
+        button {
+            &.action_btn {
+                min-width: 120px;
+                min-height: 34px;
+                background-color: $WE-100;
+                border-color: $GR-100;
+                font: 600 $font-s-14 $primaryFont;
+                color: $GR-100;
+
+                mat-spinner {
+                    svg {
+                        circle {
+                            stroke: $GR-100;
+                        }
+                    }
+                }
+                @include max-breakpoint-1680 {
+                    min-width: 96px;
+                    min-height: 29px;
+                    font: 600 $font-s-12 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 600 $font-s-11 $primaryFont;
+                }
+
+                mat-icon {
+                    font-size: $font-s-18;
+                    position: relative;
+                    top: 0;
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-14;
+                    }
+                }
+                &[disabled='true'],
+                &.disabled,
+                &.mat-button-disabled {
+                    @include disable_button();
+                }
+            }
+        }
+    }
+}
+// Business Setting Common Alerts
+.business_alert_message {
+    width: 100%;
+    min-height: 45px;
+    display: inline-block;
+    position: relative;
+    padding: 12px 15px 10px 15px;
+    margin: 0 0 30px 0;
+    font: 400 $font-s-14 $primaryFont;
+    line-height: normal;
+    color: $GY-101;
+    background: rgba($GY-101, 0.1);
+    border: 1px dashed $GY-101;
+    border-radius: 5px;
+    @include max-breakpoint-1800 {
+        min-height: 40px;
+        margin: 0 0 27px 0;
+    }
+    @include max-breakpoint-1680 {
+        min-height: 36px;
+        padding: 10px 12px 8px 12px;
+        margin: 0 0 24px 0;
+        font: 400 $font-s-11 $primaryFont;
+        line-height: normal;
+        border-radius: 4px;
+    }
+    @include max-breakpoint-1440 {
+        min-height: 34px;
+        font: 400 $font-s-12 $primaryFont;
+        line-height: normal;
+        margin: 0 0 15px 0;
+    }
+
+    &.icon_alert {
+        padding-left: 50px;
+        @include max-breakpoint-1800 {
+            padding-left: 45px;
+        }
+        @include max-breakpoint-1680 {
+            padding-left: 40px;
+        }
+
+        mat-icon {
+            font-size: $font-s-24;
+            position: absolute;
+            left: 15px;
+            top: 8px;
+            @include max-breakpoint-1680 {
+                font-size: $font-s-19;
+                left: 12px;
+                top: 6px;
+            }
+        }
+
+        img {
+            width: 24px;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            @include max-breakpoint-1800 {
+                width: 21px;
+            }
+            @include max-breakpoint-1680 {
+                width: 19px;
+                left: 12px;
+                top: 8px;
+            }
+        }
+    }
+
+    p {
+        display: inline-block;
+        line-height: normal;
+    }
+
+    &.action_required_alert {
+        background: rgba($RD-801, 0.1);
+        border-color: $RD-801;
+    }
+
+    &.rejected_alert {
+        background: rgba($RD-110, 0.1);
+        border-color: $RD-110;
+    }
+
+    &.pending_alert {
+        background: rgba($YL-102, 0.1);
+        border-color: $YL-102;
+
+        mat-icon {
+            color: $YL-102;
+        }
+    }
+
+    &.submitted_alert {
+        background: rgba($BL-102, 0.1);
+        border-color: $BL-102;
+
+        mat-icon {
+            color: $BL-102;
+        }
+    }
+}
+// Common Business Pages Heading
+.business_heading_wrap {
+    h2 {
+        &.mat-h2 {
+            font: 700 $font-s-24 $primaryFont;
+            line-height: normal;
+            color: $BL-103;
+            margin: 0 0 30px 0;
+            @include max-breakpoint-1800 {
+                font: 700 $font-s-21 $primaryFont;
+                line-height: normal;
+                margin: 0 0 27px 0;
+            }
+            @include max-breakpoint-1680 {
+                font: 700 $font-s-18 $primaryFont;
+                line-height: normal;
+                margin: 0 0 24px 0;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 700 $font-s-19 $primaryFont;
+                line-height: normal;
+            }
+            @include max-breakpoint-1440 {
+                font: 700 $font-s-16 $primaryFont;
+                line-height: normal;
+                margin: 0 0 15px 0;
+            }
+
+            span {
+                font: 700 $font-s-18 $primaryFont;
+                color: $BL-102;
+                margin: 0 0 0 6px;
+                @include max-breakpoint-1800 {
+                    font: 700 $font-s-16 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 700 $font-s-14 $primaryFont;
+                    margin: 0 0 0 5px;
+                }
+            }
+        }
+    }
+}
+// Business Setting Common Form
+.account_user_info_form {
+    margin: 0 0 45px 0;
+    @include max-breakpoint-1800 {
+        margin: 0 0 40px 0;
+    }
+    @include max-breakpoint-1680 {
+        margin: 0 0 36px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 30px 0;
+    }
+
+    h3 {
+        &.mat-h3 {
+            font: 700 $font-s-18 $primaryFont;
+            color: $BL-103;
+            line-height: normal;
+            margin: 0 0 30px 0;
+            @include max-breakpoint-1800 {
+                font: 700 $font-s-16 $primaryFont;
+                margin: 0 0 27px 0;
+            }
+            @include max-breakpoint-1680 {
+                font: 700 $font-s-14 $primaryFont;
+                line-height: normal;
+                margin: 0 0 24px 0;
+            }
+            @include max-breakpoint-1440 {
+                margin: 0 0 18px 0;
+            }
+
+            &.semibold {
+                font-weight: 600;
+            }
+        }
+    }
+}
+// Business On Boarding
+app-account-setup-wrapper {
+    app-beneficals-owners {
+        app-beneficial-owners-common {
+            .account_user_info_form {
+                margin: 0 0 30px 0;
+                @include max-breakpoint-1800 {
+                    margin: 0 0 27px 0;
+                }
+                @include max-breakpoint-1680 {
+                    margin: 0 0 24px 0;
+                }
+
+                h3 {
+                    &.mat-h3 {
+                        font: 700 $font-s-16 $primaryFont !important;
+                        line-height: normal;
+                        @include max-breakpoint-1800 {
+                            font: 700 $font-s-15 $primaryFont !important;
+                            line-height: normal;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 700 $font-s-14 $primaryFont !important;
+                            line-height: normal;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 700 $font-s-13 $primaryFont !important;
+                            line-height: normal;
+                        }
+
+                        &.semibold {
+                            font-weight: 600 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.account_user_button_wrapper {
+    width: 100%;
+    @include flex_center();
+    justify-content: center;
+    margin: 15px 0 0 0;
+    @include max-breakpoint-1680 {
+        margin: 12px 0 0 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 10px 0 0 0;
+    }
+
+    button {
+        &.account_user_btn {
+            min-width: 175px;
+            min-height: 45px;
+            font: 700 $font-s-15 $primaryFont;
+            color: $WE-100;
+            background-color: $BLN-113;
+            border-radius: 5px;
+            margin: 0 0 0 30px;
+            @include max-breakpoint-1800 {
+                min-width: 165px;
+                min-height: 40px;
+                font: 700 $font-s-14 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                min-width: 140px;
+                min-height: 36px;
+                font: 700 $font-s-12 $primaryFont;
+                border-radius: 4px;
+                margin: 0 0 0 24px;
+            }
+
+            mat-spinner {
+                svg {
+                    circle {
+                        stroke: $WE-100;
+                    }
+                }
+            }
+
+            .mdc-button__label {
+                @include flex_center();
+                justify-content: center;
+
+                img {
+                    width: 14px;
+                    height: 14px;
+                    margin: 0 6px 0 0;
+                    @include max-breakpoint-1680 {
+                        width: 11px;
+                        height: 11px;
+                        margin: 0 5px 0 0;
+                    }
+                    @include max-breakpoint-1440 {
+                        width: 12px;
+                        height: 12px;
+                        margin: 0 4px 0 0;
+                    }
+                    &.lg_img {
+                        width: 24px;
+                        height: 24px;
+                        @include max-breakpoint-1680 {
+                            width: 19px;
+                            height: 19px;
+                        }
+                        @include max-breakpoint-1440 {
+                            width: 21px;
+                            height: 21px;
+                        }
+                    }
+                }
+            }
+
+            &.lg_width_btn {
+                min-width: 300px;
+                @include max-breakpoint-1800 {
+                    min-width: 200px;
+                }
+                @include max-breakpoint-1680 {
+                    min-width: 240px;
+                }
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.blue_btn {
+                color: $WE-100;
+                background-color: $BL-103;
+            }
+
+            &.green_btn {
+                color: $WE-100;
+                background-color: $GR-100;
+            }
+
+            &.red_btn {
+                color: $WE-100;
+                background-color: $RD-110;
+            }
+
+            &[disabled='true'],
+            &.disabled,
+            &.mat-button-disabled {
+                @include disable_button();
+            }
+        }
+    }
+    .info_tooltip_wrapper {
+        z-index: 1;
+        button {
+            &.account_user_btn {
+                margin: 0 0 0 30px;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 0 24px;
+                }
+            }
+        }
+        &:first-child {
+            button {
+                &.account_user_btn {
+                    margin: 0;
+                }
+            }
+        }
+        .info_tooltip {
+            top: 0 !important;
+            padding-top: 50px;
+            z-index: -1;
+            @include max-breakpoint-1800 {
+                padding-top: 45px;
+            }
+            @include max-breakpoint-1680 {
+                padding-top: 40px;
+            }
+            @include max-breakpoint-1440 {
+                padding-top: 40px;
+            }
+        }
+    }
+
+    .ghost_loading_box {
+        &.btn_ghost {
+            width: 175px;
+            min-height: 45px;
+            display: inline-block;
+            margin: 0 auto;
+            @include max-breakpoint-1800 {
+                width: 165px;
+                min-height: 40px;
+            }
+            @include max-breakpoint-1680 {
+                width: 140px;
+                min-height: 36px;
+            }
+            @include max-breakpoint-1440 {
+                width: 140px;
+                min-height: 36px;
+            }
+        }
+    }
+
+    &.right_align {
+        justify-content: flex-end;
+    }
+
+    &.custom_mb {
+        margin: 0 0 30px 0;
+    }
+}
+// Business Setting Button Footer
+.business_setting_footer {
+    width: 100%;
+    @include flex_center();
+    border-top: 1px solid #ced7e5;
+    padding: 20px 0 45px 0;
+    @include max-breakpoint-1800 {
+        padding: 18px 0 41px 0;
+    }
+    @include max-breakpoint-1680 {
+        padding: 16px 0 36px 0;
+    }
+    @include max-breakpoint-1440 {
+        padding: 15px 0;
+    }
+
+    button {
+        &.setting_fot_btn {
+            @include flex_center();
+            font: 700 $font-s-16 $primaryFont;
+            color: $BL-103;
+            background: none;
+            border: 0;
+            cursor: pointer;
+            @include max-breakpoint-1800 {
+                font: 700 $font-s-15 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 700 $font-s-14 $primaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 700 $font-s-13 $primaryFont;
+            }
+            @include max-breakpoint-1440 {
+                font: 700 $font-s-12 $primaryFont;
+            }
+
+            &.left_btn {
+                color: $BL-102;
+                margin-right: 15px;
+                mat-icon {
+                    font-size: $font-s-24;
+                    margin-right: 6px;
+                }
+                @include max-breakpoint-1680 {
+                    margin-right: 12px;
+                    mat-icon {
+                        font-size: $font-s-19;
+                        margin-right: 5px;
+                    }
+                }
+                @include max-breakpoint-1440 {
+                    margin-right: 10px;
+                    mat-icon {
+                        font-size: $font-s-18;
+                        margin-right: 4px;
+                    }
+                }
+            }
+            &.right_btn {
+                margin-left: auto;
+
+                mat-icon {
+                    font-size: $font-s-24;
+                    margin-left: 6px;
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-19;
+                        margin-left: 5px;
+                    }
+                    @include max-breakpoint-1440 {
+                        font-size: $font-s-18;
+                        margin-left: 4px;
+                    }
+                }
+            }
+
+            &[disabled='true'],
+            &.disabled,
+            &.mat-button-disabled {
+                color: $BL-102;
+                cursor: default;
+                pointer-events: none;
+            }
+        }
+    }
+}

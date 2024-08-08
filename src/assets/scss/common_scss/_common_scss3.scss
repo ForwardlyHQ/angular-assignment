@@ -1,0 +1,651 @@
+/* Common Payment Drawer Style */
+.slide_right_toggle_wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999999;
+    transform: translateX(100%);
+
+    .slide_right_toggle_inner {
+        width: 100%;
+        max-width: 960px;
+        height: 100%;
+        background: $WE-100;
+        padding: 30px 30px 30px 30px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        @include hover-speed();
+        transform: translateX(100%);
+        @include max-breakpoint-1800 {
+            max-width: 864px;
+            padding: 27px 27px 27px 27px;
+        }
+        @include max-breakpoint-1680 {
+            max-width: 768px;
+            padding: 24px 24px 24px 24px;
+        }
+        @include max-breakpoint-1440 {
+            padding: 21px 21px 21px 21px;
+        }
+
+        &.fai_slide_invoice_bills {
+            max-width: 65%;
+            @include max-breakpoint-1680 {
+                max-width: 80%;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                max-width: 65%;
+            }
+            @include max-breakpoint-1440 {
+                max-width: 90%;
+            }
+            @include max-breakpoint-1080 {
+                max-width: 95%;
+            }
+
+            .slide_content {
+                .slide_content_inner {
+                    overflow-y: hidden;
+                }
+            }
+        }
+
+        &.finalize_payment_slide {
+            @include max-breakpoint-1440 {
+                max-width: 50%;
+            }
+            @include max-breakpoint-959 {
+                max-width: 65%;
+            }
+        }
+        button {
+            &.slide_close_btn {
+                @include round_close_btn();
+                left: -22px;
+                top: 20px;
+                z-index: 999;
+                @include max-breakpoint-1680 {
+                    left: -18px;
+                    top: 16px;
+                }
+            }
+        }
+
+        .slide_content {
+            height: 100%;
+            position: relative;
+
+            .link_bank_header {
+                text-align: center;
+                padding: 0 0 30px 0;
+                @include max-breakpoint-1800 {
+                    padding: 0 0 27px 0;
+                }
+                @include max-breakpoint-1680 {
+                    padding: 0 0 24px 0;
+                }
+                @include max-breakpoint-1440 {
+                    padding: 0 0 20px 0;
+                }
+
+                .fai_link_plaid_logo {
+                    @include link_bank_plaid();
+                    margin: 0 0 15px 0;
+                    @include max-breakpoint-1680 {
+                        margin: 0 0 12px 0;
+                    }
+                }
+
+                h2 {
+                    &.mat-h2 {
+                        @include heading_lg_blue();
+                    }
+                }
+            }
+
+            .fai_selected_business_nm {
+                font: 600 $font-s-18 $primaryFont;
+                line-height: normal;
+                color: $BL-102;
+                text-align: center;
+                margin: 15px 0;
+                @include max-breakpoint-1800 {
+                    font: 700 $font-s-16 $primaryFont;
+                    line-height: normal;
+                }
+                @include max-breakpoint-1680 {
+                    font: 700 $font-s-14 $primaryFont;
+                    line-height: normal;
+                    margin: 12px 0;
+                }
+            }
+
+            .fai_breadcrumb_wrapper {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                text-align: center;
+
+                li {
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 15px;
+                    @include max-breakpoint-1680 {
+                        padding-right: 12px;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+
+                        mat-icon {
+                            display: none;
+                        }
+                    }
+
+                    mat-icon {
+                        width: 24px !important;
+                        height: 24px !important;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        color: $BL-102;
+                        @include max-breakpoint-1680 {
+                            width: 19px !important;
+                            height: 19px !important;
+                        }
+                    }
+
+                    a,
+                    span {
+                        color: $BL-102;
+                        text-decoration: none;
+                        font: 600 $font-s-16 $primaryFont;
+                        line-height: normal;
+                        padding: 0 25px;
+                        cursor: text;
+                        position: relative;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-15 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-14 $primaryFont;
+                            padding: 0 20px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1440 {
+                            font: 600 $font-s-12 $primaryFont;
+                        }
+                    }
+
+                    .info_tooltip_wrapper {
+                        &.info_text {
+                            &.ml_0 {
+                                .info_tooltip {
+                                    left: 25px;
+                                    @include max-breakpoint-1680 {
+                                        left: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    span {
+                        cursor: text;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        a,
+                        span {
+                            color: $BL-103;
+                        }
+                    }
+
+                    &.cursor {
+                        a,
+                        span {
+                            cursor: pointer;
+                        }
+                    }
+
+                    /* Ghost Loading Box Style */
+                    span {
+                        &.ghost_loading_box {
+                            width: 100px;
+                            min-height: 24px;
+                            display: inline-block;
+                            padding: 0;
+                            margin: 0 25px;
+                            @include max-breakpoint-1680 {
+                                width: 80px;
+                                min-height: 19px;
+                                margin: 0 20px;
+                            }
+
+                            &:last-child {
+                                width: 24px;
+                                margin: 0;
+                                @include max-breakpoint-1680 {
+                                    width: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slide_content_inner {
+                @include common_slide_height();
+                padding: 0 15px 0 30px;
+                overflow: hidden;
+                overflow-y: auto;
+                @include max-breakpoint-1680 {
+                    padding: 0 12px 0 24px;
+                }
+                @include max-breakpoint-1440 {
+                    padding: 0 15px;
+                }
+
+                .business_alert_message {
+                    font: 400 $font-s-16 $primaryFont;
+                    line-height: normal;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-15 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-14 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                }
+
+                /* Mat-Drawer Slide Style */
+                &.fai_transaction_slide {
+                    height: calc(100vh - 251px);
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        height: calc(100vh - 201px);
+                    }
+                }
+
+                &.fai_payment_slide {
+                    height: calc(100vh - 239px);
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        height: calc(100vh - 191px);
+                    }
+                    @include max-breakpoint-1440 {
+                        height: calc(100vh - 175px);
+                    }
+                }
+            }
+        }
+        /* Link Bill Slide Style */
+        &.link_bill_slide {
+            .slide_content {
+                .link_bank_header {
+                    @include max-breakpoint-1680 {
+                        padding: 0;
+                    }
+                }
+                .slide_content_inner {
+                    .fai_invoice_bills_filter_sec {
+                        @include max-breakpoint-1680 {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* For Invoice and Bills Drawer */
+app-cashflow-wrapper {
+    .slide_right_toggle_wrapper {
+        .slide_right_toggle_inner {
+            app-invoice-bills-wrapper {
+                .slide_content {
+                    .slide_content_inner {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+// Side Toggle Slider Open
+body {
+    &.slide_open {
+        overflow: hidden;
+        .mat-drawer.mat-drawer-side {
+            z-index: 1;
+        }
+        .slide_right_toggle_wrapper {
+            background: transparent linear-gradient(270deg, $BL-108 0%, #fff0 100%) 0% 0% no-repeat padding-box;
+            transform: translateX(0%);
+            .slide_right_toggle_inner {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+// Slide Toggle Content
+mat-card {
+    &.mat-mdc-card {
+        &.white_default_card {
+            &.bank_link_card {
+                box-shadow: none;
+                border-radius: 6px;
+                margin: 25px 0 0 0;
+                @include max-breakpoint-1680 {
+                    border-radius: 5px;
+                    margin: 20px 0 0 0;
+                }
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                mat-card-content {
+                    .link_bank_wrap {
+                        width: 100%;
+                        @include flex_center();
+                        justify-content: space-between;
+
+                        .bank_name {
+                            @include flex_center();
+                            padding: 0 15px 0 0;
+                            @include max-breakpoint-1680 {
+                                padding: 0 12px 0 0;
+                            }
+
+                            .bank_avatar {
+                                width: 40px;
+                                min-width: 40px;
+                                height: 40px;
+                                background: $WE-100;
+                                border: 1px solid $GY-114;
+                                border-radius: 50%;
+                                @include flex_center();
+                                justify-content: center;
+                                padding: 2px;
+                                margin: 0 25px 0 0;
+                                @include max-breakpoint-1680 {
+                                    width: 32px;
+                                    min-width: 32px;
+                                    height: 32px;
+                                    margin: 0 20px 0 0;
+                                }
+
+                                img {
+                                    width: 21px;
+                                    @include max-breakpoint-1680 {
+                                        width: 17px;
+                                    }
+                                }
+
+                                mat-icon {
+                                    font-size: $font-s-21;
+                                    color: $GY-102;
+                                    @include max-breakpoint-1680 {
+                                        font-size: $font-s-18;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font-size: $font-s-17;
+                                    }
+                                }
+
+                                &.default {
+                                    background: $GY-112;
+                                    border-color: $GY-112;
+                                }
+                            }
+
+                            h3 {
+                                &.mat-h3 {
+                                    font: 600 $font-s-18 $primaryFont;
+                                    color: $BL-102;
+                                    margin: 0;
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-16 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                    }
+
+                                    .ghost_loading_box {
+                                        width: 25rem;
+                                        min-height: 24px;
+                                        display: inline-block;
+                                        @include max-breakpoint-1680 {
+                                            width: 20rem;
+                                            min-height: 19px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .link_bank_right_btn_group {
+                            button {
+                                &.link_bank_btn {
+                                    font: 500 $font-s-14 $primaryFont;
+                                    line-height: 21px;
+                                    color: $GY-102;
+                                    background-color: transparent;
+                                    border-color: $GY-106;
+                                    border-radius: 5px;
+                                    padding: 0 10px;
+                                    margin: 0 0 0 15px;
+                                    @include max-breakpoint-1800 {
+                                        font: 500 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 500 $font-s-12 $primaryFont;
+                                        line-height: 18px;
+                                        border-radius: 4px;
+                                        padding: 0 8px;
+                                        margin: 0 0 0 12px;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 500 $font-s-11 $primaryFont;
+                                        line-height: 17px;
+                                    }
+
+                                    &:first-child {
+                                        margin-left: 0;
+                                    }
+
+                                    mat-icon {
+                                        position: relative;
+                                        font-size: $font-s-21;
+                                        margin: 0 2px 0 0;
+                                        @include max-breakpoint-1680 {
+                                            font-size: $font-s-18;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font-size: $font-s-17;
+                                        }
+                                        &.check_icon {
+                                            top: -1px;
+                                        }
+                                    }
+
+                                    &.light_blue_btn {
+                                        color: $BL-102;
+                                        border-color: $BL-102;
+                                    }
+                                    &.dark_blue_btn {
+                                        color: $BL-103;
+                                        border-color: $BL-103;
+                                    }
+                                    &.green_fill_btn {
+                                        min-width: 34px;
+                                        color: $WE-100;
+                                        border-color: $GR-100;
+                                        background-color: $GR-100;
+                                        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+                                        @include max-breakpoint-1680 {
+                                            min-width: 27px;
+                                            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+                                        }
+                                    }
+                                    &.red_fill_btn {
+                                        min-width: 34px;
+                                        color: $WE-100;
+                                        border-color: $RD-101;
+                                        background-color: $RD-101;
+                                        @include max-breakpoint-1680 {
+                                            min-width: 27px;
+                                        }
+
+                                        mat-icon {
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .ghost_loading_box {
+                                width: 76px;
+                                min-height: 26px;
+                                display: inline-block;
+                                @include max-breakpoint-1680 {
+                                    width: 61px;
+                                    min-height: 21px;
+                                }
+                            }
+                        }
+                    }
+
+                    .bank_account_info {
+                        width: 100%;
+                        @include flex_center();
+                        justify-content: space-between;
+                        color: $BL-102;
+                        border-top: 1px dashed $GY-117;
+                        margin-top: 15px;
+                        padding-top: 15px;
+                        @include max-breakpoint-1680 {
+                            margin-top: 12px;
+                            padding-top: 12px;
+                        }
+
+                        ul {
+                            @include ul_style();
+                            @include flex_center();
+
+                            li {
+                                @include flex_center();
+                                position: relative;
+                                padding: 0 15px;
+                                font: 400 $font-s-14 $primaryFont;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                    padding: 0 12px;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+
+                                &::before {
+                                    width: 1px;
+                                    height: 100%;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    content: '';
+                                    background: $BL-102;
+                                }
+
+                                &:first-child {
+                                    padding-left: 0;
+
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+
+                                span {
+                                    &.ghost_loading_box {
+                                        width: 10vw;
+                                        min-height: 18px;
+                                        display: inline-block;
+                                        @include max-breakpoint-1680 {
+                                            width: 8vw;
+                                            min-height: 14px;
+                                        }
+                                    }
+                                }
+
+                                &.ghost_list {
+                                    &::before {
+                                        background: $GY-112;
+                                    }
+                                }
+                            }
+                        }
+
+                        .right {
+                            text-align: right;
+                        }
+
+                        .account_status {
+                            @include flex_center();
+                            font: 500 $font-s-14 $primaryFont;
+                            @include max-breakpoint-1800 {
+                                font: 500 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 500 $font-s-12 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500 $font-s-11 $primaryFont;
+                            }
+
+                            mat-icon {
+                                font-size: $font-s-21;
+                                @include max-breakpoint-1680 {
+                                    font-size: $font-s-18;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font-size: $font-s-17;
+                                }
+                            }
+
+                            mat-icon,
+                            img {
+                                margin: 0 2px 0 0;
+                            }
+
+                            &.verify {
+                                color: $GR-100;
+                            }
+
+                            &.unverified {
+                                color: $RD-109;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

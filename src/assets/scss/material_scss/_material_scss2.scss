@@ -1,0 +1,552 @@
+// Mat Custom Font Family
+.mat-h2,
+.mat-h3,
+.mat-h4,
+.mat-h5,
+.mat-h6,
+.mat-title,
+.mat-body,
+.mat-body-2,
+.mat-subheading-1,
+.mat-subheading-2,
+.mat-stepper-vertical,
+.mat-stepper-horizontal,
+.mat-typography .mat-h2,
+.mat-typography .mat-title,
+.mat-typography h2,
+.mat-typography .mat-h3,
+.mat-typography .mat-subheading-2,
+.mat-typography h3,
+.mat-typography .mat-h4,
+.mat-typography .mat-subheading-1,
+.mat-typography h4,
+.mat-typography .mat-h5,
+.mat-typography h5,
+.mat-typography .mat-h6,
+.mat-typography h5,
+.mat-body p,
+.mat-body-2 p,
+.mat-typography .mat-body p,
+.mat-typography .mat-body-2 p,
+.mat-typography p {
+    font-family: $primaryFont;
+    letter-spacing: 0;
+}
+// Mat Sidenav
+mat-sidenav-content {
+    &.mat-drawer-content {
+        overflow: inherit;
+        position: static;
+    }
+}
+// Mat List
+mat-list {
+    &.mat-mdc-list {
+        &.mat-mdc-list-base {
+            padding-top: 0;
+
+            mat-list-item {
+                &.mat-mdc-list-item,
+                &.mat-list-option {
+                    font-family: $primaryFont;
+                    height: auto;
+                    padding: 0;
+
+                    .mdc-list-item__primary-text {
+                        font: 400 $font-s-16 $primaryFont;
+                        letter-spacing: 0;
+                        padding: 0;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-15 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-14 $primaryFont;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1440 {
+                            font: 400 $font-s-12 $primaryFont;
+                        }
+                    }
+
+                    &.mat-multi-line {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Mat Paginator Style */
+mat-paginator {
+    &.mat-paginator {
+        background-color: transparent;
+        .mat-paginator-outer-container {
+            .mat-paginator-container {
+                padding: 0;
+
+                .mat-paginator-page-size {
+                    display: none;
+                }
+
+                .mat-mdc-paginator-container {
+                    padding: 0;
+                }
+
+                .mat-paginator-range-actions {
+                    .mat-paginator-range-label {
+                        font: 400 $font-s-14 $primaryFont;
+                        color: $GY-101;
+                        margin: 0;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-12 $primaryFont;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-11 $primaryFont;
+                        }
+                    }
+
+                    .mat-icon-button {
+                        @include max-breakpoint-1440 {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mat Slider
+mat-slider {
+    &.mat-slider {
+        width: 100%;
+
+        &.mat-accent {
+            .mat-slider-track-fill,
+            .mat-slider-thumb {
+                background-color: $BL-103;
+            }
+
+            .mat-slider-thumb {
+                transform: scale(1);
+            }
+        }
+    }
+}
+// Mat Menu
+.mat-mdc-menu-panel {
+    position: relative;
+
+    &.mat-mdc-menu-panel {
+        max-height: 250px;
+        @include max-breakpoint-1680 {
+            max-height: 200px;
+        }
+
+        &.round_arrow_dropdown {
+            min-width: 134px;
+            border-radius: 8px;
+            border: 1px solid $GY-114;
+            box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.1);
+            overflow: inherit;
+            @include max-breakpoint-1680 {
+                min-width: 107px;
+                border-radius: 6px;
+                box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+            }
+
+            &::before {
+                width: 12px;
+                height: 10px;
+                position: absolute;
+                content: '';
+                right: 15px;
+                top: -6px;
+                background: $WE-100;
+                border-left: 1px solid $GY-107;
+                border-top: 1px solid $GY-107;
+                transform: rotate(45deg);
+                @include max-breakpoint-1680 {
+                    width: 10px;
+                    height: 8px;
+                    right: 12px;
+                    top: -5px;
+                }
+            }
+
+            .mat-mdc-menu-content {
+                padding: 0;
+
+                button {
+                    &.mat-mdc-menu-item {
+                        height: auto;
+                        min-height: 34px;
+                        padding: 0 10px;
+                        border-top: 1px solid $GY-114;
+                        color: $GY-101;
+                        @include max-breakpoint-1680 {
+                            min-height: 27px;
+                            padding: 0 8px;
+                        }
+
+                        .mdc-list-item__primary-text {
+                            font: 400 $font-s-14 $primaryFont;
+                            line-height: normal;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-12 $primaryFont;
+                                line-height: normal;
+                            }
+                        }
+
+                        &:first-child {
+                            border-top: none;
+                        }
+                    }
+                }
+            }
+
+            &.fai_cashflow_dropdown {
+                min-width: 100px;
+                @include max-breakpoint-1680 {
+                    min-width: 80px;
+                }
+
+                .mat-mdc-menu-content {
+                    button {
+                        &.mat-mdc-menu-item {
+                            justify-content: center;
+
+                            &[disabled='true'],
+                            &.disabled,
+                            &.mat-button-disabled {
+                                opacity: 1;
+
+                                .mdc-list-item__primary-text {
+                                    color: rgba(0, 0, 0, 0.38);
+                                    cursor: default;
+                                    pointer-events: none;
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.user_dropdown {
+            margin-top: 8px;
+            @include max-breakpoint-1680 {
+                margin-top: 6px;
+            }
+
+            .mat-mdc-menu-content {
+                padding: 0;
+
+                button {
+                    mat-icon {
+                        font-size: $font-s-16;
+                        margin-right: 8px;
+                        color: $BL-102;
+                        @include max-breakpoint-1680 {
+                            font-size: $font-s-13;
+                            margin-right: 6px;
+                        }
+                    }
+
+                    img {
+                        &.default_img {
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 8px;
+                            position: relative;
+                            top: 2px;
+                            @include max-breakpoint-1680 {
+                                width: 13px;
+                                height: 13px;
+                                margin-right: 6px;
+                            }
+
+                            &.one {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .mdc-list-item__primary-text {
+                        color: $BL-102;
+                        letter-spacing: 0;
+                    }
+
+                    &:hover {
+                        mat-icon,
+                        .mdc-list-item__primary-text {
+                            color: $BK-100;
+                        }
+
+                        img {
+                            &.default_img {
+                                &.two {
+                                    display: none;
+                                }
+
+                                &.one {
+                                    display: inline-flex;
+                                }
+                            }
+                        }
+
+                        .mdc-list-item__primary-text {
+                            background-color: $WE-100;
+                        }
+
+                        &:not([disabled]) {
+                            background: none;
+                        }
+                    }
+                }
+            }
+
+            &.fai_tabular_sorting_menu {
+                .mat-mdc-menu-content {
+                    button {
+                        &.mdc-list-item {
+                            .mdc-list-item__primary-text {
+                                @include flex_center();
+
+                                mat-icon {
+                                    margin-left: 8px;
+                                    @include max-breakpoint-1680 {
+                                        margin-left: 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Switch Business Dropdown
+        &.switch_business_menu {
+            min-width: auto;
+            max-width: 260px;
+            padding: 5px 5px;
+            border-radius: 15px;
+            margin: 0;
+            @include max-breakpoint-1680 {
+                min-width: auto;
+                max-width: 208px;
+                padding: 4px 4px;
+                border-radius: 12px;
+            }
+            &::before {
+                display: none;
+            }
+            .mat-mdc-menu-content {
+                max-height: 170px;
+                overflow-y: auto;
+                button {
+                    &.mat-mdc-menu-item {
+                        overflow: initial;
+                        .mdc-list-item__primary-text {
+                            background-color: transparent;
+                            overflow: inherit;
+                            .switch_business_toggle-wrapper {
+                                @include flex_center();
+                                justify-content: flex-start;
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: normal;
+                                color: rgba($BL-114, 0.5);
+                                background-color: transparent;
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                    line-height: normal;
+                                }
+                                .accounting-logo-wrapper {
+                                    display: inline-flex;
+                                    width: 18px;
+                                    margin-right: 9px;
+                                    @include max-breakpoint-1680 {
+                                        width: 14px;
+                                        margin-right: 7px;
+                                    }
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                                .switch_business_toggle_inner {
+                                    max-width: 201px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    @include max-breakpoint-1680 {
+                                        max-width: 155px;
+                                    }
+                                }
+                            }
+                        }
+                        .mat-mdc-menu-ripple {
+                            display: none;
+                        }
+                        &:hover {
+                            background-color: rgba($BL-117, 0.8);
+                            border-radius: 5px;
+                            @include max-breakpoint-1680 {
+                                border-radius: 4px;
+                            }
+                            .mdc-list-item__primary-text {
+                                background-color: transparent;
+                                .switch_business_toggle-wrapper {
+                                    color: $BL-114;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.arrow_hide {
+            border-radius: 6px;
+            margin-top: 0;
+            @include max-breakpoint-1680 {
+                border-radius: 5px;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+        &.select_list_dropdown {
+            min-width: 96px;
+            max-width: 96px;
+            box-shadow: none;
+            border: 1px solid $BL-102;
+            border-top: 0;
+            border-radius: 0 0 5px 5px;
+            top: -3px;
+            @include max-breakpoint-1680 {
+                min-width: 77px;
+                max-width: 77px;
+                border-radius: 0 0 4px 4px;
+                top: -2px;
+            }
+
+            .mat-mdc-menu-content {
+                padding: 0;
+
+                button {
+                    &.mat-mdc-menu-item {
+                        &.mdc-list-item {
+                            min-height: 34px;
+                            padding: 2px 8px;
+                            text-align: left;
+                            border-top: 1px solid rgba(134, 141, 170, 0.2);
+                            @include max-breakpoint-1680 {
+                                min-height: 27px;
+                                padding: 2px 6px;
+                            }
+
+                            .mdc-list-item__primary-text {
+                                font: 400 $font-s-14 $primaryFont;
+                                color: $BL-102;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.lg_dropdown {
+                min-width: 132px;
+                max-width: 132px;
+                @include max-breakpoint-1680 {
+                    min-width: 106px;
+                    max-width: 106px;
+                }
+            }
+        }
+        // Authorize Button Dropdown
+        &.green_dropdown_menu {
+            min-width: 100%;
+            max-width: 100%;
+            box-shadow: none;
+            background: $GR-100;
+            border: 1px solid $GR-100;
+            border-radius: 0 0 5px 5px;
+            margin: -4px 0 0 0;
+            padding: 0 15px;
+            @include max-breakpoint-1800 {
+                margin: -7px 0 0 0;
+            }
+            @include max-breakpoint-1680 {
+                width: 280px;
+                min-width: 280px;
+                border-radius: 0 0 4px 4px;
+                margin: -3px 0 0 0;
+                padding: 0 12px;
+            }
+
+            .mat-mdc-menu-content {
+                &.mdc-list {
+                    padding: 0;
+                }
+
+                button {
+                    &.mat-mdc-menu-item {
+                        color: $WE-100;
+                        letter-spacing: 0;
+                        padding: 0;
+                        border-top: 1px solid $WE-100;
+
+                        .mdc-list-item__primary-text {
+                            font: 600 $font-s-16 $primaryFont;
+                            letter-spacing: 0;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-14 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-13 $primaryFont;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.authorize_btn_list {
+                min-width: 290px;
+                max-width: 290px;
+                @include max-breakpoint-1680 {
+                    min-width: 232px;
+                    max-width: 232px;
+                }
+            }
+            &.approve_btn_list {
+                min-width: 220px;
+                max-width: 220px;
+                @include max-breakpoint-1680 {
+                    min-width: 176px;
+                    max-width: 176px;
+                }
+            }
+        }
+    }
+}

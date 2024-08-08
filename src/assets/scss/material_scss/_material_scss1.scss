@@ -1,0 +1,667 @@
+// Mat Card
+mat-card {
+    &.mat-mdc-card {
+        box-shadow: none;
+        border-radius: 10px;
+        font-family: $primaryFont;
+        color: $BL-102;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            border-radius: 8px;
+        }
+    }
+
+    &.fai_transparent_card {
+        padding: 0;
+        border-radius: 0;
+        background: none;
+        margin-bottom: 75px;
+        @include max-breakpoint-1680 {
+            margin-bottom: 60px;
+        }
+        @include max-breakpoint-1440 {
+            margin-bottom: 45px;
+        }
+    }
+
+    &.white_default_card {
+        background: $WE-100;
+        box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.1);
+        border: 1px solid $GY-129;
+        border-radius: 10px;
+        padding: 15px;
+        min-height: 64px;
+        @include max-breakpoint-1680 {
+            box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+            border-radius: 8px;
+            padding: 12px;
+            min-height: 51px;
+        }
+    }
+
+    &.gray_card {
+        background: $GY-127;
+        box-shadow: none;
+    }
+
+    &.bank_account_card {
+        box-shadow: 6px 6px 10px rgba(102, 102, 102, 0.1);
+        border: 1px solid $GY-129;
+        border-radius: 10px;
+        @include max-breakpoint-1680 {
+            box-shadow: 5px 5px 8px rgba(102, 102, 102, 0.1);
+        }
+
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            box-shadow: 5px 5px 8px rgba(102, 102, 102, 0.1);
+            border-radius: 8px;
+        }
+        mat-card-content {
+            @include flex_center();
+            min-height: 64px;
+            padding: 14px 20px;
+            @include max-breakpoint-1680 {
+                min-height: 51px;
+                padding: 11px 16px;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                min-height: 51px;
+                padding: 11px 16px;
+            }
+        }
+    }
+
+    &.blue_gradient {
+        color: $WE-100;
+        background: rgb(134, 141, 170);
+        background: linear-gradient(6deg, rgba(134, 141, 170, 1) 0%, rgba(109, 119, 140, 1) 52%, rgba(134, 141, 170, 1) 100%);
+        box-shadow: 6px 6px 10px rgba(102, 102, 102, 0.1);
+        @include max-breakpoint-1680 {
+            box-shadow: 5px 5px 8px rgba(102, 102, 102, 0.1);
+        }
+        @include max-breakpoint-1440 {
+            box-shadow: 4px 4px 6px rgba(102, 102, 102, 0.1);
+        }
+
+        p {
+            color: $WE-100;
+            margin: 0;
+        }
+    }
+}
+// Mat Accordion
+mat-accordion {
+    &.mat-accordion {
+        mat-expansion-panel {
+            &.mat-expansion-panel {
+                &:first-of-type {
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 0;
+                }
+
+                &:last-of-type {
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+
+                mat-expansion-panel-header {
+                    &.mat-expansion-panel-header {
+                        height: auto;
+                        min-height: 48px;
+                        font-family: $primaryFont;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            min-height: 38px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Plan a Scenario
+        &.scenario_accordion {
+            mat-expansion-panel {
+                &.mat-expansion-panel {
+                    border: 0;
+                    background: none;
+                    box-shadow: none;
+                    margin: 0;
+
+                    .mat-expansion-panel-body {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+// Mat Accordion
+mat-accordion {
+    &.mat-accordion {
+        &.mat_accordion_tabs_wrap {
+            width: 100%;
+            display: inline-block;
+
+            mat-expansion-panel {
+                &.mat-expansion-panel {
+                    box-shadow: none;
+                    margin: 0 0 20px 0;
+                    @include max-breakpoint-1680 {
+                        margin: 0 0 16px 0;
+                    }
+
+                    mat-expansion-panel-header {
+                        &.mat-expansion-panel-header {
+                            background: #f6f6f6;
+                            border-radius: 6px;
+                            padding: 0 15px;
+                            @include max-breakpoint-1680 {
+                                border-radius: 5px;
+                                padding: 0 12px;
+                            }
+
+                            mat-panel-title {
+                                &.mat-expansion-panel-header-title {
+                                    font: 700 $font-s-18 $primaryFont;
+                                    color: $BL-102;
+                                    margin: 0;
+                                    padding: 0 0 0 30px;
+                                    @include max-breakpoint-1800 {
+                                        font: 700 $font-s-16 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 700 $font-s-14 $primaryFont;
+                                        padding: 0 0 0 24px;
+                                    }
+
+                                    span {
+                                        &.company_share {
+                                            font-weight: 400;
+                                            margin: 0 0 0 6px;
+                                            @include max-breakpoint-1680 {
+                                                margin: 0 0 0 5px;
+                                            }
+                                        }
+                                    }
+
+                                    .info_tooltip_wrapper {
+                                        &.info_text {
+                                            .info_tooltip_text {
+                                                &::first-letter {
+                                                    text-transform: uppercase;
+                                                }
+                                            }
+                                        }
+
+                                        &:hover {
+                                            .info_tooltip {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+
+                                    .owner_account_status {
+                                        font: 400 $font-s-16 $primaryFont;
+                                        @include flex_center();
+                                        margin: 0 0 0 15px;
+                                        @include max-breakpoint-1800 {
+                                            font: 400 $font-s-15 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 400 $font-s-14 $primaryFont;
+                                            margin: 0 0 0 12px;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 400 $font-s-13 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            font: 400 $font-s-12 $primaryFont;
+                                        }
+
+                                        img {
+                                            height: 16px;
+                                            margin: 0 6px 0 0;
+                                            @include max-breakpoint-1680 {
+                                                height: 13px;
+                                                margin: 0 5px 0 0;
+                                            }
+                                        }
+
+                                        &.invalid {
+                                            color: $RD-110;
+                                        }
+                                        &.verified {
+                                            color: $GR-100;
+                                        }
+                                        &.submitted {
+                                            color: $BL-102;
+                                        }
+                                        &.pending {
+                                            color: $BL-102;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button {
+                                &.delete_btn {
+                                    width: 26px;
+                                    min-width: 26px;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+                                    z-index: 1;
+                                    padding: 0;
+                                    background: none;
+                                    border: 0;
+                                    cursor: pointer;
+                                    display: none;
+                                    @include max-breakpoint-1680 {
+                                        width: 21px;
+                                        min-width: 21px;
+                                    }
+
+                                    img {
+                                        width: 18px;
+                                        min-width: 18px;
+                                        height: 20px;
+                                        @include max-breakpoint-1800 {
+                                            width: 16px;
+                                            min-width: 16px;
+                                            height: 18px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            width: 14px;
+                                            min-width: 14px;
+                                            height: 16px;
+                                        }
+                                    }
+                                    &.disabled {
+                                        cursor: auto;
+                                        opacity: 0.8;
+                                    }
+                                }
+                            }
+
+                            .mat-expansion-indicator {
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                left: 15px;
+                                top: 14px;
+                                z-index: 1;
+                                background: $BL-102;
+                                border-radius: 50%;
+                                color: $WE-100;
+                                font-size: $font-s-24;
+                                @include max-breakpoint-1680 {
+                                    width: 16px;
+                                    height: 16px;
+                                    left: 12px;
+                                    top: 11px;
+                                    font-size: $font-s-19;
+                                }
+
+                                &::after {
+                                    position: absolute;
+                                    left: 6px;
+                                    top: 5px;
+                                    color: $WE-100;
+                                    @include max-breakpoint-1680 {
+                                        left: 5px;
+                                        top: 4px;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                background: #f6f6f6;
+                            }
+                        }
+                    }
+
+                    .mat-expansion-panel-body {
+                        padding: 20px 15px 0px 15px;
+                        @include max-breakpoint-1680 {
+                            padding: 16px 12px 0px 12px;
+                        }
+                    }
+
+                    &.mat-expanded {
+                        mat-expansion-panel-header {
+                            &.mat-expansion-panel-header {
+                                background: $BL-103;
+
+                                mat-panel-title {
+                                    &.mat-expansion-panel-header-title {
+                                        color: $WE-100;
+
+                                        .info_tooltip_wrapper {
+                                            &:hover {
+                                                .info_tooltip {
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                button {
+                                    &.delete_btn {
+                                        display: block;
+                                    }
+                                }
+
+                                .mat-expansion-indicator {
+                                    background: $WE-100;
+                                    color: $BL-103;
+
+                                    &::after {
+                                        color: $BL-103;
+                                    }
+                                }
+
+                                &:hover {
+                                    background: $BL-103;
+                                }
+                            }
+                        }
+                    }
+                    &.disabled,
+                    &[disabled],
+                    &[disabled='true'],
+                    &[ng-reflect-disabled='true'] {
+                        pointer-events: none;
+                        cursor: default;
+                        mat-expansion-panel-header {
+                            &.mat-expansion-panel-header {
+                                mat-panel-title {
+                                    &.mat-expansion-panel-header-title {
+                                        min-height: 20px;
+                                        position: relative;
+                                        pointer-events: none;
+                                        cursor: default;
+                                        opacity: 0.6;
+                                        @include max-breakpoint-1680 {
+                                            min-height: 16px;
+                                        }
+
+                                        &::before {
+                                            width: 20px;
+                                            height: 20px;
+                                            content: '';
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            z-index: 1;
+                                            background: $BL-102;
+                                            border-radius: 50%;
+                                            color: $WE-100;
+                                            font-size: $font-s-24;
+                                            @include max-breakpoint-1680 {
+                                                width: 16px;
+                                                height: 16px;
+                                                font-size: $font-s-19;
+                                            }
+                                        }
+
+                                        &::after {
+                                            display: inline-block;
+                                            border-style: solid;
+                                            border-width: 0 2px 2px 0;
+                                            padding: 3px;
+                                            transform: rotate(45deg);
+                                            content: '';
+                                            position: absolute;
+                                            left: 6px;
+                                            top: 5px;
+                                            color: $WE-100;
+                                            z-index: 1;
+                                            @include max-breakpoint-1680 {
+                                                padding: 3px;
+                                                left: 5px;
+                                                top: 4px;
+                                            }
+                                        }
+                                    }
+                                }
+                                .mat-expansion-indicator {
+                                    background: rgba($BL-102, $opacitySize-1);
+                                    color: rgba($WE-100, $opacitySize-1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.no_bg {
+                mat-expansion-panel {
+                    &.mat-expansion-panel {
+                        background: none;
+
+                        .mat-expansion-panel-body {
+                            padding: 0 20px 0 0;
+                            @include max-breakpoint-1680 {
+                                padding: 0 16px 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Beneficial Accordion
+            &.beneficial_accordion {
+                width: 100%;
+                display: inline-block;
+                margin: 0;
+
+                mat-expansion-panel {
+                    &.mat-expansion-panel {
+                        border: 0;
+                        background: none;
+
+                        mat-expansion-panel-header {
+                            &.mat-expansion-panel-header {
+                                min-height: 48px;
+                                padding: 0;
+                                background-color: transparent;
+                                border-bottom: 2px solid $GY-105;
+                                border-radius: 0;
+                                @include max-breakpoint-1680 {
+                                    min-height: 38px;
+                                }
+                                .info_tooltip_wrapper {
+                                    .info_tooltip {
+                                        right: 5px;
+                                        @include max-breakpoint-1680 {
+                                            right: 4px;
+                                        }
+                                    }
+                                }
+
+                                button {
+                                    &.delete_btn {
+                                        right: 55px;
+                                        top: 10px;
+                                        @include max-breakpoint-1680 {
+                                            right: 44px;
+                                            top: 8px;
+                                        }
+                                    }
+                                }
+
+                                &:focus,
+                                &:hover {
+                                    background: none !important;
+                                }
+
+                                .mat-content {
+                                    overflow: inherit;
+
+                                    mat-panel-title {
+                                        &.mat-expansion-panel-header-title {
+                                            position: relative;
+                                            min-height: 45px;
+                                            padding: 0;
+                                            @include max-breakpoint-1800 {
+                                                min-height: 40px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                min-height: 36px;
+                                            }
+                                            @include max-breakpoint-1440 {
+                                                min-height: 34px;
+                                            }
+                                        }
+                                    }
+
+                                    button {
+                                        &.expansion_delete_btn {
+                                            color: $RD-104;
+                                        }
+                                    }
+                                }
+
+                                .mat-expansion-indicator {
+                                    width: 26px;
+                                    height: 26px;
+                                    display: block;
+                                    position: absolute;
+                                    left: auto;
+                                    right: 10px;
+                                    top: 12px;
+                                    background-color: transparent;
+                                    border-radius: 0;
+                                    color: transparent;
+                                    font-size: initial;
+                                    @include max-breakpoint-1680 {
+                                        width: 21px;
+                                        height: 21px;
+                                        right: 8px;
+                                        top: 10px;
+                                    }
+
+                                    &::after {
+                                        width: 26px;
+                                        height: 26px;
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        margin: 0 auto;
+                                        border: 0;
+                                        padding: 0;
+                                        background: url(../../../assets/images/common/accordion-arrow.png) no-repeat center;
+                                        background-size: 18px;
+                                        opacity: 0.5;
+                                        @include max-breakpoint-1680 {
+                                            width: 21px;
+                                            height: 21px;
+                                            background-size: 14px;
+                                        }
+                                    }
+                                }
+
+                                &.mat-expanded {
+                                    height: auto;
+
+                                    mat-panel-title {
+                                        &.mat-expansion-panel-header-title {
+                                            color: $BL-103;
+                                        }
+                                    }
+
+                                    button {
+                                        &.expansion_delete_btn {
+                                            color: $RD-104;
+                                        }
+                                    }
+
+                                    .mat-expansion-indicator {
+                                        &::after {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .mat-expansion-panel-content {
+                            .mat-expansion-panel-body {
+                                position: relative;
+                                padding: 15px 0 0 0;
+                                @include max-breakpoint-1680 {
+                                    padding: 12px 0 0 0;
+                                }
+
+                                .beneficial_form_wrap {
+                                    width: 100%;
+                                    max-width: 990px;
+                                    margin: 0 auto;
+                                    padding: 20px 0 0 0;
+                                    @include max-breakpoint-1680 {
+                                        max-width: 792px;
+                                        padding: 16px 0 0 0;
+                                    }
+                                    &.invite_form_margin {
+                                        margin: 0 auto 30px auto;
+                                        @include max-breakpoint-1680 {
+                                            margin: 0 auto 24px auto;
+                                        }
+                                    }
+
+                                    &.separator_border {
+                                        border-bottom: 1px solid #ced7e5;
+                                        padding-bottom: 30px;
+                                        @include max-breakpoint-1680 {
+                                            padding-bottom: 24px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.mat-expanded {
+                            mat-expansion-panel-header {
+                                &.mat-expansion-panel-header {
+                                    border-color: $BL-103;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* If Touched and Invalid */
+    &.ng-touched {
+        .ng-invalid {
+            mat-form-field {
+                &.mat-mdc-form-field {
+                    .mat-mdc-text-field-wrapper {
+                        .mat-mdc-form-field-flex {
+                            .mdc-notched-outline {
+                                .mdc-notched-outline__leading,
+                                .mdc-notched-outline__notch,
+                                .mdc-notched-outline__trailing {
+                                    border-color: $RD-107;
+                                }
+                            }
+                            label {
+                                &.mdc-floating-label {
+                                    mat-label,
+                                    .mat-mdc-form-field-required-marker {
+                                        color: $RD-107;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

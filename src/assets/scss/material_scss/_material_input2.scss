@@ -1,0 +1,630 @@
+mat-form-field {
+    &.mat-mdc-form-field {
+        &.dialog_form_field {
+            min-height: 40px;
+            margin: 0;
+            @include max-breakpoint-1680 {
+                min-height: 32px;
+            }
+            @include max-breakpoint-1279 {
+                min-height: 34px;
+                margin: 6px 0;
+            }
+
+            .mat-mdc-text-field-wrapper {
+                max-width: 180px;
+                border: 1px solid $GY-118;
+                border-radius: 4px;
+                @include max-breakpoint-1680 {
+                    max-width: 144px;
+                    border-radius: 3px;
+                }
+
+                &:hover {
+                    border: 1px solid $GY-118;
+                    box-shadow: none;
+                }
+                .mat-mdc-form-field-flex {
+                    .mdc-notched-outline {
+                        display: none;
+                    }
+                    .mat-mdc-form-field-infix {
+                        @include flex_center();
+                        justify-content: flex-start;
+                        min-height: 40px;
+                        padding: 0;
+                        @include max-breakpoint-1680 {
+                            min-height: 32px;
+                        }
+                        @include max-breakpoint-1279 {
+                            min-height: 34px;
+                        }
+
+                        input {
+                            &.mat-mdc-input-element {
+                                font: 600 $font-s-16 $primaryFont;
+                                color: $BL-102;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-14 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 600 $font-s-12 $primaryFont;
+                                }
+                            }
+                        }
+                        span {
+                            min-width: 40px;
+                            min-height: 40px;
+                            @include flex_center();
+                            justify-content: center;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            padding: 8px 8px;
+                            border-left: 1px solid $GY-118;
+                            font: 600 $font-s-16 $primaryFont;
+                            line-height: normal;
+                            color: $BL-107;
+                            @include max-breakpoint-1680 {
+                                min-width: 32px;
+                                min-height: 32px;
+                                padding: 6px 6px;
+                                font: 500 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1279 {
+                                min-width: 34px;
+                                min-height: 34px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mat-mdc-form-field-subscript-wrapper {
+                .mat-mdc-form-field-error-wrapper {
+                    mat-error {
+                        &.mat-mdc-form-field-error {
+                            ul {
+                                li {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.mat-form-field-invalid {
+                .mat-mdc-text-field-wrapper {
+                    border-color: #ff6c6c;
+                    &:hover {
+                        border-color: #ff6c6c;
+                    }
+                }
+            }
+        }
+        &.select_bank_field {
+            width: 254px;
+            margin: 0;
+            @include max-breakpoint-1800 {
+                width: 228px;
+            }
+            @include max-breakpoint-1680 {
+                width: 203px;
+            }
+
+            .mat-mdc-text-field-wrapper {
+                .mat-mdc-form-field-flex {
+                    label {
+                        &.mat-mdc-floating-label {
+                            font-weight: 600;
+                            top: 22px;
+                            @include max-breakpoint-1800 {
+                                top: 20px;
+                            }
+                            @include max-breakpoint-1680 {
+                                top: 18px;
+                            }
+                        }
+                    }
+                    .mdc-notched-outline {
+                        .mdc-notched-outline__leading,
+                        .mdc-notched-outline__notch,
+                        .mdc-notched-outline__trailing {
+                            border-color: $BL-102;
+                        }
+                    }
+                    .mat-mdc-form-field-infix {
+                        min-height: 45px;
+                        @include flex_center();
+                        padding: 4px 0;
+                        @include max-breakpoint-1800 {
+                            min-height: 40px;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-height: 36px;
+                            padding: 3px 0;
+                        }
+
+                        mat-select {
+                            .mat-mdc-select-trigger {
+                                .mat-mdc-select-value {
+                                    .mat-mdc-select-value-text {
+                                        mat-select-trigger {
+                                            h6 {
+                                                font: 600 $font-s-14 $primaryFont;
+                                                line-height: normal;
+                                                color: $BL-103;
+                                                @include max-breakpoint-1800 {
+                                                    font: 600 $font-s-13 $primaryFont;
+                                                    line-height: normal;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 $font-s-12 $primaryFont;
+                                                    line-height: normal;
+                                                }
+                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                    font: 600 $font-s-11 $primaryFont;
+                                                    line-height: normal;
+                                                }
+                                            }
+
+                                            p {
+                                                font: 600 $font-s-14 $primaryFont;
+                                                line-height: normal;
+                                                color: $BL-102;
+                                                @include max-breakpoint-1800 {
+                                                    font: 600 $font-s-13 $primaryFont;
+                                                    line-height: normal;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 600 $font-s-12 $primaryFont;
+                                                    line-height: normal;
+                                                }
+                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                    font: 600 $font-s-11 $primaryFont;
+                                                    line-height: normal;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        mat-spinner {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+        &.mat-form-field-invalid {
+            & + .mat_field_confirm_wrap {
+                margin-top: 0;
+                .mat_field_confirm_inner {
+                    border-radius: 10px;
+                    @include max-breakpoint-1680 {
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+        &.schedule_input_wrapper {
+            margin: 0;
+            .mat-mdc-text-field-wrapper {
+                max-width: 216px;
+                height: 42px;
+                border: 1px solid $disabledTX;
+                border-radius: 5px;
+                overflow: hidden;
+                @include max-breakpoint-1680 {
+                    max-width: 173px;
+                    height: 34px;
+                    border-radius: 4px;
+                }
+
+                .mat-mdc-form-field-flex {
+                    .mdc-notched-outline {
+                        opacity: 0;
+                    }
+                    .mat-mdc-form-field-text-prefix {
+                        padding: 9px 16px 9px 0;
+                        border-right: 1px solid $disabledTX;
+                        @include max-breakpoint-1680 {
+                            padding: 7px 13px 7px 0;
+                        }
+                        span {
+                            font: 400 $font-s-16 $primaryFont;
+                            color: $BL-103;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-14 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 400 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 400 $font-s-12 $primaryFont;
+                            }
+                        }
+                    }
+                    .mat-mdc-form-field-infix {
+                        min-height: auto;
+                        padding: 9px 0px 9px 16px;
+                        @include max-breakpoint-1680 {
+                            padding: 7px 0px 7px 13px;
+                        }
+
+                        input {
+                            &::-webkit-outer-spin-button,
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+
+                            /* Firefox */
+                            &[type='number'] {
+                                -moz-appearance: textfield;
+                            }
+                        }
+                    }
+                    .mat-mdc-form-field-icon-suffix {
+                        align-self: flex-start;
+                        mat-datepicker-toggle {
+                            button {
+                                &.mdc-icon-button {
+                                    width: 42px;
+                                    height: 42px;
+                                    padding: 9px;
+                                    @include max-breakpoint-1680 {
+                                        width: 34px;
+                                        height: 34px;
+                                        padding: 7px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.fai_phone_field_input {
+            .mat-mdc-text-field-wrapper {
+                .mat-mdc-form-field-flex {
+                    .mat-mdc-form-field-infix {
+                        .flag_input_wrapper {
+                            @include flex_center();
+                            justify-content: flex-start;
+
+                            .web_url {
+                                font: 400 $font-s-14 $primaryFont;
+                                letter-spacing: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                            }
+
+                            .flag-picker {
+                                @include flex_center();
+                                height: 20px;
+                                padding: 0 10px 0 0;
+                                @include max-breakpoint-1800 {
+                                    height: 18px;
+                                    padding: 0 8px 0 0;
+                                }
+                                @include max-breakpoint-1680 {
+                                    height: 16px;
+                                }
+
+                                button {
+                                    &.flag-btn {
+                                        @include flex_center();
+                                        padding-right: 16px;
+                                        font: 400 $font-s-14 $primaryFont;
+                                        line-height: 21px;
+                                        color: $BL-107;
+                                        background: none;
+                                        border: 0;
+                                        cursor: pointer;
+                                        position: relative;
+                                        @include max-breakpoint-1800 {
+                                            font: 400 $font-s-13 $primaryFont;
+                                            line-height: 21px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 400 $font-s-12 $primaryFont;
+                                            line-height: 18px;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 400 $font-s-11 $primaryFont;
+                                            line-height: 17px;
+                                        }
+
+                                        img {
+                                            height: 11px;
+                                            margin: 0 5px 0 0;
+                                            @include max-breakpoint-1800 {
+                                                height: 10px;
+                                                margin: 0 4px 0 0;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                height: 9px;
+                                            }
+                                        }
+                                        &::after {
+                                            width: 11px;
+                                            height: 11px;
+                                            position: absolute;
+                                            content: '';
+                                            top: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            margin: auto;
+                                            background: url('../../../assets/images/common/select-arrow-light.jpg') no-repeat right center;
+                                            background-size: 11px;
+                                            @include max-breakpoint-1800 {
+                                                width: 10px;
+                                                height: 10px;
+                                                background-size: 10px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                width: 9px;
+                                                height: 9px;
+                                                background-size: 9px;
+                                            }
+                                        }
+                                        &.flag-arrow-hidden {
+                                            cursor: default;
+                                            &::after {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .flag_input {
+                                width: 100%;
+                                flex: 1 1 0;
+                                max-width: 100%;
+                                @include flex_center();
+                                justify-content: flex-start;
+
+                                .mat-icon {
+                                    color: #bbbbbb;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.cashflow_input_field {
+            margin: 0;
+
+            .mat-mdc-text-field-wrapper {
+                .mat-mdc-form-field-focus-overlay,
+                .mdc-line-ripple {
+                    display: none !important;
+                }
+
+                .mat-mdc-form-field-infix {
+                    @include max-breakpoint-1680 {
+                        padding: calc(23px / 2) 0;
+                        min-height: 32px;
+                    }
+
+                    input {
+                        font: 600 $font-s-16 $primaryFont;
+                        line-height: 24px;
+                        color: $BL-103;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-15 $primaryFont;
+                            line-height: 24px;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-14 $primaryFont;
+                            line-height: 21px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-13 $primaryFont;
+                            line-height: 19px;
+                        }
+                        @include max-breakpoint-1440 {
+                            font: 600 $font-s-12 $primaryFont;
+                            line-height: 18px;
+                        }
+                    }
+                }
+
+                mat-datepicker-toggle {
+                    &.mat-datepicker-toggle {
+                        button {
+                            @include flex_center();
+                            justify-content: center;
+
+                            svg {
+                                fill: $BL-103;
+                            }
+
+                            @include max-breakpoint-1680 {
+                                width: 32px;
+                                height: 32px;
+                                padding: 4px;
+
+                                svg {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.mat_dialog_phone_read_field {
+            margin: 0;
+            opacity: 1;
+
+            .mat-mdc-text-field-wrapper {
+                padding: 0;
+
+                .mat-mdc-form-field-flex {
+                    .mat-mdc-form-field-infix {
+                        padding: 6px 0;
+                        min-height: 34px;
+                        @include max-breakpoint-1680 {
+                            padding: 5px 0;
+                            min-height: 27px;
+                        }
+
+                        .flag_input_wrapper {
+                            .flag-picker {
+                                padding: 0;
+                                button {
+                                    &.flag-btn {
+                                        font: 600 $font-s-16 $primaryFont;
+                                        line-height: 24px;
+                                        color: $BL-102;
+                                        padding-right: 6px;
+                                        @include max-breakpoint-1800 {
+                                            font: 600 $font-s-15 $primaryFont;
+                                            line-height: 24px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 600 $font-s-14 $primaryFont;
+                                            line-height: 21px;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 600 $font-s-13 $primaryFont;
+                                            line-height: 19px;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            font: 600 $font-s-12 $primaryFont;
+                                            line-height: 18px;
+                                        }
+
+                                        &::after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .flag_input {
+                                .mat-mdc-input-element {
+                                    font: 600 $font-s-16 $primaryFont;
+                                    line-height: 24px;
+                                    color: $BL-102;
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-15 $primaryFont;
+                                        line-height: 24px;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                        line-height: 21px;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 600 $font-s-13 $primaryFont;
+                                        line-height: 19px;
+                                    }
+                                    @include max-breakpoint-1440 {
+                                        font: 600 $font-s-12 $primaryFont;
+                                        line-height: 18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .mdc-line-ripple {
+                    &::before {
+                        border: none;
+                    }
+                }
+            }
+        }
+        &.mat_dialog_read_field {
+            opacity: 1;
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+}
+// For Password Field Only
+.fai_password_field_wrapper {
+    position: relative;
+    z-index: 2;
+
+    &.first_field {
+        z-index: 4;
+    }
+}
+// Confirmation Label
+.mat_field_confirm_wrap {
+    margin: -15px 0 35px 0;
+    padding: 0 15px;
+    @include max-breakpoint-1680 {
+        margin: -12px 0 28px 0;
+        padding: 0 12px;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 30px 0;
+    }
+    @include max-breakpoint-1279 {
+        margin: 0 0 25px 0;
+    }
+
+    .mat_field_confirm_inner {
+        background: #f3f3f3;
+        padding: 15px 15px 0 15px;
+        border-radius: 0px 0px 10px 10px;
+        @include max-breakpoint-1680 {
+            padding: 12px 12px 0 12px;
+            border-radius: 0px 0px 8px 8px;
+        }
+        @include max-breakpoint-1279 {
+            padding: 10px 10px 0 10px;
+            border-radius: 0px 0px 8px 8px;
+        }
+
+        p {
+            font: 400 0.8vw $primaryFont;
+            line-height: 1.2vw;
+            color: $BL-102;
+            margin: 0;
+
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 400 0.64vw $primaryFont;
+                line-height: 0.96vw;
+            }
+            @include max-breakpoint-1440 {
+                font: 400 0.9vw $primaryFont;
+                line-height: 1.2vw;
+            }
+            @include max-breakpoint-1279 {
+                font: 400 $font-s-13 $primaryFont;
+                line-height: 21px;
+            }
+        }
+    }
+}

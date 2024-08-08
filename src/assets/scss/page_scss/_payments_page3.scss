@@ -1,0 +1,461 @@
+// Payment Page SCSS 3
+.slide_overlay_wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9;
+    background: $WE-100;
+    @include flex_center();
+    justify-content: center;
+    padding: 30px;
+
+    .slide_overlay_inner {
+        width: 100%;
+        max-width: 580px;
+        position: relative;
+
+        mat-card {
+            &.mat-mdc-card {
+                &.white_default_card {
+                    border-color: $GYN-132;
+                    box-shadow: 0px 10px 10px rgba(23, 63, 95, 0.1019607843);
+
+                    @include max-breakpoint-1440 {
+                        box-shadow: 0px 6px 6px rgba(23, 63, 95, 0.1019607843);
+                    }
+
+                    h2 {
+                        &.mat-h2 {
+                            font: 700 1.2vw $primaryFont;
+                            color: $BL-103;
+                            margin: 0 0 1.2vw 0;
+                        }
+                    }
+
+                    // Phone Verify
+                    &.phone_verify_card {
+                        border-color: $WE-100;
+                        box-shadow: none;
+
+                        mat-card-content {
+                            text-align: center;
+                        }
+                    }
+
+                    // Payment Process
+                    &.payment_process_card {
+                        border-color: $WE-100;
+                        box-shadow: none;
+
+                        mat-card-content {
+                            padding: 3vw 15px;
+                            text-align: center;
+
+                            .payment_process_stepper {
+                                position: relative;
+                                margin: 0 0 1.2vw 0;
+
+                                ul {
+                                    @include ul_style();
+
+                                    li {
+                                        width: 100%;
+                                        position: relative;
+                                        @include flex_center();
+                                        justify-content: center;
+                                        padding: 0 0 2.4vw 0;
+
+                                        .pay_process_icon {
+                                            width: 4.2vw;
+                                            min-width: 4.2vw;
+                                            height: 4.2vw;
+                                            position: relative;
+                                            z-index: 1;
+                                            border-radius: 50%;
+                                            border: 0.2vw solid $BL-107;
+
+                                            .pay_process_icon_inner {
+                                                width: 100%;
+                                                height: 100%;
+                                                position: absolute;
+                                                left: 0;
+                                                top: 0;
+                                                background: #c1c5d3;
+                                                border: 0.3vw solid $WE-100;
+                                                border-radius: 50%;
+                                                @include flex_center();
+                                                justify-content: center;
+                                                padding: 4px;
+
+                                                mat-icon {
+                                                    font-size: 3vw;
+                                                    color: $WE-100;
+                                                }
+                                            }
+
+                                            .confirm_label {
+                                                width: 1.2vw;
+                                                min-width: 1.2vw;
+                                                height: 1.3vw;
+                                                @include flex_center();
+                                                justify-content: center;
+                                                border-radius: 50%;
+                                                color: $WE-100;
+                                                background: $BL-102;
+                                                border: 2px solid $WE-100;
+                                                box-shadow: 0px 3px 6px #00000029;
+                                                position: absolute;
+                                                right: -0.5vw;
+                                                top: auto;
+                                                bottom: 0.4vw;
+                                                z-index: 1;
+                                                display: none;
+
+                                                mat-icon {
+                                                    font-size: 0.9vw;
+                                                }
+                                            }
+                                        }
+
+                                        &::after {
+                                            width: 3px;
+                                            height: 100%;
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            top: auto;
+                                            bottom: 0;
+                                            margin: auto;
+                                            content: '';
+                                            background: $BL-107;
+                                        }
+
+                                        &.verify {
+                                            .pay_process_icon {
+                                                border-color: $GR-100;
+
+                                                .pay_process_icon_inner {
+                                                    background: $BL-103;
+
+                                                    mat-icon {
+                                                        font-size: 2vw;
+                                                    }
+                                                }
+
+                                                .confirm_label {
+                                                    display: flex;
+                                                    background: $GR-100;
+                                                }
+                                            }
+
+                                            &::after {
+                                                background: $GR-100;
+                                            }
+                                        }
+
+                                        &.done {
+                                            .pay_process_icon {
+                                                width: 3.5vw;
+                                                min-width: 3.5vw;
+                                                height: 3.5vw;
+                                                border: none;
+
+                                                .pay_process_icon_inner {
+                                                    border: 0.2vw solid $GR-100;
+                                                    background: $WE-100;
+
+                                                    mat-icon {
+                                                        font-size: 2vw;
+                                                        color: $GR-100;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            padding-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pay_process_stepper_footer {
+                                h4 {
+                                    &.mat-h4 {
+                                        font: 600 0.9vw $primaryFont;
+                                        color: $BL-103;
+                                        margin: 0 0 1.4vw 0;
+                                    }
+                                }
+
+                                button {
+                                    &.track_pay_btn {
+                                        min-width: 1vw;
+                                        min-height: 2vw;
+                                        color: $WE-100;
+                                        background-color: $BL-103;
+                                        padding: 4px 1.5vw;
+                                        font: 700 0.8vw $primaryFont;
+
+                                        &.disabled,
+                                        &[disabled='true'],
+                                        &.mat-button-disabled {
+                                            @include disable_button();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Payment Detail
+.payment_details_inner {
+    width: 100%;
+    max-width: 680px;
+    position: relative;
+    margin: 0 auto;
+
+    mat-card {
+        &.mat-mdc-card {
+            &.white_default_card {
+                &.payment_details_card {
+                    padding: 0;
+                    border-color: $GYN-132;
+                    margin: 0 0 1.8vw 0;
+
+                    mat-card-content {
+                        padding: 0;
+
+                        .payment_details_wrap {
+                            ul {
+                                &.payment_details_list {
+                                    margin-top: 0;
+
+                                    li {
+                                        background: none;
+                                        border-top: 1px dashed rgba(194, 204, 214, 0.4);
+
+                                        .pd_column {
+                                            &.pd_content {
+                                                background: none;
+
+                                                &::before {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+
+                                        &:first-child {
+                                            border-top: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .payment_details_stepper {
+        margin: 0 0 1.2vw 0;
+
+        h3 {
+            &.mat-h3 {
+                &.section_title {
+                    font: 700 1vw $primaryFont;
+                    color: $BL-103;
+                    margin: 0 0 1.2vw 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        ul {
+            @include ul_style();
+            @include flex_center();
+            justify-content: center;
+
+            li {
+                width: 100%;
+                max-width: 33.333%;
+                position: relative;
+
+                .pay_req_stepper {
+                    min-height: 80px;
+                    position: relative;
+                    text-align: center;
+                    padding: 0 15px;
+
+                    .check_icon {
+                        width: $font-s-32;
+                        min-width: $font-s-32;
+                        height: $font-s-32;
+                        display: inline-block;
+                        position: relative;
+                        z-index: 9;
+                        border-radius: 50%;
+                        color: $BL-107;
+                        background: $WE-100;
+                        border: 2px solid $WE-100;
+                        margin: 0 0 6px 0;
+
+                        mat-icon {
+                            font-size: $font-s-28;
+                        }
+                    }
+
+                    h4 {
+                        &.mat-h4 {
+                            font: 700 $font-s-15 $primaryFont;
+                            color: $BL-107;
+                            margin: 0 0 6px 0;
+
+                            @include max-breakpoint-1800 {
+                                font: 700 $font-s-14 $primaryFont;
+                            }
+                        }
+                    }
+
+                    p {
+                        font: 400 $font-s-12 $primaryFont;
+                        color: $BL-107;
+                    }
+
+                    &::before,
+                    &::after {
+                        width: 50%;
+                        height: 2px;
+                        content: '';
+                        position: absolute;
+                        top: 15px;
+                        z-index: 1;
+                        border-top: 2px dashed #b5b9ca;
+                    }
+
+                    &::before {
+                        left: 0;
+                    }
+
+                    &::after {
+                        right: 0;
+                    }
+                }
+
+                &.approved {
+                    .pay_req_stepper {
+                        .check_icon {
+                            color: $BL-103;
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                color: $BL-103;
+                            }
+                        }
+
+                        &::before {
+                            height: 3px;
+                            border-top: 3px solid $BL-103;
+                        }
+
+                        &::after {
+                            height: 3px;
+                            border-top: 3px solid $BL-103;
+                        }
+                    }
+                }
+
+                &.processing {
+                    .pay_req_stepper {
+                        .check_icon {
+                            color: #d5a300;
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                color: #d5a300;
+                            }
+                        }
+
+                        &::before {
+                            height: 3px;
+                            border-top: 3px solid $BL-103;
+                        }
+                    }
+                }
+
+                &.delivered {
+                    .pay_req_stepper {
+                        .check_icon {
+                            color: $GR-100;
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                color: $GR-100;
+                            }
+                        }
+
+                        &::before {
+                            height: 3px;
+                            border-top: 3px solid $BL-103;
+                        }
+
+                        &::after {
+                            height: 3px;
+                            border-top: 3px solid $BL-103;
+                        }
+                    }
+                }
+
+                &.failed,
+                &.reversed {
+                    .pay_req_stepper {
+                        .check_icon {
+                            color: $RD-110;
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                color: $RD-110;
+                            }
+                        }
+
+                        &::before {
+                            height: 3px;
+                            border-top: 3px solid $BL-103;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    .pay_req_stepper {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    .pay_req_stepper {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+// Alignment In Layout Direction (Horizontal) None, And Alignment In Perpendicular Direction (Vertical) None
+.fx-align-none {
+  height: 100%;
+  place-content: stretch flex-start;
+  align-items: stretch;
+}
+// Alignment In Layout Direction (Horizontal) None, And Alignment In Perpendicular Direction (Vertical) Start, Center, End, & Stretch
+.fx-align-none-start {
+  height: 100%;
+  place-content: flex-start;
+  align-items: flex-start;
+}
+.fx-align-none-center {
+  height: 100%;
+  place-content: center flex-start;
+  align-items: center;
+}
+.fx-align-none-end {
+  height: 100%;
+  place-content: flex-end flex-start;
+  align-items: flex-end;
+}
+.fx-align-none-stretch {
+  height: 100%;
+  place-content: stretch flex-start;
+  align-items: stretch;
+  max-height: 100%;
+}
+// Alignment In Layout Direction (Horizontal) Center, And Alignment In Perpendicular Direction (Vertical) None, Start, Center, End, & Stretch
+.fx-align-center-none {
+  height: 100%;
+  place-content: stretch center;
+  align-items: stretch;
+}
+.fx-align-center-start {
+  height: 100%;
+  place-content: flex-start center;
+  align-items: flex-start;
+}
+.fx-align-center-center {
+  height: 100%;
+  place-content: center;
+  align-items: center;
+}
+.fx-align-center-end {
+  height: 100%;
+  place-content: flex-end center;
+  align-items: flex-end;
+}
+.fx-align-center-stretch {
+  height: 100%;
+  place-content: stretch center;
+  align-items: stretch;
+  max-height: 100%;
+}
+// Alignment In Layout Direction (Horizontal) End, And Alignment In Perpendicular Direction (Vertical) None, Start, Center, End, & Stretch
+.fx-align-end-none {
+  height: 100%;
+  place-content: stretch flex-end;
+  align-items: stretch;
+}
+.fx-align-end-start {
+  height: 100%;
+  place-content: flex-start flex-end;
+  align-items: flex-start;
+}
+.fx-align-end-center {
+  height: 100%;
+  place-content: center flex-end;
+  align-items: center;
+}
+.fx-align-end {
+  height: 100%;
+  place-content: flex-end;
+  align-items: flex-end;
+}
+.fx-align-end-stretch {
+  height: 100%;
+  place-content: stretch flex-end;
+  align-items: stretch;
+  max-height: 100%;
+}
+// Alignment In Layout Direction (Horizontal) Space-Around, And Alignment In Perpendicular Direction (Vertical) None, Start, Center, End, & Stretch
+.fx-align-around-none {
+  height: 100%;
+  place-content: stretch space-around;
+  align-items: stretch;
+}
+.fx-align-around-start {
+  height: 100%;
+  place-content: flex-start space-around;
+  align-items: flex-start;
+}
+.fx-align-around-center {
+  height: 100%;
+  place-content: center space-around;
+  align-items: center;
+}
+.fx-align-around-end {
+  height: 100%;
+  place-content: flex-end space-around;
+  align-items: flex-end;
+}
+.fx-align-around-stretch {
+  height: 100%;
+  place-content: stretch space-around;
+  align-items: stretch;
+  max-height: 100%;
+}
+// Alignment In Layout Direction (Horizontal) Space-Between, And Alignment In Perpendicular Direction (Vertical) None, Start, Center, End, & Stretch
+.fx-align-between-none {
+  height: 100%;
+  place-content: stretch space-between;
+  align-items: stretch;
+}
+.fx-align-between-start {
+  height: 100%;
+  place-content: flex-start space-between;
+  align-items: flex-start;
+}
+.fx-align-between-center {
+  height: 100%;
+  place-content: center space-between;
+  align-items: center;
+}
+.fx-align-between-end {
+  height: 100%;
+  place-content: flex-end space-between;
+  align-items: flex-end;
+}
+.fx-align-between-stretch {
+  height: 100%;
+  place-content: stretch space-between;
+  align-items: stretch;
+  max-height: 100%;
+}
+// Alignment In Layout Direction (Horizontal) Space-evenly, And Alignment In Perpendicular Direction (Vertical) None, Start, Center, End, & Stretch
+.fx-align-evenly-none {
+  height: 100%;
+  place-content: stretch space-evenly;
+  align-items: stretch;
+}
+.fx-align-evenly-start {
+  height: 100%;
+  place-content: flex-start space-evenly;
+  align-items: flex-start;
+}
+.fx-align-evenly-center {
+  height: 100%;
+  place-content: center space-evenly;
+  align-items: center;
+}
+.fx-align-evenly-end {
+  height: 100%;
+  place-content: flex-end space-evenly;
+  align-items: flex-end;
+}
+.fx-align-evenly-stretch {
+  height: 100%;
+  place-content: stretch space-evenly;
+  align-items: stretch;
+  max-height: 100%;
+}

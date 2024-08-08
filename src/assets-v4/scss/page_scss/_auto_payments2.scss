@@ -1,0 +1,495 @@
+// Auto Payment Right Content 2
+.auto_payment_right_wrapper {
+    // Main Tab Content
+    .auto_payment_tab_wrapper {
+        width: 100%;
+        position: relative;
+
+        // Header
+        .auto_payment_tab_header {
+            width: 100%;
+            min-height: 55px;
+            @include flex_center();
+            position: relative;
+            background: #eff3f6;
+            border-bottom: 1px solid $OE-1;
+            border-radius: 15px 15px 0 0;
+            font: 700 $font-s-24 $primaryFont;
+            color: $BE-1;
+            text-align: center;
+            padding: 10px;
+            @include max-breakpoint-1800 {
+                min-height: 50px;
+                font: 700 $font-s-21 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                min-height: 44px;
+                border-radius: 12px 12px 0 0;
+                font: 700 $font-s-19 $primaryFont;
+                padding: 8px;
+            }
+            @include max-breakpoint-1680 {
+                min-height: 39px;
+                padding: 6px;
+            }
+
+            .ghost_loading_box {
+                width: 20%;
+                min-height: 30px;
+                margin: 0 auto;
+                @include max-breakpoint-1800 {
+                    min-height: 26px;
+                }
+                @include max-breakpoint-1680 {
+                    min-height: 24px;
+                }
+            }
+        }
+
+        // Content
+        .auto_payment_tab_content {
+            padding: 15px 0;
+            @include max-breakpoint-1680 {
+                padding: 12px 0;
+            }
+
+            .auto_payment_tab_inner {
+                width: 100%;
+                max-width: 940px;
+                margin: 20px auto 0 auto;
+                @include max-breakpoint-1800 {
+                    max-width: 846px;
+                    margin: 18px auto 0 auto;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 752px;
+                    margin: 16px auto 0 auto;
+                }
+                @include max-breakpoint-1440 {
+                    max-width: 658px;
+                }
+                @include max-breakpoint-1279 {
+                    max-width: 100%;
+                }
+            }
+
+            .auto_payment_tab_form {
+                h3 {
+                    &.mat-h3 {
+                        .inner_title_text {
+                            width: 100%;
+                            @include flex_align_center();
+                            font: 600 $font-s-21 $primaryFont;
+                            line-height: normal;
+                            color: $BE-1;
+                            margin: 0 0 15px 0;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-19 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-16 $primaryFont;
+                                line-height: normal;
+                                margin: 0 0 12px 0;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-17 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1440 {
+                                line-height: normal;
+                                margin: 0 0 10px 0;
+                            }
+                            .tooltip_default {
+                                &.customer_email {
+                                    margin-left: 8px;
+                                    top: -2px;
+                                    @include max-breakpoint-1680 {
+                                        margin-left: 6px;
+                                    }
+                                    img {
+                                        width: 18px;
+                                        height: 18px;
+                                        vertical-align: middle;
+                                        @include max-breakpoint-1800 {
+                                            width: 16px;
+                                            height: 16px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            width: 14px;
+                                            height: 14px;
+                                        }
+                                    }
+                                    .tooltip_default_wrapper {
+                                        .tooltip_default_inner {
+                                            p {
+                                                white-space: nowrap;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .ghost_loading_box {
+                            max-width: 240px;
+                            min-height: 30px;
+                            @include max-breakpoint-1800 {
+                                min-height: 26px;
+                            }
+                            @include max-breakpoint-1680 {
+                                max-width: 192px;
+                                min-height: 24px;
+                            }
+                        }
+                    }
+                }
+
+                .fxFlex {
+                    .ghost_loading_box {
+                        @include max-breakpoint-1800 {
+                            min-height: 40px;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-height: 36px;
+                        }
+                        @include max-breakpoint-1440 {
+                            min-height: 30px;
+                        }
+                    }
+                }
+                .border-top-outline {
+                    border-top: 1px solid $GY-132;
+                }
+                .auto_payment_tab_form_inner {
+                    height: calc(100vh - 490px);
+                    margin-right: -15px;
+                    padding-right: 15px;
+                    overflow: hidden;
+                    overflow-y: auto;
+                    @include max-breakpoint-1680 {
+                        height: calc(100vh - 394px);
+                    }
+                    .fx-align-none {
+                        height: auto;
+                    }
+                }
+            }
+
+            .form_field_edit_wrapper {
+                @include flex_align_center();
+                margin: 0 -15px;
+                @include max-breakpoint-1680 {
+                    margin: 0 -12px;
+                }
+
+                .form_field_edit_col {
+                    width: 100%;
+                    flex: 0 1 auto;
+                    max-width: 100%;
+                    position: relative;
+                    padding: 0 15px;
+                    @include max-breakpoint-1680 {
+                        padding: 0 12px;
+                    }
+
+                    p {
+                        width: 100%;
+                        display: inline-block;
+                        font: 400 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                        color: $BE-1;
+                        margin: 0;
+                        border-left: 2px solid $OE-1;
+                        padding-left: 15px;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-13 $primaryFont;
+                            line-height: 21px;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-12 $primaryFont;
+                            line-height: 18px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-11 $primaryFont;
+                            line-height: 17px;
+                        }
+
+                        strong {
+                            font-weight: 600;
+                            color: $OE-1;
+                        }
+                    }
+
+                    &.update_btn_wrap {
+                        flex: 0 0 120px;
+                        max-width: 120px;
+                        @include max-breakpoint-1680 {
+                            flex: 0 0 96px;
+                            max-width: 96px;
+                        }
+
+                        button {
+                            &.info_update_btn {
+                                width: 100%;
+                                min-height: 35px;
+                                @include flex_center();
+                                padding: 2px 10px;
+                                font: 600 $font-s-14 $primaryFont;
+                                color: $WE-1;
+                                background: $GN-1;
+                                border-radius: 5px;
+                                border: 0;
+                                cursor: pointer;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    min-height: 28px;
+                                    font: 600 $font-s-12 $primaryFont;
+                                    padding: 2px 8px;
+                                    border-radius: 4px;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-11 $primaryFont;
+                                }
+
+                                mat-icon {
+                                    font-size: $font-s-18;
+                                    transform: rotate(-90deg);
+                                    margin: 0 0 0 4px;
+                                    position: relative;
+                                    top: 2px;
+                                    @include max-breakpoint-1800 {
+                                        font-size: $font-s-16;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font-size: $font-s-14;
+                                        margin: 0 0 0 3px;
+                                    }
+                                }
+
+                                &[disabled='true'],
+                                &[disabled=''],
+                                &.disabled,
+                                &.mat-button-disabled {
+                                    color: $WE-1;
+                                    background-color: $GY-1;
+                                    border-color: $GY-1;
+                                    cursor: default;
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .auto_payment_tab_paragraph {
+                p {
+                    font: 400 $font-s-14 $primaryFont;
+                    line-height: 21px;
+                    color: $GY-2;
+                    margin: 0 0 25px 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-15 $primaryFont;
+                        line-height: 24px;
+                        margin: 0 0 20px 0;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-13 $primaryFont;
+                        line-height: 19px;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 400 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                        margin: 0 0 15px 0;
+                    }
+
+                    strong {
+                        font-weight: 700;
+                        color: $BE-1;
+                    }
+
+                    a {
+                        color: $RD-1;
+                        text-decoration: underline;
+                        &:hover {
+                            color: $RD-1;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .ghost_loading_box {
+                    &.paragraph_ghost {
+                        min-height: 14px;
+                        margin: 0 0 10px 0;
+                        @include max-breakpoint-1680 {
+                            min-height: 11px;
+                            margin: 0 0 8px 0;
+                        }
+                    }
+                }
+            }
+
+            .auto_payment_label {
+                width: 100%;
+                min-height: 45px;
+                position: relative;
+                background: #fff7ed;
+                border: 1px dashed $BL-114;
+                border-radius: 50px;
+                padding: 10px 10px 10px 40px;
+                font: 400 $font-s-14 $primaryFont;
+                line-height: 24px;
+                color: $BL-114;
+                margin-bottom: 25px;
+                @include max-breakpoint-1800 {
+                    min-height: 40px;
+                    font: 400 $font-s-13 $primaryFont;
+                    line-height: 24px;
+                }
+                @include max-breakpoint-1680 {
+                    min-height: 36px;
+                    padding: 8px 8px 8px 32px;
+                    font: 400 $font-s-12 $primaryFont;
+                    line-height: 21px;
+                    margin-bottom: 20px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-11 $primaryFont;
+                    line-height: 19px;
+                }
+                @include max-breakpoint-1440 {
+                    min-height: 30px;
+                }
+
+                strong {
+                    font-weight: 500;
+                }
+
+                mat-icon {
+                    font-size: $font-s-21;
+                    margin: 0 8px 0 0;
+                    position: absolute;
+                    left: 10px;
+                    top: 13px;
+                    @include max-breakpoint-1800 {
+                        font-size: $font-s-18;
+                    }
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-17;
+                        margin: 0 6px 0 0;
+                        left: 8px;
+                        top: 10px;
+                    }
+                }
+            }
+
+            // Auto Payment Disable Enable Status
+            .auto_payment_status_wrap {
+                width: 100%;
+                @include flex_align_center();
+                margin: 0 0 25px 0;
+                @include max-breakpoint-1680 {
+                    margin: 0 0 20px 0;
+                }
+                @include max-breakpoint-1440 {
+                    margin: 0 0 15px 0;
+                }
+
+                .auto_payment_status_col {
+                    position: relative;
+
+                    img {
+                        min-width: 190px;
+                        @include max-breakpoint-1800 {
+                            min-width: 171px;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-width: 152px;
+                        }
+                        @include max-breakpoint-1440 {
+                            min-width: 133px;
+                        }
+                    }
+
+                    h3 {
+                        &.mat-h3 {
+                            font: 600 $font-s-24 $primaryFont;
+                            line-height: normal;
+                            color: $OE-1;
+                            margin: 0 0 15px 0;
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-21 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 600 $font-s-18 $primaryFont;
+                                line-height: normal;
+                                margin: 0 0 12px 0;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 600 $font-s-19 $primaryFont;
+                                line-height: normal;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 600 $font-s-16 $primaryFont;
+                                line-height: normal;
+                            }
+                        }
+                    }
+
+                    p {
+                        font: 400 $font-s-16 $primaryFont;
+                        line-height: 24px;
+                        color: $GY-2;
+                        margin: 0 0 25px 0;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-15 $primaryFont;
+                            line-height: 24px;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-14 $primaryFont;
+                            line-height: 21px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-13 $primaryFont;
+                            line-height: 19px;
+                        }
+                        @include max-breakpoint-1440 {
+                            font: 400 $font-s-12 $primaryFont;
+                            line-height: 18px;
+                        }
+
+                        strong {
+                            font-weight: 700;
+                            color: $BE-1;
+                        }
+
+                        a {
+                            color: $RD-1;
+                            text-decoration: underline;
+                            &:hover {
+                                color: $RD-1;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        padding-right: 15px;
+                        @include max-breakpoint-1680 {
+                            padding-right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

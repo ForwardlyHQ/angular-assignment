@@ -1,1 +1,434 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Sen:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Global SCSS File Include Here */
+@import "./assets/scss/include-file";
+
+/* Main Style Include Here */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      width: 5px;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: $BL-117;
+    border: 1px solid $GY-132;
+    box-shadow: inset 0 10px 10px rgba($BLN-113, 0.25);
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      border-radius: 6px;
+      box-shadow: inset 0 8px 8px rgba($BLN-113, 0.25);
+    }
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($BK-100, 0.38);
+    border-radius: 8px;
+    @media (-webkit-device-pixel-ratio: 1.25) {
+      border-radius: 6px;
+    }
+  }
+}
+html {
+  min-height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+}
+body {
+  font: 400 $font-s-14 $primaryFont;
+  color: $BL-102;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (-webkit-device-pixel-ratio: 1.25) {
+    font: 400 $font-s-11 $primaryFont;
+  }
+  &:not(.show-captcha) {
+    .grecaptcha-badge {
+      visibility: hidden;
+    }
+  }
+  mat-sidenav-content {
+    &.mat-sidenav-content {
+      padding-top: 116px;
+      @include max-breakpoint-1680 {
+        padding-top: 94px;
+      }
+      @include max-breakpoint-767 {
+        padding-top: 128px;
+      }
+    }
+  }
+  &.cash-flow-body {
+    .fai_wrapper {
+      overflow: unset;
+      .mat-drawer-container {
+        overflow: unset;
+      }
+    }
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: $BL-100;
+  text-decoration: none;
+  @include hover-speed2();
+
+  &:hover {
+    color: $BL-103;
+    text-decoration: none;
+  }
+}
+p {
+  color: $GY-123;
+  letter-spacing: 0;
+}
+input,
+button {
+  outline: 0;
+}
+textarea {
+  resize: none !important;
+}
+// Not data found
+.noDataFound_wrapper {
+  padding: 30px 0;
+  text-align: center;
+}
+// PDF VIewer inner scroll
+.ng2-pdf-viewer-container {
+  overflow-x: hidden !important;
+}
+.mat-mdc-checkbox {
+  &.mat-accent {
+    &.mat-mdc-checkbox-checked {
+      .mdc-form-field {
+        .mdc-checkbox {
+          .mdc-checkbox__ripple {
+            background: $BL-102;
+          }
+
+          .mdc-checkbox__background {
+            border-color: $BL-102 !important;
+            background-color: $BL-102 !important;
+          }
+        }
+      }
+    }
+  }
+}
+// Custom Floating Field
+.custom_float_field {
+  width: 100%;
+  position: relative;
+}
+// Address Checkbox
+.fai_form_checkbox {
+  margin: 0;
+
+  mat-checkbox {
+    margin: 0 0 0 -10px;
+
+    label {
+      font: 600 $font-s-16 $primaryFont;
+      color: $BL-103;
+
+      @include max-breakpoint-1440 {
+        font: 600 $font-s-14 $primaryFont;
+      }
+    }
+  }
+}
+mat-progress-bar {
+  &.main-progress-loader {
+    .mdc-linear-progress__buffer {
+      .mdc-linear-progress__buffer-bar {
+        background-color: rgba($GR-100, $opacitySize-13);
+      }
+    }
+    .mdc-linear-progress__bar {
+      .mdc-linear-progress__bar-inner {
+        border-color: $GR-100;
+      }
+    }
+  }
+}
+// Graph Ghost Loading
+.graph_ghost_box_wrapper {
+  .graph_ghost_box_row {
+    @include flex_start();
+    margin: 0 -15px;
+
+    .graph_ghost_box_col {
+      width: 100%;
+      position: relative;
+      padding: 0 15px 20px 15px;
+
+      .ghost_border_ghost {
+        min-height: 16.5vw;
+        @include flex_center();
+        justify-content: center;
+        padding: 15px;
+        text-align: center;
+        border: 10px solid #e2e2e2;
+
+        h4 {
+          font: 700 $font-s-16 $primaryFont;
+          color: #7f8180;
+          @include flex_center();
+
+          img {
+            height: 48px;
+            margin-left: 6px;
+          }
+        }
+      }
+
+      &:first-child {
+        flex: 0 0 16%;
+        max-width: 16%;
+
+        .ghost_loading_box {
+          min-height: 1vw;
+          margin-bottom: 1.55vw;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .graph_ghost_box_fot_row {
+    @include flex_center();
+    margin: 0 -15px 25px -15px;
+
+    .graph_ghost_box_col {
+      width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      padding: 0 15px;
+
+      .ghost_loading_box {
+        min-height: 16px;
+      }
+    }
+  }
+
+  .graph_ghost_legend {
+    width: 100%;
+
+    .graph_ghost_legend_row {
+      @include flex_center();
+      justify-content: center;
+
+      .graph_ghost_box_col {
+        width: 100%;
+        flex: 0 0 30%;
+        max-width: 30%;
+        @include flex_center();
+        padding: 0 15px;
+
+        .ghost_loading_box {
+          min-height: 20px;
+
+          &:first-child {
+            min-height: 8px;
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  // Cashflow Ghost
+  &.cashflow_ghost {
+    .graph_ghost_box_row {
+      .graph_ghost_box_col {
+        padding: 0 15px 15px 15px;
+
+        .ghost_border_ghost {
+          min-height: 240px;
+        }
+
+        &:first-child {
+          .ghost_loading_box {
+            min-height: 18px;
+            margin-bottom: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+// Cash In/Out Flow Ghost
+mat-card {
+  &.fai_transparent_card {
+    &.cash_in_outflow_ghost {
+      .fai-donut-chart {
+        @include flex_center();
+        justify-content: center;
+        .ghost_loading_box {
+          &.donut_ghost_box {
+            width: 197px;
+            min-height: 197px;
+            position: relative;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+
+            &::before {
+              width: 130px;
+              height: 130px;
+              display: block;
+              border-radius: 50%;
+              content: "";
+              background: $WE-100;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              margin: 0 auto;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      .fai_graph_legends {
+        ul {
+          li {
+            &::before {
+              background-color: $GY-109 !important;
+            }
+            span {
+              .ghost_loading_box {
+                width: 82%;
+                min-height: 28px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.memo-message-count-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -13px;
+  font-size: 12px;
+
+  &.invalid-memo-message {
+    margin-top: -27px;
+    color: $RD-107;
+  }
+}
+// Call To Action Progress Bar
+.fai_action_progress_inner {
+  mat-progress-bar {
+    &.mat-mdc-progress-bar {
+      height: 10px;
+      border-radius: 20px;
+      .mdc-linear-progress__buffer {
+        .mdc-linear-progress__buffer-bar {
+          background-color: $WE-100;
+        }
+      }
+      .mdc-linear-progress__bar {
+        .mdc-linear-progress__bar-inner {
+          border-top-width: 10px;
+          border-color: $GR-104;
+        }
+      }
+      &.verification_progress {
+        .mdc-linear-progress__buffer {
+          .mdc-linear-progress__buffer-bar {
+            background-color: $GYN-133;
+          }
+        }
+      }
+    }
+  }
+}
+app-accounting-connection-missing {
+  app-action-center-banner {
+    .fai_action_to_call_banner {
+      padding: 0 60px;
+      @include max-breakpoint-1800 {
+        padding: 0 40px;
+      }
+      @include max-breakpoint-1680 {
+        padding: 0 30px;
+      }
+      @media (-webkit-device-pixel-ratio: 1.25) {
+        padding: 0 48px;
+      }
+    }
+  }
+}
+.grecaptcha-badge {
+  @include max-breakpoint-767 {
+    z-index: 9;
+  }
+}
+// For Forwardly Version 4
+/*===========================================*/
+// Don't Place This Style On The Top
+@import "./assets-v4/scss/styles-v4";
+
+.right_align_dash {
+  text-align: right;
+
+  &.center {
+    min-width: 50px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 8px;
+    @include max-breakpoint-1680 {
+      min-width: 40px;
+      margin-left: 6px;
+    }
+  }
+  &.empty_dash {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    @include max-breakpoint-1279 {
+      text-align: left;
+    }
+  }
+
+  &.right_dash {
+    display: block;
+    float: right;
+  }
+}

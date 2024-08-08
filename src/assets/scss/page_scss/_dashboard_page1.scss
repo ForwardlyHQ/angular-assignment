@@ -1,0 +1,571 @@
+// Account Balance
+.transparent_card_box {
+    width: 100%;
+    position: relative;
+    margin: 0 0 45px 0;
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        margin: 0 0 36px 0;
+    }
+
+    .transparent_card_header {
+        min-height: 60px;
+        @include flex_center();
+        position: relative;
+        margin: 0 -15px 10px -15px;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            min-height: 48px;
+            margin: 0 -12px 8px -12px;
+        }
+
+        @include max-breakpoint-1440 {
+            min-height: 50px;
+        }
+
+        .transparent_header_left,
+        .transparent_header_right {
+            width: 100%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            position: relative;
+            padding: 0 15px;
+
+            p {
+                color: $BL-102;
+                margin: 0;
+
+                .ghost_loading_box {
+                    width: 10vw;
+                    min-height: 16px;
+                    display: inline-block;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        width: 8vw;
+                        min-height: 13px;
+                    }
+                }
+
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-12 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-11 $primaryFont;
+                }
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                padding: 0 12px;
+            }
+
+            @include max-breakpoint-1365 {
+                width: auto;
+                flex: 0 0 auto;
+                max-width: inherit;
+            }
+        }
+
+        .transparent_header_left {
+            @include flex_center();
+            padding-right: 0;
+
+            h3 {
+                &.mat-h3 {
+                    @include heading_md_blue();
+                    white-space: nowrap;
+
+                    .ghost_loading_box {
+                        width: 10vw;
+                        min-height: 27px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            width: 8vw;
+                            min-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .transparent_header_right {
+            @include flex_center();
+            justify-content: flex-end;
+            text-align: right;
+            color: $BL-102;
+
+            @include max-breakpoint-1365 {
+                margin-left: auto;
+            }
+
+            button {
+                &.transparent_icon_btn {
+                    color: $BL-102;
+
+                    mat-icon {
+                        font-size: $font-s-21;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font-size: $font-s-17;
+                        }
+                    }
+                }
+            }
+
+            // Button Group 1
+            .button_tab_group {
+                width: 100%;
+                @include flex_center();
+                border: 1px solid $GY-108;
+                border-radius: 5px;
+                padding: 2px 2px;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    border-radius: 4px;
+                }
+
+                button {
+                    &.button_tab {
+                        width: 100%;
+                        min-width: 45%;
+                        min-height: 25px;
+                        font: 500 $font-s-14 $primaryFont;
+                        line-height: 21px;
+                        color: $BL-102;
+                        padding: 0 8px;
+                        background-color: transparent;
+                        margin: 0 0 0 10px;
+
+                        &.active {
+                            color: $WE-100;
+                            background-color: $BL-103;
+                            box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.1);
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+                            }
+                        }
+
+                        @include max-breakpoint-1800 {
+                            min-width: 25%;
+                            font: 600 $font-s-12 $primaryFont;
+                            line-height: 21px;
+
+                            &:first-child {
+                                min-width: 60%;
+                            }
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            min-width: 36px;
+                            min-height: 20px;
+                            font: 400 $font-s-11 $primaryFont;
+                            line-height: 17px;
+                            padding: 0 6px;
+                            margin: 0 0 0 8px;
+                        }
+
+                        &.fai_inflow_outflow_btn {
+                            @include max-breakpoint-1800 {
+                                min-width: auto;
+                            }
+                        }
+
+                        @include max-breakpoint-1440 {
+                            margin: 0 0 0 6px;
+                        }
+
+                        @include max-breakpoint-1365 {
+                            padding: 0 6px;
+                            margin: 0;
+                        }
+
+                        @include max-breakpoint-1279 {
+                            font: 600 $font-s-14 $primaryFont;
+                            line-height: 21px;
+                            padding: 0 15px;
+                            margin: 0 0 0 6px;
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                &.single_btn_group {
+                    width: auto;
+                }
+
+                .ghost_loading_box {
+                    width: 4vw;
+                    min-height: 24px;
+                    display: inline-block;
+                    margin: 0 0 0 10px;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        width: 3.2vw;
+                        min-height: 19px;
+                        margin: 0 0 0 8px;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            // Button Group 2
+            .button_tab_group2 {
+                button {
+                    &.tab_round_btn {
+                        color: $WE-100;
+                        background-color: $BL-102;
+                        border-radius: 200px;
+                        font: 600 $font-s-14 $primaryFont;
+                        line-height: 28px;
+                        padding: 0 12px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            border-radius: 160px;
+                            font: 500 $font-s-11 $primaryFont;
+                            line-height: 22px;
+                            padding: 0 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.border_bottom {
+            border-bottom: 1px solid $GY-116;
+            margin: 0 0 20px 0;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                margin: 0 0 16px 0;
+            }
+
+            .transparent_header_left,
+            .transparent_header_right {
+                padding: 0;
+            }
+        }
+    }
+
+    .bank_account_box_wrapper {
+        .card_left,
+        .card_right {
+            width: 100%;
+            position: relative;
+
+            h4 {
+                &.mat-h4 {
+                    @include flex_center();
+                    font: 600 $font-s-16 $primaryFont;
+                    margin: 0 0 8px 0;
+                    white-space: nowrap;
+
+                    .ghost_loading_box {
+                        &.head_ghost {
+                            width: 4vw;
+                            min-height: 20px;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                width: 3vw;
+                                min-height: 16px;
+                            }
+                        }
+                    }
+
+                    @include max-breakpoint-1800 {
+                        font: 600 $font-s-14 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-13 $primaryFont;
+                        margin: 0 0 6px 0;
+                    }
+
+                    @include max-breakpoint-1580 {
+                        font: 600 $font-s-12 $primaryFont;
+                    }
+                }
+            }
+
+            h2 {
+                &.mat-h2 {
+                    width: 100%;
+                    font: 700 $font-s-24 $primaryFont;
+                    color: $WE-100;
+                    margin: 0;
+
+                    @include max-breakpoint-1800 {
+                        font: 700 $font-s-20 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 600 $font-s-19 $primaryFont;
+                    }
+
+                    @include max-breakpoint-1580 {
+                        font: 700 $font-s-16 $primaryFont;
+                    }
+
+                    .ghost_loading_box {
+                        width: 80%;
+                        min-height: 28px;
+                        display: inline-block;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            width: 64%;
+                            min-width: 22px;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font: 400 $font-s-14 $primaryFont;
+
+                .ghost_loading_box {
+                    width: 70%;
+                    min-height: 14px;
+                    display: inline-block;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        width: 56%;
+                        min-height: 11px;
+                    }
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 400 $font-s-11 $primaryFont;
+                }
+
+                @include max-breakpoint-1580 {
+                    font: 400 $font-s-12 $primaryFont;
+                }
+            }
+        }
+
+        .card_left {
+            flex: 0 0 55%;
+            max-width: 55%;
+        }
+
+        .card_right {
+            flex: 0 0 45%;
+            max-width: 45%;
+            text-align: right;
+            p {
+                &.card_synced {
+                    font: 400 $font-s-12 $primaryFont !important;
+                    color: $BL-102 !important;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-10 $primaryFont !important;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 400 $font-s-11 $primaryFont !important;
+                    }
+                }
+            }
+        }
+
+        mat-card {
+            &.mat-mdc-card {
+                &.bank_account_card {
+                    &.blue_gradient {
+                        margin: 0 0 25px 0;
+                        color: $WE-100;
+
+                        @include max-breakpoint-1800 {
+                            margin: 0 0 15px 0;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            margin: 0 0 20px 0;
+                        }
+
+                        mat-card-content {
+                            padding: 14px 20px;
+
+                            @include max-breakpoint-1800 {
+                                padding: 14px 14px;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                padding: 11px 16px;
+                            }
+                        }
+
+                        p {
+                            font-weight: 300;
+                            letter-spacing: 0.14px;
+                        }
+                    }
+                }
+
+                // No Bank
+                &.no_bank_connected {
+                    min-height: 330px;
+                    background: rgb(252, 253, 253);
+                    background: linear-gradient(90deg, rgba(252, 253, 253, 1) 0%, rgba(243, 245, 244, 1) 80%);
+                    border: 2px dashed $BL-113;
+                    box-shadow: 0px 10px 10px rgba(102, 102, 102, 0.1);
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        min-height: 264px;
+                        box-shadow: 0px 8px 8px rgba(102, 102, 102, 0.1);
+                    }
+
+                    @include max-breakpoint-1440 {
+                        min-height: 265px;
+                        box-shadow: 0px 6px 6px rgba(102, 102, 102, 0.1);
+                    }
+
+                    &::before {
+                        width: 100%;
+                        min-height: 132px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        content: '';
+                        background: url(../../../assets/images/common/white-overlap-bg.png) no-repeat right top;
+                        background-size: 80%;
+                        z-index: 1;
+                        overflow: hidden;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            min-height: 106px;
+                            background-size: 64px;
+                        }
+                    }
+
+                    mat-card-content {
+                        @include flex_center();
+                        justify-content: center;
+                        min-height: 210px;
+                        text-align: center;
+
+                        .no_bank_inner {
+                            padding-top: 35px;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                padding-top: 28px;
+                            }
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            min-height: 168px;
+                        }
+
+                        @include max-breakpoint-1440 {
+                            min-height: 180px;
+
+                            .no_bank_inner {
+                                padding-top: 15px;
+                            }
+                        }
+
+                        h2 {
+                            &.mat-h2 {
+                                font: 600 $font-s-24 $primaryFont;
+                                color: $BL-103;
+
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-21 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 500 $font-s-19 $primaryFont;
+                                }
+
+                                @include max-breakpoint-1440 {
+                                    font: 600 $font-s-18 $primaryFont;
+                                }
+                            }
+                        }
+
+                        p {
+                            font: 600 $font-s-18 $primaryFont;
+                            line-height: 1.4;
+                            color: $BL-113;
+                            min-height: 70px;
+
+                            @include max-breakpoint-1800 {
+                                font: 600 $font-s-16 $primaryFont;
+                                line-height: 1.4;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500 $font-s-14 $primaryFont;
+                                line-height: 1.12;
+                                min-height: 56px;
+                            }
+
+                            @include max-breakpoint-1440 {
+                                font: 600 $font-s-14 $primaryFont;
+                                line-height: 1.4;
+                            }
+                        }
+
+                        .fai_link_plaid_logo {
+                            margin: 10px 0;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                margin: 8px 0;
+                            }
+
+                            @include max-breakpoint-1440 {
+                                margin: 0;
+                            }
+                            img {
+                                max-width: 160px;
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    max-width: 128px;
+                                }
+                            }
+                        }
+                    }
+
+                    mat-card-actions {
+                        &.no_bank_footer {
+                            width: 100%;
+                            text-align: center;
+                            .info_tooltip_wrapper {
+                                width: 100%;
+                                .info_tooltip {
+                                    left: 0;
+                                    top: 0;
+                                    right: 0;
+                                    padding-top: 50px;
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        padding-top: 40px;
+                                    }
+                                }
+                            }
+                            button {
+                                &.no_bank_btn {
+                                    width: 100%;
+                                    font: 600 $font-s-16 $primaryFont;
+                                    line-height: 1.6;
+                                    color: $BL-103;
+                                    background-color: $GY-107;
+                                    border-radius: 10px;
+                                    padding: 10px 10px;
+
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                        line-height: 1.6;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 600 $font-s-13 $primaryFont;
+                                        line-height: 1.28;
+                                        border-radius: 8px;
+                                        padding: 8px 8px;
+                                    }
+
+                                    &.blue_btn {
+                                        color: $WE-100;
+                                        background-color: $BL-103;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    mat-card-content,
+                    mat-card-actions {
+                        width: 100%;
+                        margin: 0 auto;
+                        position: relative;
+                        z-index: 9;
+                    }
+
+                    mat-card-actions {
+                        max-width: 312px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            max-width: 250px;
+                        }
+
+                        @include max-breakpoint-1440 {
+                            max-width: 270px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+// Flex Style Use Full Mixin
+@mixin flex_box() {
+    display: flex;
+}
+
+@mixin flex_center() {
+    @include flex_box();
+    align-items: center;
+    justify-content: center;
+}
+
+// Flex Direction Mixins
+@mixin flex_direction_row() {
+    @include flex_box();
+    flex-direction: row;
+}
+
+@mixin flex_direction_row_reverse() {
+    @include flex_box();
+    flex-direction: row-reverse;
+}
+
+@mixin flex_direction_column() {
+    @include flex_box();
+    flex-direction: column;
+}
+
+@mixin flex_direction_column_reverse() {
+    @include flex_box();
+    flex-direction: column-reverse;
+}
+
+// Flex Wrap Mixins
+@mixin flex_wrap() {
+    @include flex_box();
+    flex-wrap: wrap;
+}
+
+@mixin flex_nowrap() {
+    @include flex_box();
+    flex-wrap: nowrap;
+}
+
+// Flex Justify Content Mixins
+@mixin flex_justify_start() {
+    @include flex_box();
+    justify-content: flex-start;
+}
+
+@mixin flex_justify_center() {
+    @include flex_box();
+    justify-content: center;
+}
+
+@mixin flex_justify_end() {
+    @include flex_box();
+    justify-content: flex-end;
+}
+
+@mixin flex_justify_space_around() {
+    @include flex_box();
+    justify-content: space-around;
+}
+
+@mixin flex_justify_space_between() {
+    @include flex_box();
+    justify-content: space-between;
+}
+
+// Flex Align Item Mixins
+@mixin flex_align_start() {
+    @include flex_box();
+    align-items: flex-start;
+}
+
+@mixin flex_align_center() {
+    @include flex_box();
+    align-items: center;
+}
+
+@mixin flex_align_end() {
+    @include flex_box();
+    align-items: flex-end;
+}
+
+// Unordered List Style
+@mixin unordered_list() {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+// Hover Effects Mixins
+@mixin hover-effect2() {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@mixin hover-effect5() {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+// Text Limit
+@mixin text_limit() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+// Ul
+@mixin ul_style() {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Mat Dialog Close Button
+@mixin dialog_close_btn() {
+    width: 46px;
+    height: 46px;
+    @include flex_center();
+    position: absolute;
+    background-color: $GY-10;
+    border: 5px solid $WE-1;
+    border-radius: 50%;
+    color: $WE-100;
+    padding: 0;
+    @include max-breakpoint-1800 {
+        width: 41px;
+        height: 41px;
+        border-width: 4px;
+    }
+    @include max-breakpoint-1680 {
+        width: 37px;
+        height: 37px;
+    }
+    @include max-breakpoint-1440 {
+        width: 32px;
+        height: 32px;
+    }
+
+    mat-icon {
+        font-size: $font-s-24;
+        overflow: inherit;
+        margin: 0;
+        @include max-breakpoint-1800 {
+            font-size: $font-s-21;
+        }
+        @include max-breakpoint-1680 {
+            font-size: $font-s-19;
+        }
+        @include max-breakpoint-1440 {
+            font-size: $font-s-17;
+        }
+    }
+}
+
+// Disabled Button
+@mixin disable_button() {
+    color: $BK-3 !important;
+    background-color: $GY-13 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}

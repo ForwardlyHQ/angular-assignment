@@ -1,0 +1,790 @@
+// Mat Select Dropdown
+.cdk-overlay-pane {
+    .mat-mdc-select-panel {
+        &.mdc-menu-surface {
+            border: 1px solid $GY-1;
+            box-shadow: none;
+
+            mat-option {
+                &.mat-mdc-option {
+                    min-height: auto;
+                    padding: 12px 15px;
+                    font: 400 $font-s-14 $primaryFont;
+                    line-height: 21px;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding: 10px 12px;
+                        font: 400 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                        line-height: 17px;
+                    }
+
+                    span {
+                        &.mdc-list-item__primary-text {
+                            font: 400 $font-s-14 $primaryFont;
+                            line-height: 21px;
+                            letter-spacing: 0;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-13 $primaryFont;
+                                line-height: 21px;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-12 $primaryFont;
+                                line-height: 18px;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 400 $font-s-11 $primaryFont;
+                                line-height: 17px;
+                            }
+                        }
+                    }
+                    &.multiline_select_option {
+                        overflow: inherit;
+                        padding: 10px 15px 0 15px;
+                        @include max-breakpoint-1680 {
+                            padding: 8px 12px 0 12px;
+                        }
+
+                        span {
+                            &.mdc-list-item__primary-text {
+                                width: 100%;
+                                margin: 0;
+                                letter-spacing: 0;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid $GY-1;
+                                @include max-breakpoint-1680 {
+                                    padding-bottom: 8px;
+                                }
+
+                                h6 {
+                                    &.mat-h6 {
+                                        font: 400 $font-s-14 $primaryFont;
+                                        line-height: 21px;
+                                        color: $BE-1;
+                                        margin: 0 0 2px 0;
+                                        @include text_limit();
+                                        @include max-breakpoint-1800 {
+                                            font: 400 $font-s-13 $primaryFont;
+                                            line-height: 21px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 400 $font-s-12 $primaryFont;
+                                            line-height: 18px;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 400 $font-s-11 $primaryFont;
+                                            line-height: 17px;
+                                        }
+                                    }
+                                }
+
+                                p {
+                                    font: 400 $font-s-10 $primaryFont;
+                                    color: $GY-2;
+                                    margin: 0;
+                                    @include text_limit();
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 400 $font-s-8 $primaryFont;
+                                    }
+                                }
+                            }
+                        }
+
+                        mat-pseudo-checkbox {
+                            &.mat-pseudo-checkbox {
+                                position: absolute;
+                                right: 15px;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                margin-left: 0;
+                                @include max-breakpoint-1680 {
+                                    right: 12px;
+                                }
+                            }
+                        }
+                        span {
+                            &.mdc-list-item__primary-text {
+                                padding-right: 25px;
+                                @include max-breakpoint-1680 {
+                                    padding-right: 20px;
+                                }
+                            }
+                        }
+
+                        &:focus,
+                        &:hover,
+                        &.mat-mdc-option-active {
+                            background: none;
+                        }
+                        &.multiline_select_field_wrapper {
+                            span {
+                                &.mdc-list-item__primary-text {
+                                    h6 {
+                                        @include flex_center();
+                                        justify-content: flex-start;
+                                        font: 400 $font-s-16 $primaryFont;
+                                        color: $GY-2;
+                                        padding: 7px 0;
+                                        border-bottom: 1px dashed $GY-5;
+                                        @include max-breakpoint-1800 {
+                                            font: 400 $font-s-15 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 400 $font-s-14 $primaryFont;
+                                            padding: 6px 0;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 400 $font-s-13 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            font: 400 $font-s-12 $primaryFont;
+                                        }
+
+                                        img {
+                                            max-width: 28px;
+                                            max-height: 17px;
+                                            margin-right: 15px;
+                                            @include max-breakpoint-1800 {
+                                                width: 16px;
+                                                margin-right: 10px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                width: 14px;
+                                                margin-right: 12px;
+                                            }
+                                        }
+                                    }
+                                    p {
+                                        @include flex_center();
+                                        justify-content: flex-start;
+                                        font: 600 $font-s-16 $primaryFont;
+                                        color: rgba($BE-1, 0.9);
+                                        padding: 7px 0;
+                                        @include max-breakpoint-1800 {
+                                            font: 600 $font-s-15 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 600 $font-s-14 $primaryFont;
+                                            padding: 6px 0;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 600 $font-s-13 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            font: 600 $font-s-12 $primaryFont;
+                                        }
+                                        img {
+                                            max-width: 28px;
+                                            max-height: 17px;
+                                            margin-right: 15px;
+                                            @include max-breakpoint-1800 {
+                                                width: 16px;
+                                                margin-right: 10px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                width: 14px;
+                                                margin-right: 12px;
+                                            }
+                                        }
+                                        span {
+                                            &.bank_details_sec {
+                                                @include flex_justify_space_between();
+                                                flex: 1 1 auto;
+                                                .bank_details {
+                                                    span {
+                                                        padding-right: 10px;
+                                                        @include max-breakpoint-1680 {
+                                                            padding-right: 8px;
+                                                        }
+                                                        &:not(:last-child) {
+                                                            max-width: 325px;
+                                                            display: block;
+                                                            @include text_limit();
+                                                            @include max-breakpoint-1800 {
+                                                                max-width: 275px;
+                                                            }
+                                                            @include max-breakpoint-1680 {
+                                                                max-width: 260px;
+                                                            }
+                                                        }
+                                                        &:last-child {
+                                                            padding-left: 10px;
+                                                            padding-right: 0;
+                                                            border-left: 1px solid $GY-5;
+                                                            font: 700 $font-s-16 $primaryFont;
+                                                            @include max-breakpoint-1800 {
+                                                                font: 700 $font-s-15 $primaryFont;
+                                                            }
+                                                            @include max-breakpoint-1680 {
+                                                                padding-left: 8px;
+                                                                font: 700 $font-s-14 $primaryFont;
+                                                            }
+                                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                                font: 700 $font-s-13 $primaryFont;
+                                                            }
+                                                            @include max-breakpoint-1440 {
+                                                                font: 700 $font-s-12 $primaryFont;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                .bank_date {
+                                                    font: 400 $font-s-14 $primaryFont;
+                                                    color: $GY-2;
+                                                    @include max-breakpoint-1800 {
+                                                        font: 400 $font-s-13 $primaryFont;
+                                                    }
+                                                    @include max-breakpoint-1680 {
+                                                        font: 400 $font-s-12 $primaryFont;
+                                                    }
+                                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                                        font: 400 $font-s-11 $primaryFont;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.payment_card_details {
+                                            img {
+                                                max-width: 35px;
+                                                margin-right: 11px;
+                                            }
+                                            span {
+                                                &.bank_details_sec {
+                                                    align-items: center;
+                                                    justify-content: flex-start;
+                                                    span {
+                                                        padding: 0 10px;
+                                                        &:not(:last-child) {
+                                                            border-right: 1px solid $GY-5;
+                                                        }
+                                                        &:first-child {
+                                                            padding-left: 0;
+                                                        }
+                                                        &:last-child {
+                                                            padding-right: 0;
+                                                        }
+                                                        img {
+                                                            max-width: 21px;
+                                                            margin: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            mat-pseudo-checkbox {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    &.empty_mat_option {
+                        display: none;
+                    }
+                    &.select_withoutCheck_option {
+                        mat-pseudo-checkbox {
+                            &.mat-pseudo-checkbox {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .mat-pseudo-checkbox-minimal {
+                        @include max-breakpoint-1800 {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+
+            &.hide_dropdown {
+                display: none !important;
+            }
+
+            &.select_card_panel {
+                border-radius: 0 0 8px 8px !important;
+                border: 1px solid $GY-5;
+                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+                @include max-breakpoint-1680 {
+                    border-radius: 0 0 6px 6px !important;
+                    border-width: 0.8px;
+                    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.15);
+                }
+
+                mat-option {
+                    &.mat-mdc-option {
+                        &.select_card_lg_option {
+                            min-height: 75px;
+                            border-bottom: 1px solid $GY-5;
+                            @include max-breakpoint-1800 {
+                                min-height: 60px;
+                            }
+
+                            span {
+                                &.mdc-list-item__primary-text {
+                                    .select_card_lg_inner {
+                                        width: 100%;
+                                        @include flex_align_center();
+
+                                        .select_card_img {
+                                            width: 35px;
+                                            margin: 0 8px 0 0;
+                                            @include max-breakpoint-1680 {
+                                                width: 28px;
+                                                margin: 0 6px 0 0;
+                                            }
+
+                                            img {
+                                                min-width: 35px;
+                                                @include max-breakpoint-1680 {
+                                                    min-width: 28px;
+                                                }
+                                            }
+                                        }
+
+                                        .select_card_text {
+                                            font: 400 $font-s-16 $primaryFont;
+                                            color: $BE-1;
+                                            @include max-breakpoint-1800 {
+                                                font: 400 $font-s-15 $primaryFont;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                font: 400 $font-s-14 $primaryFont;
+                                            }
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                font: 400 $font-s-13 $primaryFont;
+                                            }
+                                            @include max-breakpoint-1440 {
+                                                font: 400 $font-s-12 $primaryFont;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Select Card Dropdown Button
+                .select_card_button_wrapper {
+                    width: 100%;
+                    display: inline-block;
+
+                    button {
+                        &.add_card_btn {
+                            width: 100%;
+                            min-height: 75px;
+                            font: 500 $font-s-16 $primaryFont;
+                            color: $GY-2;
+                            @include max-breakpoint-1800 {
+                                min-height: 60px;
+                                font: 500 $font-s-15 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 500 $font-s-14 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 500 $font-s-12 $primaryFont;
+                            }
+
+                            .mdc-button__label {
+                                @include flex_align_center();
+
+                                img {
+                                    height: 21px;
+                                    margin: 0 10px 0 0;
+                                    @include max-breakpoint-1680 {
+                                        height: 17px;
+                                        margin: 0 8px 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.select_card_panel2 {
+                .info_tooltip_wrapper {
+                    width: 100%;
+                }
+            }
+
+            .multiline_select_field_footer {
+                button {
+                    width: 100%;
+                    height: 40px;
+                    background: none;
+                    border: none;
+                    font: 400 $font-s-14 $primaryFont;
+                    line-height: 21px;
+                    color: $OE-1;
+                    letter-spacing: 0;
+                    cursor: pointer;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                        line-height: 21px;
+                    }
+                    @include max-breakpoint-1680 {
+                        height: 32px;
+                        font: 400 $font-s-12 $primaryFont;
+                        line-height: 18px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                        line-height: 17px;
+                    }
+                    &.add_card {
+                        @include flex_center();
+                        height: 85px;
+                        font: 500 $font-s-18 $primaryFont;
+                        color: $GY-2;
+                        @include max-breakpoint-1680 {
+                            height: 50px;
+                            font: 500 $font-s-14 $primaryFont;
+                        }
+                        img {
+                            max-width: 35px;
+                            margin-right: 13px;
+                            @include max-breakpoint-1680 {
+                                max-width: 23px;
+                                margin-right: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Mat-Select with options Group */
+mat-optgroup {
+    &.options_with_group {
+        .mat-mdc-optgroup-label {
+            padding: 8px 15px;
+            min-height: auto;
+            @include max-breakpoint-1800 {
+                padding: 7px 13px;
+            }
+            @include max-breakpoint-1680 {
+                padding: 6px 12px;
+            }
+            &:first-child {
+                padding-top: 15px;
+                @include max-breakpoint-1800 {
+                    padding-top: 13px;
+                }
+                @include max-breakpoint-1680 {
+                    padding-top: 12px;
+                }
+            }
+            .mdc-list-item__primary-text {
+                font: 500 $font-s-14 $primaryFont;
+                color: $BE-1;
+                @include max-breakpoint-1800 {
+                    font: 500 $font-s-13 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 500 $font-s-12 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 500 $font-s-11 $primaryFont;
+                }
+            }
+        }
+        mat-option {
+            &.mat-mdc-option {
+                padding: 8px 25px;
+                min-height: auto;
+                @include max-breakpoint-1800 {
+                    padding: 7px 22px;
+                }
+                @include max-breakpoint-1680 {
+                    padding: 6px 20px;
+                }
+                .mdc-list-item__primary-text {
+                    font: 400 $font-s-14 $primaryFont;
+                    color: $GY-2;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Common Mat Auto Complete
+.mdc-menu-surface {
+    &.mat-mdc-autocomplete-panel {
+        &.common_autocomplete_wrap {
+            border: 1px solid $GY-1;
+            box-shadow: none;
+            padding: 0;
+        }
+        // Searchable Card Dropdown
+        &.searchable_card_dropdown {
+            border: 1px solid $GY-1;
+            box-shadow: none;
+            padding: 0;
+
+            mat-option {
+                &.mat-mdc-option {
+                    width: 100%;
+                    min-height: auto;
+                    padding: 12px 15px;
+                    font: 400 $font-s-14 $primaryFont;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding: 10px 12px;
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+
+                    &.customer_list_item {
+                        border-bottom: 1px solid $GY-8;
+
+                        .customer_info_item {
+                            width: 100%;
+                            display: inline-block;
+
+                            h4 {
+                                &.mat-h4 {
+                                    width: 100%;
+                                    font: 500 $font-s-14 $primaryFont;
+                                    color: $BL-1;
+                                    margin: 0;
+                                    @include max-breakpoint-1800 {
+                                        font: 500 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 500 $font-s-12 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 500 $font-s-11 $primaryFont;
+                                    }
+                                }
+                            }
+
+                            p {
+                                font: 400 $font-s-12 $primaryFont;
+                                color: $GY-17;
+                                margin: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-10 $primaryFont;
+                                }
+                            }
+                        }
+
+                        .vendor_info_item {
+                            width: 100%;
+                            display: inline-block;
+                            color: $GY-17;
+                        }
+                    }
+
+                    &:hover {
+                        &.customer_list_item {
+                            .vendor_info_item {
+                                color: $BL-1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            button {
+                &.add_list_button {
+                    width: 100%;
+                    display: inline-block;
+                    padding: 12px 15px;
+                    font: 400 $font-s-14 $primaryFont;
+                    color: $RD-1;
+                    letter-spacing: 0;
+                    text-align: left;
+                    background: #f1f4f7;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding: 10px 12px;
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+
+                    p {
+                        font: 400 $font-s-12 $primaryFont;
+                        margin: 0 0 2px 0;
+                        @include max-breakpoint-1800 {
+                            font: 400 $font-s-11 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 400 $font-s-10 $primaryFont;
+                        }
+                    }
+
+                    h4 {
+                        &.mat-h4 {
+                            width: 100%;
+                            @include flex_align_center();
+                            font: 500 $font-s-14 $primaryFont;
+                            color: $RD-1;
+                            margin: 0;
+                            @include max-breakpoint-1800 {
+                                font: 500 $font-s-13 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 500 $font-s-12 $primaryFont;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500 $font-s-11 $primaryFont;
+                            }
+
+                            mat-icon {
+                                font-size: $font-s-21;
+                                margin: 0 6px 0 0;
+                                @include max-breakpoint-1680 {
+                                    font-size: $font-s-17;
+                                    margin: 0 5px 0 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.border_btn {
+                        border-bottom: 1px solid $GY-8;
+                        border-radius: 0;
+                    }
+                }
+            }
+
+            &.virtual_scroll_autocomplete {
+                max-height: inherit;
+                mat-option {
+                    &.mat-mdc-option {
+                        &.customer_list_item {
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                mat-spinner {
+                    &.autocomplete_spinner {
+                        margin: 10px 15px;
+                        @include max-breakpoint-1680 {
+                            margin: 8px 12px;
+                        }
+                        svg {
+                            circle {
+                                stroke: $RD-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Searchable Card Dropdown
+.mdc-menu-surface {
+    &.mat-mdc-autocomplete-panel {
+        &.searchable_card_dropdown {
+            border: 1px solid $GY-1;
+            box-shadow: none;
+            padding: 0;
+
+            mat-option {
+                &.mat-mdc-option {
+                    min-height: auto;
+                    padding: 12px 15px;
+                    font: 400 $font-s-14 $primaryFont;
+                    letter-spacing: 0;
+                    @include max-breakpoint-1800 {
+                        font: 400 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding: 10px 12px;
+                        font: 400 $font-s-12 $primaryFont;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Custom Select option bar
+.mdc-menu-surface.mat-mdc-select-panel {
+    padding: 0 !important;
+    scroll-behavior: unset !important;
+    &::-webkit-scrollbar {
+        scroll-behavior: unset !important;
+    }
+    &::-webkit-scrollbar-track {
+        scroll-behavior: unset !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        scroll-behavior: unset !important;
+    }
+}
+
+// Hover ripple
+.mat-mdc-icon-button .mat-mdc-button-ripple,
+.mat-mdc-icon-button .mat-mdc-button-persistent-ripple,
+.mat-mdc-icon-button .mat-mdc-button-persistent-ripple::before {
+    display: none;
+}
+
+// Common Input Ghost
+.ghost_loading_box {
+    &.input_box_ghost {
+        min-height: 50px;
+        margin: 0 0 15px 0;
+        @include max-breakpoint-1680 {
+            min-height: 40px;
+            margin: 0 0 12px 0;
+        }
+    }
+
+    &.radio_box_ghost {
+        min-height: 100px;
+        margin: 0 0 15px 0;
+        @include max-breakpoint-1680 {
+            min-height: 80px;
+            margin: 0 0 12px 0;
+        }
+    }
+}

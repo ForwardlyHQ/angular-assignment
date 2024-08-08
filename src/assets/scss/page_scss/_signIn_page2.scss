@@ -1,0 +1,340 @@
+// Sign Up Pages
+.signin_main_wrapper {
+    mat-card {
+        &.mat-mdc-card {
+            &.white_default_card {
+                &.signup_box {
+                    width: 100%;
+                    max-width: 71.7777vw;
+                    margin: 0 auto 25px auto;
+                    padding: 0;
+                    border-radius: 20px;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.0705882353);
+                    border: 0;
+
+                    @include max-breakpoint-1440 {
+                        max-width: 90%;
+                    }
+                    @include max-breakpoint-480 {
+                        max-width: 100%;
+                    }
+
+                    .signup_row {
+                        display: flex;
+                    }
+
+                    .signup_left,
+                    .signup_right {
+                        width: 100%;
+                        position: relative;
+                    }
+
+                    // Left Side
+                    .signup_left {
+                        flex: 0 0 33%;
+                        max-width: 33%;
+                        background: $WE-100;
+                        box-shadow: 20px 0 20px rgba(0, 0, 0, 0.0705882353);
+                        border-radius: 20px 0 0 20px;
+                        position: relative;
+                        z-index: 9;
+                        padding: 15px 30px 75px 30px;
+                        @include flex_start();
+                        flex-wrap: wrap;
+                        @include max-breakpoint-991 {
+                            display: none;
+                        }
+                    }
+
+                    .signup_left_box_content {
+                        width: 100%;
+                        max-width: 330px;
+                        margin: 0 auto;
+                        padding-top: 91px;
+
+                        @include max-breakpoint-1440 {
+                            padding-top: 38px;
+                        }
+
+                        .signup_left_stepper {
+                            margin-bottom: 5vw;
+
+                            @include max-breakpoint-1279 {
+                                margin-bottom: 30px;
+                            }
+
+                            ul {
+                                @include ul_style();
+
+                                li {
+                                    @include flex_center();
+                                    position: relative;
+                                    padding-bottom: 45px;
+
+                                    @include max-breakpoint-1440 {
+                                        padding-bottom: 20px;
+                                    }
+
+                                    &::after {
+                                        width: 1px;
+                                        height: 50%;
+                                        position: absolute;
+                                        left: 35px;
+                                        top: 75px;
+                                        content: '';
+                                        border-left: 1px dashed $BL-102;
+                                        z-index: 1;
+
+                                        @include max-breakpoint-1440 {
+                                            left: 30px;
+                                        }
+                                    }
+
+                                    .stepper_inner {
+                                        width: 100%;
+                                        min-height: 72px;
+                                        position: relative;
+                                        @include flex_center();
+                                    }
+
+                                    .stepper_icon {
+                                        width: 72px;
+                                        min-width: 72px;
+                                        min-height: 72px;
+                                        background: $WE-100;
+                                        border-radius: 50%;
+                                        position: relative;
+                                        @include flex_center();
+                                        justify-content: center;
+                                        z-index: 9;
+                                        padding: 4px;
+                                        margin: 0 30px 0 0;
+
+                                        img {
+                                            height: 44px;
+                                            opacity: 0.3;
+
+                                            &.completed_tick,
+                                            &.incompleted {
+                                                display: none;
+                                            }
+                                        }
+
+                                        @include max-breakpoint-1440 {
+                                            width: 60px;
+                                            min-width: 60px;
+                                            min-height: 60px;
+
+                                            img {
+                                                height: 36px;
+                                            }
+                                        }
+                                    }
+
+                                    h4 {
+                                        &.mat-h4 {
+                                            font: 500 $font-s-20 $primaryFont;
+                                            color: $BL-102;
+                                            margin: 0;
+                                            opacity: 0.5;
+
+                                            @include max-breakpoint-1800 {
+                                                font: 500 $font-s-18 $primaryFont;
+                                            }
+
+                                            @include max-breakpoint-1680 {
+                                                font: 500 $font-s-16 $primaryFont;
+                                            }
+                                        }
+                                    }
+
+                                    p {
+                                        font: 400 $font-s-14 $primaryFont;
+                                        color: $BL-102;
+                                        margin: 10px 0 0 0;
+                                        opacity: 0.5;
+                                    }
+
+                                    &.active {
+                                        .stepper_icon {
+                                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+
+                                            img {
+                                                height: 33px;
+                                                opacity: 1;
+
+                                                &.completed_tick,
+                                                &.incompleted {
+                                                    display: none;
+                                                }
+
+                                                @include max-breakpoint-1440 {
+                                                    height: 26px;
+                                                }
+                                            }
+                                        }
+
+                                        h4 {
+                                            &.mat-h4 {
+                                                font-weight: 700;
+                                                color: $BL-103;
+                                                opacity: 1;
+                                            }
+                                        }
+
+                                        p {
+                                            color: $BL-103;
+                                            opacity: 1;
+                                        }
+                                    }
+
+                                    &.completed {
+                                        .stepper_icon {
+                                            img {
+                                                display: none;
+                                                opacity: 1;
+
+                                                &.completed_tick {
+                                                    height: 31px;
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+
+                                        h4 {
+                                            &.mat-h4 {
+                                                color: $BL-103;
+                                                opacity: 1;
+                                            }
+                                        }
+
+                                        p {
+                                            color: $BL-103;
+                                            opacity: 1;
+                                        }
+
+                                        &::after {
+                                            border-left: 2px solid $BL-103;
+                                        }
+                                    }
+
+                                    &.incompleted {
+                                        .stepper_inner {
+                                            margin: 15px 0;
+                                        }
+
+                                        .stepper_icon {
+                                            width: 48px;
+                                            min-width: 48px;
+                                            min-height: 48px;
+                                            border: 1px solid $RD-104;
+                                            box-shadow: none;
+                                            margin: 0 45px 0 10px;
+
+                                            img {
+                                                display: none;
+                                                opacity: 1;
+
+                                                &.completed_tick {
+                                                    display: none;
+                                                }
+
+                                                &.incompleted {
+                                                    height: 31px;
+                                                    display: block;
+                                                }
+                                            }
+                                        }
+
+                                        h4 {
+                                            &.mat-h4 {
+                                                font-weight: 700;
+                                                color: $BL-103;
+                                                opacity: 1;
+                                            }
+                                        }
+
+                                        p {
+                                            color: $BL-103;
+                                            opacity: 1;
+                                        }
+
+                                        &::after {
+                                            top: 85px;
+                                        }
+
+                                        &.completed {
+                                            .stepper_inner {
+                                                .stepper_icon {
+                                                    border: none;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        padding-bottom: 0;
+
+                                        &::after {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .signup_left_footer {
+                        @include flex_center();
+                        position: absolute;
+                        left: 30px;
+                        bottom: 15px;
+                        &.fai_bottom_privacy {
+                            display: none;
+                            @include max-breakpoint-991 {
+                                display: flex;
+                                position: static;
+                                padding: 15px 0;
+                                justify-content: center;
+                            }
+                        }
+
+                        img {
+                            height: 40px;
+                            margin: 0 15px 0 0;
+                            @include max-breakpoint-991 {
+                                height: 27px;
+                            }
+                        }
+
+                        p {
+                            font: 300 $font-s-14 $primaryFont;
+                            letter-spacing: 0.14px;
+                            color: $GY-100;
+
+                            a {
+                                color: $RD-101;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    //  Right Side
+                    .signup_right {
+                        flex: 0 0 67%;
+                        max-width: 67%;
+                        padding-bottom: 65px;
+
+                        @include max-breakpoint-1680 {
+                            padding-bottom: 45px;
+                        }
+                        @include max-breakpoint-991 {
+                            flex: 0 0 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

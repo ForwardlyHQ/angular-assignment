@@ -1,0 +1,1086 @@
+// Payment Page SCSS 5
+// Mat Table
+.mat_table_wrap_main {
+    &.mat_toggle_table {
+        mat-table {
+            &.mat-mdc-table {
+                // Toggle Table
+                mat-header-row {
+                    &.mat-mdc-header-row {
+                        padding: 6px 12px;
+                        @include max-breakpoint-1680 {
+                            padding: 5px 10px;
+                        }
+                    }
+                }
+
+                .table_box_row {
+                    background: $WE-100;
+                    border: 1px solid $GY-129;
+                    border-radius: 10px;
+                    margin: 0 0 10px 0 !important;
+                    padding: 0 12px;
+                    @include max-breakpoint-1680 {
+                        border-radius: 8px;
+                        margin: 0 0 8px 0 !important;
+                        padding: 0 10px;
+                    }
+                    @include max-breakpoint-1279 {
+                        padding: 10px 10px;
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            border: 0;
+
+                            mat-cell {
+                                min-height: 60px;
+                                padding: 8px 8px;
+                                color: $BL-102;
+                                @include max-breakpoint-1680 {
+                                    min-height: 48px;
+                                    padding: 6px 6px;
+                                }
+                                @include max-breakpoint-1279 {
+                                    padding: 0;
+                                    min-height: 34px;
+                                }
+
+                                h4 {
+                                    &.mat-h4 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                        color: $BL-103;
+                                        margin: 0 0 6px 0;
+                                        @include max-breakpoint-1800 {
+                                            font: 600 $font-s-13 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 600 $font-s-12 $primaryFont;
+                                            margin: 0 0 5px 0;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 600 $font-s-11 $primaryFont;
+                                        }
+
+                                        .info_tooltip_wrapper {
+                                            &.info_text {
+                                                &.ml_0 {
+                                                    top: 2px;
+                                                }
+                                            }
+                                        }
+
+                                        &.lg {
+                                            font: 600 $font-s-15 $primaryFont;
+                                            margin: 0 0 2px 0;
+                                            @include max-breakpoint-1800 {
+                                                font: 600 $font-s-14 $primaryFont;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                font: 600 $font-s-12 $primaryFont;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .payee_info {
+                                    h4,
+                                    .info_tooltip_wrapper {
+                                        line-height: normal;
+                                    }
+                                }
+
+                                strong {
+                                    font: 600 $font-s-14 $primaryFont;
+                                    color: $BL-103;
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 600 $font-s-12 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 600 $font-s-11 $primaryFont;
+                                    }
+                                }
+
+                                p {
+                                    color: $BL-102;
+
+                                    &.status_text {
+                                        font-weight: 600;
+                                        text-transform: capitalize;
+
+                                        &.requested {
+                                            color: #93b473;
+                                        }
+                                        &.processing {
+                                            color: $YL-105;
+                                        }
+                                        &.failed,
+                                        &.reversed {
+                                            color: #cc361d;
+                                        }
+                                        &.declined {
+                                            color: $RD-105;
+                                        }
+                                        &.pending {
+                                            color: #a48a03;
+                                        }
+                                        &.synced {
+                                            color: $GR-100;
+                                        }
+                                        &.cancelled {
+                                            color: #fe9f8f;
+                                        }
+                                    }
+
+                                    &.status_text2 {
+                                        @include flex_center();
+                                        font-weight: 600;
+                                        text-transform: capitalize;
+
+                                        &.requested {
+                                            color: $GR-100;
+                                        }
+                                        &.processing {
+                                            color: $YL-105;
+                                        }
+                                        &.failed,
+                                        &.reversed {
+                                            color: $RD-104;
+                                        }
+                                        &.declined {
+                                            color: $RD-105;
+                                        }
+                                        &.pending {
+                                            color: #a48a03;
+                                        }
+                                        &.synced {
+                                            color: $GR-100;
+                                        }
+                                    }
+                                }
+
+                                .info_tooltip_wrapper {
+                                    .info_tooltip_text {
+                                        p {
+                                            &.status_text2 {
+                                                img {
+                                                    width: 12px;
+                                                    min-width: 12px;
+                                                    height: 12px;
+                                                    margin-left: 6px;
+                                                    @include max-breakpoint-1680 {
+                                                        width: 10px;
+                                                        min-width: 10px;
+                                                        height: 10px;
+                                                        margin-left: 5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .text_tooltip {
+                                    width: 100%;
+                                    max-width: 115px;
+                                    @include max-breakpoint-1680 {
+                                        max-width: 92px;
+                                    }
+                                }
+
+                                .action_btn_group2 {
+                                    @include flex_center();
+                                    justify-content: center;
+                                    @include max-breakpoint-1279 {
+                                        justify-content: left;
+                                    }
+
+                                    button {
+                                        &.actionBtn {
+                                            min-height: 34px;
+                                            font: 600 $font-s-14 $primaryFont;
+                                            color: $BL-102;
+                                            border-color: $BL-102;
+                                            border-radius: 5px;
+                                            padding: 0 10px;
+                                            margin: 0 0 0 20px;
+                                            @include max-breakpoint-1800 {
+                                                font: 600 $font-s-13 $primaryFont;
+                                                margin: 0 0 0 16px;
+                                                padding: 0 8px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                min-height: 27px;
+                                                font: 600 $font-s-12 $primaryFont;
+                                                border-radius: 4px;
+                                            }
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                font: 600 $font-s-11 $primaryFont;
+                                            }
+
+                                            .mdc-button__label {
+                                                white-space: nowrap;
+                                            }
+
+                                            mat-icon {
+                                                font-size: $font-s-21;
+                                                @include max-breakpoint-1680 {
+                                                    font-size: $font-s-17;
+                                                }
+                                            }
+
+                                            &:first-child {
+                                                margin-left: 0;
+                                            }
+
+                                            &.view_btn {
+                                                min-width: 34px;
+                                                padding: 0 4px;
+                                                @include max-breakpoint-1680 {
+                                                    min-width: 27px;
+                                                    padding: 0 4px;
+                                                }
+
+                                                mat-icon {
+                                                    margin: 0;
+                                                }
+
+                                                &.disabled,
+                                                &[disabled='true'],
+                                                &.mat-button-disabled {
+                                                    border-color: $GYN-132;
+                                                    color: $disabledTX;
+                                                    cursor: default;
+                                                    pointer-events: none;
+                                                }
+                                            }
+
+                                            &.pay_btn {
+                                                min-width: 124px;
+                                                justify-content: left;
+                                                padding-right: 30px;
+                                                color: $WE-100;
+                                                background-color: $GR-100;
+                                                border-color: $GR-100;
+                                                @include max-breakpoint-1800 {
+                                                    min-width: 115px;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    min-width: 105px;
+                                                    padding-right: 24px;
+                                                }
+                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                    min-width: 99px;
+                                                }
+
+                                                mat-icon {
+                                                    font-size: $font-s-28;
+                                                    position: absolute;
+                                                    right: 5px;
+                                                    top: 3px;
+                                                    margin: 0;
+                                                    @include max-breakpoint-1800 {
+                                                        font-size: $font-s-26;
+                                                        top: 4px;
+                                                    }
+                                                    @include max-breakpoint-1680 {
+                                                        font-size: $font-s-22;
+                                                        right: 4px;
+                                                        top: 2px;
+                                                    }
+                                                }
+
+                                                &.blue_btn {
+                                                    background-color: $BL-103;
+                                                    border-color: $BL-103;
+                                                }
+                                            }
+
+                                            &.green_fill_btn {
+                                                color: $WE-100;
+                                                background-color: $GR-100;
+                                                border-color: $GR-100;
+                                            }
+                                            &.blue_fill_btn {
+                                                color: $WE-100;
+                                                border-color: $BL-103;
+                                                background-color: $BL-103;
+                                            }
+
+                                            &.close_btn {
+                                                min-width: 34px;
+                                                padding: 0 4px;
+                                                background-color: $WE-100;
+                                                border-color: $RD-110;
+                                                @include max-breakpoint-1680 {
+                                                    min-width: 27px;
+                                                    padding: 0 3px;
+                                                }
+
+                                                mat-icon {
+                                                    color: $RD-110;
+                                                    margin: 0;
+                                                }
+
+                                                &.fill_btn {
+                                                    background-color: $RD-110;
+                                                    border-color: $RD-110;
+
+                                                    mat-icon {
+                                                        color: $WE-100;
+                                                    }
+                                                }
+                                            }
+
+                                            &.pay_btn,
+                                            &.blue_btn,
+                                            &.green_fill_btn,
+                                            &.close_btn,
+                                            &.blue_fill_btn {
+                                                &.disabled,
+                                                &[disabled='true'],
+                                                &.mat-button-disabled {
+                                                    @include disable_button();
+                                                    border-color: $GYN-132;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    img {
+                                        &.download_img {
+                                            height: 28px;
+                                            @include max-breakpoint-1680 {
+                                                height: 22px;
+                                            }
+                                        }
+                                    }
+
+                                    &.send_pay_btn_group {
+                                        button {
+                                            &.actionBtn {
+                                                margin: 0 0 0 8px;
+                                                @include max-breakpoint-1680 {
+                                                    margin: 0 0 0 6px;
+                                                }
+                                                @include max-breakpoint-1440 {
+                                                    margin: 0 0 0 4px;
+                                                }
+
+                                                &.view_btn {
+                                                    @include max-breakpoint-1440 {
+                                                        min-width: 28px;
+                                                    }
+                                                    @include max-breakpoint-1279 {
+                                                        min-width: 34px;
+                                                    }
+                                                }
+
+                                                &.close_btn {
+                                                    @include max-breakpoint-1440 {
+                                                        min-width: 28px;
+                                                    }
+                                                    @include max-breakpoint-1279 {
+                                                        min-width: 34px;
+                                                    }
+                                                }
+
+                                                &.pay_btn {
+                                                    min-width: 85px;
+                                                    justify-content: center;
+                                                    padding: 2px 6px;
+
+                                                    @include max-breakpoint-1800 {
+                                                        min-width: 80px;
+                                                    }
+                                                    @include max-breakpoint-1680 {
+                                                        min-width: 70px;
+                                                        padding: 2px 5px;
+                                                    }
+                                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                                        min-width: 68px;
+                                                    }
+                                                    @include max-breakpoint-1440 {
+                                                        min-width: 65px;
+                                                    }
+                                                    @include max-breakpoint-1279 {
+                                                        min-width: 80px;
+                                                    }
+
+                                                    &.paid_btn {
+                                                        color: $GR-100;
+                                                        background-color: $WE-100;
+                                                        border-color: $GR-100;
+                                                    }
+                                                }
+
+                                                &:first-child {
+                                                    margin-left: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                /* Payment Status Column Style */
+                                .payment_status_wrapper {
+                                    width: 100%;
+                                    @include flex_start();
+                                    justify-content: flex-start;
+
+                                    .payment_status_icon {
+                                        padding-right: 6px;
+                                        position: relative;
+                                        top: 3px;
+                                        @include max-breakpoint-1680 {
+                                            padding-right: 5px;
+                                            top: 2px;
+                                        }
+
+                                        img {
+                                            width: 20px;
+                                            height: 20px;
+                                            cursor: default;
+                                            @include max-breakpoint-1680 {
+                                                width: 16px;
+                                                height: 16px;
+                                            }
+                                        }
+                                    }
+                                    .payment_status_text {
+                                        p {
+                                            &.status_text {
+                                                font: 400 $font-s-14 $primaryFont;
+                                                @include max-breakpoint-1800 {
+                                                    font: 400 $font-s-13 $primaryFont;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 400 $font-s-12 $primaryFont;
+                                                }
+                                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                                    font: 400 $font-s-11 $primaryFont;
+                                                }
+                                            }
+                                            &.status_date {
+                                                font: 500 $font-s-12 $primaryFont;
+                                                color: $BL-103;
+                                                @include max-breakpoint-1800 {
+                                                    font: 500 $font-s-11 $primaryFont;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font: 500 $font-s-10 $primaryFont;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                background: none;
+                            }
+                        }
+                    }
+
+                    // Toggle Section
+                    .payment_req_toggle {
+                        width: 100%;
+                        @include flex_center();
+                        justify-content: flex-end;
+                        padding: 0 6px;
+                        @include max-breakpoint-1680 {
+                            padding: 0 5px;
+                        }
+
+                        .payment_req_toggle_inner {
+                            width: 100%;
+                            max-width: 71%;
+                            position: relative;
+                            @include flex_center();
+                            justify-content: flex-end;
+                            border-top: 1px dashed $BL-102;
+                            padding: 25px 0;
+                            @include max-breakpoint-1680 {
+                                padding: 20px 0;
+                            }
+
+                            &::before {
+                                width: 0;
+                                height: 0;
+                                content: '';
+                                position: absolute;
+                                right: 50px;
+                                top: 0;
+                                border-left: 10px solid transparent;
+                                border-right: 10px solid transparent;
+                                border-top: 14px solid $BL-102;
+                                @include max-breakpoint-1680 {
+                                    border-left-width: 8px;
+                                    border-right-width: 8px;
+                                    border-top-width: 12px;
+                                }
+                                @include max-breakpoint-1440 {
+                                    border-left-width: 6px;
+                                    border-right-width: 6px;
+                                    border-top-width: 10px;
+                                }
+                            }
+
+                            button {
+                                &.pay_toggle_btn {
+                                    min-height: 34px;
+                                    font: 600 $font-s-14 $primaryFont;
+                                    color: $BL-102;
+                                    border-color: $BL-102;
+                                    border-radius: 5px;
+                                    margin: 0 0 0 20px;
+                                    @include max-breakpoint-1800 {
+                                        font: 600 $font-s-13 $primaryFont;
+                                        margin: 0 0 0 16px;
+                                        padding: 0 10px;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        min-height: 27px;
+                                        font: 600 $font-s-12 $primaryFont;
+                                    }
+
+                                    &.blue_btn {
+                                        min-width: initial;
+                                        color: $WE-100;
+                                        background-color: $BL-103;
+                                        border-color: $BL-103;
+
+                                        &.disabled,
+                                        &[disabled='true'],
+                                        &.mat-button-disabled {
+                                            @include disable_button();
+                                            border-color: $GYN-132;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // Send Payment Business
+                        &.send_payment_business {
+                            padding-right: 6px;
+                            @include max-breakpoint-1680 {
+                                padding-right: 5px;
+                            }
+
+                            .payment_req_toggle_inner {
+                                max-width: 87%;
+                                border-top-color: $RD-110;
+                                @include max-breakpoint-1279 {
+                                    max-width: 48.6%;
+                                }
+                                @include max-breakpoint-959 {
+                                    max-width: 100%;
+                                }
+
+                                &::before {
+                                    border-top-color: $RD-110;
+                                    right: 15px;
+                                    @include max-breakpoint-1680 {
+                                        right: 12px;
+                                    }
+                                    @include max-breakpoint-1279 {
+                                        right: auto;
+                                        left: 135px;
+                                    }
+                                    @include max-breakpoint-959 {
+                                        left: 82%;
+                                    }
+                                }
+
+                                .custom_float_field {
+                                    max-width: 830px;
+                                    @include max-breakpoint-1680 {
+                                        max-width: 664px;
+                                    }
+                                }
+
+                                button {
+                                    &.pay_toggle_btn {
+                                        &.blue_btn {
+                                            min-width: 97px;
+                                            @include max-breakpoint-1800 {
+                                                min-width: 80px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                min-width: 70px;
+                                            }
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                min-width: 78px;
+                                            }
+                                            @include max-breakpoint-1440 {
+                                                min-width: 60px;
+                                                padding: 0 6px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        border-color: $BLN-113;
+                        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+                        @include max-breakpoint-1680 {
+                            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+                        }
+                        @include max-breakpoint-1440 {
+                            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Column Alignment
+        .center_align_column {
+            justify-content: center;
+        }
+        .right_align_column {
+            justify-content: flex-end;
+        }
+
+        // Column Width
+        .custom_sm_column {
+            flex: 0 0 5.8vw;
+            max-width: 5.8vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 4.64vw;
+                max-width: 4.64vw;
+            }
+        }
+
+        .custom_sm_column2 {
+            flex: 0 0 4vw;
+            max-width: 4vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 3vw;
+                max-width: 3vw;
+            }
+        }
+        .custom_sm_column3 {
+            flex: 0 0 60px;
+            max-width: 60px;
+            @include max-breakpoint-1680 {
+                flex: 0 0 48px;
+                max-width: 48px;
+            }
+        }
+
+        .custom_md_column {
+            flex: 0 0 8vw;
+            max-width: 8vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 6vw;
+                max-width: 6vw;
+            }
+        }
+
+        .custom_md_column2 {
+            flex: 0 0 7vw;
+            max-width: 7vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 6vw;
+                max-width: 6vw;
+            }
+        }
+
+        .custom_lg_column {
+            flex: 0 0 14vw;
+            max-width: 14vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 11vw;
+                max-width: 11vw;
+            }
+        }
+
+        .custom_lg_column2 {
+            flex: 0 0 12vw;
+            max-width: 12vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 10vw;
+                max-width: 10vw;
+            }
+        }
+
+        .custom_lg_column3 {
+            flex: 0 0 10vw;
+            max-width: 10vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 8vw;
+                max-width: 8vw;
+            }
+        }
+
+        .custom_lg_column4 {
+            flex: 0 0 16vw;
+            max-width: 16vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 13vw;
+                max-width: 13vw;
+            }
+            @include max-breakpoint-1440 {
+                flex: 0 0 10vw;
+                max-width: 10vw;
+            }
+        }
+
+        .custom_xxl_column {
+            flex: 0 0 16vw;
+            max-width: 16vw;
+            @include max-breakpoint-1680 {
+                flex: 0 0 13vw;
+                max-width: 13vw;
+            }
+        }
+        .custom_lg_column5 {
+            flex: 0 0 8vw;
+            max-width: 8vw;
+            @include max-breakpoint-1440 {
+                flex: 0 0 10vw;
+                max-width: 10vw;
+            }
+        }
+
+        @include max-breakpoint-1279 {
+            .custom_sm_column,
+            .custom_sm_column2,
+            .custom_md_column,
+            .custom_md_column2,
+            .custom_lg_column,
+            .custom_lg_column2,
+            .custom_lg_column3,
+            .custom_lg_column4,
+            .custom_lg_column5,
+            .custom_xxl_column {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .center_align_column,
+            .right_align_column {
+                justify-content: left;
+            }
+        }
+
+        // BG Removed
+        .mat-mdc-table tbody,
+        .mat-mdc-table tfoot,
+        .mat-mdc-table thead,
+        .mat-mdc-cell,
+        .mat-mdc-footer-cell,
+        .mat-mdc-header-row,
+        .mat-mdc-row,
+        .mat-mdc-footer-row,
+        .mat-mdc-table .mat-mdc-header-cell {
+            background: none;
+        }
+    }
+
+    // Payment Overview Table
+    &.payment_accordion_table {
+        mat-table {
+            &.mat-mdc-table {
+                mat-header-row {
+                    &.mat-mdc-header-row {
+                        @include max-breakpoint-1440 {
+                            padding: 6px 4px;
+                        }
+                    }
+                }
+
+                .table_box_row {
+                    @include max-breakpoint-1440 {
+                        padding: 0 4px;
+                    }
+                    @include max-breakpoint-1279 {
+                        padding: 10px 10px;
+                    }
+
+                    mat-row {
+                        &.mat-mdc-row {
+                            mat-cell {
+                                .action_btn_group3 {
+                                    @include flex_center();
+                                    justify-content: center;
+
+                                    &.left_align {
+                                        justify-content: left;
+                                    }
+
+                                    @include max-breakpoint-1279 {
+                                        justify-content: left;
+                                    }
+
+                                    button {
+                                        &.actionBtn {
+                                            min-width: 96px;
+                                            min-height: 38px;
+                                            font: 500 $font-s-14 $primaryFont;
+                                            color: $BL-102;
+                                            letter-spacing: 0;
+                                            border-color: $BL-102;
+                                            border-radius: 5px;
+                                            padding: 0 10px;
+                                            margin: 0;
+                                            @include max-breakpoint-1800 {
+                                                font: 500 $font-s-13 $primaryFont;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                min-width: 77px;
+                                                min-height: 30px;
+                                                font: 500 $font-s-12 $primaryFont;
+                                            }
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                font: 500 $font-s-11 $primaryFont;
+                                            }
+
+                                            &.blue_border_btn {
+                                                &[disabled='true'],
+                                                &.disabled,
+                                                &.mat-button-disabled {
+                                                    @include disable_button();
+                                                    border-color: $GYN-132;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .fai_btn_group {
+                                        @include flex_center();
+
+                                        button {
+                                            &.actionBtn {
+                                                &.left_btn_group {
+                                                    min-width: 100px;
+                                                    justify-content: left;
+                                                    border-radius: 5px 0 0 5px;
+                                                    border-right: 0;
+                                                    @include max-breakpoint-1680 {
+                                                        min-width: 80px;
+                                                        border-radius: 4px 0 0 4px;
+                                                    }
+                                                }
+
+                                                &.right_btn_group {
+                                                    min-width: 30px;
+                                                    min-height: 34px;
+                                                    padding: 0 2px;
+                                                    border-radius: 0 5px 5px 0;
+                                                    @include max-breakpoint-1680 {
+                                                        min-width: 24px;
+                                                        min-height: 27px;
+                                                        border-radius: 0 4px 4px 0;
+                                                    }
+
+                                                    mat-icon {
+                                                        font-size: $font-s-26;
+                                                        margin: 0;
+                                                        @include max-breakpoint-1800 {
+                                                            font-size: $font-s-24;
+                                                        }
+                                                        @include max-breakpoint-1680 {
+                                                            font-size: $font-s-21;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.lg_btn_group3 {
+                                        button {
+                                            &.actionBtn {
+                                                min-width: 132px;
+                                                @include max-breakpoint-1680 {
+                                                    min-width: 106px;
+                                                }
+
+                                                &.blue_border_btn {
+                                                    &[disabled='true'],
+                                                    &.disabled,
+                                                    &.mat-button-disabled {
+                                                        @include disable_button();
+                                                        border-color: $GYN-132;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.payment_status_table {
+        mat-table {
+            &.mat-mdc-table {
+                .table_box_row {
+                    mat-row {
+                        &.mat-mdc-row {
+                            mat-cell {
+                                h4 {
+                                    &.mat-h4 {
+                                        margin: 0;
+                                    }
+                                }
+
+                                .action_btn_group3 {
+                                    button {
+                                        &.actionBtn {
+                                            min-height: 34px;
+                                            @include max-breakpoint-1680 {
+                                                min-height: 27px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Pagination
+mat-paginator {
+    &.mat-mdc-paginator {
+        font: 400 $font-s-12 $primaryFont;
+        color: $GY-101;
+        letter-spacing: 0;
+        background: none;
+        @include max-breakpoint-1800 {
+            font: 400 $font-s-11 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+            font: 400 $font-s-10 $primaryFont;
+        }
+        .mat-mdc-paginator-page-size {
+            display: none;
+
+            .mat-mdc-paginator-range-actions {
+                .mat-mdc-paginator-range-label {
+                    margin: 0 20px;
+                    @include max-breakpoint-1680 {
+                        margin: 0 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* FA-11798 */
+.cdk-overlay-container {
+    .mat-mdc-select-panel {
+        &.mdc-menu-surface {
+            margin: 0 0 6px 0;
+            @include max-breakpoint-1680 {
+                margin: 0 0 5px 0;
+            }
+        }
+    }
+}
+
+// Draft Table Wrapper
+.draft_table_wrapper {
+    margin: 0 0 30px 0;
+    @include max-breakpoint-1800 {
+        margin: 0 0 27px 0;
+    }
+    @include max-breakpoint-1680 {
+        margin: 0 0 24px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 20px 0;
+    }
+
+    .draft_table_footer {
+        width: 100%;
+        min-height: 30px;
+        @include flex_center();
+        justify-content: center;
+        border-bottom: 1px solid $GY-129;
+        @include max-breakpoint-1800 {
+            min-height: 27px;
+        }
+        @include max-breakpoint-1680 {
+            min-height: 24px;
+        }
+        @include max-breakpoint-1440 {
+            min-height: 20px;
+        }
+
+        button {
+            &.draft_table_btn {
+                @include flex_center();
+                cursor: pointer;
+                background: none;
+                border: 0;
+                outline: 0;
+                padding: 0;
+                margin: 15px 0;
+                font: 600 $font-s-16 $primaryFont;
+                color: $OE-2;
+                @include max-breakpoint-1800 {
+                    font: 600 $font-s-15 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 600 $font-s-14 $primaryFont;
+                    margin: 12px 0;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 600 $font-s-13 $primaryFont;
+                }
+                @include max-breakpoint-1440 {
+                    font: 600 $font-s-12 $primaryFont;
+                    margin: 10px 0;
+                }
+
+                mat-icon {
+                    font-size: $font-s-21;
+                    margin: 0 0 0 6px;
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-18;
+                        margin: 0 0 0 5px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font-size: $font-s-17;
+                    }
+                }
+            }
+        }
+
+        &.custom_mt_0 {
+            margin-top: -40px;
+            @include max-breakpoint-1800 {
+                margin-top: -36px;
+            }
+            @include max-breakpoint-1680 {
+                min-height: 32px;
+            }
+            @include max-breakpoint-1440 {
+                min-height: 30px;
+            }
+
+            button {
+                &.draft_table_btn {
+                    position: relative;
+                    z-index: 9;
+                }
+            }
+        }
+    }
+}

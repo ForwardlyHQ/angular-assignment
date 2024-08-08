@@ -1,0 +1,1188 @@
+// Common Heading Style
+.icon_heading {
+    @include flex_center();
+    justify-content: flex-start;
+    margin-bottom: 6px;
+    @include max-breakpoint-1680 {
+        margin-bottom: 5px;
+    }
+    &.center-align {
+        justify-content: center;
+    }
+    &.mb-25 {
+        margin-bottom: 25px;
+        @include max-breakpoint-1680 {
+            margin-bottom: 20px;
+        }
+    }
+    img {
+        max-width: 18px;
+        margin-right: 9px;
+        @include max-breakpoint-1680 {
+            max-width: 14px;
+            margin-right: 7px;
+        }
+    }
+    h5 {
+        &.mat-h5 {
+            font: 600 $font-s-21 $primaryFont;
+            line-height: normal;
+            color: $BL-114;
+            margin: 0;
+            @include max-breakpoint-1680 {
+                font: 700 $font-s-17 $primaryFont;
+            }
+        }
+    }
+    span {
+        font: 400 $font-s-14 $primaryFont;
+        line-height: normal;
+        color: rgba($BL-114, 0.6);
+        margin-left: auto;
+        @include max-breakpoint-1680 {
+            font: 400 $font-s-11 $primaryFont;
+        }
+    }
+}
+// If Action Required Box Style
+.action_required_box_wrapper {
+    @include flex_center();
+    justify-content: center;
+    flex-direction: column;
+    min-height: 289px;
+    border-bottom: 1px solid $GY-132;
+    @include max-breakpoint-1680 {
+        min-height: 231px;
+    }
+    &.receivable-payable-disabled {
+        background: url('../../../assets/images/dashboard/receivable-payable-bg.png') no-repeat top left;
+        background-size: contain;
+    }
+    &.no-transaction {
+        min-height: 246px;
+        background: url('../../../assets/images/dashboard/recent-transaction-bg.png') no-repeat top left;
+        background-size: contain;
+        @include max-breakpoint-1440 {
+            min-height: 197px;
+        }
+    }
+    &.action-required-border-box {
+        min-height: unset;
+        height: 100%;
+        padding: 15px 15px;
+        border: 1px solid $GY-132;
+        border-radius: 5px;
+        @include max-breakpoint-1680 {
+            padding: 12px 12px;
+            border-radius: 4px;
+        }
+    }
+    .action_required_icon {
+        text-align: center;
+        margin-bottom: 13px;
+        @include max-breakpoint-1680 {
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 54px;
+            @include max-breakpoint-1680 {
+                max-width: 43px;
+            }
+        }
+    }
+    h5 {
+        &.mat-h5 {
+            font: 500 $font-s-19 $primaryFont;
+            line-height: normal;
+            color: $BL-114;
+            text-align: center;
+            margin: 0 0 15px 0;
+            @include max-breakpoint-1680 {
+                font: 500 $font-s-16 $primaryFont;
+                margin: 0 0 12px 0;
+            }
+        }
+    }
+    p {
+        font: 400 $font-s-16 $primaryFont;
+        line-height: 24px;
+        color: $GY-131;
+        text-align: center;
+        margin: 0;
+        @include max-breakpoint-1680 {
+            font: 400 $font-s-14 $primaryFont;
+            line-height: 19px;
+        }
+        br {
+            @include max-breakpoint-1680 {
+                display: none;
+            }
+        }
+        a {
+            font-weight: 500;
+            color: $BL-114;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
+// Action Required Tabs Style Include Here
+.action-required-wrapper {
+    .action-required-tabs-wrapper {
+        .action-required-tabs {
+            button {
+                position: relative;
+                font: 400 $font-s-16 $primaryFont;
+                color: rgba($BL-114, 0.6);
+                justify-content: flex-start;
+                height: 60px;
+                width: 100%;
+                border: 1px solid $BL-117;
+                border-radius: 5px;
+                margin-bottom: 33px;
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-14 $primaryFont;
+                    border-radius: 4px;
+                }
+                @include max-breakpoint-1440 {
+                    font: 400 $font-s-12 $primaryFont;
+                    height: 48px;
+                    margin-bottom: 44px;
+                }
+                &:last-child {
+                    margin: 0;
+                }
+                span {
+                    &.counter {
+                        @include flex_center();
+                        justify-content: center;
+                        height: 16px;
+                        width: 16px;
+                        background-color: $BL-117;
+                        box-shadow: -1px 2px 3px $BLN-113;
+                        border: 1px solid $BL-117;
+                        border-top-right-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        font: 500 $font-s-10 $primaryFont;
+                        color: $WE-100;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        &.counter-invoices {
+                            background-color: $GR-100;
+                        }
+                        &.counter-bills {
+                            background-color: $RD-104;
+                        }
+                        &.counter-approvals {
+                            background-color: $BL-103;
+                        }
+                    }
+                }
+                span {
+                    &.mdc-button__label {
+                        @include flex_center();
+                        justify-content: flex-start;
+                        position: static;
+                        img {
+                            max-width: 16px;
+                            margin-right: 10px;
+                            @include max-breakpoint-1680 {
+                                max-width: 13px;
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+                // If Tabs Is In Active Status
+                &.active-tab {
+                    font: 500 $font-s-16 $primaryFont;
+                    color: $BL-114;
+                    background-color: $BL-117;
+                    box-shadow: 0 5px 5px rgba($GY-132, 0.5);
+                    @include max-breakpoint-1680 {
+                        font: 500 $font-s-14 $primaryFont;
+                    }
+                    @include max-breakpoint-1440 {
+                        font: 500 $font-s-12 $primaryFont;
+                    }
+                }
+            }
+        }
+        .action-required-tabs-content {
+            padding: 0 10px;
+            position: relative;
+            width: 100%;
+            flex: 0 0 76%;
+            max-width: 76%;
+            @include max-breakpoint-880 {
+                flex: 0 0 66%;
+                max-width: 66%;
+            }
+            @include max-breakpoint-480 {
+                flex: 0 0 56%;
+                max-width: 56%;
+            }
+            .action-required-box-wrapper-outer {
+                height: 100%;
+                .pending-approvals-box-inner {
+                    height: 100%;
+                }
+                .invoice-bills-approval-wrapper {
+                    height: 100%;
+                    padding-right: 3px;
+                    overflow: hidden;
+                    .invoice-bills-approval-card {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        height: 246px;
+                        padding: 5px 5px;
+                        background-color: $WE-100;
+                        border: 1px solid $GY-132;
+                        border-radius: 5px;
+                        @include max-breakpoint-1680 {
+                            padding: 4px 4px;
+                            border-radius: 4px;
+                        }
+                        @include max-breakpoint-1440 {
+                            height: 232px;
+                        }
+                        &:hover {
+                            border-color: $BL-114;
+                        }
+                        &.ghost_loading_card_wrapper {
+                            max-width: 193px;
+                            margin-right: 10px;
+                            @include max-breakpoint-1680 {
+                                max-width: 154px;
+                                margin-right: 8px;
+                            }
+                        }
+                        &.view-all {
+                            height: 246px;
+                            @include flex_center();
+                            justify-content: center;
+                            @include max-breakpoint-1440 {
+                                height: 232px;
+                            }
+                            &.view-all-bills {
+                                @include max-breakpoint-1440 {
+                                    min-height: 232px;
+                                }
+                            }
+                            button {
+                                &.default-btn {
+                                    font: 500 $font-s-16 $primaryFont;
+                                    padding: 0;
+                                    min-width: auto;
+                                    border-radius: 0;
+                                    text-decoration: underline;
+                                    @include max-breakpoint-1680 {
+                                        font: 400 $font-s-14 $primaryFont;
+                                    }
+                                    span {
+                                        &.mdc-button__ripple,
+                                        &.mat-mdc-button-ripple {
+                                            display: none;
+                                        }
+                                        &.arrow-icon {
+                                            font-family: $primaryFont;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .invoice-bills-approval-card-header {
+                            height: 100px;
+                            width: calc(100% - 10px);
+                            position: absolute;
+                            left: 5px;
+                            top: 5px;
+                            right: 5px;
+                            @include max-breakpoint-1680 {
+                                height: 80px;
+                                width: calc(100% - 8px);
+                                left: 4px;
+                                top: 4px;
+                                right: 4px;
+                            }
+                            h6 {
+                                &.mat-h6 {
+                                    font: 600 $font-s-16 $primaryFont;
+                                    line-height: 22px;
+                                    color: $BL-114;
+                                    text-align: center;
+                                    padding: 23px 5px 28px 5px;
+                                    margin: 0;
+                                    @include max-breakpoint-1680 {
+                                        font: 600 $font-s-14 $primaryFont;
+                                        line-height: 18px;
+                                        padding: 18px 4px 22px 4px;
+                                    }
+                                    .ghost_loading_box {
+                                        display: block;
+                                        max-width: 117px;
+                                        min-height: 15px;
+                                        margin: 0 auto;
+                                        @include max-breakpoint-1680 {
+                                            max-width: 94px;
+                                            min-height: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                            .tooltip_default_wrapper {
+                                width: 100%;
+                                max-width: 80%;
+                                top: calc(100% - 28px);
+                                bottom: auto;
+                                @include max-breakpoint-1680 {
+                                    top: calc(100% - 22px);
+                                }
+                                &::after {
+                                    border-top-color: transparent;
+                                    border-bottom-color: $WE-100;
+                                    top: auto;
+                                    bottom: 100%;
+                                }
+                                .tooltip_default_inner {
+                                    p {
+                                        text-align: center;
+                                    }
+                                    &::after {
+                                        border-top-color: transparent;
+                                        border-bottom-color: $BL-117;
+                                        top: auto;
+                                        bottom: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        .invoice-bills-approval-card-body {
+                            padding: 100px 0 62px 0;
+                            @include max-breakpoint-1440 {
+                                padding: 80px 0 50px 0;
+                            }
+                            h5 {
+                                &.mat-h5 {
+                                    font: 500 $font-s-18 $primaryFont;
+                                    line-height: normal;
+                                    color: $BL-114;
+                                    text-align: center;
+                                    margin: 0 0 20px 0;
+                                    @include max-breakpoint-1680 {
+                                        font: 500 $font-s-16 $primaryFont;
+                                        margin: 0 0 14px 0;
+                                    }
+                                    .ghost_loading_box {
+                                        display: block;
+                                        max-width: 70px;
+                                        min-height: 18px;
+                                        margin: 0 auto;
+                                        @include max-breakpoint-1680 {
+                                            max-width: 56px;
+                                            min-height: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            .date-sec {
+                                span {
+                                    display: block;
+                                    font: 400 $font-s-12 $primaryFont;
+                                    line-height: 15px;
+                                    color: $GY-131;
+                                    text-align: center;
+                                    .ghost_loading_box {
+                                        display: block;
+                                        width: 30px;
+                                        min-height: 15px;
+                                        margin-bottom: 2px;
+                                        @include max-breakpoint-1680 {
+                                            width: 24px;
+                                            min-height: 12px;
+                                        }
+                                    }
+                                }
+                                p {
+                                    font: 500 $font-s-14 $primaryFont;
+                                    line-height: 15px;
+                                    color: $BL-114;
+                                    text-align: center;
+                                    margin: 0;
+                                    span {
+                                        font: 500 $font-s-14 $primaryFont;
+                                        color: $BL-114;
+                                        max-width: 40px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .ghost_loading_box {
+                                        width: 60px;
+                                        min-height: 15px;
+                                        @include max-breakpoint-1680 {
+                                            display: block;
+                                            width: 48px;
+                                            min-height: 12px;
+                                        }
+                                    }
+                                }
+                                ul {
+                                    @include ul_style();
+                                    @include flex_center();
+                                    justify-content: center;
+                                    text-align: center;
+                                    li {
+                                        display: inline-block;
+                                        padding: 0 10px;
+                                        border-right: 1px solid $GY-132;
+                                        @include max-breakpoint-1680 {
+                                            padding: 0 8px;
+                                        }
+                                        span,
+                                        p {
+                                            text-align: left;
+                                        }
+                                        &:first-child {
+                                            padding-left: 0;
+                                        }
+                                        &:last-child {
+                                            padding-right: 0;
+                                            border: none;
+                                        }
+                                    }
+                                }
+                                .tooltip_default {
+                                    .tooltip_default_wrapper {
+                                        .tooltip_default_inner {
+                                            p {
+                                                font: 500 $font-s-11 $primaryFont;
+                                                white-space: nowrap;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .invoice-bills-approval-card-footer {
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            width: 100%;
+                            padding: 19px 0 20px 0;
+                            text-align: center;
+                            @include max-breakpoint-1680 {
+                                padding: 16px 0;
+                            }
+                            button {
+                                &.default-btn {
+                                    font: 400 $font-s-14 $primaryFont;
+                                    color: $BL-114;
+                                    height: 23px;
+                                    padding: 0 15px;
+                                    background-color: $BL-117;
+                                    border-radius: 50px;
+                                    span {
+                                        &.mdc-button__label {
+                                            @include flex_center();
+                                            justify-content: center;
+                                            span {
+                                                &.arrow-icon {
+                                                    font-family: $primaryFont;
+                                                    margin-left: 5px;
+                                                    @include max-breakpoint-1680 {
+                                                        margin-left: 4px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.disabled_btn,
+                                    &[disabled='true'],
+                                    &.mat-button-disabled {
+                                        color: $disabledTX;
+                                        cursor: default;
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                            .tooltip_default {
+                                .tooltip_default_wrapper {
+                                    width: 100%;
+                                    max-width: 80%;
+                                    .tooltip_default_inner {
+                                        p {
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                            .ghost_loading_box {
+                                display: block;
+                                max-width: 94px;
+                                min-height: 23px;
+                                border-radius: 50px;
+                                margin: 0 auto;
+                                @include max-breakpoint-1680 {
+                                    max-width: 75px;
+                                    min-height: 18px;
+                                }
+                            }
+                        }
+                        // If Auto Payment Authorization Request
+                        &.authorization-request-card {
+                            .invoice-bills-approval-card-header {
+                                h6 {
+                                    &.mat-h6 {
+                                        position: relative;
+                                        padding: 8px 15px 8px 40px;
+                                        background-color: rgba($GY-132, 0.5);
+                                        border-radius: 5px;
+                                        font: 400 $font-s-12 $secondaryFont;
+                                        color: $BL-114;
+                                        text-align: left;
+                                        @include max-breakpoint-1680 {
+                                            padding: 6px 12px 6px 40px;
+                                            border-radius: 4px;
+                                        }
+                                        img {
+                                            position: absolute;
+                                            left: 10px;
+                                            top: 0;
+                                            bottom: 0;
+                                            margin: auto;
+                                            width: 20px;
+                                            @include max-breakpoint-1680 {
+                                                left: 16px;
+                                                width: 16px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .invoice-bills-approval-card-body {
+                                h6 {
+                                    &.mat-h6 {
+                                        min-height: 71px;
+                                        padding: 0 25px;
+                                        font: 600 $font-s-16 $primaryFont;
+                                        line-height: 22px;
+                                        text-align: center;
+                                        color: $BL-114;
+                                        margin: 0;
+                                        @include max-breakpoint-1680 {
+                                            min-height: 57px;
+                                            padding: 0 20px;
+                                            font: 600 $font-s-14 $primaryFont;
+                                            line-height: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                            .invoice-bills-approval-card-footer {
+                                button {
+                                    &.default-btn {
+                                        background-color: rgba($BL-121, 0.3);
+                                    }
+                                }
+                            }
+                        }
+                        // If Bill Received From Accounting Software
+                        &.bill-received-acc {
+                            .invoice-bills-approval-card-header {
+                                h6 {
+                                    &.mat-h6 {
+                                        position: relative;
+                                        padding-left: 52px;
+                                        text-align: left;
+                                        @include max-breakpoint-1680 {
+                                            padding-left: 42px;
+                                        }
+                                        span {
+                                            &.accounting-soft-wrapper {
+                                                display: block;
+                                                height: 17px;
+                                                width: 17px;
+                                                background-color: $WE-100;
+                                                border-radius: 50%;
+                                                overflow: hidden;
+                                                position: absolute;
+                                                left: 30px;
+                                                top: 24px;
+                                                @include max-breakpoint-1680 {
+                                                    height: 14px;
+                                                    width: 14px;
+                                                    left: 24px;
+                                                    top: 19px;
+                                                }
+                                                img {
+                                                    height: 100%;
+                                                    width: 100%;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        // If Bill Received Manually
+                        &.bill-received-manual {
+                            .invoice-bills-approval-card-header {
+                                position: static;
+                                width: 100%;
+                                height: auto;
+                                padding: 11px 15px;
+                                background-color: rgba($GY-132, 0.5);
+                                border-radius: 5px;
+                                @include max-breakpoint-1680 {
+                                    padding: 9px 12px;
+                                    border-radius: 4px;
+                                }
+                                h6 {
+                                    &.mat-h6 {
+                                        @include flex_center;
+                                        justify-content: center;
+                                        font: 400 $font-s-12 $secondaryFont;
+                                        color: $BL-114;
+                                        padding: 0;
+                                        img {
+                                            max-width: 18px;
+                                            margin-right: 5px;
+                                            @include max-breakpoint-1680 {
+                                                max-width: 14px;
+                                                margin-right: 4px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .invoice-bills-approval-card-body {
+                                padding: 0 0 62px 0;
+                                @include max-breakpoint-1680 {
+                                    padding: 20px 0 50px 0;
+                                }
+                                .bill-received-manual-h6 {
+                                    min-height: 69px;
+                                    @include max-breakpoint-1680 {
+                                        min-height: 55px;
+                                    }
+                                    h6 {
+                                        &.mat-h6 {
+                                            font: 600 $font-s-16 $primaryFont;
+                                            line-height: 22px;
+                                            text-align: center;
+                                            color: $BL-114;
+                                            padding: 13px 10px 16px 10px;
+                                            margin: 0;
+                                            @include max-breakpoint-1680 {
+                                                font: 600 $font-s-14 $primaryFont;
+                                                line-height: 18px;
+                                                padding: 10px 8px 13px 8px;
+                                            }
+                                        }
+                                    }
+                                    .tooltip_default_wrapper {
+                                        width: 100%;
+                                        max-width: 80%;
+                                        top: calc(100% - 16px);
+                                        bottom: auto;
+                                        @include max-breakpoint-1680 {
+                                            top: calc(100% - 13px);
+                                        }
+                                        &::after {
+                                            border-top-color: transparent;
+                                            border-bottom-color: $WE-100;
+                                            top: auto;
+                                            bottom: 100%;
+                                        }
+                                        .tooltip_default_inner {
+                                            p {
+                                                text-align: center;
+                                            }
+                                            &::after {
+                                                border-top-color: transparent;
+                                                border-bottom-color: $BL-117;
+                                                top: auto;
+                                                bottom: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                                h5 {
+                                    &.mat-h5 {
+                                        margin: 0 0 11px 0;
+                                        @include max-breakpoint-1440 {
+                                            margin: 0 0 7px 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .invoice-bills-approval-card-footer {
+                                button {
+                                    &.default-btn {
+                                        background-color: rgba($RD-801, 0.15);
+                                    }
+                                }
+                            }
+                        }
+                        // If Bill Received From Book
+                        &.bill-received-book {
+                            .invoice-bills-approval-card-header {
+                                position: static;
+                                width: 100%;
+                                height: auto;
+                                h6 {
+                                    &.mat-h6 {
+                                        font: 400 $font-s-12 $primaryFont;
+                                        line-height: 15px;
+                                        color: $GY-131;
+                                        padding: 10px 5px 16px 5px;
+                                        @include max-breakpoint-1680 {
+                                            padding: 8px 4px 13px 4px;
+                                        }
+                                    }
+                                }
+                            }
+                            .invoice-bills-approval-card-body {
+                                padding: 0 0 62px 0;
+                                @include max-breakpoint-1680 {
+                                    padding: 0 0 50px 0;
+                                }
+                                .invoice-bills-approval-card-body-h6 {
+                                    min-height: 59px;
+                                    @include max-breakpoint-1680 {
+                                        min-height: 47px;
+                                    }
+                                    h6 {
+                                        &.mat-h6 {
+                                            font: 600 $font-s-16 $primaryFont;
+                                            line-height: 22px;
+                                            color: $BL-114;
+                                            text-align: center;
+                                            padding: 0 10px 15px 10px;
+                                            margin: 0;
+                                            @include max-breakpoint-1680 {
+                                                font: 600 $font-s-14 $primaryFont;
+                                                line-height: 18px;
+                                                padding: 0 8px 12px 8px;
+                                                min-height: 48px;
+                                            }
+                                        }
+                                    }
+                                    .tooltip_default_wrapper {
+                                        width: 100%;
+                                        max-width: 80%;
+                                        top: calc(100% - 15px);
+                                        bottom: auto;
+                                        @include max-breakpoint-1680 {
+                                            top: calc(100% - 12px);
+                                        }
+                                        &::after {
+                                            border-top-color: transparent;
+                                            border-bottom-color: $WE-100;
+                                            top: auto;
+                                            bottom: 100%;
+                                        }
+                                        .tooltip_default_inner {
+                                            p {
+                                                text-align: center;
+                                            }
+                                            &::after {
+                                                border-top-color: transparent;
+                                                border-bottom-color: $BL-117;
+                                                top: auto;
+                                                bottom: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    owl-carousel-o {
+                        .owl-carousel {
+                            .owl-stage-outer {
+                                overflow: initial;
+                            }
+                        }
+                        &.invoice-bills-approval-card-fixed {
+                            .owl-carousel {
+                                .owl-stage-outer {
+                                    .owl-item {
+                                        max-width: 193px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // Owl Carousel Navigation Style
+                    .owl-nav {
+                        height: 0;
+                        margin: 0;
+                        [class*='owl-'] {
+                            height: 45px;
+                            width: 45px;
+                            position: absolute;
+                            left: -25px;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            background: transparent;
+                            padding: 0;
+                            border-radius: 0;
+                            opacity: 1;
+                            @include max-breakpoint-1680 {
+                                height: 36px;
+                                width: 36px;
+                            }
+                            i {
+                                &.material-icons {
+                                    font-size: 45px;
+                                    color: $BL-116;
+                                    @include max-breakpoint-1680 {
+                                        font-size: 36px;
+                                    }
+                                }
+                            }
+                            &:hover,
+                            &:focus {
+                                i {
+                                    &.material-icons {
+                                        color: $BL-114;
+                                    }
+                                }
+                            }
+                            // Disabled
+                            &.disabled {
+                                cursor: auto;
+                                pointer-events: none;
+                                opacity: 0.45;
+                                &:hover,
+                                &:focus {
+                                    i {
+                                        &.material-icons {
+                                            color: $BL-116;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .owl-next {
+                            left: auto;
+                            right: -25px;
+                        }
+                    }
+
+                    .owl-carousel {
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+}
+// Critical Action Progress Bar Stye
+.critical-action-progress-inner {
+    mat-progress-bar {
+        &.mat-mdc-progress-bar {
+            height: 4px;
+            border-radius: 20px;
+            .mdc-linear-progress__buffer {
+                .mdc-linear-progress__buffer-bar {
+                    background-color: $WE-100;
+                }
+            }
+            .mdc-linear-progress__bar {
+                .mdc-linear-progress__bar-inner {
+                    border-top-width: 4px;
+                    border-color: $OE-2;
+                }
+            }
+            &.verification_progress {
+                .mdc-linear-progress__buffer {
+                    .mdc-linear-progress__buffer-bar {
+                        background-color: $BL-117;
+                    }
+                }
+            }
+        }
+    }
+}
+.critical-action-wrapper {
+    .btn-sec {
+        &.center {
+            text-align: center;
+        }
+        &.right {
+            text-align: right;
+        }
+        button {
+            &.default-btn {
+                font: 400 $font-s-16 $primaryFont;
+                color: $WE-100;
+                height: 35px;
+                min-width: 186px;
+                background-color: $BL-114;
+                border-radius: 50px;
+                @include max-breakpoint-1680 {
+                    font: 400 $font-s-14 $primaryFont;
+                    height: 28px;
+                    min-width: 149px;
+                }
+                span {
+                    &.mdc-button__label {
+                        @include flex_center();
+                        span {
+                            &.arrow-icon {
+                                font-family: $primaryFont;
+                                margin-left: 5px;
+                                @include max-breakpoint-1680 {
+                                    margin-left: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover,
+                &:focus {
+                    box-shadow: 0 4px 4px rgba($BK-100, 0.25);
+                }
+                &.contact-support-btn {
+                    color: $BL-114;
+                    height: 65px;
+                    min-width: 235px;
+                    background-color: $WE-100;
+                    border: 1px solid $BL-114;
+                    border-radius: 10px;
+                    @include max-breakpoint-1680 {
+                        height: 52px;
+                        min-width: 188px;
+                        border-radius: 8px;
+                    }
+                    span {
+                        &.mdc-button__label {
+                            span {
+                                margin-right: 10px;
+                                @include max-breakpoint-1680 {
+                                    margin-right: 8px;
+                                }
+                                img {
+                                    max-width: 38px;
+                                    @include max-breakpoint-1680 {
+                                        max-width: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover,
+                    &:focus {
+                        box-shadow: 0 4px 4px rgba($BK-100, 0.25);
+                    }
+                }
+            }
+        }
+    }
+    &.critical-action-verified {
+        .btn-sec {
+            button {
+                &.default-btn {
+                    background-color: rgba($BL-120, 0.2);
+                    color: $BL-114;
+                    &:hover,
+                    &:focus {
+                        box-shadow: 0 4px 4px rgba($BK-100, 0.25);
+                    }
+                }
+            }
+        }
+    }
+}
+// Default Tooltip Common Style Include Here
+.tooltip_default {
+    position: relative;
+    .tooltip_default_wrapper {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 9px);
+        transform: translate(-50%, 0px);
+        background-color: $WE-100;
+        border: 2px solid $WE-100;
+        box-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.15);
+        border-radius: 5px;
+        display: none;
+        @include max-breakpoint-1680 {
+            bottom: calc(100% + 7px);
+            box-shadow: 0 3px 3px rgba($color: #000000, $alpha: 0.15);
+            border-radius: 4px;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            border: 9px solid transparent;
+            border-top-color: $WE-100;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 0);
+            @include max-breakpoint-1680 {
+                border: 7px solid transparent;
+                border-top-color: $WE-100;
+            }
+        }
+        .tooltip_default_inner {
+            position: relative;
+            padding: 5px 10px;
+            background-color: $BL-117;
+            border-radius: 5px;
+            font: 500 $font-s-11 $primaryFont;
+            line-height: normal;
+            color: $BL-114;
+            text-align: left;
+            @include max-breakpoint-1680 {
+                padding: 4px 8px;
+                border-radius: 4px;
+                font: 500 $font-s-9 $primaryFont;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                border: 6px solid transparent;
+                border-top-color: $BL-117;
+                left: 50%;
+                top: 100%;
+                transform: translate(-50%, 0);
+                z-index: 1;
+                @include max-breakpoint-1680 {
+                    border: 5px solid transparent;
+                    border-top-color: $BL-117;
+                }
+            }
+            p {
+                font: 500 $font-s-11 $primaryFont;
+                line-height: normal;
+                color: $BL-114;
+                text-align: left;
+                margin: 0;
+                @include max-breakpoint-1680 {
+                    font: 500 $font-s-9 $primaryFont;
+                }
+                &.center {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    &:hover {
+        .tooltip_default_wrapper {
+            display: block;
+            &.hideTooltipMsg {
+                display: none;
+            }
+        }
+    }
+    // Tooltip Start From Left Side
+    &.tooltip_default_left {
+        .tooltip_default_wrapper {
+            left: 0;
+            right: auto !important;
+            transform: translate(0, 0);
+            &::after {
+                left: 4px;
+                transform: translate(0, 0);
+                @include max-breakpoint-1680 {
+                    left: 3px;
+                }
+            }
+            .tooltip_default_inner {
+                &::after {
+                    left: 7px;
+                    transform: translate(0, 0);
+                    @include max-breakpoint-1680 {
+                        left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    // Tooltip Start From Right Side
+    &.tooltip_default_right {
+        .tooltip_default_wrapper {
+            left: auto;
+            right: 0;
+            transform: translate(0, 0);
+            &::after {
+                left: auto;
+                right: 4px;
+                transform: translate(0, 0);
+                @include max-breakpoint-1680 {
+                    right: 3px;
+                }
+            }
+            .tooltip_default_inner {
+                &::after {
+                    left: auto;
+                    right: 7px;
+                    transform: translate(0, 0);
+                    @include max-breakpoint-1680 {
+                        right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    // Bottom Tooltip
+    &.tooltip_default_bottom {
+        .tooltip_default_wrapper {
+            top: 100%;
+            right: -8px;
+            bottom: auto;
+            @include max-breakpoint-1680 {
+                right: -6px;
+            }
+            &::after {
+                border: 9px solid transparent;
+                border-bottom-color: $WE-100;
+                top: auto;
+                bottom: 100%;
+                @include max-breakpoint-1680 {
+                    border: 7px solid transparent;
+                    border-bottom-color: $WE-100;
+                }
+            }
+            .tooltip_default_inner {
+                &::after {
+                    border: 6px solid transparent;
+                    border-bottom-color: $BL-117;
+                    top: auto;
+                    bottom: 100%;
+                    @include max-breakpoint-1680 {
+                        border: 5px solid transparent;
+                        border-bottom-color: $BL-117;
+                    }
+                }
+            }
+        }
+    }
+    // Multiline Tooltip
+    &.tooltip_default_multiline {
+        .tooltip_default_wrapper {
+            .tooltip_default_inner {
+                p {
+                    white-space: normal !important;
+                }
+            }
+        }
+    }
+    // Whitspace Nowrap
+    &.tooltip_whitespace {
+        .tooltip_default_wrapper {
+            .tooltip_default_inner {
+                white-space: nowrap;
+            }
+        }
+    }
+}

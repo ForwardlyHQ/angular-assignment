@@ -1,0 +1,766 @@
+// Page 1 SCSS Style
+.payment_page_inner_wrapper {
+    position: relative;
+
+    &.custom_pb {
+        padding-bottom: 130px;
+        @include max-breakpoint-1680 {
+            padding-bottom: 104px;
+        }
+        @include max-breakpoint-480 {
+            padding-bottom: 175px;
+        }
+    }
+
+    .right_align_row {
+        justify-content: flex-end;
+        @include max-breakpoint-1279 {
+            justify-content: flex-start;
+        }
+    }
+}
+
+// Page Back Button (New)
+.common_page_back_wrapper {
+    width: 100%;
+    @include flex_align_center();
+    position: relative;
+    border-bottom: 1px solid $GY-8;
+    padding: 10px 0;
+    margin: 0 0 45px 0;
+    @include max-breakpoint-1800 {
+        margin: 0 0 40px 0;
+    }
+    @include max-breakpoint-1680 {
+        padding: 8px 0;
+        margin: 0 0 36px 0;
+    }
+    @include max-breakpoint-1440 {
+        margin: 0 0 32px 0;
+    }
+    @include max-breakpoint-959 {
+        @include flex_align_start();
+    }
+
+    .left_column {
+        button {
+            &.common_back_nav_btn {
+                @include flex_align_center();
+                padding: 0;
+                background: none;
+                border: none;
+                cursor: pointer;
+                font: 600 $font-s-18 $primaryFont;
+                color: $BL-1;
+                @include max-breakpoint-1800 {
+                    font: 600 $font-s-16 $primaryFont;
+                }
+                @include max-breakpoint-1680 {
+                    font: 600 $font-s-14 $primaryFont;
+                }
+
+                mat-icon {
+                    font-size: $font-s-24;
+                    margin: 0 6px 0 0;
+                    @include max-breakpoint-1800 {
+                        font-size: $font-s-21;
+                    }
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-18;
+                        margin: 0 5px 0 0;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font-size: $font-s-19;
+                    }
+                }
+            }
+        }
+    }
+
+    .right_column {
+        margin-left: auto;
+    }
+
+    .auto_payment_status_alert {
+        width: 100%;
+        @include flex_align_center();
+        font: 500 $font-s-16 $primaryFont;
+        color: $GY-17;
+        @include max-breakpoint-1800 {
+            font: 500 $font-s-15 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+            font: 500 $font-s-14 $primaryFont;
+        }
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 500 $font-s-13 $primaryFont;
+        }
+        @include max-breakpoint-1440 {
+            font: 500 $font-s-12 $primaryFont;
+        }
+
+        img {
+            width: 21px;
+            margin: 0 6px 0 0;
+            @include max-breakpoint-1680 {
+                width: 17px;
+                margin: 0 5px 0 0;
+            }
+        }
+    }
+
+    // PDF Page Breadcrumb
+    .breadcrumb_stepper_column {
+        width: 100%;
+
+        ul {
+            @include ul_style();
+            @include flex_align_center();
+            @include max-breakpoint-599 {
+                flex-wrap: wrap;
+            }
+
+            li {
+                width: 100%;
+                flex: 1 1 auto;
+                max-width: 100%;
+                position: relative;
+                padding: 0 15px;
+                @include max-breakpoint-1680 {
+                    padding: 0 12px;
+                }
+                @include max-breakpoint-959 {
+                    padding: 0;
+                }
+                @include max-breakpoint-599 {
+                    flex: 0 0 100%;
+
+                    &::after {
+                        width: 2px;
+                        height: 100%;
+                        content: '';
+                        position: absolute;
+                        left: 10px;
+                        top: 0;
+                        border-left: 2px solid $RD-1;
+                    }
+                }
+
+                .breadcrumb_stepper_wrap {
+                    min-height: 45px;
+                    position: relative;
+                    @include flex_align_center();
+                    @include max-breakpoint-959 {
+                        min-height: 65px;
+                        display: block;
+
+                        &::after {
+                            width: 100%;
+                            height: 2px;
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 10px;
+                            border-top: 2px solid $RD-1;
+                        }
+                    }
+                    @include max-breakpoint-599 {
+                        display: flex;
+                        align-items: flex-start;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    .breadcrumb_stepper_avatar {
+                        width: 28px;
+                        min-width: 28px;
+                        height: 28px;
+                        @include flex_align_center();
+                        justify-content: center;
+                        position: relative;
+                        z-index: 1;
+                        background: $WE-1;
+                        border: 1px solid $RD-1;
+                        border-radius: 50%;
+                        padding: 2px;
+                        margin-right: 15px;
+                        @include max-breakpoint-1680 {
+                            width: 22px;
+                            min-width: 22px;
+                            height: 22px;
+                            margin-right: 12px;
+                        }
+                        @include max-breakpoint-959 {
+                            margin: 0 0 6px 0;
+                        }
+                        @include max-breakpoint-599 {
+                            margin: 0 15px 0 0;
+                        }
+
+                        mat-icon {
+                            font-size: $font-s-18;
+                            color: $RD-1;
+                            @include max-breakpoint-1680 {
+                                font-size: $font-s-16;
+                            }
+                        }
+                    }
+
+                    .breadcrumb_stepper_content {
+                        width: 100%;
+                        position: relative;
+                        @include max-breakpoint-959 {
+                            padding-right: 15px;
+                        }
+
+                        h4 {
+                            &.mat-h4 {
+                                font: 600 $font-s-16 $primaryFont;
+                                margin: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-14 $primaryFont;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 600 $font-s-12 $primaryFont;
+                                }
+                            }
+                        }
+
+                        h5 {
+                            &.mat-h5 {
+                                font: 400 $font-s-12 $primaryFont;
+                                margin: 0;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-10 $primaryFont;
+                                }
+                            }
+                        }
+
+                        p {
+                            font: 400 $font-s-10 $primaryFont;
+                            color: $GY-17;
+                            margin: 0;
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-8 $primaryFont;
+                            }
+                        }
+
+                        h4.mat-h4,
+                        h5.mat-h5,
+                        p {
+                            span {
+                                display: inline-block;
+                                position: relative;
+                                z-index: 1;
+                                background: $WE-1;
+                                padding-right: 40px;
+                                @include max-breakpoint-1800 {
+                                    padding-right: 36px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    padding-right: 32px;
+                                }
+                                @include max-breakpoint-1440 {
+                                    padding-right: 28px;
+                                }
+                                @include max-breakpoint-959 {
+                                    padding-right: 0;
+                                }
+                            }
+                        }
+
+                        &::after {
+                            width: 100%;
+                            height: 2px;
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            border-top: 2px solid $RD-1;
+                            @include max-breakpoint-959 {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                &.active {
+                    .breadcrumb_stepper_wrap {
+                        .breadcrumb_stepper_avatar {
+                            background: $RD-1;
+                            border-color: $RD-1;
+
+                            mat-icon {
+                                color: $WE-1;
+                            }
+                        }
+                    }
+                }
+
+                &.inactive {
+                    @include max-breakpoint-599 {
+                        &::after {
+                            border-left: 2px dotted #b3bdc6;
+                        }
+                    }
+                    .breadcrumb_stepper_wrap {
+                        @include max-breakpoint-959 {
+                            &::after {
+                                border-top: 2px dotted #b3bdc6;
+                            }
+                        }
+
+                        .breadcrumb_stepper_avatar {
+                            border: 1px dashed #b3bdc6;
+
+                            mat-icon {
+                                display: none;
+                            }
+                        }
+
+                        .breadcrumb_stepper_content {
+                            h4.mat-h4,
+                            h5.mat-h5,
+                            p {
+                                color: $GY-17;
+                            }
+
+                            &::after {
+                                border-top: 2px dotted #b3bdc6;
+                            }
+                        }
+                    }
+                }
+
+                &.failed {
+                    .breadcrumb_stepper_wrap {
+                        .breadcrumb_stepper_avatar {
+                            background: $RD-6;
+                            border-color: $RD-6;
+
+                            mat-icon {
+                                color: $WE-1;
+                            }
+                        }
+
+                        .breadcrumb_stepper_content {
+                            h4 {
+                                &.mat-h4 {
+                                    color: $RD-6;
+                                }
+                            }
+                            h5 {
+                                &.mat-h5 {
+                                    color: $RD-6;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.reversed {
+                    .breadcrumb_stepper_wrap {
+                        .breadcrumb_stepper_avatar {
+                            background: $RD-6;
+                            border-color: $RD-6;
+
+                            mat-icon {
+                                color: $WE-1;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    @include max-breakpoint-1680 {
+                        padding-right: 0;
+                    }
+                    @include max-breakpoint-599 {
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    .breadcrumb_stepper_wrap {
+                        @include max-breakpoint-959 {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        .breadcrumb_stepper_content {
+                            h4.mat-h4,
+                            h5.mat-h5,
+                            p {
+                                span {
+                                    padding-right: 0;
+                                    @include max-breakpoint-1800 {
+                                        padding-right: 0;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        padding-right: 0;
+                                    }
+                                    @include max-breakpoint-1440 {
+                                        padding-right: 0;
+                                    }
+                                }
+                            }
+
+                            &::after {
+                                display: none !important;
+                            }
+                        }
+                    }
+
+                    &.failed,
+                    &.reversed {
+                        max-width: 180px;
+                        @include max-breakpoint-1680 {
+                            max-width: 144px;
+                        }
+                        @include max-breakpoint-959 {
+                            max-width: 100px;
+                        }
+                        @include max-breakpoint-599 {
+                            max-width: 100%;
+                        }
+                    }
+
+                    &.paid {
+                        max-width: 100px;
+                        @include max-breakpoint-1680 {
+                            max-width: 80px;
+                        }
+                        @include max-breakpoint-959 {
+                            max-width: 45px;
+                        }
+                        @include max-breakpoint-599 {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Search Customer Field
+.search_customer_field_wrap {
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    @include max-breakpoint-1800 {
+        max-width: 396px;
+    }
+    @include max-breakpoint-1680 {
+        max-width: 352px;
+    }
+    @include max-breakpoint-599 {
+        max-width: 100%;
+    }
+}
+
+.editable_input_field {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -6px;
+    z-index: 9;
+    @include max-breakpoint-1680 {
+        top: -5px;
+    }
+
+    h3 {
+        &.mat-h3 {
+            width: 100%;
+            display: inline-block;
+            font: 600 $font-s-21 $primaryFont;
+            color: $BL-1;
+            margin: 0;
+            @include text_limit();
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-18 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-16 $primaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 600 $font-s-17 $primaryFont;
+            }
+
+            &.orange_heading {
+                color: $RD-1;
+            }
+
+            &.edit_btn_enable {
+                padding: 0 30px 0 0;
+                @include max-breakpoint-1800 {
+                    padding: 0 27px 0 0;
+                }
+                @include max-breakpoint-1680 {
+                    padding: 0 24px 0 0;
+                }
+            }
+
+            .ghost_loading_box {
+                width: 50%;
+                min-height: 25px;
+                @include max-breakpoint-1800 {
+                    min-height: 22px;
+                }
+                @include max-breakpoint-1680 {
+                    min-height: 20px;
+                }
+            }
+        }
+    }
+
+    button {
+        &.edit_title_btn {
+            width: 25px;
+            height: 25px;
+            background: $WE-1;
+            border: 0;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            color: $GY-20;
+            @include max-breakpoint-1680 {
+                width: 20px;
+                height: 20px;
+            }
+
+            mat-icon {
+                font-size: $font-s-21;
+                @include max-breakpoint-1680 {
+                    font-size: $font-s-17;
+                }
+            }
+        }
+    }
+
+    &.readonly_field {
+        h3 {
+            &.mat-h3 {
+                &.edit_btn_enable {
+                    padding: 0;
+                    @include max-breakpoint-1800 {
+                        padding: 0;
+                    }
+                    @include max-breakpoint-1680 {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        button {
+            &.edit_title_btn {
+                display: none;
+            }
+        }
+    }
+}
+
+// Custom Location Text
+.customer_location_field {
+    width: 100%;
+    @include flex_align_center();
+    font: 400 $font-s-14 $primaryFont;
+    color: $GY-17;
+    @include max-breakpoint-1800 {
+        font: 400 $font-s-13 $primaryFont;
+    }
+    @include max-breakpoint-1680 {
+        font: 400 $font-s-12 $primaryFont;
+    }
+    @media (-webkit-device-pixel-ratio: 1.25) {
+        font: 400 $font-s-11 $primaryFont;
+    }
+
+    img {
+        height: 18px;
+        margin: 0 6px 0 0;
+        @include max-breakpoint-1680 {
+            height: 16px;
+            margin: 0 5px 0 0;
+        }
+    }
+}
+
+// Autocomplete Custom Dropdown
+.autocomplete_custom_dropdown {
+    width: 100%;
+    display: none;
+    background: $WE-1;
+    border: 1px solid $GY-1;
+    box-shadow: 0px 10px 10px 0px rgba(194, 204, 214, 0.25);
+    border-radius: 0 0 8px 8px;
+    padding: 30px 30px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 9;
+    @include max-breakpoint-1800 {
+        padding: 27px 27px;
+        top: 45px;
+    }
+    @include max-breakpoint-1680 {
+        box-shadow: 0px 8px 8px 0px rgba(194, 204, 214, 0.25);
+        border-radius: 0 0 6px 6px;
+        padding: 24px 24px;
+        top: 40px;
+    }
+
+    h3 {
+        &.mat-h3 {
+            font: 600 $font-s-18 $primaryFont;
+            color: $BL-1;
+            margin: 0 0 15px 0;
+            @include max-breakpoint-1800 {
+                font: 600 $font-s-16 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 600 $font-s-14 $primaryFont;
+                margin: 0 0 12px 0;
+            }
+        }
+    }
+
+    .ghost_loading_box {
+        &.input_ghost_box {
+            min-height: 45px;
+            margin: 0 0 10px 0;
+            @include max-breakpoint-1800 {
+                min-height: 40px;
+            }
+            @include max-breakpoint-1680 {
+                min-height: 36px;
+                margin: 0 0 8px 0;
+            }
+        }
+    }
+
+    .no_account_dropdown_wrap {
+        width: 100%;
+        display: inline-block;
+        margin: 0 0 30px 0;
+
+        p {
+            font: 400 $font-s-14 $primaryFont;
+            color: $GY-17;
+            margin: 0;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-13 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-12 $primaryFont;
+            }
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 400 $font-s-11 $primaryFont;
+            }
+        }
+
+        a {
+            color: $OE-4;
+            text-decoration: none;
+            font: 400 $font-s-12 $primaryFont;
+            @include max-breakpoint-1800 {
+                font: 400 $font-s-11 $primaryFont;
+            }
+            @include max-breakpoint-1680 {
+                font: 400 $font-s-10 $primaryFont;
+            }
+        }
+    }
+
+    .autocomplete_custom_dropdown_fot {
+        width: 100%;
+        @include flex_align_center();
+
+        &.right {
+            justify-content: flex-end;
+        }
+
+        button {
+            &.common_btn {
+                max-width: 100px;
+                min-height: 30px;
+                @include max-breakpoint-1800 {
+                    max-width: 90px;
+                    min-height: 27px;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 80px;
+                    min-height: 24px;
+                }
+
+                mat-icon {
+                    font-size: $font-s-14;
+                    margin: 0 0 0 4px;
+                    position: relative;
+                    top: 1px;
+                    @include max-breakpoint-1680 {
+                        font-size: $font-s-11;
+                        margin: 0 0 0 3px;
+                    }
+                }
+
+                &.black_btn {
+                    margin-left: 10px;
+                    @include max-breakpoint-1680 {
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+
+        .ghost_loading_box {
+            &.button_ghost_box {
+                max-width: 100px;
+                min-height: 30px;
+                display: inline-block;
+                border-radius: 200px;
+                margin: 0 0 0 15px;
+                @include max-breakpoint-1800 {
+                    max-width: 90px;
+                    min-height: 27px;
+                }
+                @include max-breakpoint-1680 {
+                    max-width: 80px;
+                    min-height: 24px;
+                    margin: 0 0 0 12px;
+                }
+            }
+        }
+    }
+
+    &.table_dropdown {
+        top: 46px;
+        @include max-breakpoint-1800 {
+            top: 41px;
+        }
+        @include max-breakpoint-1680 {
+            top: 37px;
+        }
+    }
+
+    &.open_dropdown {
+        display: block;
+    }
+}

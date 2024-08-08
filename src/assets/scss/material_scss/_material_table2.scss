@@ -1,0 +1,791 @@
+.mat_table_wrap_main {
+    mat-table {
+        &.mat-mdc-table {
+            &.linked_bank_box_table {
+                mat-header-row {
+                    &.mat-mdc-header-row {
+                        &.gray_header_row {
+                            background: none;
+                            border: 0;
+                        }
+                        &.hide_linked_coa_list {
+                            display: none;
+                        }
+                    }
+                }
+                mat-row {
+                    &.mat-mdc-row {
+                        background: $WE-100;
+                        border: 1px solid $GYN-132;
+                        border-radius: 10px;
+                        margin: 0 0 10px 0 !important;
+                        @include max-breakpoint-1680 {
+                            border-radius: 8px;
+                            margin: 0 0 8px 0 !important;
+                        }
+
+                        &:hover {
+                            border-color: $BLN-113;
+                            box-shadow: 0 0 20px $boxShadow-C-11;
+                            @include max-breakpoint-1680 {
+                                box-shadow: 0 0 16px $boxShadow-C-11;
+                            }
+                        }
+
+                        @include max-breakpoint-1279 {
+                            background: none;
+                        }
+
+                        /* If Overlay Opened */
+                        &.fai_overlay_open {
+                            position: relative;
+                            z-index: 999;
+                        }
+
+                        mat-cell {
+                            color: $BL-102;
+                            @include max-breakpoint-1279 {
+                                min-height: 30px;
+                            }
+
+                            span {
+                                &.optionalDoc {
+                                    display: block;
+                                    margin-top: 3px;
+                                    font-size: $font-s-12;
+                                    @include max-breakpoint-1800 {
+                                        font-size: $font-s-11;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        margin-top: 2px;
+                                        font-size: $font-s-11;
+                                    }
+                                }
+
+                                &.responsive-td-title {
+                                    &.lg_td {
+                                        min-height: 55px;
+                                    }
+                                }
+                            }
+
+                            .ghost_loading_box {
+                                min-height: 26px;
+                                @include max-breakpoint-1680 {
+                                    min-height: 21px;
+                                }
+
+                                &.action_ghost {
+                                    width: 15vw;
+                                    min-height: 56px;
+                                    @include max-breakpoint-1680 {
+                                        width: 12vw;
+                                        min-height: 45px;
+                                    }
+                                }
+                            }
+
+                            h4 {
+                                &.mat-h4 {
+                                    font: 700 $font-s-16 $primaryFont;
+                                    color: $BL-103;
+                                    margin: 0;
+                                    @include max-breakpoint-1800 {
+                                        font: 700 $font-s-15 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font: 700 $font-s-14 $primaryFont;
+                                    }
+                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                        font: 700 $font-s-13 $primaryFont;
+                                    }
+                                    @include max-breakpoint-1440 {
+                                        font: 700 $font-s-12 $primaryFont;
+                                    }
+
+                                    .ghost_loading_box {
+                                        width: 60%;
+                                        min-height: 24px;
+                                        @include max-breakpoint-1680 {
+                                            min-height: 19px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .data_icon_name {
+                                @include flex_start();
+
+                                .fai_sf_logo {
+                                    width: 20px;
+                                    min-width: 20px;
+                                    height: 20px;
+                                    flex: 0 0 20px;
+                                    margin: 0 10px 0 0;
+                                    position: relative;
+                                    top: 4px;
+                                    @include max-breakpoint-1680 {
+                                        width: 16px;
+                                        min-width: 16px;
+                                        height: 16px;
+                                        flex: 0 0 16px;
+                                        margin: 0 8px 0 0;
+                                        top: 3px;
+                                    }
+
+                                    img {
+                                        width: 20px;
+                                        height: 20px;
+                                        border-radius: 50%;
+                                        @include max-breakpoint-1680 {
+                                            width: 16px;
+                                            height: 16px;
+                                        }
+                                    }
+                                }
+
+                                .fai_cl_name {
+                                    strong,
+                                    span {
+                                        display: block;
+                                    }
+                                }
+
+                                .ghost_loading_box {
+                                    &.data_icon_ghost {
+                                        width: 26px;
+                                        min-width: 26px;
+                                        display: inline-block;
+                                        margin-right: 6px;
+                                        @include max-breakpoint-1680 {
+                                            width: 21px;
+                                            min-width: 21px;
+                                            margin-right: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .data_icon_name2 {
+                                position: relative;
+                                padding: 0 0 0 30px;
+                                @include max-breakpoint-1680 {
+                                    padding: 0 0 0 24px;
+                                }
+
+                                mat-icon {
+                                    color: $BL-102;
+                                    position: absolute;
+                                    left: -30px;
+                                    top: 4px;
+                                    @include max-breakpoint-1680 {
+                                        left: -24px;
+                                        top: 3px;
+                                    }
+                                }
+
+                                img {
+                                    &.fai_other_team {
+                                        width: 24px;
+                                        min-width: 24px;
+                                        position: absolute;
+                                        left: -30px;
+                                        top: 4px;
+                                        @include max-breakpoint-1680 {
+                                            width: 19px;
+                                            min-width: 19px;
+                                            left: -24px;
+                                            top: 3px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            strong {
+                                color: $BL-103;
+                            }
+
+                            p {
+                                &.status_text {
+                                    text-transform: capitalize;
+
+                                    &.green {
+                                        color: $GR-100;
+                                    }
+                                    &.orange {
+                                        color: $YL-106;
+                                    }
+                                    &.red {
+                                        color: $RD-104;
+                                    }
+                                }
+                            }
+
+                            .account_name_text {
+                                width: 100%;
+                                position: relative;
+
+                                img {
+                                    margin: 0 4px 0 0;
+                                    @include max-breakpoint-1680 {
+                                        margin: 0 3px 0 0;
+                                    }
+                                }
+
+                                .info_tooltip_wrapper {
+                                    &.info_text {
+                                        &.ml_0 {
+                                            top: 2px;
+
+                                            .info_tooltip_text {
+                                                width: 90%;
+                                                position: relative;
+                                                overflow: inherit;
+                                                white-space: inherit;
+                                                text-overflow: inherit;
+
+                                                &.pl_20 {
+                                                    padding-left: 20px;
+                                                    @include max-breakpoint-1680 {
+                                                        padding-left: 16px;
+                                                    }
+                                                }
+
+                                                img {
+                                                    width: 12px;
+                                                    min-width: 12px;
+                                                    height: 12px;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    top: 3px;
+                                                    @include max-breakpoint-1680 {
+                                                        width: 10px;
+                                                        min-width: 10px;
+                                                        height: 10px;
+                                                        top: 2px;
+                                                    }
+                                                }
+                                            }
+
+                                            .info_tooltip {
+                                                &.left_tooltip {
+                                                    top: 24px;
+                                                    @include max-breakpoint-1680 {
+                                                        top: 19px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .status_label {
+                                @include flex_center();
+                                position: relative;
+                                font: 600 $font-s-14 $primaryFont;
+                                text-transform: capitalize;
+                                margin: 0 6px 0 0;
+                                @include max-breakpoint-1800 {
+                                    font: 600 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 600 $font-s-12 $primaryFont;
+                                    margin: 0 5px 0 0;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 600 $font-s-11 $primaryFont;
+                                }
+                                @include max-breakpoint-959 {
+                                    font-size: 0;
+                                }
+
+                                mat-icon {
+                                    font-size: $font-s-18;
+                                    margin: 0 6px 0 0;
+                                    @include max-breakpoint-1800 {
+                                        font-size: $font-s-16;
+                                    }
+                                    @include max-breakpoint-1680 {
+                                        font-size: $font-s-14;
+                                        margin: 0 5px 0 0;
+                                    }
+
+                                    &.lg_icon {
+                                        font-size: $font-s-24;
+                                        @include max-breakpoint-1800 {
+                                            font-size: $font-s-21;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font-size: $font-s-19;
+                                        }
+                                    }
+                                }
+
+                                &.yellow {
+                                    color: #f8951d;
+                                }
+                                &.orange {
+                                    color: $OE-1;
+                                }
+                                &.brown {
+                                    color: $YL-104;
+                                }
+                                &.green {
+                                    color: $GR-100;
+                                }
+                                &.red {
+                                    color: $RD-109;
+                                }
+                            }
+
+                            .action_btn_group {
+                                @include flex_center();
+
+                                p {
+                                    &.status_text {
+                                        font: 600 $font-s-14 $primaryFont;
+                                        color: #93b473;
+                                        text-transform: capitalize;
+                                        @include max-breakpoint-1800 {
+                                            font: 600 $font-s-13 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 600 $font-s-12 $primaryFont;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 600 $font-s-11 $primaryFont;
+                                        }
+                                    }
+                                }
+
+                                button {
+                                    &.action_btn {
+                                        min-height: 34px;
+                                        font: 600 $font-s-14 $primaryFont;
+                                        line-height: 21px;
+                                        margin: 0 0 0 15px;
+                                        padding: 0 6px;
+                                        border-radius: 5px;
+                                        @include max-breakpoint-1800 {
+                                            min-height: 30px;
+                                            font: 600 $font-s-13 $primaryFont;
+                                            line-height: 21px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            min-height: 27px;
+                                            font: 600 $font-s-12 $primaryFont;
+                                            line-height: 18px;
+                                            margin: 0 0 0 12px;
+                                            padding: 0 5px;
+                                            border-radius: 4px;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 600 $font-s-11 $primaryFont;
+                                            line-height: 17px;
+                                        }
+
+                                        mat-icon {
+                                            font-size: $font-s-21;
+                                            margin: 0 6px 0 0;
+                                            @include max-breakpoint-1800 {
+                                                font-size: $font-s-18;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                font-size: $font-s-17;
+                                            }
+                                        }
+
+                                        &[disabled='true'],
+                                        &.disabled,
+                                        &.mat-button-disabled {
+                                            @include disable_button();
+                                            border-color: $GYN-132;
+                                        }
+                                        &.bank_reconnect_btn {
+                                            min-width: 130px;
+                                            background-color: $WE-100;
+                                            border-color: #ff6c6c;
+                                            color: #ff6c6c;
+                                            @include max-breakpoint-1680 {
+                                                min-width: 104px;
+                                            }
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                                border-color: $GYN-132;
+                                            }
+                                        }
+
+                                        &.green_border_btn {
+                                            color: $GR-100;
+                                            background-color: $WE-100;
+                                            border-color: $GR-100;
+
+                                            mat-icon {
+                                                margin: 0 4px 0 0;
+                                                @include max-breakpoint-1680 {
+                                                    margin: 0 3px 0 0;
+                                                }
+                                            }
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                                border-color: $GYN-132;
+                                            }
+                                        }
+
+                                        &.green_fill_btn {
+                                            min-width: 120px;
+                                            color: $WE-100;
+                                            border-color: $GR-100;
+                                            background-color: $GR-100;
+                                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+                                            cursor: default;
+                                            pointer-events: none;
+                                            @include max-breakpoint-1680 {
+                                                min-width: 96px;
+                                                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+                                            }
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                                border-color: $GYN-132;
+                                                box-shadow: none;
+                                            }
+                                        }
+
+                                        &.blue_btn {
+                                            min-width: 84px;
+                                            color: $WE-100;
+                                            background-color: $BL-103;
+                                            border-color: $BL-103;
+                                            padding: 2px 6px;
+                                            @include max-breakpoint-1680 {
+                                                min-width: 67px;
+                                                padding: 2px 5px;
+                                            }
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                                border-color: $GYN-132;
+                                            }
+                                        }
+
+                                        &.blue_border_btn {
+                                            color: $BL-103;
+                                            background-color: $WE-100;
+                                            border-color: $BL-103;
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                                border-color: $GYN-132;
+                                            }
+                                        }
+
+                                        &.light_blue_btn {
+                                            min-width: 173px;
+                                            color: $BL-102;
+                                            border-color: $BL-102;
+                                            @include max-breakpoint-1680 {
+                                                min-width: 138px;
+                                            }
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                border-color: $GYN-132;
+                                            }
+                                        }
+
+                                        &.red_fill_btn {
+                                            min-width: 50px;
+                                            color: $WE-100;
+                                            border-color: $RD-101;
+                                            background-color: $RD-101;
+                                            @include max-breakpoint-1680 {
+                                                min-width: 40px;
+                                            }
+
+                                            mat-icon {
+                                                margin: 0;
+                                            }
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                                border-color: $GYN-132;
+                                            }
+                                        }
+
+                                        &.icon_btn {
+                                            min-width: 34px;
+                                            padding: 0 6px;
+                                            background: none;
+                                            border: none;
+                                            cursor: pointer;
+                                            @include max-breakpoint-1680 {
+                                                min-width: 27px;
+                                                padding: 0 5px;
+                                            }
+
+                                            img {
+                                                height: 18px;
+                                                position: relative;
+                                                top: 4px;
+                                                @include max-breakpoint-1680 {
+                                                    height: 14px;
+                                                    top: 3px;
+                                                }
+                                            }
+                                        }
+
+                                        &:first-child {
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                                .fai_reconnect_btn_tooltip {
+                                    width: 230px;
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: calc(100% + 6px);
+                                    padding: 15px 13px;
+                                    background-color: $WE-100;
+                                    border: 1px solid $GY-108;
+                                    border-radius: 5px;
+                                    box-shadow: 0 10px 10px $boxShadow-C-11;
+                                    z-index: 999;
+                                    @include max-breakpoint-1680 {
+                                        width: 184px;
+                                        padding: 12px 10px;
+                                        bottom: calc(100% + 5px);
+                                        border-radius: 4px;
+                                        box-shadow: 0 8px 8px $boxShadow-C-11;
+                                    }
+
+                                    &::before {
+                                        width: 7px;
+                                        height: 7px;
+                                        position: absolute;
+                                        content: '';
+                                        right: 30px;
+                                        bottom: -5px;
+                                        background-color: $WE-100;
+                                        border: 1px solid $GY-108;
+                                        border-right-color: transparent;
+                                        border-bottom-color: transparent;
+                                        transform: rotate(220deg);
+                                        @include max-breakpoint-1680 {
+                                            width: 6px;
+                                            height: 6px;
+                                            right: 24px;
+                                            bottom: -4px;
+                                        }
+                                    }
+
+                                    h6 {
+                                        @include flex_center();
+                                        justify-content: flex-start;
+                                        font: 700 $font-s-16 $primaryFont;
+                                        line-height: 24px;
+                                        color: #ff6c6c;
+                                        margin-bottom: 9px;
+                                        @include max-breakpoint-1800 {
+                                            font: 700 $font-s-15 $primaryFont;
+                                            line-height: 24px;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 700 $font-s-14 $primaryFont;
+                                            line-height: 21px;
+                                            margin-bottom: 7px;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 700 $font-s-13 $primaryFont;
+                                            line-height: 19px;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            font: 700 $font-s-12 $primaryFont;
+                                            line-height: 18px;
+                                        }
+
+                                        img {
+                                            max-height: 23px;
+                                            margin-right: 6px;
+                                            @include max-breakpoint-1680 {
+                                                max-height: 18px;
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                    }
+
+                                    p {
+                                        font: 400 $font-s-14 $primaryFont;
+                                        line-height: 21px;
+                                        color: $BL-102;
+                                        white-space: normal;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .btn_sec {
+                                        display: flex;
+                                        justify-content: flex-end;
+
+                                        button {
+                                            border: none;
+                                            background: none;
+                                            font: 600 $font-s-14 $primaryFont;
+                                            color: $WE-100;
+                                            padding: 4px 12px;
+                                            border-radius: 5px;
+                                            background-color: #ff6c6c;
+                                            cursor: pointer;
+                                            @include max-breakpoint-1800 {
+                                                font: 600 $font-s-13 $primaryFont;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                font: 600 $font-s-12 $primaryFont;
+                                                padding: 3px 10px;
+                                                border-radius: 4px;
+                                            }
+                                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                                font: 600 $font-s-11 $primaryFont;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .upload_btn_wrapper {
+                                    position: relative;
+
+                                    input {
+                                        &[type='file'] {
+                                            width: 100%;
+                                            height: 100%;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            z-index: 9;
+                                            font-size: 0;
+                                            border: 0;
+                                            background: none;
+                                            outline: 0;
+                                            opacity: 0;
+                                            cursor: pointer;
+                                        }
+                                    }
+
+                                    button {
+                                        &.action_btn {
+                                            min-width: 120px;
+                                            min-height: 36px;
+                                            @include max-breakpoint-1800 {
+                                                min-width: 110px;
+                                                min-height: 30px;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                min-width: 96px;
+                                                min-height: 29px;
+                                            }
+
+                                            mat-spinner {
+                                                svg {
+                                                    circle {
+                                                        stroke: $GR-100;
+                                                    }
+                                                }
+                                            }
+
+                                            mat-icon {
+                                                font-size: $font-s-18;
+                                                position: relative;
+                                                top: 0;
+                                                @include max-breakpoint-1800 {
+                                                    font-size: $font-s-16;
+                                                }
+                                                @include max-breakpoint-1680 {
+                                                    font-size: $font-s-14;
+                                                }
+                                            }
+
+                                            &.green_fill_btn {
+                                                box-shadow: none;
+                                            }
+
+                                            &.blue_edit_btn {
+                                                min-width: auto;
+                                                border: none;
+                                                color: $BL-103;
+                                                &[disabled='true'],
+                                                &.disabled,
+                                                &.mat-button-disabled {
+                                                    background: $WE-100;
+                                                    opacity: 0.25;
+                                                    pointer-events: none;
+                                                    cursor: auto;
+                                                }
+                                            }
+
+                                            &[disabled='true'],
+                                            &.disabled,
+                                            &.mat-button-disabled {
+                                                @include disable_button();
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .action_btn_ghost {
+                                    width: 90px;
+                                    min-height: 24px;
+                                    @include max-breakpoint-1680 {
+                                        width: 72px;
+                                        min-height: 19px;
+                                    }
+                                }
+                            }
+
+                            &.cell_right_align {
+                                .action_btn_group {
+                                    justify-content: flex-end;
+                                    position: relative;
+                                    @include max-breakpoint-1279 {
+                                        justify-content: left;
+                                    }
+                                    .info_tooltip_wrapper {
+                                        form {
+                                            .info_tooltip {
+                                                top: calc(100% + 4px);
+                                                @include max-breakpoint-1680 {
+                                                    top: calc(100% + 3px);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.active {
+                            border-color: $BLN-113;
+                            box-shadow: 0px 0px 20px rgba(102, 102, 102, 0.1);
+                            @include max-breakpoint-1680 {
+                                box-shadow: 0px 0px 16px rgba(102, 102, 102, 0.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

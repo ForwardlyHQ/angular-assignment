@@ -1,0 +1,681 @@
+// COMMON MAT TABLE SKIN (V4)
+.mat_table_main_wrapper {
+    width: 100%;
+    position: relative;
+
+    mat-table {
+        &.mat-mdc-table {
+            mat-header-row {
+                min-height: 48px;
+                @include max-breakpoint-1680 {
+                    min-height: 38px;
+                }
+                mat-header-cell {
+                    &.mdc-data-table__header-cell {
+                        font: 600 $font-s-14 $primaryFont;
+                        color: $BL-1;
+                        letter-spacing: 0;
+                        overflow: inherit;
+                        padding: 10px 15px;
+                        @include max-breakpoint-1800 {
+                            font: 600 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            font: 600 $font-s-12 $primaryFont;
+                            padding: 8px 12px;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 600 $font-s-11 $primaryFont;
+                        }
+                        @include max-breakpoint-1440 {
+                            padding: 6px 10px;
+                        }
+
+                        .mat_header_cell_inner {
+                            width: 100%;
+                            display: inline-block;
+
+                            sub {
+                                font: 400 $font-s-12 $primaryFont;
+                                line-height: 8px;
+                                position: relative;
+                                top: -2px;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-11 $primaryFont;
+                                    line-height: 8px;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-10 $primaryFont;
+                                    line-height: 6px;
+                                }
+                            }
+                        }
+
+                        &.center_td_column {
+                            justify-content: center;
+                        }
+                        &.right_td_column {
+                            justify-content: flex-end;
+                        }
+
+                        &:first-child {
+                            border-top-left-radius: 10px;
+                            @include max-breakpoint-1680 {
+                                border-top-left-radius: 8px;
+                            }
+                        }
+                        &:last-child {
+                            border-top-right-radius: 10px;
+                            @include max-breakpoint-1680 {
+                                border-top-right-radius: 8px;
+                            }
+                        }
+                    }
+                }
+
+                @include max-breakpoint-1279 {
+                    display: none;
+                }
+            }
+
+            mat-row {
+                min-height: inherit;
+                @include max-breakpoint-1279 {
+                    width: 100%;
+                    display: inline-block;
+                    border: 1px solid $GY-8;
+                    border-bottom: 2px solid $RD-1;
+                    border-radius: 10px;
+                    padding: 15px;
+                    margin: 0 0 20px 0;
+                }
+
+                mat-cell {
+                    &.mdc-data-table__cell {
+                        min-height: 45px;
+                        font: 400 $font-s-14 $primaryFont;
+                        color: $GY-17;
+                        letter-spacing: 0;
+                        overflow: inherit;
+                        padding: 0;
+                        @include max-breakpoint-1800 {
+                            min-height: 40px;
+                            font: 400 $font-s-13 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            min-height: 36px;
+                            font: 400 $font-s-12 $primaryFont;
+                        }
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            font: 400 $font-s-11 $primaryFont;
+                        }
+                        @include max-breakpoint-1279 {
+                            min-height: 32px;
+                            color: $BL-1;
+                        }
+
+                        .responsive_table_row {
+                            width: 100%;
+                            @include max-breakpoint-1279 {
+                                @include flex_align_center();
+                            }
+
+                            .responsive_td_title {
+                                display: none;
+
+                                @include max-breakpoint-1279 {
+                                    width: 100%;
+                                    max-width: 50%;
+                                    display: flex;
+                                    font: 600 $font-s-12 $primaryFont;
+                                    color: $BL-1;
+                                }
+                            }
+
+                            .responsive_td_content {
+                                position: relative;
+                                padding: 0;
+                                @include max-breakpoint-1279 {
+                                    width: 100%;
+                                    max-width: 50%;
+                                    padding: 0 30px 0 0;
+                                }
+                                @include max-breakpoint-480 {
+                                    padding: 0;
+                                }
+
+                                // Form Field
+                                mat-form-field {
+                                    &.mat-mdc-form-field {
+                                        &.default_field_control {
+                                            &.table_col_field {
+                                                margin: 0;
+                                                @include max-breakpoint-1680 {
+                                                    margin: 0;
+                                                }
+
+                                                .mat-mdc-text-field-wrapper {
+                                                    background: none;
+                                                    padding: 0 15px;
+                                                    @include max-breakpoint-1680 {
+                                                        padding: 0 12px;
+                                                    }
+                                                    @include max-breakpoint-1440 {
+                                                        padding: 0 10px;
+                                                    }
+                                                    @include max-breakpoint-1279 {
+                                                        padding: 0;
+                                                    }
+
+                                                    .mat-mdc-form-field-flex {
+                                                        .mat-mdc-form-field-infix {
+                                                            min-height: 45px;
+                                                            padding: 12px 0 6px 0;
+                                                            @include max-breakpoint-1800 {
+                                                                min-height: 40px;
+                                                                padding: 11px 0 5px 0;
+                                                            }
+                                                            @include max-breakpoint-1680 {
+                                                                min-height: 36px;
+                                                                padding: 10px 0 5px 0;
+                                                            }
+
+                                                            input,
+                                                            textarea {
+                                                                &.mat-mdc-input-element {
+                                                                    &::-webkit-input-placeholder {
+                                                                        color: $GY-3;
+                                                                    }
+                                                                    &:-moz-placeholder {
+                                                                        color: $GY-3;
+                                                                    }
+                                                                    &::-moz-placeholder {
+                                                                        color: $GY-3;
+                                                                    }
+                                                                    &:-ms-input-placeholder {
+                                                                        color: $GY-3;
+                                                                    }
+                                                                    &::-ms-input-placeholder {
+                                                                        color: $GY-3;
+                                                                    }
+                                                                    &::placeholder {
+                                                                        color: $GY-3;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        // Left Field Icon
+                                                        .mat_field_left_icon {
+                                                            img {
+                                                                @include max-breakpoint-480 {
+                                                                    min-width: 13px;
+                                                                    height: 13px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .mdc-line-ripple {
+                                                        display: none;
+                                                        @include max-breakpoint-1279 {
+                                                            display: block;
+                                                        }
+                                                    }
+                                                }
+
+                                                &.ng-touched {
+                                                    .mat-mdc-text-field-wrapper {
+                                                        .mat-mdc-form-field-flex {
+                                                            // Left Field Icon
+                                                            .mat_field_left_icon {
+                                                                &.with_text_icon {
+                                                                    color: $BE-1;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                // Validation Style
+                                                &.mat-form-field-invalid {
+                                                    .mat-mdc-text-field-wrapper {
+                                                        .mat-mdc-form-field-flex {
+                                                            .mat_field_left_icon {
+                                                                &.with_text_icon {
+                                                                    color: $RD-2;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            &.center_col_field {
+                                                .mat-mdc-text-field-wrapper {
+                                                    .mat-mdc-form-field-flex {
+                                                        .mat-mdc-form-field-infix {
+                                                            input,
+                                                            textarea {
+                                                                &.mat-mdc-input-element {
+                                                                    text-align: center;
+                                                                    @include max-breakpoint-1279 {
+                                                                        text-align: left;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.right_col_field {
+                                                .mat-mdc-text-field-wrapper {
+                                                    .mat-mdc-form-field-flex {
+                                                        .mat-mdc-form-field-infix {
+                                                            input,
+                                                            textarea {
+                                                                &.mat-mdc-input-element {
+                                                                    text-align: right;
+                                                                    @include max-breakpoint-1279 {
+                                                                        text-align: left;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // Table cell tooltip
+                                .info_tooltip_wrapper {
+                                    position: static;
+
+                                    &.info_text {
+                                        .info_tooltip {
+                                            &.top_tooltip {
+                                                &.invalid_tooltip {
+                                                    .info_tooltip_inner {
+                                                        width: 100%;
+                                                        max-width: 190px;
+                                                        color: $RD-2;
+                                                        @include max-breakpoint-1800 {
+                                                            max-width: 171px;
+                                                        }
+                                                        @include max-breakpoint-1680 {
+                                                            max-width: 152px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            &.delete_tooltip {
+                                                .info_tooltip_inner {
+                                                    min-width: 340px;
+                                                    min-height: 45px;
+                                                    padding: 10px 10px;
+                                                    border-radius: 15px;
+                                                    font: 400 $font-s-14 $primaryFont;
+                                                    line-height: normal;
+                                                    @include max-breakpoint-1800 {
+                                                        min-height: 40px;
+                                                        font: 400 $font-s-13 $primaryFont;
+                                                        line-height: normal;
+                                                    }
+                                                    @include max-breakpoint-1680 {
+                                                        min-width: 272px;
+                                                        min-height: 36px;
+                                                        padding: 8px 8px;
+                                                        border-radius: 12px;
+                                                        font: 400 $font-s-12 $primaryFont;
+                                                        line-height: normal;
+                                                    }
+                                                    @media (-webkit-device-pixel-ratio: 1.25) {
+                                                        font: 400 $font-s-11 $primaryFont;
+                                                        line-height: normal;
+                                                    }
+                                                    @include max-breakpoint-1440 {
+                                                        min-height: 32px;
+                                                    }
+
+                                                    p {
+                                                        color: $BL-1;
+                                                        margin: 0 0 15px 0;
+                                                        @include max-breakpoint-1680 {
+                                                            margin: 0 0 12px 0;
+                                                        }
+                                                    }
+
+                                                    .info_tooltip_footer {
+                                                        width: 100%;
+                                                        @include flex_align_center();
+
+                                                        button {
+                                                            &.common_btn {
+                                                                width: auto;
+                                                                min-height: 30px;
+                                                                @include max-breakpoint-1800 {
+                                                                    min-height: 27px;
+                                                                }
+                                                                @include max-breakpoint-1680 {
+                                                                    min-height: 24px;
+                                                                }
+                                                                @include max-breakpoint-1440 {
+                                                                    min-height: 20px;
+                                                                }
+
+                                                                &.black_btn {
+                                                                    margin: 0 0 0 10px;
+                                                                    @include max-breakpoint-1680 {
+                                                                        margin: 0 0 0 8px;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                &.right_tooltip {
+                                                    right: -8px;
+                                                    @include max-breakpoint-1680 {
+                                                        right: -6px;
+                                                    }
+                                                    .info_tooltip_inner {
+                                                        text-align: right;
+
+                                                        &::before {
+                                                            right: 10px;
+                                                            @include max-breakpoint-1680 {
+                                                                right: 8px;
+                                                            }
+                                                        }
+                                                        .info_tooltip_footer {
+                                                            justify-content: flex-end;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &.relative {
+                                        position: relative;
+
+                                        img {
+                                            width: auto;
+                                            height: auto;
+                                            @include max-breakpoint-1800 {
+                                                width: auto;
+                                                height: auto;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                width: auto;
+                                                height: auto;
+                                            }
+                                        }
+                                    }
+
+                                    &.stable_tooltip {
+                                        .info_tooltip {
+                                            display: block;
+                                        }
+                                    }
+                                }
+
+                                // TD inner wrapper
+                                .mat_td_inner {
+                                    padding: 5px 15px;
+                                    @include max-breakpoint-1680 {
+                                        padding: 4px 12px;
+                                    }
+                                    @include max-breakpoint-1440 {
+                                        padding: 3px 10px;
+                                    }
+                                    @include max-breakpoint-1279 {
+                                        padding: 5px 0;
+                                    }
+                                }
+
+                                // No found
+                                .no_found_contain {
+                                    a {
+                                        color: $OE-4;
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                        &:hover {
+                                            color: $OE-4;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+
+                                .product_name {
+                                    @include max-breakpoint-1279 {
+                                        font-weight: 600;
+                                    }
+                                }
+
+                                // Amount Column Style
+                                .mat_td_amount_row {
+                                    @include flex_align_center();
+
+                                    .mat_td_amount_col {
+                                        width: 100%;
+                                        flex: 1 1 auto;
+                                        max-width: 100%;
+                                        position: relative;
+                                        text-align: right;
+                                        @include max-breakpoint-1279 {
+                                            text-align: left;
+                                        }
+
+                                        &.currency_col {
+                                            width: 30px;
+                                            padding-right: 5px;
+                                            text-align: left;
+                                            @include max-breakpoint-1279 {
+                                                width: auto;
+                                                padding-right: 2px;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // Single Checkbox in Table
+                                mat-checkbox {
+                                    &.mat-mdc-checkbox {
+                                        &.orange_checkbox {
+                                            .mdc-form-field {
+                                                left: 0;
+                                                @include max-breakpoint-1680 {
+                                                    left: 0;
+                                                }
+                                                @include max-breakpoint-1279 {
+                                                    left: -10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // Button
+                                button {
+                                    &.transparent_icon_btn {
+                                        width: 15px;
+                                        height: 15px;
+                                        background: none;
+                                        border: none;
+                                        cursor: pointer;
+                                        @include max-breakpoint-1680 {
+                                            width: 12px;
+                                            height: 12px;
+                                        }
+
+                                        &.black_btn {
+                                            color: $BL-1;
+                                        }
+
+                                        mat-icon {
+                                            font-size: $font-s-21;
+                                            @include max-breakpoint-1680 {
+                                                font-size: $font-s-17;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .mobile_btn {
+                                    display: none;
+                                    @include max-breakpoint-1279 {
+                                        display: block;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 8px;
+                                    }
+                                    @include max-breakpoint-480 {
+                                        top: -8px;
+                                    }
+
+                                    .info_tooltip_wrapper {
+                                        img {
+                                            width: auto;
+                                            height: auto;
+                                            @include max-breakpoint-1800 {
+                                                width: auto;
+                                                height: auto;
+                                            }
+                                            @include max-breakpoint-1680 {
+                                                width: auto;
+                                                height: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &.center_td_column {
+                            .responsive_table_row {
+                                .responsive_td_content {
+                                    // TD inner wrapper
+                                    .mat_td_inner {
+                                        text-align: center;
+                                        @include max-breakpoint-1279 {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.right_td_column {
+                            .responsive_table_row {
+                                .responsive_td_content {
+                                    // TD inner wrapper
+                                    .mat_td_inner {
+                                        text-align: right;
+                                        @include max-breakpoint-1279 {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Border Grid Table
+    &.mat_table_border_grid {
+        border-bottom: 1px solid $GY-8;
+
+        mat-table {
+            &.mat-mdc-table {
+                mat-header-row {
+                    mat-header-cell {
+                        &.mdc-data-table__header-cell {
+                            position: relative;
+                            background: #f6f6f6;
+                            border: none;
+                            border-bottom: 3px solid $RD-1;
+
+                            &::after {
+                                width: 1px;
+                                height: 100%;
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                z-index: 1;
+                                border-right: 1px solid $GY-8;
+                            }
+
+                            &:last-child {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                mat-row {
+                    mat-cell {
+                        &.mdc-data-table__cell {
+                            position: relative;
+                            background: $WE-1;
+                            border-color: $GY-8;
+                            &.gray_table_cell {
+                                background: $BL-3;
+                            }
+                            @include max-breakpoint-1279 {
+                                width: 100%;
+                                display: inline-block;
+                                border: none;
+                            }
+
+                            .responsive_table_row {
+                                .responsive_td_content {
+                                    margin: 0 0 0 -1px;
+                                    @include max-breakpoint-1279 {
+                                        margin: 0;
+                                    }
+                                }
+                            }
+
+                            &::after {
+                                width: 1px;
+                                height: 100%;
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                z-index: 1;
+                                border-right: 1px solid $GY-8;
+                                @include max-breakpoint-1279 {
+                                    display: none;
+                                }
+                            }
+
+                            &:last-child {
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        mat-cell {
+                            &.mdc-data-table__cell {
+                                border-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

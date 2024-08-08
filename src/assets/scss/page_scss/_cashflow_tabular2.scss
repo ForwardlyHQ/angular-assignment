@@ -1,0 +1,422 @@
+/* Cash Flow Table Style */
+.fai_cashflow_tabular_container {
+    /* Cash Flow Table Body Style */
+    .fai_tabular_body {
+        .fai_tabular_body_row {
+            /* For First Child Row */
+            &.fai_first_child {
+                .fai_tabular_body_column {
+                    font: 500 $font-s-14 $primaryFont;
+                    border-bottom: 1px solid $GY-114;
+                    padding: 16px 15px;
+
+                    @include max-breakpoint-1680 {
+                        font: 500 $font-s-11 $primaryFont;
+                        padding: 13px 12px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                        padding: 13px 12px;
+                    }
+
+                    @include max-breakpoint-1440 {
+                        padding: 10px 10px;
+                    }
+
+                    &:first-child {
+                        color: $GY-101;
+                        background-color: $WE-100;
+                        cursor: pointer;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: $WE-100;
+                    }
+                }
+
+                /* If Row Expanded */
+                &.fai_row_expanded {
+                    .fai_tabular_body_column {
+                        &:first-child {
+                            font-weight: 600;
+                            color: $BL-100;
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 500;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* For Second Child Row */
+            &.fai_second_child {
+                .fai_tabular_body_column {
+                    font: 500 $font-s-14 $primaryFont;
+                    padding: 12px 15px;
+
+                    @include max-breakpoint-1680 {
+                        font: 500 $font-s-11 $primaryFont;
+                        padding: 11px 12px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 400 $font-s-11 $primaryFont;
+                        padding: 10px 12px;
+                    }
+
+                    @include max-breakpoint-1440 {
+                        padding: 10px 10px;
+                    }
+
+                    .fai_tabular_text_wrapper {
+                        width: 100%;
+                        padding: 0 0 0 26px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            padding: 0 0 0 21px;
+                        }
+
+                        .info_tooltip_wrapper {
+                            &.info_text {
+                                &.ml_0 {
+                                    .info_tooltip {
+                                        left: 25px;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            left: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        color: $GY-101;
+                        background-color: rgba(237, 243, 249, 0.7);
+                        cursor: pointer;
+
+                        button {
+                            img {
+                                width: 18px;
+
+                                @include max-breakpoint-1680 {
+                                    width: 17px;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    width: 14px;
+                                }
+
+                                @include max-breakpoint-1440 {
+                                    width: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        background-color: rgba(237, 243, 249, 0.7);
+                    }
+
+                    &.fai_current_date {
+                        background-color: #f2f7fb;
+                    }
+                }
+
+                /* If Row Expanded */
+                &.fai_row_expanded {
+                    .fai_tabular_body_column {
+                        &:first-child {
+                            color: $BL-100;
+                        }
+                    }
+                }
+
+                &.borderBottom {
+                    .fai_tabular_body_column {
+                        border-bottom: 1px solid $GY-114;
+                    }
+                }
+            }
+
+            /* For Second Child Row */
+            &.fai_third_child {
+                .fai_tabular_body_column {
+                    color: $GY-130;
+
+                    &:first-child {
+                        .fai_tabular_dots {
+                            display: inline-block;
+                            height: 9px;
+                            width: 9px;
+                            background-color: $BL-100;
+                            border-radius: 50%;
+                            margin: 0 7px 0 46px;
+
+                            @include max-breakpoint-1680 {
+                                height: 7px;
+                                width: 7px;
+                                margin: 0 5px 0 38px;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                height: 7px;
+                                width: 7px;
+                                margin: 0 6px 0 37px;
+                            }
+
+                            @include max-breakpoint-1440 {
+                                height: 5px;
+                                width: 5px;
+                            }
+                        }
+
+                        .info_tooltip_wrapper {
+                            &.info_text {
+                                &.ml_0 {
+                                    .info_tooltip {
+                                        left: 65px;
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            left: 52px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child,
+                    &:nth-child(2) {
+                        background-color: rgba(237, 243, 249, 0.7);
+                    }
+
+                    &.fai_current_date {
+                        background-color: #f2f7fb;
+                    }
+                }
+
+                &.borderBottom {
+                    .fai_tabular_body_column {
+                        border-bottom: 1px solid $GY-114;
+                    }
+                }
+            }
+
+            /* For Empty Row */
+            &.fai_empty_row {
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+
+                .fai_tabular_body_column {
+                    padding: 0 15px;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        padding: 0 12px;
+                    }
+
+                    &.fai_border_right {
+                        border-right: 1px solid rgba($GY-114, $opacitySize-7);
+                    }
+                }
+            }
+        }
+    }
+}
+/* Mat-Progress-Bar-Style */
+.fai_process_col {
+    position: relative;
+
+    .fai_outstanding_tooltip {
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        padding: 6px 10px;
+        background-color: $WE-100;
+        border: 1px solid $GR-104;
+        border-radius: 5px;
+        left: -14px;
+        bottom: calc(100% + 8px);
+        z-index: 9;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            min-width: 120px;
+            padding: 5px 8px;
+            border-radius: 4px;
+            left: -11px;
+            bottom: calc(100% + 6px);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            height: 10px;
+            width: 10px;
+            background-color: $WE-100;
+            border: 1px solid $GR-104;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            left: 10px;
+            top: calc(100% - 6px);
+            transform: rotate(45deg);
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                height: 8px;
+                width: 8px;
+                left: 8px;
+                top: calc(100% - 5px);
+            }
+        }
+
+        p {
+            @include flex_center();
+            justify-content: space-between;
+            font: 600 $font-s-10 $primaryFont;
+            line-height: normal;
+            color: $BL-102;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 500 $font-s-8 $primaryFont;
+            }
+        }
+    }
+
+    &:hover {
+        .fai_outstanding_tooltip {
+            display: block;
+        }
+    }
+
+    mat-progress-bar {
+        &.mat-mdc-progress-bar {
+            height: 6px;
+            margin-bottom: 11px;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                height: 5px;
+                margin-bottom: 9px;
+            }
+
+            .mdc-linear-progress__buffer {
+                .mdc-linear-progress__buffer-bar {
+                    background-color: $GYN-133;
+                }
+            }
+
+            .mdc-linear-progress__bar {
+                .mdc-linear-progress__bar-inner {
+                    border-top-width: 6px;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        border-top-width: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.fai_invoice_process {
+        mat-progress-bar {
+            &.mat-mdc-progress-bar {
+                border-radius: 20px 0 0 20px;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    border-radius: 16px 0 0 16px;
+                }
+
+                .mdc-linear-progress__bar {
+                    .mdc-linear-progress__bar-inner {
+                        border-color: $GR-104;
+                    }
+                }
+            }
+        }
+    }
+
+    &.fai_bills_process {
+        mat-progress-bar {
+            &.mat-mdc-progress-bar {
+                border-radius: 0 20px 20px 0;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    border-radius: 0 16px 16px 0;
+                }
+
+                .mdc-linear-progress__bar {
+                    .mdc-linear-progress__bar-inner {
+                        border-color: $RD-111;
+                    }
+                }
+            }
+        }
+
+        .fai_outstanding_tooltip {
+            border: 1px solid $RD-111;
+
+            &::after {
+                border-right-color: $RD-111;
+                border-bottom-color: $RD-111;
+            }
+        }
+    }
+}
+
+.fai_process_amount_col {
+    display: flex;
+    justify-content: space-between;
+
+    .fai_amount_section {
+        width: 100%;
+        @include flex_center();
+        font: 600 $font-s-14 $primaryFont;
+        line-height: normal;
+        color: $BL-102;
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            font: 500 $font-s-11 $primaryFont;
+        }
+
+        &:last-child {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        span {
+            display: inline-block;
+            font: 700 $font-s-14 $primaryFont;
+            line-height: 24px;
+            color: $BL-103;
+            padding: 0 19px;
+            background-color: $GYN-133;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                font: 700 $font-s-11 $primaryFont;
+                line-height: 19px;
+                padding: 0 15px;
+                border-radius: 4px;
+                margin-left: 4px;
+            }
+            &:hover {
+                background-color: $WE-100;
+                border-color: $BL-103;
+            }
+
+            &.ghost_loading_box {
+                display: inline-block;
+                min-height: 25px;
+                max-width: 30%;
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    min-height: 20px;
+                    max-width: 24%;
+                }
+            }
+        }
+
+        .info_tooltip_wrapper {
+            &.info_text {
+                &.ml_0 {
+                    margin-left: 6px;
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        margin-left: 5px;
+                    }
+                    .info_tooltip {
+                        left: 25px;
+                        margin-top: 2px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

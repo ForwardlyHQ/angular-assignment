@@ -1,0 +1,105 @@
+// Mat Radio
+mat-radio-group {
+    &.mat-mdc-radio-group {
+        &.default_radio_group {
+            &.orange_radio {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        &.mat-mdc-radio-checked {
+                            .mdc-form-field {
+                                .mdc-radio {
+                                    .mdc-radio__background {
+                                        .mdc-radio__outer-circle,
+                                        .mdc-radio__inner-circle {
+                                            border-color: $RD-1;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .mat-ripple-element {
+                                background-color: rgba($RD-1, 0.8);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.blue_radio {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        &.mat-mdc-radio-checked {
+                            .mdc-form-field {
+                                .mdc-radio {
+                                    .mdc-radio__background {
+                                        .mdc-radio__outer-circle,
+                                        .mdc-radio__inner-circle {
+                                            border-color: $BE-1;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .mat-ripple-element {
+                                background-color: rgba($BE-1, 0.8);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.label_lg_text {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        .mdc-form-field {
+                            width: 100%;
+                            font: 400 $font-s-16 $primaryFont;
+                            line-height: 21px;
+                            letter-spacing: 0;
+                            color: $BL-1;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-15 $primaryFont;
+                                line-height: 21px;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-14 $primaryFont;
+                                line-height: 18px;
+                            }
+                            @media (-webkit-device-pixel-ratio: 1.25) {
+                                font: 400 $font-s-13 $primaryFont;
+                                line-height: 17px;
+                            }
+                            @include max-breakpoint-1440 {
+                                font: 400 $font-s-12 $primaryFont;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.label_100 {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        .mdc-form-field {
+                            > label {
+                                width: 100%;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.flex_start {
+                mat-radio-button {
+                    &.mat-mdc-radio-button {
+                        .mdc-form-field {
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

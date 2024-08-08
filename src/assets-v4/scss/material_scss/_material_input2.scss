@@ -1,0 +1,643 @@
+// Mat Form Field
+mat-form-field {
+    &.mat-mdc-form-field {
+        &.default_field_control {
+            /* If form field disabled */
+            &.mat-form-field-disabled {
+                opacity: 1;
+                box-shadow: none;
+                pointer-events: all;
+
+                .mat-mdc-text-field-wrapper {
+                    &.mdc-text-field--filled {
+                        &.mdc-text-field--disabled {
+                            .mdc-line-ripple {
+                                &::before {
+                                    border-bottom-color: rgba($GY-3, 0.6);
+                                }
+                            }
+                        }
+                        .mdc-line-ripple {
+                            &::after {
+                                display: none;
+                                border-bottom-color: rgba($GY-3, 0.6);
+                            }
+                        }
+                    }
+
+                    .mat-mdc-form-field-flex {
+                        .mat-mdc-form-field-infix {
+                            input,
+                            textarea {
+                                &.mat-mdc-input-element {
+                                    color: rgba($BE-1, 0.6);
+                                }
+                            }
+                            .info_input_tooltip {
+                                .info_input_icon {
+                                    opacity: 0.6;
+                                }
+                            }
+                        }
+
+                        mat-select {
+                            &.mat-mdc-select {
+                                .mat-mdc-select-value {
+                                    color: rgba($BE-1, 0.6);
+                                }
+                            }
+                        }
+
+                        .mat-mdc-form-field-icon-suffix {
+                            opacity: 0.6;
+                            span {
+                                &.fai_percentage_sign {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+
+                    // Select Arrow
+                    .mat-mdc-select-arrow {
+                        opacity: 0.6;
+                    }
+
+                    &:hover {
+                        box-shadow: none;
+                    }
+
+                    &.mdc-text-field--disabled {
+                        pointer-events: all;
+                    }
+                }
+            }
+            // Blue Color Read Only
+            &.mat_border_zero_read_only {
+                cursor: default;
+                pointer-events: none;
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .mat-mdc-form-field-infix {
+                            min-height: 35px;
+                            padding: 6px 0;
+                            @include max-breakpoint-1800 {
+                                padding: 5px 0;
+                            }
+                            @include max-breakpoint-1680 {
+                                min-height: 28px;
+                                padding: 5px 0;
+                            }
+
+                            .mdc-floating-label {
+                                color: $GY-2;
+                                opacity: 0.8;
+                            }
+
+                            .flag_input_wrapper {
+                                cursor: default;
+                                pointer-events: none;
+                                .flag-picker {
+                                    button {
+                                        &.flag-btn {
+                                            color: $GY-2;
+
+                                            &::after {
+                                                opacity: 0.5;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            input,
+                            textarea {
+                                &.mat-mdc-input-element {
+                                    color: $GY-2;
+                                }
+                            }
+                        }
+                    }
+
+                    .mdc-line-ripple {
+                        &::before {
+                            border-bottom-color: transparent !important;
+                        }
+                    }
+                }
+            }
+            // Showing Tooltip When User Focused On Input Field
+            &.focused_info_tooltip {
+                &.mat-focused {
+                    .mat-mdc-text-field-wrapper {
+                        .mat-mdc-form-field-flex {
+                            .mat-mdc-form-field-infix {
+                                .info_input_tooltip {
+                                    .info_input_tooltip_text {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.light_arrow_field {
+                .mat-mdc-text-field-wrapper {
+                    // Select Arrow
+                    .mat-mdc-select-arrow {
+                        background: url(../../../assets/images/select-arrow-gray.png) no-repeat center;
+                        background-size: 16px;
+                        background-position-y: 0;
+                        @include max-breakpoint-1680 {
+                            background-size: 13px;
+                        }
+                    }
+                }
+            }
+            &.icon_field_control {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        label {
+                            &.mat-mdc-floating-label {
+                                &.mdc-floating-label--float-above {
+                                    left: -25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.select_autocomplete_field {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .mat-mdc-form-field-infix {
+                            input {
+                                &.mat-mdc-input-element {
+                                    background: url(../../../assets/images/select-arrow-gray.png) $WE-1 no-repeat right;
+                                    background-size: 16px;
+                                    background-position-y: 2px;
+                                    @include text_limit();
+                                    padding-right: 40px;
+                                    @include max-breakpoint-1680 {
+                                        background-size: 13px;
+                                        padding-right: 32px;
+                                    }
+                                }
+                            }
+
+                            label {
+                                &.mat-mdc-floating-label {
+                                    &.mdc-floating-label--float-above {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Select Card Dropdown
+        &.select_card_lg_control {
+            .mat-mdc-text-field-wrapper {
+                .mat-mdc-form-field-flex {
+                    .field_card_img {
+                        width: 35px;
+                        height: 28px;
+                        display: inline-flex;
+                        align-items: center;
+                        margin: 0 8px 0 0;
+                        position: relative;
+                        top: 6px;
+                        @include max-breakpoint-1680 {
+                            width: 28px;
+                            height: 22px;
+                            margin: 0 6px 0 0;
+                            top: 5px;
+                        }
+
+                        img {
+                            height: 20px;
+                            @include max-breakpoint-1680 {
+                                height: 16px;
+                            }
+                        }
+
+                        &.visa_card_img {
+                            top: 0;
+                            @include max-breakpoint-1680 {
+                                top: 0;
+                            }
+                            img {
+                                width: 35px;
+                                height: auto;
+                                @include max-breakpoint-1680 {
+                                    width: 28px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                    .mat-mdc-form-field-infix {
+                        min-height: 60px;
+                        @include max-breakpoint-1680 {
+                            min-height: 48px;
+                        }
+
+                        label {
+                            &.mdc-floating-label {
+                                font: 400 $font-s-16 $primaryFont;
+                                left: -42px;
+                                top: 25px;
+                                @include max-breakpoint-1800 {
+                                    font: 400 $font-s-15 $primaryFont;
+                                }
+                                @include max-breakpoint-1680 {
+                                    font: 400 $font-s-14 $primaryFont;
+                                    left: -34px;
+                                    top: 20px;
+                                }
+                                @media (-webkit-device-pixel-ratio: 1.25) {
+                                    font: 400 $font-s-13 $primaryFont;
+                                }
+                                @include max-breakpoint-1440 {
+                                    font: 400 $font-s-12 $primaryFont;
+                                }
+                            }
+                        }
+
+                        mat-select {
+                            &.mat-mdc-select {
+                                span {
+                                    &.mat-mdc-select-value-text {
+                                        font: 400 $font-s-16 $primaryFont;
+                                        color: $BE-1;
+                                        @include max-breakpoint-1800 {
+                                            font: 400 $font-s-15 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1680 {
+                                            font: 400 $font-s-14 $primaryFont;
+                                        }
+                                        @media (-webkit-device-pixel-ratio: 1.25) {
+                                            font: 400 $font-s-13 $primaryFont;
+                                        }
+                                        @include max-breakpoint-1440 {
+                                            font: 400 $font-s-12 $primaryFont;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.mat-form-field-hide-placeholder {
+                .mat-mdc-text-field-wrapper {
+                    .mat-mdc-form-field-flex {
+                        .field_card_img {
+                            display: none;
+                        }
+
+                        .mat-mdc-form-field-infix {
+                            label {
+                                &.mdc-floating-label {
+                                    left: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Gray Field
+        &.gray_field {
+            .mat-mdc-text-field-wrapper {
+                background: #f1f4f7;
+                padding: 0 15px;
+                @include max-breakpoint-1680 {
+                    padding: 0 12px;
+                }
+            }
+        }
+    }
+}
+// Mat Error
+mat-error {
+    &.mat-mdc-form-field-error {
+        position: relative;
+        font: 600 $font-s-12 $primaryFont;
+        letter-spacing: 0;
+        color: $RD-2;
+        @include max-breakpoint-1800 {
+            font: 600 $font-s-11 $primaryFont;
+        }
+        @include max-breakpoint-1680 {
+            font: 600 $font-s-10 $primaryFont;
+        }
+
+        &::before {
+            display: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &.standard_validation {
+            top: 0;
+            &.validation_left_align {
+                text-align: left;
+            }
+        }
+        &.multiple_validation_list {
+            top: -5px;
+            z-index: 9;
+            @include max-breakpoint-1680 {
+                top: -4px;
+            }
+
+            ul {
+                &.pass-alert {
+                    @include ul_style();
+                    font: 700 $font-s-14 $primaryFont;
+                    padding: 6px 10px;
+                    border-radius: 4px;
+                    background: $WE-1;
+                    border: 1px solid $GY-1;
+                    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include max-breakpoint-1800 {
+                        font: 700 $font-s-13 $primaryFont;
+                    }
+                    @include max-breakpoint-1680 {
+                        font: 700 $font-s-12 $primaryFont;
+                        padding: 5px 8px;
+                        border-radius: 3px;
+                    }
+                    @media (-webkit-device-pixel-ratio: 1.25) {
+                        font: 700 $font-s-11 $primaryFont;
+                    }
+
+                    &::after {
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        content: '';
+                        left: 17px;
+                        bottom: 100%;
+                        border: 9px solid transparent;
+                        border-bottom-color: $GY-1;
+                        @include max-breakpoint-1680 {
+                            left: 14px;
+                            border: 7px solid transparent;
+                        }
+                    }
+
+                    li {
+                        width: 100%;
+                        position: relative;
+                        margin: 4px 0;
+                        padding: 0;
+                        font: 500 $font-s-12 $primaryFont;
+                        color: $RD-2;
+                        @include max-breakpoint-1800 {
+                            font: 500 $font-s-11 $primaryFont;
+                        }
+                        @include max-breakpoint-1680 {
+                            margin: 3px 0;
+                            font: 500 $font-s-10 $primaryFont;
+                        }
+
+                        mat-icon {
+                            font-size: $font-s-16;
+                            position: relative;
+                            top: 3px;
+                            margin-right: 3px;
+                            @include max-breakpoint-1680 {
+                                font-size: $font-s-13;
+                                top: 2px;
+                                margin-right: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.form-validation-main {
+            margin: -6px 0 -10px 0;
+            z-index: 999;
+            @include max-breakpoint-1680 {
+                margin: -5px 0 -8px 0;
+            }
+
+            ul {
+                margin: 0;
+                list-style: none;
+
+                li {
+                    width: 100%;
+                    position: relative;
+                    @include flex_align_center();
+                    justify-content: flex-start;
+                    margin: 4px 0;
+                    padding: 0;
+                    color: $RD-102;
+                    @include max-breakpoint-1680 {
+                        margin: 3px 0;
+                    }
+
+                    mat-icon {
+                        margin-right: 3px;
+                        @include max-breakpoint-1680 {
+                            margin-right: 2px;
+                        }
+                    }
+                }
+            }
+            &.dob_validation {
+                margin: -15px 0 0 0;
+                @include max-breakpoint-1680 {
+                    margin: -12px 0 0 0;
+                }
+            }
+        }
+    }
+}
+// NG OTP Input
+app-otp-input {
+    input {
+        width: 50px;
+        height: 50px;
+        font: 400 $font-s-30 $primaryFont;
+        color: $GY-2;
+        outline: none;
+        padding: 5px;
+        border: none;
+        border-bottom: 1px solid $GY-3;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0 0 0 10px;
+
+        @include max-breakpoint-1680 {
+            width: 40px;
+            height: 40px;
+            font: 400 $font-s-24 $primaryFont;
+            padding: 4px;
+            margin: 0 0 0 8px;
+        }
+        @include max-breakpoint-480 {
+            width: 32px;
+            height: 40px;
+            margin: 0 0 0 6px;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $BL-110;
+        }
+        &:-moz-placeholder {
+            color: $BL-110;
+        }
+        &::-moz-placeholder {
+            color: $BL-110;
+        }
+        &:-ms-input-placeholder {
+            color: $BL-110;
+        }
+        &::-ms-input-placeholder {
+            color: $BL-110;
+        }
+        &::placeholder {
+            color: $BL-110;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        &.ng-invalid {
+            color: $BE-1;
+            border-bottom: 2px solid $RD-3;
+            box-shadow: none;
+        }
+    }
+}
+/* For Accept Card Payments Form Field */
+app-accept-card-payments {
+    mat-form-field {
+        &.mat-mdc-form-field {
+            &.default_field_control {
+                .mat-mdc-text-field-wrapper {
+                    background-color: transparent;
+                    .mat-mdc-form-field-flex {
+                        .mat-mdc-form-field-infix {
+                            mat-select {
+                                .mat-mdc-select-value-text {
+                                    color: $BE-1;
+                                }
+                            }
+                            .info_input_tooltip {
+                                .info_input_tooltip_text {
+                                    min-width: 250px;
+                                    left: auto;
+                                    right: -15px;
+                                    &::after {
+                                        left: auto;
+                                        right: 15px;
+                                    }
+                                    p {
+                                        font: 400 $font-s-12 $primaryFont;
+                                        line-height: 16px;
+                                        text-align: left;
+                                        color: $WE-1;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    mat-radio-group {
+        &.mat-mdc-radio-group {
+            mat-radio-button {
+                &.mat-mdc-radio-button {
+                    .mdc-form-field {
+                        .mdc-radio {
+                            .mdc-radio__background {
+                                .mdc-radio__outer-circle {
+                                    border-color: $GY-2;
+                                }
+                            }
+                        }
+                        label {
+                            font: 400 $font-s-16 $primaryFont;
+                            color: $GY-2;
+                            letter-spacing: 0;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-14 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-13 $primaryFont;
+                            }
+                        }
+                    }
+                    &.mat-mdc-radio-checked {
+                        .mdc-form-field {
+                            .mdc-radio {
+                                .mdc-radio__background {
+                                    &::before {
+                                        background-color: $OE-1;
+                                    }
+                                    .mdc-radio__outer-circle {
+                                        border-color: $OE-1;
+                                    }
+                                    .mdc-radio__inner-circle {
+                                        border-color: $OE-1;
+                                    }
+                                }
+                                .mat-ripple {
+                                    .mat-ripple-element {
+                                        background-color: $OE-1;
+                                    }
+                                }
+                            }
+                            label {
+                                color: $BE-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .signIn_option_row {
+        .signIn_option_col {
+            mat-checkbox {
+                &.mat-mdc-checkbox {
+                    .mdc-form-field {
+                        label {
+                            font: 400 $font-s-16 $primaryFont;
+                            color: $GY-2;
+                            @include max-breakpoint-1800 {
+                                font: 400 $font-s-14 $primaryFont;
+                            }
+                            @include max-breakpoint-1680 {
+                                font: 400 $font-s-13 $primaryFont;
+                            }
+                            a {
+                                text-decoration: underline;
+                                color: $BE-1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

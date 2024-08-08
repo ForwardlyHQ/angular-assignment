@@ -1,0 +1,135 @@
+// For Insights Component
+app-insights {
+    .insights_main_inner {
+        .no_data_found_wrapper {
+            min-height: 435px;
+            @include flex_center();
+            flex-direction: column;
+            justify-content: center;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                min-height: 348px;
+            }
+
+            img {
+                width: 150px;
+                margin: 0 auto 25px auto;
+                @include max-breakpoint-1680 {
+                    margin: 0 auto 20px auto;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    width: 120px;
+                    margin: 0 auto 20px auto;
+                }
+                @include max-breakpoint-1440 {
+                    height: 110px;
+                    margin: 0 auto 15px auto;
+                }
+            }
+            h3 {
+                font: 600 $font-s-18 $primaryFont;
+                letter-spacing: 0.3px;
+                @include max-breakpoint-1680 {
+                    font: 700 $font-s-16 $primaryFont;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    font: 600 $font-s-14 $primaryFont;
+                }
+                @include max-breakpoint-1440 {
+                    font: 700 $font-s-14 $primaryFont;
+                }
+            }
+        }
+    }
+}
+// For Due & OverDue List
+app-due-list,
+app-overdue-list {
+    .noDataFound_wrapper {
+        height: calc(100vh - 400px);
+        @media (-webkit-device-pixel-ratio: 1.25) {
+            height: calc(100vh - 320px);
+        }
+        .no_data_found_wrapper {
+            height: 100%;
+            @include flex_center();
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+// For Transaction Detail
+app-transaction-detail {
+    app-transaction-list {
+        .no_data_found_wrapper {
+            margin-top: 35px;
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                margin-top: 28px;
+            }
+            h3 {
+                &.mat-h3 {
+                    margin: 0;
+                }
+            }
+        }
+        app-similar-transaction-list {
+            .no_data_found_wrapper {
+                h3 {
+                    &.mat-h3 {
+                        margin-bottom: 35px;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            margin-bottom: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// For Top Inflow & Outflow
+app-top-inflow,
+app-top-outflow {
+    mat-card {
+        &.mat-mdc-card {
+            &.no_data_box {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+// Approval Threshold Tooltip Style Include Here
+.payment_threshold_footer {
+    .info_tooltip_wrapper {
+        .info_tooltip {
+            top: calc(100% + 4px);
+            @media (-webkit-device-pixel-ratio: 1.25) {
+                top: calc(100% + 3px);
+            }
+        }
+        &.left_tooltip_wrapper {
+            .info_tooltip {
+                left: 35px;
+                right: 0;
+                @include max-breakpoint-1800 {
+                    left: 25px;
+                }
+                @media (-webkit-device-pixel-ratio: 1.25) {
+                    left: 28px;
+                }
+                @include max-breakpoint-1440 {
+                    left: 20px;
+                }
+
+                .info_tooltip_inner {
+                    &::before {
+                        left: 15px;
+                        right: auto;
+                        @media (-webkit-device-pixel-ratio: 1.25) {
+                            left: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

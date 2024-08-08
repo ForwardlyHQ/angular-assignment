@@ -1,0 +1,49 @@
+/* Variable SCSS File Include Here */
+@import './variable';
+/* Max Breakpoint SCSS File Include Here */
+@import './mixin';
+// Auth Module SCSS Files Inlcude Here
+@import './page_scss/signIn_page1';
+@import './page_scss/signIn_page2';
+@import './page_scss/signIn_page3';
+// Dashboard Module SCSS Files Include Here
+@import './page_scss/dashboard_page1';
+@import './page_scss/dashboard_page2';
+@import './page_scss/account_payment_page1';
+@import './page_scss/account_payment_page2';
+// Business Setting Module SCSS Files Include Here
+@import './page_scss/business_setting1';
+@import './page_scss/business_setting2';
+// Cash-Flow Module SCSS Files Include Here
+@import './page_scss/cashflow_tabular1';
+@import './page_scss/cashflow_tabular2';
+// Payment Module SCSS Files Include Here
+@import './page_scss/payments_page1';
+@import './page_scss/payments_page2';
+@import './page_scss/payments_page3';
+@import './page_scss/payments_page4';
+@import './page_scss/payments_page5';
+@import './page_scss/link_invoice_bills';
+/* Global SCSS File Include Here */
+@import './common_scss/common_scss1';
+@import './common_scss/common_scss2';
+@import './common_scss/common_scss3';
+@import './common_scss/common_scss4';
+@import './common_scss/common_scss5';
+@import './common_scss/common_scss6';
+@import './common_scss/common_scss7';
+@import './common_scss/noDataFound';
+@import './common_scss/header_style';
+@import './common_scss/common_scss8';
+// Material SCSS
+@import './material_scss/material_input1';
+@import './material_scss/material_input2';
+@import './material_scss/material_input3';
+@import './material_scss/material_checkbox_radio';
+@import './material_scss/material_table1';
+@import './material_scss/material_table2';
+@import './material_scss/material_table3';
+@import './material_scss/material_scss1';
+@import './material_scss/material_scss2';
+@import './material_scss/material_scss3';
+@import './material_scss/notification_dropdown';
