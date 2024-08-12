@@ -51,5 +51,6 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatRadioModule,
     MatTabsModule,
   ],
+  exports:[]
 })
 export class InvoiceModule {}
