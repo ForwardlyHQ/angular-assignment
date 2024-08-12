@@ -45,10 +45,12 @@ const dbConfig: DBConfig = {
         { name: 'rate', keypath: 'rate', options: { unique: false } },
         { name: 'date', keypath: 'date', options: { unique: false } },
         { name: 'dueDate', keypath: 'dueDate', options: { unique: false } },
+        { name: 'items', keypath: 'items', options: { unique: false } },
       ],
     },
   ],
 };
+
 
 @NgModule({
   declarations: [AppComponent, CommonWrapperComponent, SidebarComponent],
